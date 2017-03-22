@@ -47,7 +47,7 @@ namespace NOC_PL_WebApplication {
             });
 
             // The call to seed data, .Wait() trick to fake async
-            seeder.EnsureSeedData().Wait();
+            //seeder.EnsureSeedData().Wait();
 
             //app.Run(async (context) => {
             //    await context.Response.WriteAsync("Hello World!");
