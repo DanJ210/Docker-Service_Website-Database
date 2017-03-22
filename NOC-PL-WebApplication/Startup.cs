@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using NOCPLWebApplication.Models;
+using NOCPLWebApplication.Models.SeedData;
 
 namespace NOC_PL_WebApplication {
     public class Startup {
@@ -17,11 +18,13 @@ namespace NOC_PL_WebApplication {
 
             services.AddDbContext<ProductLocationContext>();
 
+            services.AddTransient<ProductLocationSeedData>();
+
             services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory) {
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory, ProductLocationSeedData seeder) {
             loggerFactory.AddConsole();
 
             if (env.IsDevelopment()) {
@@ -42,6 +45,9 @@ namespace NOC_PL_WebApplication {
                 //    defaults: new { controller = "Table", action = "Index" }
                 //    );
             });
+
+            // The call to seed data, .Wait() trick to fake async
+            seeder.EnsureSeedData().Wait();
 
             //app.Run(async (context) => {
             //    await context.Response.WriteAsync("Hello World!");
