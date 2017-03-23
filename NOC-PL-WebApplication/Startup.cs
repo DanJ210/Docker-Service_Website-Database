@@ -18,13 +18,13 @@ namespace NOC_PL_WebApplication {
 
             services.AddDbContext<ProductLocationContext>();
 
-            services.AddTransient<ProductLocationSeedData>();
+            services.AddTransient<ProductServerSeedData>();
 
             services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory, ProductLocationSeedData seeder) {
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory, ProductServerSeedData seeder) {
             loggerFactory.AddConsole();
 
             if (env.IsDevelopment()) {

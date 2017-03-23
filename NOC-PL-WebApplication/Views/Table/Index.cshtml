@@ -1,4 +1,5 @@
-﻿@{
+﻿@model IEnumerable<NOCPLWebApplication.Models.Product>
+@{
     ViewBag.Title = "NOC Table Page";
 }
 @section scripts{
@@ -19,11 +20,13 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td >Product</td>
-                            <td>Server</td>
-                            <td>Status</td>
-                        </tr>
+                        @foreach (var item in Model) {
+                            <tr>
+                                <td>@item.ProductName@*@Html.DisplayFor(modelItem => item.ProductName)*@</td>
+                                <td>Server</td>
+                                <td>Status</td>
+                            </tr>
+                        }
                     </tbody>
                 </table>
             </div>
@@ -40,11 +43,13 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>Product</td>
-                            <td>Server</td>
-                            <td>Status</td>
-                        </tr>
+                        @foreach (var item in Model) {
+                            <tr>
+                                <td>@item.ProductName@*@Html.DisplayFor(modelItem => item.ProductName)*@</td>
+                                <td>Server</td>
+                                <td>Status</td>
+                            </tr>
+                        }
                     </tbody>
                 </table>
             </div>
@@ -61,11 +66,13 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>Product</td>
-                            <td>Server</td>
-                            <td>Status</td>
-                        </tr>
+                        @foreach (var item in Model) {
+                            <tr>
+                                <td>@item.ProductName@*@Html.DisplayFor(modelItem => item.ProductName)*@</td>
+                                <td>Server</td>
+                                <td>Status</td>
+                            </tr>
+                        }
                     </tbody>
                 </table>
             </div>
