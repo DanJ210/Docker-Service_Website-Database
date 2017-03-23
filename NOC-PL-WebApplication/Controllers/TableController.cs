@@ -15,9 +15,10 @@ namespace NOCPLWebApplication.Controllers {
         }
         // GET: /<controller>/
         public IActionResult Index() {
-            //var data = _context.Products.ToList();
-            return View();
+            var data = _context.Products.ToList();
+            //var serverData = _context.Products.ToList();
+            return View(data);
         }
-
+        
     }
 }
