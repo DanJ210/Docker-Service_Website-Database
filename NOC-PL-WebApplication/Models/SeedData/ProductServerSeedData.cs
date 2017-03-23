@@ -5,10 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace NOCPLWebApplication.Models.SeedData {
-    public class ProductLocationSeedData {
+    public class ProductServerSeedData {
         private ProductLocationContext _context;
 
-        public ProductLocationSeedData(ProductLocationContext context) {
+        public ProductServerSeedData(ProductLocationContext context) {
             _context = context;
         }
         
