@@ -22,12 +22,11 @@
                     <tbody>
                         @foreach (var item in Model) {
                             <tr>
-                                <td>@*@Html.DisplayFor(modelItem => item.ProductName)*@</td>
-                                <td>@item.ProductName</td>
-                                <td></td>
+                                <td>@item.ProductName@*@Html.DisplayFor(modelItem => item.ProductName)*@</td>
+                                <td>Server</td>
+                                <td>Status</td>
                             </tr>
                         }
-                        
                     </tbody>
                 </table>
             </div>
@@ -44,11 +43,13 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>Product</td>
-                            <td>Server</td>
-                            <td>Status</td>
-                        </tr>
+                        @foreach (var item in Model) {
+                            <tr>
+                                <td>@item.ProductName@*@Html.DisplayFor(modelItem => item.ProductName)*@</td>
+                                <td>Server</td>
+                                <td>Status</td>
+                            </tr>
+                        }
                     </tbody>
                 </table>
             </div>
@@ -65,11 +66,13 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>Product</td>
-                            <td>Server</td>
-                            <td>Status</td>
-                        </tr>
+                        @foreach (var item in Model) {
+                            <tr>
+                                <td>@item.ProductName@*@Html.DisplayFor(modelItem => item.ProductName)*@</td>
+                                <td>Server</td>
+                                <td>Status</td>
+                            </tr>
+                        }
                     </tbody>
                 </table>
             </div>
