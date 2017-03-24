@@ -19,6 +19,11 @@ namespace NOCPLWebApplication.Controllers {
             //var serverData = _context.Products.ToList();
             return View(data);
         }
+
+        //[HttpPost]
+        //public IActionResult Index() {
+
+        //}
         
     }
 }
