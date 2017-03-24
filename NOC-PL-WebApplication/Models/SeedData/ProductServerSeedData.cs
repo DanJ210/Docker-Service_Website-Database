@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace NOCPLWebApplication.Models.SeedData {
     /// <summary>
     /// Only seeds data for the Products and Servers if the data doesn't already exist.
-    /// Meant for initial setups
+    /// Meant for initial setups. Section labels below can be removed after future development.
     /// </summary>
     public class ProductServerSeedData {
         private ProductLocationContext _context;
@@ -68,7 +68,6 @@ namespace NOCPLWebApplication.Models.SeedData {
                     new Product { ProductName = "API.ecngateway.com", ProductGroup = "ECNGATEWAY", TableNumber = 3 },
                     new Product { ProductName = "Push Service", ProductGroup = "PUSH SERVICE", TableNumber = 3 },
                     new Product { ProductName = "Coderedweb.net", ProductGroup = "CODEREDWEB NET", TableNumber = 3 },
-
                     new Product { ProductName = "Widget.coderedweb.com", ProductGroup = "CODERED WEB", TableNumber = 3 },
                     new Product { ProductName = "Coderedweb.com", ProductGroup = "CODEREDWEB", TableNumber = 3 },
                     new Product { ProductName = "Citynet.coderedweb.com", ProductGroup = "CODEREDWEB", TableNumber = 3 },
@@ -105,8 +104,7 @@ namespace NOCPLWebApplication.Models.SeedData {
 
                     // IPAWS
                     // Table 7
-                    new Product { ProductName = "IPAWS", ProductGroup = "IPAWS", TableNumber = 7 },
-
+                    new Product { ProductName = "IPAWS", ProductGroup = "IPAWS", TableNumber = 7 }
                 };
                 _context.AddRange(productList);
                 await _context.SaveChangesAsync();
@@ -114,55 +112,55 @@ namespace NOCPLWebApplication.Models.SeedData {
             if (!_context.Servers.Any()) {
                 var serverList = new List<Server>() {
                     // Product Page 1
-                    new Server { ServerName = "N/A" },
-                    new Server { ServerName = "No Primary" }, // Needed
-                    new Server { ServerName = "No Secondary" },
-                    new Server { ServerName = "Unknown" },
-                    new Server { ServerName = "TBD" },
-                    new Server { ServerName = "Site1-EcnWeb" },
-                    new Server { ServerName = "Site2-EcnWeb" },
-                    new Server { ServerName = "Site3-EcnWeb" },
-                    new Server { ServerName = "Site2-VirtWeb1" }, // Confirm Existence
-                    new Server { ServerName = "Site2-VirtWeb4" },
-                    new Server { ServerName = "EcnWeb1" },
-                    new Server { ServerName = "EcnWeb2" },
-                    new Server { ServerName = "VirtWeb1-1" },
-                    new Server { ServerName = "VirtWeb1-2" },
-                    new Server { ServerName = "VirtWeb3-2" },
-                    new Server { ServerName = "VirtWeb1-4" },
-                    new Server { ServerName = "(S3)CSB-VMN-APP" }, // Possible incorrect entry to remove
-                    new Server { ServerName = "(S3)CSB-VMN-APP1" },
-                    new Server { ServerName = "(S3)CSB-VMN-WEB1" },
-                    new Server { ServerName = "(S3)CSB-VMN-GAPP1" }, 
-                    new Server { ServerName = "(S1)CSB-VGA-PAT1" },
-                    new Server { ServerName = "(S3)CSB-VMN-SAE1" },
-                    new Server { ServerName = "(S3)CSB-VMN-TK02" },
-                    new Server { ServerName = "(S1)CSB-VGA-CW01" },
-                    new Server { ServerName = "(S1)CSB-VGA-RWE1" },
-                    new Server { ServerName = "(S1)CSB-VGA-SAE1" },
+                    new Server { ServerName = "N/A", TableNumber = 1 },
+                    new Server { ServerName = "No Primary", TableNumber = 1 },
+                    new Server { ServerName = "No Secondary", TableNumber = 1 },
+                    new Server { ServerName = "Unknown", TableNumber = 1 },
+                    new Server { ServerName = "TBD", TableNumber = 1 },
+                    new Server { ServerName = "Site1-EcnWeb", TableNumber = 1 },
+                    new Server { ServerName = "Site2-EcnWeb", TableNumber = 1 },
+                    new Server { ServerName = "Site3-EcnWeb", TableNumber = 1 },
+                    new Server { ServerName = "Site2-VirtWeb1", TableNumber = 1 },
+                    new Server { ServerName = "Site2-VirtWeb4", TableNumber = 1 },
+                    new Server { ServerName = "EcnWeb1", TableNumber = 1 },
+                    new Server { ServerName = "EcnWeb2", TableNumber = 1 },
+                    new Server { ServerName = "VirtWeb1-1", TableNumber = 1 },
+                    new Server { ServerName = "VirtWeb1-2", TableNumber = 1 },
+
+                    new Server { ServerName = "VirtWeb3-2", TableNumber = 2 },
+                    new Server { ServerName = "VirtWeb1-4", TableNumber = 2 },
+                    new Server { ServerName = "(S3)CSB-VMN-APP1", TableNumber = 2 },
+                    new Server { ServerName = "(S3)CSB-VMN-WEB1", TableNumber = 2 },
+                    new Server { ServerName = "(S3)CSB-VMN-GAPP1", TableNumber = 2 }, 
+                    new Server { ServerName = "(S1)CSB-VGA-PAT1", TableNumber = 2 },
+                    new Server { ServerName = "(S3)CSB-VMN-SAE1", TableNumber = 2 },
+                    new Server { ServerName = "(S3)CSB-VMN-TK02", TableNumber = 2 },
+                    new Server { ServerName = "(S1)CSB-VGA-CW01", TableNumber = 2 },
+                    new Server { ServerName = "(S1)CSB-VGA-RWE1", TableNumber = 2 },
+                    new Server { ServerName = "(S1)CSB-VGA-SAE1", TableNumber = 2 },
                     
                     // Product Page 2
-                    new Server { ServerName = "Codered1w" },
-                    new Server { ServerName = "Codered2w" },
-                    new Server { ServerName = "Codered3w" },
-                    new Server { ServerName = "Ecn-ftp1" },
-                    new Server { ServerName = "Ecn-ftp2" },
-                    new Server { ServerName = "Ecn-ftp3" },
-                    new Server { ServerName = "Ecnutil3" },
-                    new Server { ServerName = "Site1-VirtUtil2" },
-                    new Server { ServerName = "Site2-VirtUtil2" },
-                    new Server { ServerName = "Site1web01" },
-                    new Server { ServerName = "Site2web01" },
-                    new Server { ServerName = "MCSQL3" },
+                    new Server { ServerName = "Codered1w", TableNumber = 3 },
+                    new Server { ServerName = "Codered2w", TableNumber = 3 },
+                    new Server { ServerName = "Codered3w", TableNumber = 3 },
+                    new Server { ServerName = "Ecn-ftp1", TableNumber = 3 },
+                    new Server { ServerName = "Ecn-ftp2", TableNumber = 3 },
+                    new Server { ServerName = "Ecn-ftp3", TableNumber = 3 },
+                    new Server { ServerName = "Ecnutil3", TableNumber = 3 },
+                    new Server { ServerName = "Site1-VirtUtil2", TableNumber = 3 },
+                    new Server { ServerName = "Site2-VirtUtil2", TableNumber = 3 },
+                    new Server { ServerName = "Site1web01", TableNumber = 3 },
+                    new Server { ServerName = "Site2web01", TableNumber = 3 },
+                    new Server { ServerName = "MCSQL3", TableNumber = 3 },
                     // SQL Servers
 
                     // Table 4
-                    new Server { ServerName = "Site1-SQL1-V1", ServerGroup = "SQL" },
-                    new Server { ServerName = "Site2-SQL1-V1", ServerGroup = "SQL" },
-                    new Server { ServerName = "TNG", ServerGroup = "SQL" },
-                    new Server { ServerName = "TNG2A", ServerGroup = "SQL" },
-                    new Server { ServerName = "ECNSQL3-1", ServerGroup = "SQL" },
-                    new Server { ServerName = "MCSQL3", ServerGroup = "SQL" },
+                    new Server { ServerName = "Site1-SQL1-V1", ServerGroup = "SQL", TableNumber = 4 },
+                    new Server { ServerName = "Site2-SQL1-V1", ServerGroup = "SQL", TableNumber = 4 },
+                    new Server { ServerName = "TNG", ServerGroup = "SQL", TableNumber = 4 },
+                    new Server { ServerName = "TNG2A", ServerGroup = "SQL", TableNumber = 4 },
+                    new Server { ServerName = "ECNSQL3-1", ServerGroup = "SQL", TableNumber = 4 },
+                    new Server { ServerName = "MCSQL3", ServerGroup = "SQL", TableNumber = 4 },
 
                     // Product Page 3
 
@@ -185,15 +183,11 @@ namespace NOCPLWebApplication.Models.SeedData {
                     // Table 7
                     new Server { ServerName = "S1-IPAWS1 (Backup)", ServerGroup = "IPAWS", TableNumber = 7,  },
                     new Server { ServerName = "S2-IPAWS1 (Primary)", ServerGroup = "IPAWS", TableNumber = 7 },
-                    new Server { ServerName = "S3-IPAWS3 (Unavailable) ", ServerGroup = "IPAWS", TableNumber = 7 },
-
-
+                    new Server { ServerName = "S3-IPAWS3 (Unavailable) ", ServerGroup = "IPAWS", TableNumber = 7 }
                 };
                 _context.AddRange(serverList);
                 await _context.SaveChangesAsync();
             }
-
-            //await _context.SaveChangesAsync();
         }
     }
 }
