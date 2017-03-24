@@ -16,7 +16,7 @@ namespace NOCPLWebApplication.Models {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) {
             base.OnConfiguring(optionsBuilder);
 
-            optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDb;Database=PLTablesDb;Trusted_Connection=true;MultipleActiveResultSets=true;");
+            optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDb;Database=PLTablesData;Trusted_Connection=true;MultipleActiveResultSets=true;");
             // To use a config file when ready
             //optionsBuilder.UseSqlServer(_config[""]);
         }
