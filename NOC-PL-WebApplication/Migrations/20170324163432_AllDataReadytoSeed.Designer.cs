@@ -8,9 +8,10 @@ using NOCPLWebApplication.Models;
 namespace NOCPLWebApplication.Migrations
 {
     [DbContext(typeof(ProductLocationContext))]
-    partial class ProductLocationContextModelSnapshot : ModelSnapshot
+    [Migration("20170324163432_AllDataReadytoSeed")]
+    partial class AllDataReadytoSeed
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.1.1")

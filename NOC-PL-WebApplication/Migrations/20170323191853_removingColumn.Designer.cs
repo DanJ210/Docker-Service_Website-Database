@@ -8,9 +8,10 @@ using NOCPLWebApplication.Models;
 namespace NOCPLWebApplication.Migrations
 {
     [DbContext(typeof(ProductLocationContext))]
-    partial class ProductLocationContextModelSnapshot : ModelSnapshot
+    [Migration("20170323191853_removingColumn")]
+    partial class removingColumn
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.1.1")
@@ -27,8 +28,6 @@ namespace NOCPLWebApplication.Migrations
 
                     b.Property<int?>("ServerId");
 
-                    b.Property<int>("TableNumber");
-
                     b.HasKey("Id");
 
                     b.HasIndex("ServerId");
@@ -41,11 +40,7 @@ namespace NOCPLWebApplication.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("ServerGroup");
-
                     b.Property<string>("ServerName");
-
-                    b.Property<int>("TableNumber");
 
                     b.HasKey("Id");
 
