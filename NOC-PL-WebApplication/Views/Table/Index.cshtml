@@ -1,4 +1,5 @@
 ﻿@model IEnumerable<NOCPLWebApplication.Models.Product>
+@*@model IEnumerable<NOCPLWebApplication.Models.Server>*@
 @{
     ViewBag.Title = "NOC Table Page";
 }
@@ -22,8 +23,8 @@
                     <tbody>
                         @foreach (var item in Model) {
                             <tr>
-                                <td>@item.ProductName@*@Html.DisplayFor(modelItem => item.ProductName)*@</td>
-                                <td>Server</td>
+                                <td>@item.ProductName) @*@Html.DisplayFor(modelItem => item.ProductName)*@</td>
+                                <td></td>
                                 <td>Status</td>
                             </tr>
                         }
