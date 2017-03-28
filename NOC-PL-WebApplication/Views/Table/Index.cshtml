@@ -25,7 +25,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach (var item in Model) {
+                        @foreach (var item in Model.Where(m => m.TableNumber == 1)) {
                             <tr>
                                 <td id="@item.Id" class="success">@item.ProductName @*@Html.DisplayFor(modelItem => item.ProductName)*@</td>
                                 <td>@Html.ActionLink("Link", "GetServer", "Servers", new { id=item.Id })</td>
@@ -51,7 +51,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach (var item in Model) {
+                        @foreach (var item in Model.Where(m => m.TableNumber == 2)) {
                             <tr>
                                 <td>@item.ProductName@*@Html.DisplayFor(modelItem => item.ProductName)*@</td>
                                 <td>Server</td>
@@ -77,7 +77,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach (var item in Model) {
+                        @foreach (var item in Model.Where(m => m.TableNumber == 3)) {
                             <tr>
                                 <td>@item.ProductName@*@Html.DisplayFor(modelItem => item.ProductName)*@</td>
                                 <td>Server</td>
@@ -102,7 +102,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach (var item in Model) {
+                        @foreach (var item in Model.Where(m => m.TableNumber == 4)) {
                             <tr>
                                 <td>@item.ProductName@*@Html.DisplayFor(modelItem => item.ProductName)*@</td>
                                 <td>Server</td>
@@ -127,7 +127,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach (var item in Model) {
+                        @foreach (var item in Model.Where(m => m.TableNumber == 5)) {
                             <tr>
                                 <td>@item.ProductName@*@Html.DisplayFor(modelItem => item.ProductName)*@</td>
                                 <td>Server</td>
@@ -153,7 +153,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach (var item in Model) {
+                        @foreach (var item in Model.Where(m => m.TableNumber == 6)) {
                             <tr>
                                 <td>@item.ProductName@*@Html.DisplayFor(modelItem => item.ProductName)*@</td>
                                 <td>Server</td>
@@ -179,7 +179,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach (var item in Model) {
+                        @foreach (var item in Model.Where(m => m.TableNumber == 7)) {
                             <tr>
                                 <td>@item.ProductName@*@Html.DisplayFor(modelItem => item.ProductName)*@</td>
                                 <td>Server</td>
@@ -190,6 +190,5 @@
                 </table>
             </div>
         </div>
-
     </div>
 </div>
