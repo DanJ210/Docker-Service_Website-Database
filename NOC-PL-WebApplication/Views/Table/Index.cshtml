@@ -2,6 +2,7 @@
 @*@model IEnumerable<NOCPLWebApplication.Models.Server>*@
 @{
     ViewBag.Title = "NOC Table Page";
+    
 }
 @section scripts{
     <link href="~/css/serverModal.styles.css" rel="stylesheet" />
@@ -12,8 +13,11 @@
     <div class="row">
         <div class="col-md-4">
             <div class="table">
-                <table class="table table-responsive">
+                <table class="table table-condensed">
                     <thead>
+                        <tr>
+                            Table 1
+                        </tr>
                         <tr>
                             <th>Product</th>
                             <th>Server</th>
@@ -23,7 +27,7 @@
                     <tbody>
                         @foreach (var item in Model) {
                             <tr>
-                                <td>@item.ProductName) @*@Html.DisplayFor(modelItem => item.ProductName)*@</td>
+                                <td class="success">@item.ProductName @*@Html.DisplayFor(modelItem => item.ProductName)*@</td>
                                 <td></td>
                                 <td>Status</td>
                             </tr>
@@ -38,6 +42,9 @@
                 <table class="table table-responsive">
                     <thead>
                         <tr>
+                            Table 2
+                        </tr>
+                        <tr>
                             <th>Product</th>
                             <th>Server</th>
                             <th>Status</th>
@@ -61,6 +68,9 @@
                 <table class="table table-responsive">
                     <thead>
                         <tr>
+                            Table 3
+                        </tr>
+                        <tr>
                             <th>Product</th>
                             <th>Server</th>
                             <th>Status</th>
@@ -78,5 +88,108 @@
                 </table>
             </div>
         </div>
+
+        <div class="col-md-4">
+            <div class="table">
+                <table class="table table-responsive">
+                    <thead>
+                        <tr>
+                            SQL Table
+                        </tr>
+                        <tr>
+                            <th>SQL Alias</th>
+                            <th>SQL Server</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model) {
+                            <tr>
+                                <td>@item.ProductName@*@Html.DisplayFor(modelItem => item.ProductName)*@</td>
+                                <td>Server</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="table">
+                <table class="table table-responsive">
+                    <thead>
+                        <tr>
+                            HORDE
+                        </tr>
+                        <tr>
+                            <th>Horde</th>
+                            <th>Active Site</th>
+                            <th>Horde Server</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model) {
+                            <tr>
+                                <td>@item.ProductName@*@Html.DisplayFor(modelItem => item.ProductName)*@</td>
+                                <td>Server</td>
+                                <td>Status</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="table">
+                <table class="table table-responsive">
+                    <thead>
+                        <tr>
+                            UBER
+                        </tr>
+                        <tr>
+                            <th>Uber</th>
+                            <th>Product</th>
+                            <th>Uber Server</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model) {
+                            <tr>
+                                <td>@item.ProductName@*@Html.DisplayFor(modelItem => item.ProductName)*@</td>
+                                <td>Server</td>
+                                <td>Status</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="table">
+                <table class="table table-responsive">
+                    <thead>
+                        <tr>
+                            IPAWS
+                        </tr>
+                        <tr>
+                            <th>IPAWS</th>
+                            <th>Server</th>
+                            <th>Active Site</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model) {
+                            <tr>
+                                <td>@item.ProductName@*@Html.DisplayFor(modelItem => item.ProductName)*@</td>
+                                <td>Server</td>
+                                <td>Status</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
     </div>
 </div>

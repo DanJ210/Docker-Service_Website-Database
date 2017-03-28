@@ -16,16 +16,16 @@ namespace NOCPLWebApplication.Controllers {
         // GET: /<controller>/
         public IActionResult Index() {
             var data = _context.Products.ToList();
+            
             //var serverData = _context.Products.ToList();
-            ViewBag.ProductModel = data;
-            ViewBag.ServerModel = _context.Servers.ToList();
             //ViewData["Servers"] = _context.Servers.ToList();
             return View(data);
         }
 
-        public IActionResult Servers() {
-            var servers = _context.Servers.ToList();
-            return View(servers);
+        [HttpPost]
+        public IActionResult DisplayByTableNumber(int tableNumber) {
+            var products = _context.Products.ToList();
+            return View(products);
         }
 
         //[HttpPost]
