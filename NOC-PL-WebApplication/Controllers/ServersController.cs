@@ -27,23 +27,23 @@ namespace NOC_PL_WebApplication.Controllers
         }
 
         // GET: api/Servers/5
-        [HttpGet("{id}")]
-        public async Task<IActionResult> GetServer([FromRoute] int id)
-        {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
+        //[HttpGet("{id}")]
+        //public async Task<IActionResult> GetServer([FromRoute] int id)
+        //{
+        //    if (!ModelState.IsValid)
+        //    {
+        //        return BadRequest(ModelState);
+        //    }
 
-            var server = await _context.Servers.SingleOrDefaultAsync(m => m.Id == id);
+        //    var server = await _context.Servers.SingleOrDefaultAsync(m => m.Id == id);
 
-            if (server == null)
-            {
-                return NotFound();
-            }
+        //    if (server == null)
+        //    {
+        //        return NotFound();
+        //    }
 
-            return Ok(server);
-        }
+        //    return Ok(server);
+        //}
 
         // PUT: api/Servers/5
         [HttpPut("{id}")]
@@ -119,6 +119,23 @@ namespace NOC_PL_WebApplication.Controllers
         private bool ServerExists(int id)
         {
             return _context.Servers.Any(e => e.Id == id);
+        }
+
+
+        // GET: api/Servers/5
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetServerNameByTableNumber([FromRoute] int id) {
+            if (!ModelState.IsValid) {
+                return BadRequest(ModelState);
+            }
+
+            var server = await _context.Servers.SingleOrDefaultAsync(m => m.Id == id);
+            var serverName = server.ServerName;
+            if (server == null) {
+                return NotFound();
+            }
+
+            return Ok(serverName);
         }
     }
 }

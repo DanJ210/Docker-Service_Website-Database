@@ -20,7 +20,7 @@
                         </tr>
                         <tr>
                             <th>Product</th>
-                            <th>Server</th>
+                            <th></th>
                             <th>Status</th>
                         </tr>
                     </thead>
@@ -28,7 +28,9 @@
                         @foreach (var item in Model.Where(m => m.TableNumber == 1)) {
                             <tr>
                                 <td id="@item.Id" class="success">@item.ProductName @*@Html.DisplayFor(modelItem => item.ProductName)*@</td>
-                                <td>@Html.ActionLink("Link", "GetServer", "Servers", new { id=item.Id })</td>
+                                
+                                <td>@Html.ActionLink("Link", "GetServerNameByTableNumber", "Servers", new { id=item.Id })</td>
+                                <td>@*@Html.Partial("Index")*@</td>
                                 <td></td>
                             </tr>
                         }

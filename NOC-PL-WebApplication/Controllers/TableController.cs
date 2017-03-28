@@ -15,17 +15,17 @@ namespace NOCPLWebApplication.Controllers {
         }
         // GET: /<controller>/
         public IActionResult Index() {
-            var data = _context.Products.ToList();
-            
+            var data =  _context.Products.ToList();
+            ViewBag.ServerNames =  _context.Servers.Select(s => s.ServerName);
+            ViewBag.ServerTableNumbers =  _context.Servers.Select(s => s.ServerName);
             //var serverData = _context.Products.ToList();
             //ViewData["Servers"] = _context.Servers.ToList();
             return View(data);
         }
 
-        [HttpPost]
-        public IActionResult DisplayByTableNumber(int tableNumber) {
-            var products = _context.Products.ToList();
-            return View(products);
+        public IActionResult GetServers() {
+            var data = _context.Servers.ToList();
+            return PartialView(data);
         }
 
         //[HttpPost]
