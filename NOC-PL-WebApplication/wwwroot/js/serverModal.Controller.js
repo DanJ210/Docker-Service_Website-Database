@@ -16,7 +16,16 @@
         //alert(position);
 
         //alert("clicked");
-        $('#serverModal').modal().css("left", currentId.left).css("top", currentId.top);
+        //$('#serverModal').text("Hello");
+        $.get("/api/servers/", function (data, status) {
+            //$('#serverModal li').text("Hey");
+        });
+        $('#serverModal').modal('show.bs.modal', function() {
+            
+            //$.get("/api/servers/" + i, function (data, status) {
+            //    //alert(JSON.stringify(data) + status);
+            //})
+        }).css("left", currentId.left).css("top", currentId.top);
         //$('#serverModal').modal('show.bs.modal', function () {
         //    $('.modal-dialog').css("left", "800px");
         //});
