@@ -5,6 +5,7 @@
     <title>@ViewBag.Title</title>
 
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    @*<link href="~/lib/jquery-modal/jquery.modal.css" rel="stylesheet" />*@
     <link rel="stylesheet" href="~/lib/font-awesome/css/font-awesome.css" />
     <link rel="stylesheet" href="~/css/site.css" />
 
@@ -36,8 +37,8 @@
                     <button id="windowClose" class="fa fa-window-close" data-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
-                    <ul id="serverModal">
-                        <li></li>
+                    <ul>
+                        <li id="modalTd"></li>
                         <li></li>
                         <li></li>
                     </ul>
@@ -51,6 +52,7 @@
     </div>
 
     <script type="text/javascript" src="~/lib/jquery/dist/jquery.min.js"></script>
+    @*<script src="~/lib/jquery-modal/jquery.modal.min.js"></script>*@
     <script type="text/javascript" src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="~/lib/angular2/angular.min.js"></script>
     <script type="text/javascript" src="~/js/site.js"></script>

@@ -27,9 +27,9 @@
                     <tbody>
                         @foreach (var item in Model) {
                             <tr>
-                                <td class="success">@item.ProductName @*@Html.DisplayFor(modelItem => item.ProductName)*@</td>
+                                <td id="@item.Id" class="success">@item.ProductName @*@Html.DisplayFor(modelItem => item.ProductName)*@</td>
+                                <td>@Html.ActionLink("Link", "GetServer", "Servers", new { id=item.Id })</td>
                                 <td></td>
-                                <td>Status</td>
                             </tr>
                         }
                     </tbody>

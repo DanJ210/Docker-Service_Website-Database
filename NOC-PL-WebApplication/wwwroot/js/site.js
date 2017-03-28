@@ -1,5 +1,5 @@
 ﻿($(function () {
-    alert("Hey");
+    //alert("Hey");
     var resultData = $.get("/api/products", function (data, status) {
         var resultData = JSON.stringify(data);
         return resultData;

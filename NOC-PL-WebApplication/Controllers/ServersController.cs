@@ -20,10 +20,9 @@ namespace NOC_PL_WebApplication.Controllers
             _context = context;
         }
 
-        // GET: api/Servers
-        [HttpGet]
-        public IEnumerable<Server> GetServers()
-        {
+        //GET: api/Servers
+       [HttpGet]
+        public IEnumerable<Server> GetServers() {
             return _context.Servers;
         }
 
