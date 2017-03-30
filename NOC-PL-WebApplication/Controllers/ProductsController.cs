@@ -79,8 +79,10 @@ namespace NOC_PL_WebApplication.Controllers
             if (product.ProductServer == null) {
                 product.ProductServer = new Server { ServerName = server };
                 product.ProductGroup = "Testing";
-                _context.UpdateAsync(product);
-                await _context.SaveChanges();
+                _context.Update(product);
+                
+                await _context.SaveChangesAsync();
+                
                 return RedirectToRoute(new { Controller = "TableDataVMs", Action = "Index" });
             }
             else {
