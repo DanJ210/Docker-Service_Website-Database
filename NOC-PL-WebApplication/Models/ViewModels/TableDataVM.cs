@@ -5,10 +5,10 @@ using System.Threading.Tasks;
 
 namespace NOCPLWebApplication.Models {
     public class TableDataVM {
-        private ProductLocationContext _context;
-        public TableDataVM() {
+        //private ProductLocationContext _context;
+        //public TableDataVM() {
 
-        }
+        //}
         //public TableDataVM(ProductLocationContext context) {
         //    _context = context;
         //    TableProduct = _context.Products.ToList();

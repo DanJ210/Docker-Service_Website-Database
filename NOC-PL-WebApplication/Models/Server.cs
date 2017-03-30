@@ -10,7 +10,5 @@ namespace NOCPLWebApplication.Models {
         public int TableNumber { get; set; }
         public string ServerName { get; set; }
         public string ServerGroup { get; set; }
-        public ICollection<Product> ProductsContained { get; set; }
-
     }
 }
