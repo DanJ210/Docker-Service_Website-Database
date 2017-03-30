@@ -8,9 +8,10 @@ using NOCPLWebApplication.Models;
 namespace NOCPLWebApplication.Migrations
 {
     [DbContext(typeof(ProductLocationContext))]
-    partial class ProductLocationContextModelSnapshot : ModelSnapshot
+    [Migration("20170330155023_ChangingTableDataVMProperties")]
+    partial class ChangingTableDataVMProperties
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.1.1")
@@ -27,15 +28,11 @@ namespace NOCPLWebApplication.Migrations
 
                     b.Property<int?>("ProductServerId");
 
-                    b.Property<int?>("TableDataVMId");
-
                     b.Property<int>("TableNumber");
 
                     b.HasKey("Id");
 
                     b.HasIndex("ProductServerId");
-
-                    b.HasIndex("TableDataVMId");
 
                     b.ToTable("Products");
                 });
@@ -49,13 +46,9 @@ namespace NOCPLWebApplication.Migrations
 
                     b.Property<string>("ServerName");
 
-                    b.Property<int?>("TableDataVMId");
-
                     b.Property<int>("TableNumber");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("TableDataVMId");
 
                     b.ToTable("Servers");
                 });
@@ -65,7 +58,15 @@ namespace NOCPLWebApplication.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<int?>("TableProductId");
+
+                    b.Property<int?>("TableServerId");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("TableProductId");
+
+                    b.HasIndex("TableServerId");
 
                     b.ToTable("TableDataVM");
                 });
@@ -75,17 +76,17 @@ namespace NOCPLWebApplication.Migrations
                     b.HasOne("NOCPLWebApplication.Models.Server", "ProductServer")
                         .WithMany("ProductsContained")
                         .HasForeignKey("ProductServerId");
-
-                    b.HasOne("NOCPLWebApplication.Models.TableDataVM")
-                        .WithMany("TableProduct")
-                        .HasForeignKey("TableDataVMId");
                 });
 
-            modelBuilder.Entity("NOCPLWebApplication.Models.Server", b =>
+            modelBuilder.Entity("NOCPLWebApplication.Models.TableDataVM", b =>
                 {
-                    b.HasOne("NOCPLWebApplication.Models.TableDataVM")
-                        .WithMany("TableServer")
-                        .HasForeignKey("TableDataVMId");
+                    b.HasOne("NOCPLWebApplication.Models.Product", "TableProduct")
+                        .WithMany()
+                        .HasForeignKey("TableProductId");
+
+                    b.HasOne("NOCPLWebApplication.Models.Server", "TableServer")
+                        .WithMany()
+                        .HasForeignKey("TableServerId");
                 });
         }
     }

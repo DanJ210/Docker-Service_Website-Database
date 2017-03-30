@@ -10,6 +10,6 @@ namespace NOCPLWebApplication.Models {
         public int TableNumber { get; set; }
         public string ProductName { get; set; }
         public string ProductGroup { get; set; }
-
+        public Server ProductServer { get; set; }
     }
 }

@@ -1,4 +1,4 @@
-﻿@model IEnumerable<NOCPLWebApplication.Models.Product>
+﻿@model NOCPLWebApplication.Models.TableDataVM
 @*@model IEnumerable<NOCPLWebApplication.Models.Server>*@
 @{
     ViewBag.Title = "NOC Table Page";
@@ -25,13 +25,11 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach (var item in Model.Where(m => m.TableNumber == 1)) {
+                        @foreach (var item in Model.TableProduct) {
                             <tr>
-                                <td id="@item.Id" class="success">@item.ProductName @*@Html.DisplayFor(modelItem => item.ProductName)*@</td>
-                                
+                                <td id="@item.Id" class="success"> @item.ProductName</td>
+                                <td>@item.ProductServer</td>
                                 <td>@Html.ActionLink("Link", "GetServerNameByTableNumber", "Servers", new { id=item.Id })</td>
-                                <td>@*@Html.Partial("Index")*@</td>
-                                <td></td>
                             </tr>
                         }
                     </tbody>
@@ -53,10 +51,10 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach (var item in Model.Where(m => m.TableNumber == 2)) {
+                        @foreach (var item in Model.TableProduct) {
                             <tr>
                                 <td>@item.ProductName@*@Html.DisplayFor(modelItem => item.ProductName)*@</td>
-                                <td>Server</td>
+                                <td>@item.ProductServer</td>
                                 <td>Status</td>
                             </tr>
                         }
@@ -79,10 +77,10 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach (var item in Model.Where(m => m.TableNumber == 3)) {
+                        @foreach (var item in Model.TableProduct) {
                             <tr>
                                 <td>@item.ProductName@*@Html.DisplayFor(modelItem => item.ProductName)*@</td>
-                                <td>Server</td>
+                                <td>@item.ProductServer</td>
                                 <td>Status</td>
                             </tr>
                         }
@@ -104,10 +102,10 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach (var item in Model.Where(m => m.TableNumber == 4)) {
+                        @foreach (var item in Model.TableProduct) {
                             <tr>
                                 <td>@item.ProductName@*@Html.DisplayFor(modelItem => item.ProductName)*@</td>
-                                <td>Server</td>
+                                <td>@item.ProductServer</td>
                             </tr>
                         }
                     </tbody>
@@ -129,10 +127,10 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach (var item in Model.Where(m => m.TableNumber == 5)) {
+                        @foreach (var item in Model.TableProduct) {
                             <tr>
                                 <td>@item.ProductName@*@Html.DisplayFor(modelItem => item.ProductName)*@</td>
-                                <td>Server</td>
+                                <td>@item.ProductServer</td>
                                 <td>Status</td>
                             </tr>
                         }
@@ -155,10 +153,10 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach (var item in Model.Where(m => m.TableNumber == 6)) {
+                        @foreach (var item in Model.TableProduct) {
                             <tr>
-                                <td>@item.ProductName@*@Html.DisplayFor(modelItem => item.ProductName)*@</td>
-                                <td>Server</td>
+                                <td>@item.ProductName @*@Html.DisplayFor(modelItem => item.ProductName)*@</td>
+                                <td>@item.ProductServer</td>
                                 <td>Status</td>
                             </tr>
                         }
@@ -181,10 +179,10 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach (var item in Model.Where(m => m.TableNumber == 7)) {
+                        @foreach (var item in Model.TableProduct) {
                             <tr>
                                 <td>@item.ProductName@*@Html.DisplayFor(modelItem => item.ProductName)*@</td>
-                                <td>Server</td>
+                                <td>@item.ProductServer</td>
                                 <td>Status</td>
                             </tr>
                         }
