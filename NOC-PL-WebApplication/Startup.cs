@@ -46,7 +46,7 @@ namespace NOC_PL_WebApplication {
                 );
             config.MapRoute(
                 name: "TableDataVM",
-                template:  "{Controller}/{Action}/{id?}/{server?}"
+                template:  "{Controller}/{Action}/{id?}/{serverId?}"
                 );
             });
 

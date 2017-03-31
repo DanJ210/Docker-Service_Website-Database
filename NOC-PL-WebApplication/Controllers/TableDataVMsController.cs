@@ -8,21 +8,17 @@ using Microsoft.EntityFrameworkCore;
 using NOCPLWebApplication.Models;
 using System.Collections;
 
-namespace NOC_PL_WebApplication.Controllers
-{
-    public class TableDataVMsController : Controller
-    {
+namespace NOC_PL_WebApplication.Controllers {
+    public class TableDataVMsController : Controller {
         private readonly ProductLocationContext _context;
 
-        public TableDataVMsController(ProductLocationContext context)
-        {
+        public TableDataVMsController(ProductLocationContext context) {
             _context = context;    
         }
 
         // GET: TableDataVMs
-        public async Task<IActionResult> Index()
-        {
-            //var tableDataVM;
+        public async Task<IActionResult> Index() {
+            
             var tableDataVM = new TableDataVM();
             tableDataVM.TableProduct = await _context.Products.ToListAsync();
             tableDataVM.TableServer = await _context.Servers.ToListAsync();
@@ -30,60 +26,60 @@ namespace NOC_PL_WebApplication.Controllers
         }
 
         // GET: TableDataVMs/Details/5
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
+        //public async Task<IActionResult> Details(int? id)
+        //{
+        //    if (id == null)
+        //    {
+        //        return NotFound();
+        //    }
 
-            var tableDataVM = await _context.TableDataVM
-                .SingleOrDefaultAsync(m => m.Id == id);
-            if (tableDataVM == null)
-            {
-                return NotFound();
-            }
+        //    var tableDataVM = await _context.TableDataVM
+        //        .SingleOrDefaultAsync(m => m.Id == id);
+        //    if (tableDataVM == null)
+        //    {
+        //        return NotFound();
+        //    }
 
-            return View(tableDataVM);
-        }
+        //    return View(tableDataVM);
+        //}
 
         // GET: TableDataVMs/Create
-        public IActionResult Create()
-        {
-            return View();
-        }
+        //public IActionResult Create()
+        //{
+        //    return View();
+        //}
 
         // POST: TableDataVMs/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id")] TableDataVM tableDataVM)
-        {
-            if (ModelState.IsValid)
-            {
-                _context.Add(tableDataVM);
-                await _context.SaveChangesAsync();
-                return RedirectToAction("Index");
-            }
-            return View(tableDataVM);
-        }
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public async Task<IActionResult> Create([Bind("Id")] TableDataVM tableDataVM)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        _context.Add(tableDataVM);
+        //        await _context.SaveChangesAsync();
+        //        return RedirectToAction("Index");
+        //    }
+        //    return View(tableDataVM);
+        //}
 
         // GET: TableDataVMs/Edit/5
-        public async Task<IActionResult> Edit(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
+        //public async Task<IActionResult> Edit(int? id)
+        //{
+        //    if (id == null)
+        //    {
+        //        return NotFound();
+        //    }
 
-            var tableDataVM = await _context.TableDataVM.SingleOrDefaultAsync(m => m.Id == id);
-            if (tableDataVM == null)
-            {
-                return NotFound();
-            }
-            return View(tableDataVM);
-        }
+        //    var tableDataVM = await _context.TableDataVM.SingleOrDefaultAsync(m => m.Id == id);
+        //    if (tableDataVM == null)
+        //    {
+        //        return NotFound();
+        //    }
+        //    return View(tableDataVM);
+        //}
 
         // POST: TableDataVMs/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
@@ -121,33 +117,33 @@ namespace NOC_PL_WebApplication.Controllers
         }
 
         // GET: TableDataVMs/Delete/5
-        public async Task<IActionResult> Delete(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
+        //public async Task<IActionResult> Delete(int? id)
+        //{
+        //    if (id == null)
+        //    {
+        //        return NotFound();
+        //    }
 
-            var tableDataVM = await _context.TableDataVM
-                .SingleOrDefaultAsync(m => m.Id == id);
-            if (tableDataVM == null)
-            {
-                return NotFound();
-            }
+        //    var tableDataVM = await _context.TableDataVM
+        //        .SingleOrDefaultAsync(m => m.Id == id);
+        //    if (tableDataVM == null)
+        //    {
+        //        return NotFound();
+        //    }
 
-            return View(tableDataVM);
-        }
+        //    return View(tableDataVM);
+        //}
 
         // POST: TableDataVMs/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
-            var tableDataVM = await _context.TableDataVM.SingleOrDefaultAsync(m => m.Id == id);
-            _context.TableDataVM.Remove(tableDataVM);
-            await _context.SaveChangesAsync();
-            return RedirectToAction("Index");
-        }
+        //[HttpPost, ActionName("Delete")]
+        //[ValidateAntiForgeryToken]
+        //public async Task<IActionResult> DeleteConfirmed(int id)
+        //{
+        //    var tableDataVM = await _context.TableDataVM.SingleOrDefaultAsync(m => m.Id == id);
+        //    _context.TableDataVM.Remove(tableDataVM);
+        //    await _context.SaveChangesAsync();
+        //    return RedirectToAction("Index");
+        //}
 
         private bool TableDataVMExists(int id)
         {
