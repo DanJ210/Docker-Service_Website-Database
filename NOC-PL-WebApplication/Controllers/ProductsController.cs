@@ -74,7 +74,7 @@ namespace NOC_PL_WebApplication.Controllers
             var count = tableDataProducts.Count();
             var product = await _context.Products.SingleOrDefaultAsync(m => m.Id == id);
             var servers = await _context.Servers.CountAsync();
-            var productServerId = product.ProductServer.Id;
+            //var productServerId = product.ProductServer.Id;
             //var productOfServer = _context.Servers.Select(s => s);
             if (product == null) {
                 return NotFound();
