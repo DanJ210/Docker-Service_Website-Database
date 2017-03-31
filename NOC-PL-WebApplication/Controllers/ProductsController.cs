@@ -66,11 +66,15 @@ namespace NOC_PL_WebApplication.Controllers
 
         // GET: Products/Edit/5
         public async Task<IActionResult> Index(int? id, string server) {
+            //ProductLocationContext newContext = new DbContext(ProductLocationContext);
             if (id == null) {
                 return NotFound();
             }
-
+            var tableDataProducts = await _context.TableDataVM.ToListAsync();
+            var count = tableDataProducts.Count();
             var product = await _context.Products.SingleOrDefaultAsync(m => m.Id == id);
+            var servers = await _context.Servers.CountAsync();
+            var productServerId = product.ProductServer.Id;
             //var productOfServer = _context.Servers.Select(s => s);
             if (product == null) {
                 return NotFound();
@@ -80,7 +84,7 @@ namespace NOC_PL_WebApplication.Controllers
                 product.ProductServer = new Server { ServerName = server };
                 product.ProductGroup = "Testing";
                 _context.Update(product);
-                
+                //_context.Update(TableDataVM);
                 await _context.SaveChangesAsync();
                 
                 return RedirectToRoute(new { Controller = "TableDataVMs", Action = "Index" });
