@@ -12,6 +12,14 @@ namespace NOC_PL_WebApplication.Controllers
     public class ProductsController : Controller
     {
         private readonly ProductLocationContext _context;
+        /// <summary>
+        /// Returns true or false if a product exists or not
+        /// </summary>
+        /// <param name="id">Product Id of which cell was clicked</param>
+        /// <returns>boolean</returns>
+        private bool ProductExists(int id) {
+            return _context.Products.Any(e => e.Id == id);
+        }
 
         public ProductsController(ProductLocationContext context)
         {
@@ -70,10 +78,9 @@ namespace NOC_PL_WebApplication.Controllers
             if (id == null) {
                 return NotFound();
             }
-            var tableDataProducts = await _context.TableDataVM.ToListAsync();
-            var count = tableDataProducts.Count();
+            
             var product = await _context.Products.SingleOrDefaultAsync(m => m.Id == id);
-            var servers = await _context.Servers.CountAsync();
+            var servers = await _context.Servers.ToListAsync();
             //var productServerId = product.ProductServer.Id;
             //var productOfServer = _context.Servers.Select(s => s);
             if (product == null) {
@@ -166,9 +173,6 @@ namespace NOC_PL_WebApplication.Controllers
             return RedirectToAction("Index");
         }
 
-        private bool ProductExists(int id)
-        {
-            return _context.Products.Any(e => e.Id == id);
-        }
+        
     }
 }

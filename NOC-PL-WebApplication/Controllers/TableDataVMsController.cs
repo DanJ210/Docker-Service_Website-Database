@@ -20,12 +20,12 @@ namespace NOC_PL_WebApplication.Controllers
         }
 
         // GET: TableDataVMs
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
             //var tableDataVM;
             var tableDataVM = new TableDataVM();
-            tableDataVM.TableProduct = _context.Products.ToList();
-            tableDataVM.TableServer = _context.Servers.ToList();
+            tableDataVM.TableProduct = await _context.Products.ToListAsync();
+            tableDataVM.TableServer = await _context.Servers.ToListAsync();
             return View(tableDataVM);
         }
 
