@@ -28,7 +28,6 @@ namespace NOC_PL_WebApplication.Controllers
         /// <param name="serverId">Id of the server to set to product</param>
         /// <returns>RedirectToRoute of Controller="TableDataVMs"/Action="Index"</returns>
         public async Task<IActionResult> Index(int? id, int? serverId) {
-            //ProductLocationContext newContext = new DbContext(ProductLocationContext);
             if (id == null) {
                 return NotFound();
             }

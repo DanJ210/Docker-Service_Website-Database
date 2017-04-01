@@ -15,7 +15,7 @@ namespace NOCPLWebApplication.Models {
         //    TableServer = _context.Servers.ToList();
         //}
         public int Id { get; set; }
-        public ICollection<Product> TableProduct { get; set; }
-        public ICollection<Server> TableServer { get; set; }
+        public ICollection<Product> TableProducts { get; set; }
+        public ICollection<Server> TableServers { get; set; }
     }
 }

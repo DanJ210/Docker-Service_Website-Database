@@ -20,8 +20,10 @@ namespace NOC_PL_WebApplication.Controllers {
         public async Task<IActionResult> Index() {
             
             var tableDataVM = new TableDataVM();
-            tableDataVM.TableProduct = await _context.Products.ToListAsync();
-            tableDataVM.TableServer = await _context.Servers.ToListAsync();
+            tableDataVM.TableProducts = await _context.Products.ToListAsync();
+            tableDataVM.TableServers = await _context.Servers.ToListAsync();
+            SelectList serverList = new SelectList(tableDataVM.TableServers);
+            ViewBag.serverList = serverList;
             return View(tableDataVM);
         }
 
