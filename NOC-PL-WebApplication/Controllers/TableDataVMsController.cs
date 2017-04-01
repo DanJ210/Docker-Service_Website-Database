@@ -22,7 +22,8 @@ namespace NOC_PL_WebApplication.Controllers {
             var tableDataVM = new TableDataVM();
             tableDataVM.TableProducts = await _context.Products.ToListAsync();
             tableDataVM.TableServers = await _context.Servers.ToListAsync();
-            SelectList serverList = new SelectList(tableDataVM.TableServers);
+            SelectList serverList = new SelectList(tableDataVM.TableServers, "Id", "ServerName");
+            
             ViewBag.serverList = serverList;
             return View(tableDataVM);
         }

@@ -13,6 +13,7 @@ namespace NOCPLWebApplication.Models {
         }
         public DbSet<Product> Products { get; set; }
         public DbSet<Server> Servers { get; set; }
+        public DbSet<NOCPLWebApplication.Models.TableDataVM> TableDataVM { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) {
             base.OnConfiguring(optionsBuilder);
@@ -22,7 +23,7 @@ namespace NOCPLWebApplication.Models {
             //optionsBuilder.UseSqlServer(_config[""]);
         }
 
-        public DbSet<NOCPLWebApplication.Models.TableDataVM> TableDataVM { get; set; }
+        
 
     }
 }
