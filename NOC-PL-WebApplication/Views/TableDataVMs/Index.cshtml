@@ -29,7 +29,8 @@
                             <tr>
                                 <td id="@item.Id" class="success"> @item.ProductName</td>
                                 @*<td>@Html.ActionLink("Link", "Index", "Products",  new { id=item.Id, serverId = 1} ) </td>*@
-                                <td>@Html.DropDownList("ServerList", ViewBag.serverList as SelectList, "Select")</td>
+                                <td id="serverCell"></td>
+                                @*<td>@Html.DropDownList("ServerList", ViewBag.serverList as SelectList, "Select")</td>*@
                                 @*<td>@if (item.ProductServer != null) { @item.ProductServer.ServerName; }</td>*@
                                 @*<td>@Html.ActionLink("Link", "GetServerNameByTableNumber", "Servers", new { id=item.Id })</td>*@
                                 <td>Status</td>

@@ -22,8 +22,5 @@ namespace NOCPLWebApplication.Models {
             // To use a config file when ready
             //optionsBuilder.UseSqlServer(_config[""]);
         }
-
-        
-
     }
 }

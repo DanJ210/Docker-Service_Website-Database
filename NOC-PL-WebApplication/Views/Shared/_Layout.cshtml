@@ -50,9 +50,7 @@
                 </div>
                 <div class="modal-body">
                     <ul>
-                        <li id="modalTd"></li>
-                        <li></li>
-                        <li></li>
+                        <li id="modalTd">@Html.DropDownList("Server Select", ViewBag.serverList as SelectList, "Select Server")</li>
                     </ul>
                 </div>
                 <div class="modal-footer">
