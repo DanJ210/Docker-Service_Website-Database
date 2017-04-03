@@ -34,16 +34,20 @@ namespace NOC_PL_WebApplication {
             app.UseStaticFiles();
 
             app.UseMvc(config => {
-                config.MapRoute(
-                    name: "Default",
-                    template: "{Controller}/{Action}/{id?}",
-                    defaults: new { controller = "App", action = "Index" }
-                    );
-                //config.MapRoute(
-                //    name: "Tables",
-                //    template: "{Controller}/{Action}/{id?}",
-                //    defaults: new { controller = "Table", action = "Index" }
-                //    );
+            config.MapRoute(
+                name: "Default",
+                template: "{Controller}/{Action}/{id?}",
+                defaults: new { controller = "App", action = "Index" }
+                );
+            config.MapRoute(
+                name: "Tables",
+                template: "{Controller}/{Action}/{id?}",
+                defaults: new { controller = "TableDataVMs", action = "Index" }
+                );
+            config.MapRoute(
+                name: "TableDataVM",
+                template:  "{Controller}/{Action}/{id?}/{serverId?}"
+                );
             });
 
             // The call to seed data, .Wait() trick to fake async

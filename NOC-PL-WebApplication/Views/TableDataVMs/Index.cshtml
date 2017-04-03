@@ -1,0 +1,220 @@
+﻿@model NOCPLWebApplication.Models.TableDataVM
+@*@model IEnumerable<NOCPLWebApplication.Models.Server>*@
+@{
+    ViewBag.Title = "NOC Table Page";
+    
+}
+@section scripts{
+    <link href="~/css/serverModal.styles.css" rel="stylesheet" />
+    <script src="~/js/serverModal.Controller.js"></script>
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-5">
+            <div class="table">
+                <table class="table table-condensed">
+                    <thead>
+                        <tr>
+                            Table 1
+                        </tr>
+                        <tr>
+                            <th>Product</th>
+                            <th>Server</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.TableProducts.Where(product => product.TableNumber == 1)) {
+                            <tr>
+                                <td id="@item.Id" class="success"> @item.ProductName</td>
+                                @*<td>@Html.ActionLink("Link", "Index", "Products",  new { id=item.Id, serverId = 1} ) </td>*@
+                                <td id="serverCell">Server</td>
+                                @*<td>@Html.DropDownList("ServerList", ViewBag.serverList as SelectList, "Select")</td>*@
+                                @*<td>@if (item.ProductServer != null) { @item.ProductServer.ServerName; }</td>*@
+                                @*<td>@Html.ActionLink("Link", "GetServerNameByTableNumber", "Servers", new { id=item.Id })</td>*@
+                                <td>Status</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="col-md-5">
+            <div class="table">
+                <table class="table table-responsive">
+                    <thead>
+                        <tr>
+                            Table 2
+                        </tr>
+                        <tr>
+                            <th>Product</th>
+                            <th>Server</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.TableProducts.Where(product => product.TableNumber == 2)) {
+                            <tr>
+                                <td id="@item.Id" class="success">@item.ProductName</td>
+                                <td>@Html.DropDownList("ServerList", ViewBag.serverList as SelectList, "Select")</td>
+                                <td>Status</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="col-md-5">
+            <div class="table">
+                <table class="table table-responsive">
+                    <thead>
+                        <tr>
+                            Table 3
+                        </tr>
+                        <tr>
+                            <th>Product</th>
+                            <th>Server</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.TableProducts.Where(product => product.TableNumber == 3)) {
+                            <tr>
+                                <td id="@item.Id" class="success">@item.ProductName</td>
+                                <td>@Html.DropDownList("ServerList", ViewBag.serverList as SelectList, "Select")</td>
+                                <td>Status</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="col-md-5">
+            <div class="table">
+                <table class="table table-responsive">
+                    <thead>
+                        <tr>
+                            SQL Table
+                        </tr>
+                        <tr>
+                            <th>SQL Alias</th>
+                            <th>SQL Server</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.TableProducts.Where(product => product.TableNumber == 4)) {
+                            <tr>
+                                <td id="@item.Id" class="success">@item.ProductName</td>
+                                <td>@Html.DropDownList("ServerList", ViewBag.serverList as SelectList, "Select")</td>
+                                <td>Status</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="col-md-5">
+            <div class="table">
+                <table class="table table-responsive">
+                    <thead>
+                        <tr>
+                            HORDE
+                        </tr>
+                        <tr>
+                            <th>Horde</th>
+                            <th>Active Site</th>
+                            <th>Horde Server</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.TableProducts.Where(product => product.TableNumber == 5)) {
+                            <tr>
+                                <td id="@item.Id" class="success">@item.ProductName</td>
+                                <td>@Html.DropDownList("ServerList", ViewBag.serverList as SelectList, "Select")</td>
+                                <td>Status</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="col-md-5">
+            <div class="table">
+                <table class="table table-responsive">
+                    <thead>
+                        <tr>
+                            UBER
+                        </tr>
+                        <tr>
+                            <th>Uber</th>
+                            <th>Product</th>
+                            <th>Uber Server</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.TableProducts.Where(product => product.TableNumber == 6)) {
+                            <tr>
+                                <td id="@item.Id" class="success">@item.ProductName</td>
+                                <td>@Html.DropDownList("ServerList", ViewBag.serverList as SelectList, "Select")</td>
+                                <td>Status</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="col-md-5">
+            <div class="table">
+                <table class="table table-responsive">
+                    <thead>
+                        <tr>
+                            IPAWS
+                        </tr>
+                        <tr>
+                            <th>IPAWS</th>
+                            <th>Server</th>
+                            <th>Active Site</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.TableProducts.Where(product => product.TableNumber == 7)) {
+                            <tr>
+                                <td id="@item.Id" class="success">@item.ProductName</td>
+                                <td>@Html.DropDownList("ServerList", ViewBag.serverList as SelectList, "Select")</td>
+                                <td>Status</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="serverModal" role="menu">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 id="modalTitle" class="modal-title">Server Select</h4>
+                <button id="windowClose" class="fa fa-window-close" data-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <ul>
+                    @*<li id="modalTd">@Html.DropDownList("ServerList", ViewBag.serverList as SelectList, "Select Server")</li>*@
+                    @*<li>@Html.DropDownList("ServerList", ViewBag.serverList as SelectList, "Select")</li>*@
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-danger" data-dismiss="modal">Close</button>
+                <h4>End Servers</h4>
+            </div>
+        </div>
+    </div>
+</div>

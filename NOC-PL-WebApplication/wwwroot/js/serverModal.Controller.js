@@ -1,7 +1,8 @@
 ﻿$(document).ready(function () {
-    //alert("ready");
+    alert("ready");
     $('td').click(function () {
         var currentId = $(this).offset();
+        alert("Clicked");
         //alert(currentId.left);
         //awesome.id();
         //alert(awesome.screenX);
@@ -16,10 +17,18 @@
         //alert(position);
 
         //alert("clicked");
+        //$('#serverModal').text("Hello");
+        
+        $('#serverModal').on('show.bs.modal', function () {
+
+
+            // Get that got all servers from a past web API
+            //$.get("/api/servers/", function (data, status) {
+            //    $('#modalTd').text(data);
+            //});
+        });
         $('#serverModal').modal().css("left", currentId.left).css("top", currentId.top);
-        //$('#serverModal').modal('show.bs.modal', function () {
-        //    $('.modal-dialog').css("left", "800px");
-        //});
+        
 
     });
 });

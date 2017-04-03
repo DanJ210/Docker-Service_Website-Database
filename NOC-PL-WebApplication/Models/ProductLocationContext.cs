@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using NOCPLWebApplication.Models;
 
 namespace NOCPLWebApplication.Models {
     public class ProductLocationContext : DbContext {
@@ -12,6 +13,7 @@ namespace NOCPLWebApplication.Models {
         }
         public DbSet<Product> Products { get; set; }
         public DbSet<Server> Servers { get; set; }
+        public DbSet<NOCPLWebApplication.Models.TableDataVM> TableDataVM { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) {
             base.OnConfiguring(optionsBuilder);
@@ -20,6 +22,5 @@ namespace NOCPLWebApplication.Models {
             // To use a config file when ready
             //optionsBuilder.UseSqlServer(_config[""]);
         }
-
     }
 }

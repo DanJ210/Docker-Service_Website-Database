@@ -6,6 +6,10 @@
     "jquery": "~3.2.1",
     "bootstrap": "~3.3.7",
     "font-awesome": "~4.7.0",
-    "angular2": "~1.6.3"
+    "angular2": "~1.6.3",
+    "jquery-modal": "~0.8.0"
+  },
+  "resolutions": {
+    "jquery": "1.9.1 - 3"
   }
 }
