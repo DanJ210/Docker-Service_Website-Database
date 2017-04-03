@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using NOCPLWebApplication.Models;
+using Microsoft.AspNetCore.Http;
 
 namespace NOC_PL_WebApplication.Controllers
 {
@@ -35,19 +36,18 @@ namespace NOC_PL_WebApplication.Controllers
                 if (!ProductExists((int)id)) {
                     return NotFound();
                 }
-                var product = await _context.Products.SingleOrDefaultAsync(m => m.Id == id);
-                var servers = _context.Servers.ToList();
+                //var product = await _context.Products.SingleOrDefaultAsync(m => m.Id == id);
+                //var servers = await _context.Servers.ToListAsync();
 
-                product.ProductServer = servers.Single(s => s.Id == serverId);
+                //product.ProductServer = servers.Single(s => s.Id == serverId);
 
-                _context.Update(product);
-                await _context.SaveChangesAsync();
+                //_context.Update(product);
+                //await _context.SaveChangesAsync();
                 return RedirectToRoute(new { Controller = "TableDataVMs", Action = "Index" });
             }
             catch (Exception ex) { // TODO: Add logger for exception catching.
                 return RedirectToRoute(new { Controller = "TableDataVMs", Action = "Index" });
             }
-
             //if (product.ProductServer == null) {
             //    product.ProductServer = new Server { ServerName = server };
             //    product.ProductGroup = "Testing";
@@ -67,7 +67,19 @@ namespace NOC_PL_WebApplication.Controllers
             //await _context.SaveChangesAsync();
             //return View();
             //return RedirectToRoute("Tables", new { Controller = "TableDataVMs", Action = "Index" });
+        }
 
+        [HttpPost]
+        public async void SaveSelectedServer(int? productId, int? serverId) {
+            
+            var product = await _context.Products.SingleOrDefaultAsync(p => p.Id == productId);
+            var server = await _context.Servers.ToListAsync();
+
+            product.ProductServer = server.Single(s => s.Id == serverId);
+
+            _context.Update(product);
+            await _context.SaveChangesAsync();
+            
         }
 
         // GET: Products

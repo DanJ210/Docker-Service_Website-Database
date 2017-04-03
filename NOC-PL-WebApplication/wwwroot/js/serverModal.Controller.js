@@ -1,23 +1,20 @@
 ﻿$(document).ready(function () {
-    alert("ready");
-    $('td').click(function () {
-        var currentId = $(this).offset();
-        alert("Clicked");
-        //alert(currentId.left);
-        //awesome.id();
-        //alert(awesome.screenX);
-        //alert(awesome.returnValue);
-        //alert(awesome.result);
-        //alert(awesome.pageX);
-        //alert(awesome.pagey);
-        //var position = this.position();
-        //var x = awesome.pageX;
-        //var position = awesome.position;
-        //alert(x);
-        //alert(position);
+    //alert("ready");
+    //var serverCell = $().attr("cellClass");
 
-        //alert("clicked");
-        //$('#serverModal').text("Hello");
+    //serverCell.click(function () {
+    //    alert("Cell class clicked");
+    //});
+    //$('td').click(function () {
+        
+    //    alert($(this).attr("cellClass"));
+    //});
+    $('[cellClass]').click(function () {
+        var currentCellIdPosition = $(this).offset();
+        //alert("Clicked");
+        //var cellId = $(this).attr('id');
+        //alert(cellId);
+        //alert(currentId.left);
         
         $('#serverModal').on('show.bs.modal', function () {
 
@@ -27,8 +24,22 @@
             //    $('#modalTd').text(data);
             //});
         });
-        $('#serverModal').modal().css("left", currentId.left).css("top", currentId.top);
-        
+        $('#serverModal').modal().css("left", currentCellIdPosition.left).css("top", currentCellIdPosition.top);
 
+        $('#saveButton').click(function () {
+            //alert("#ServerList").attr('id');
+            $('#serverModal').modal('hide');
+        });
+        //$('#serverModal').on('hide.bs.modal', function () {
+            
+        //    //alert("Modal about to be hidden");
+        //    //alert('#ServerList').val();
+        //    alert($('#ServerList option:selected').text());
+        //});
     });
+    
 });
+
+function serverListChange() {
+    alert("server selected");
+}

@@ -29,7 +29,7 @@
                             <tr>
                                 <td id="@item.Id" class="success"> @item.ProductName</td>
                                 @*<td>@Html.ActionLink("Link", "Index", "Products",  new { id=item.Id, serverId = 1} ) </td>*@
-                                <td id="serverCell">Server</td>
+                                <td id="@item.Id" cellClass="serverCell">Server</td>
                                 @*<td>@Html.DropDownList("ServerList", ViewBag.serverList as SelectList, "Select")</td>*@
                                 @*<td>@if (item.ProductServer != null) { @item.ProductServer.ServerName; }</td>*@
                                 @*<td>@Html.ActionLink("Link", "GetServerNameByTableNumber", "Servers", new { id=item.Id })</td>*@
@@ -198,7 +198,7 @@
     </div>
 </div>
 
-<div class="modal fade" id="serverModal" role="menu">
+<div class="modal fade" id="serverModal" role="dialog" >
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -207,12 +207,12 @@
             </div>
             <div class="modal-body">
                 <ul>
-                    @*<li id="modalTd">@Html.DropDownList("ServerList", ViewBag.serverList as SelectList, "Select Server")</li>*@
+                    <li id="modalTd">@Html.DropDownList("ServerList", ViewBag.serverList as SelectList, "Select Server", new {onchange = "serverListChange()" })</li>
                     @*<li>@Html.DropDownList("ServerList", ViewBag.serverList as SelectList, "Select")</li>*@
                 </ul>
             </div>
             <div class="modal-footer">
-                <button class="btn btn-danger" data-dismiss="modal">Close</button>
+                <button id="saveButton" class="btn btn-success">Save</button>
                 <h4>End Servers</h4>
             </div>
         </div>
