@@ -1,8 +1,8 @@
 ﻿$(document).ready(function () {
-    alert("ready");
+    //alert("ready");
     $('td').click(function () {
         var currentId = $(this).offset();
-        alert("Clicked");
+        //alert("Clicked");
         //alert(currentId.left);
         //awesome.id();
         //alert(awesome.screenX);
