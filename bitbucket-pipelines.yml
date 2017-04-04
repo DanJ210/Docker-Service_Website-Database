@@ -10,7 +10,7 @@ pipelines:
     - step:
         script: # Modify the commands below to build your repository.
         - cd NOC-PL-WebApplication
-        - dotnet commands
-          #- dotnet restore
-          #- dotnet build
+        #- dotnet commands
+          - dotnet restore
+          - dotnet build
 #          - dotnet test TestName
