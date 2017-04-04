@@ -3,12 +3,14 @@
 # Only use spaces to indent your .yml configuration.
 # -----
 # You can specify a custom docker image from Docker Hub as your build environment.
-image: microsoft/dotnet:onbuild
+image: microsoft/dotnet:1.1-sdk
 
 pipelines:
   default:
     - step:
         script: # Modify the commands below to build your repository.
-          - dotnet restore
-          - dotnet build
+        - cd NOC-PL-WebApplication
+        - #dotnet commands
+          #- dotnet restore
+          #- dotnet build
 #          - dotnet test TestName
