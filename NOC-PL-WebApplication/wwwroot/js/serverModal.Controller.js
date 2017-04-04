@@ -51,14 +51,24 @@ $(document).ready(function () {
 
 function serverListChange() {
     var serverId = $('#ServerSelectList').val();
-    alert(serverId);
+    //alert(serverId);
     $.post("products/SaveSelectedServer",
         {
             productName: productName,
             serverId: serverId
         },
         function (data, status) {
-            alert("data: " + data + "\nStatus: " + status)
+            //alert("data: " + data + "\nStatus: " + status);
+            
         });
+    //$.post("servers/GetServerNameById",
+    //    {
+    //        serverId: serverId
+    //    },
+    //    function (data, status) {
+    //        //$('td').attr('id', data).text("Testing");
+    //        //alert(data + "  " + status);
+    //    }
+    //);
     //$('[serverCell]').text("Test");
 }

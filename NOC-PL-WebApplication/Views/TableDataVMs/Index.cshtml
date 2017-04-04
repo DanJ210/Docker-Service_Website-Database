@@ -29,7 +29,7 @@
                             <tr>
                                 <td id="@item.Id" class="success"> @item.ProductName</td>
                                 @*<td>@Html.ActionLink("Link", "Index", "Products",  new { id=item.Id, serverId = 1} ) </td>*@
-                                <td id="@item.ProductName" serverCell="tableCell">Server</td>
+                                <td id="@item.ProductName" serverCell="tableCell">@if (item.ProductServer != null) { @item.ProductServer.ServerName; }</td>
                                 @*<td>@Html.DropDownList("ServerList", ViewBag.serverList as SelectList, "Select")</td>*@
                                 @*<td>@if (item.ProductServer != null) { @item.ProductServer.ServerName; }</td>*@
                                 @*<td>@Html.ActionLink("Link", "GetServerNameByTableNumber", "Servers", new { id=item.Id })</td>*@
@@ -57,8 +57,9 @@
                     <tbody>
                         @foreach (var item in Model.TableProducts.Where(product => product.TableNumber == 2)) {
                             <tr>
-                                <td id="@item.Id" class="success">@item.ProductName</td>
-                                <td>@Html.DropDownList("ServerList", ViewBag.serverList as SelectList, "Select")</td>
+                                <td id="@item.Id" class="success"> @item.ProductName</td>
+                                @*<td>@Html.ActionLink("Link", "Index", "Products",  new { id=item.Id, serverId = 1} ) </td>*@
+                                <td id="@item.ProductName" serverCell="tableCell">@if (item.ProductServer != null) { @item.ProductServer.ServerName; }</td>
                                 <td>Status</td>
                             </tr>
                         }
@@ -83,8 +84,9 @@
                     <tbody>
                         @foreach (var item in Model.TableProducts.Where(product => product.TableNumber == 3)) {
                             <tr>
-                                <td id="@item.Id" class="success">@item.ProductName</td>
-                                <td>@Html.DropDownList("ServerList", ViewBag.serverList as SelectList, "Select")</td>
+                                <td id="@item.Id" class="success"> @item.ProductName</td>
+                                @*<td>@Html.ActionLink("Link", "Index", "Products",  new { id=item.Id, serverId = 1} ) </td>*@
+                                <td id="@item.ProductName" serverCell="tableCell">@if (item.ProductServer != null) { @item.ProductServer.ServerName; }</td>
                                 <td>Status</td>
                             </tr>
                         }
@@ -108,8 +110,9 @@
                     <tbody>
                         @foreach (var item in Model.TableProducts.Where(product => product.TableNumber == 4)) {
                             <tr>
-                                <td id="@item.Id" class="success">@item.ProductName</td>
-                                <td>@Html.DropDownList("ServerList", ViewBag.serverList as SelectList, "Select")</td>
+                                <td id="@item.Id" class="success"> @item.ProductName</td>
+                                @*<td>@Html.ActionLink("Link", "Index", "Products",  new { id=item.Id, serverId = 1} ) </td>*@
+                                <td id="@item.ProductName" serverCell="tableCell">@if (item.ProductServer != null) { @item.ProductServer.ServerName; }</td>
                                 <td>Status</td>
                             </tr>
                         }
@@ -134,8 +137,9 @@
                     <tbody>
                         @foreach (var item in Model.TableProducts.Where(product => product.TableNumber == 5)) {
                             <tr>
-                                <td id="@item.Id" class="success">@item.ProductName</td>
-                                <td>@Html.DropDownList("ServerList", ViewBag.serverList as SelectList, "Select")</td>
+                                <td id="@item.Id" class="success"> @item.ProductName</td>
+                                @*<td>@Html.ActionLink("Link", "Index", "Products",  new { id=item.Id, serverId = 1} ) </td>*@
+                                <td id="@item.ProductName" serverCell="tableCell">@if (item.ProductServer != null) { @item.ProductServer.ServerName; }</td>
                                 <td>Status</td>
                             </tr>
                         }
@@ -160,8 +164,9 @@
                     <tbody>
                         @foreach (var item in Model.TableProducts.Where(product => product.TableNumber == 6)) {
                             <tr>
-                                <td id="@item.Id" class="success">@item.ProductName</td>
-                                <td>@Html.DropDownList("ServerList", ViewBag.serverList as SelectList, "Select")</td>
+                                <td id="@item.Id" class="success"> @item.ProductName</td>
+                                @*<td>@Html.ActionLink("Link", "Index", "Products",  new { id=item.Id, serverId = 1} ) </td>*@
+                                <td id="@item.ProductName" serverCell="tableCell">@if (item.ProductServer != null) { @item.ProductServer.ServerName; }</td>
                                 <td>Status</td>
                             </tr>
                         }
@@ -186,8 +191,9 @@
                     <tbody>
                         @foreach (var item in Model.TableProducts.Where(product => product.TableNumber == 7)) {
                             <tr>
-                                <td id="@item.Id" class="success">@item.ProductName</td>
-                                <td>@Html.DropDownList("ServerList", ViewBag.serverList as SelectList, "Select")</td>
+                                <td id="@item.Id" class="success"> @item.ProductName</td>
+                                @*<td>@Html.ActionLink("Link", "Index", "Products",  new { id=item.Id, serverId = 1} ) </td>*@
+                                <td id="@item.ProductName" serverCell="tableCell">@if (item.ProductServer != null) { @item.ProductServer.ServerName; }</td>
                                 <td>Status</td>
                             </tr>
                         }
