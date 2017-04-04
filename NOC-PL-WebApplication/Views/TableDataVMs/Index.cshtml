@@ -29,7 +29,7 @@
                             <tr>
                                 <td id="@item.Id" class="success"> @item.ProductName</td>
                                 @*<td>@Html.ActionLink("Link", "Index", "Products",  new { id=item.Id, serverId = 1} ) </td>*@
-                                <td id="@item.Id" cellClass="serverCell">Server</td>
+                                <td id="@item.ProductName" serverCell="tableCell">Server</td>
                                 @*<td>@Html.DropDownList("ServerList", ViewBag.serverList as SelectList, "Select")</td>*@
                                 @*<td>@if (item.ProductServer != null) { @item.ProductServer.ServerName; }</td>*@
                                 @*<td>@Html.ActionLink("Link", "GetServerNameByTableNumber", "Servers", new { id=item.Id })</td>*@
@@ -207,7 +207,7 @@
             </div>
             <div class="modal-body">
                 <ul>
-                    <li id="modalTd">@Html.DropDownList("ServerList", ViewBag.serverList as SelectList, "Select Server", new {onchange = "serverListChange()" })</li>
+                    <li id="modalTd">@Html.DropDownList("ServerSelectList", ViewBag.serverList as SelectList, "Select Server", new {onchange = "serverListChange()" })</li>
                     @*<li>@Html.DropDownList("ServerList", ViewBag.serverList as SelectList, "Select")</li>*@
                 </ul>
             </div>

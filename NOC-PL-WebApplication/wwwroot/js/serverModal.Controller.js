@@ -1,4 +1,7 @@
-﻿$(document).ready(function () {
+﻿
+var productName;
+
+$(document).ready(function () {
     //alert("ready");
     //var serverCell = $().attr("cellClass");
 
@@ -6,16 +9,21 @@
     //    alert("Cell class clicked");
     //});
     //$('td').click(function () {
-        
+
     //    alert($(this).attr("cellClass"));
     //});
-    $('[cellClass]').click(function () {
+    $('[serverCell]').click(function () {
         var currentCellIdPosition = $(this).offset();
         //alert("Clicked");
-        //var cellId = $(this).attr('id');
-        //alert(cellId);
+        productName = $(this).attr('id');
+
         //alert(currentId.left);
-        
+        //function getProductId() {
+
+        //    return cellId
+        //}
+
+
         $('#serverModal').on('show.bs.modal', function () {
 
 
@@ -31,15 +39,24 @@
             $('#serverModal').modal('hide');
         });
         //$('#serverModal').on('hide.bs.modal', function () {
-            
+
         //    //alert("Modal about to be hidden");
         //    //alert('#ServerList').val();
         //    alert($('#ServerList option:selected').text());
         //});
     });
-    
 });
 
 function serverListChange() {
-    alert("server selected");
+    var serverId = $('#ServerSelectList').val();
+    alert(serverId);
+    $.post("products/SaveSelectedServer",
+        {
+            productName: "TNG",
+            serverId: serverId
+        },
+        function (data, status) {
+            alert("data: " + data + "\nStatus: " + status)
+        });
+    //$('[serverCell]').text("Test");
 }

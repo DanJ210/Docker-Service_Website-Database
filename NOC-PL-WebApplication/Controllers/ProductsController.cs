@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using NOCPLWebApplication.Models;
 using Microsoft.AspNetCore.Http;
+using System.Data.SqlClient;
 
 namespace NOC_PL_WebApplication.Controllers
 {
@@ -70,16 +71,21 @@ namespace NOC_PL_WebApplication.Controllers
         }
 
         [HttpPost]
-        public async void SaveSelectedServer(int? productId, int? serverId) {
+        public async Task<IActionResult> SaveSelectedServer(string productName, int? serverId) {
             
-            var product = await _context.Products.SingleOrDefaultAsync(p => p.Id == productId);
-            var server = await _context.Servers.ToListAsync();
+            var products = await _context.Products.ToListAsync();
+                
+            var servers = await _context.Servers.ToListAsync();
+            //if (products.Any(p => p.ProductName == productName)) {
+                
+            //}
+            var product = products.Find(p => p.ProductName == productName);
 
-            product.ProductServer = server.Single(s => s.Id == serverId);
+            product.ProductServer = servers.Single(s => s.Id == serverId);
 
-            _context.Update(product);
+            //_context.Update(product);
             await _context.SaveChangesAsync();
-            
+            return Ok();
         }
 
         // GET: Products
