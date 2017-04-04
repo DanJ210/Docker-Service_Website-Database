@@ -1,4 +1,5 @@
 ﻿
+// Global variable needed to send to controller
 var productName;
 
 $(document).ready(function () {
@@ -47,12 +48,13 @@ $(document).ready(function () {
     });
 });
 
+
 function serverListChange() {
     var serverId = $('#ServerSelectList').val();
     alert(serverId);
     $.post("products/SaveSelectedServer",
         {
-            productName: "TNG",
+            productName: productName,
             serverId: serverId
         },
         function (data, status) {
