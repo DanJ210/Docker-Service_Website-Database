@@ -39,12 +39,9 @@ $(document).ready(function () {
             //alert("#ServerList").attr('id');
             $('#serverModal').modal('hide');
         });
-        //$('#serverModal').on('hide.bs.modal', function () {
-
-        //    //alert("Modal about to be hidden");
-        //    //alert('#ServerList').val();
-        //    alert($('#ServerList option:selected').text());
-        //});
+        $('#serverModal').on('hide.bs.modal', function () {
+            location.reload();
+        });
     });
 });
 
