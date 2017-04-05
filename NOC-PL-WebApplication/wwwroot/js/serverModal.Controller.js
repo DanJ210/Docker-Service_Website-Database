@@ -37,13 +37,12 @@ $(document).ready(function () {
 
         $('#saveButton').click(function () {
             //alert("#ServerList").attr('id');
-            $('#serverModal').modal('hide').on('hide.bs.modal', function () {
-                location.reload();
-            });
+            $('#serverModal').modal('hide')
         });
-        //$('#serverModal').on('hide.bs.modal', function () {
-        //    location.reload();
-        //});
+        // Keeping this seperate makes it work faster.
+        $('#serverModal').on('hide.bs.modal', function () {
+            location.reload();
+        });
     });
 });
 
