@@ -83,7 +83,7 @@ namespace NOC_PL_WebApplication.Controllers
 
             product.ProductServer = servers.Single(s => s.Id == serverId);
 
-            //_context.Update(product);
+            _context.Update(product);
             await _context.SaveChangesAsync();
             return Ok();
         }

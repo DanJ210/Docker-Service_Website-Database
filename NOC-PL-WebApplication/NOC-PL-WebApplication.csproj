@@ -5,6 +5,7 @@
     <PackageTargetFallback>portable-net45+win8</PackageTargetFallback>
   </PropertyGroup>
 
+  <!--Below was commented out to get bitbucket pipeline builds to work, not sure what affect this will have in the future.-->
   <!--<ItemGroup>
     <Content Include="wwwroot\css\serverModal.styles.css" />
     <Content Include="wwwroot\css\site.css" />

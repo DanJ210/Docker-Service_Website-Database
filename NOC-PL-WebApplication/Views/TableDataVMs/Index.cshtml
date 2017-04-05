@@ -27,7 +27,7 @@
                     <tbody>
                         @foreach (var item in Model.TableProducts.Where(product => product.TableNumber == 1)) {
                             <tr>
-                                <td id="@item.Id" class="success"> @item.ProductName</td>
+                                <td id="@item.Id" class="success">@item.ProductName</td>
                                 @*<td>@Html.ActionLink("Link", "Index", "Products",  new { id=item.Id, serverId = 1} ) </td>*@
                                 <td id="@item.ProductName" serverCell="tableCell">@if (item.ProductServer != null) { @item.ProductServer.ServerName; }</td>
                                 @*<td>@Html.DropDownList("ServerList", ViewBag.serverList as SelectList, "Select")</td>*@

@@ -61,7 +61,7 @@ namespace NOCPLWebApplication.Models.SeedData {
                     new Product { ProductName = "FTP-Loader", ProductGroup = "LOADER FTP", TableNumber = 3 },
                     new Product { ProductName = "TNG", ProductGroup = "TNG", TableNumber = 3 },
                     new Product { ProductName = "CodeRed Checker", ProductGroup = "CODERED", TableNumber = 3 },
-                    new Product { ProductName = "My Daily Call)", ProductGroup = "DAILY", TableNumber = 3 },
+                    new Product { ProductName = "My Daily Call", ProductGroup = "DAILY", TableNumber = 3 },
                     new Product { ProductName = ".Net Checker", ProductGroup = "NET CHECKER", TableNumber = 3 },
                     new Product { ProductName = "Terms.coderedweb.com", ProductGroup = "TERMS CODERED WEB", TableNumber = 3 },
                     new Product { ProductName = "Mobile", ProductGroup = "MOBILE", TableNumber = 3 },
@@ -97,7 +97,7 @@ namespace NOCPLWebApplication.Models.SeedData {
 
                     // Uber
                     // Table 6
-                    new Product { ProductName = "CodeEd", ProductGroup = "UBER", TableNumber = 6 },
+                    new Product { ProductName = "Code Ed", ProductGroup = "UBER", TableNumber = 6 },
                     new Product { ProductName = "CodeRed Classic", ProductGroup = "UBER", TableNumber = 6 },
                     new Product { ProductName = "TNG", ProductGroup = "UBER", TableNumber = 6 },
                     new Product { ProductName = "Message Centric", ProductGroup = "UBER", TableNumber = 6 },
