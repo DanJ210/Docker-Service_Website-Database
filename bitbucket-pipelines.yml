@@ -10,4 +10,4 @@ pipelines:
         script: # Modify the commands below to build your repository.
           - cd NOC-PL-WebApplication
           - dotnet restore
-          - dotnet build
+          - dotnet build --verbose diag
