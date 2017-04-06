@@ -61,7 +61,7 @@
                     <tbody>
                         @foreach (var item in Model.TableProducts.Where(product => product.TableNumber == 2)) {
                             <tr>
-                                <td id="@item.Id" class="label-warning fa fa-server">@item.ProductName</td>
+                                <td id="@item.Id" class="label-warning">@item.ProductName</td>
                                 <td class="label-info" productName="@item.ProductName" serverColumn="primaryColumn"
                                     serverGroup="@(item.PrimaryProductServer != null ? item.PrimaryProductServer.ServerGroup : "Empty")">
                                     @(item.PrimaryProductServer != null ? item.PrimaryProductServer.ServerName : "Not Set") @*Shown in the cell*@
