@@ -2,7 +2,9 @@
 @*@model IEnumerable<NOCPLWebApplication.Models.Server>*@
 @{
     ViewBag.Title = "NOC Table Page";
-    
+    List<SelectListItem> statusSelectList = new List<SelectListItem>();
+    statusSelectList.Add(new SelectListItem() { Text = "Primary", Value = "Primary" });
+    statusSelectList.Add(new SelectListItem() { Text = "Secondary", Value = "Secondary" });
 }
 @section scripts{
     <link href="~/css/serverModal.styles.css" rel="stylesheet" />
@@ -20,20 +22,22 @@
                         </tr>
                         <tr>
                             <th>Product</th>
-                            <th>Server</th>
-                            <th>Status</th>
+                            <th>Primary</th>
+                            <th>Secondary</th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach (var item in Model.TableProducts.Where(product => product.TableNumber == 1)) {
                             <tr>
-                                <td id="@item.Id" class="success">@item.ProductName</td>
-                                @*<td>@Html.ActionLink("Link", "Index", "Products",  new { id=item.Id, serverId = 1} ) </td>*@
-                                <td id="@item.ProductName" serverCell="tableCell">@if (item.ProductServer != null) { @item.ProductServer.ServerName; }</td>
-                                @*<td>@Html.DropDownList("ServerList", ViewBag.serverList as SelectList, "Select")</td>*@
-                                @*<td>@if (item.ProductServer != null) { @item.ProductServer.ServerName; }</td>*@
-                                @*<td>@Html.ActionLink("Link", "GetServerNameByTableNumber", "Servers", new { id=item.Id })</td>*@
-                                <td>Status</td>
+                                <td id="@item.Id" class="label-warning fa fa-server">@item.ProductName</td>
+                                <td class="label-info" productName="@item.ProductName" serverColumn="primaryColumn" 
+                                    serverGroup="@(item.PrimaryProductServer != null ? item.PrimaryProductServer.ServerGroup : "Empty")">
+                                        @(item.PrimaryProductServer != null ? item.PrimaryProductServer.ServerName : "Not Set") @*Shown in the cell*@
+                                </td>
+                                <td class="label-primary" productName="@item.ProductName" serverColumn="secondaryColumn" 
+                                    serverGroup="@(item.SecondaryProductServer != null ? item.SecondaryProductServer.ServerGroup : "Empty")">
+                                        @(item.SecondaryProductServer != null ? @item.SecondaryProductServer.ServerName : "Not Set") @*Shown in the cell*@
+                                </td>
                             </tr>
                         }
                     </tbody>
@@ -43,24 +47,29 @@
 
         <div class="col-md-5">
             <div class="table">
-                <table class="table table-responsive">
+                <table class="table table-condensed">
                     <thead>
                         <tr>
                             <th>Table 2</th>
                         </tr>
                         <tr>
                             <th>Product</th>
-                            <th>Server</th>
-                            <th>Status</th>
+                            <th>Primary</th>
+                            <th>Secondary</th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach (var item in Model.TableProducts.Where(product => product.TableNumber == 2)) {
                             <tr>
-                                <td id="@item.Id" class="success">@item.ProductName</td>
-                                @*<td>@Html.ActionLink("Link", "Index", "Products",  new { id=item.Id, serverId = 1} ) </td>*@
-                                <td id="@item.ProductName" serverCell="tableCell">@if (item.ProductServer != null) { @item.ProductServer.ServerName; }</td>
-                                <td>Status</td>
+                                <td id="@item.Id" class="label-warning fa fa-server">@item.ProductName</td>
+                                <td class="label-info" productName="@item.ProductName" serverColumn="primaryColumn"
+                                    serverGroup="@(item.PrimaryProductServer != null ? item.PrimaryProductServer.ServerGroup : "Empty")">
+                                    @(item.PrimaryProductServer != null ? item.PrimaryProductServer.ServerName : "Not Set") @*Shown in the cell*@
+                                </td>
+                                <td class="label-primary" productName="@item.ProductName" serverColumn="secondaryColumn"
+                                    serverGroup="@(item.SecondaryProductServer != null ? item.SecondaryProductServer.ServerGroup : "Empty")">
+                                    @(item.SecondaryProductServer != null ? @item.SecondaryProductServer.ServerName : "Not Set") @*Shown in the cell*@
+                                </td>
                             </tr>
                         }
                     </tbody>
@@ -70,7 +79,7 @@
 
         <div class="col-md-5">
             <div class="table">
-                <table class="table table-responsive">
+                <table class="table table-condensed">
                     <thead>
                         <tr>
                             <th>Table 3</th>
@@ -84,10 +93,15 @@
                     <tbody>
                         @foreach (var item in Model.TableProducts.Where(product => product.TableNumber == 3)) {
                             <tr>
-                                <td id="@item.Id" class="success">@item.ProductName</td>
-                                @*<td>@Html.ActionLink("Link", "Index", "Products",  new { id=item.Id, serverId = 1} ) </td>*@
-                                <td id="@item.ProductName" serverCell="tableCell">@if (item.ProductServer != null) { @item.ProductServer.ServerName; }</td>
-                                <td>Status</td>
+                                <td id="@item.Id" class="label-default">@item.ProductName</td>
+                                <td class="label-info" productName="@item.ProductName" serverColumn="primaryColumn"
+                                    serverGroup="@(item.PrimaryProductServer != null ? item.PrimaryProductServer.ServerGroup : "Empty")">
+                                    @(item.PrimaryProductServer != null ? item.PrimaryProductServer.ServerName : "Not Set") @*Shown in the cell*@
+                                </td>
+                                <td class="label-primary" productName="@item.ProductName" serverColumn="secondaryColumn"
+                                    serverGroup="@(item.SecondaryProductServer != null ? item.SecondaryProductServer.ServerGroup : "Empty")">
+                                    @(item.SecondaryProductServer != null ? @item.SecondaryProductServer.ServerName : "Not Set") @*Shown in the cell*@
+                                </td>
                             </tr>
                         }
                     </tbody>
@@ -95,9 +109,11 @@
             </div>
         </div>
 
+
+        @*TODO: ADD serverGroup code.*@
         <div class="col-md-5">
             <div class="table">
-                <table class="table table-responsive">
+                <table class="table table-condensed">
                     <thead>
                         <tr>
                             <th>SQL Table</th>
@@ -110,10 +126,13 @@
                     <tbody>
                         @foreach (var item in Model.TableProducts.Where(product => product.TableNumber == 4)) {
                             <tr>
-                                <td id="@item.Id" class="success">@item.ProductName</td>
-                                @*<td>@Html.ActionLink("Link", "Index", "Products",  new { id=item.Id, serverId = 1} ) </td>*@
-                                <td id="@item.ProductName" serverCell="tableCell">@if (item.ProductServer != null) { @item.ProductServer.ServerName; }</td>
-                                <td>Status</td>
+                                <td id="@item.Id" class="">@item.ProductName</td>
+                                <td class="" productName="@item.ProductName" serverColumn="primaryColumn">
+                                    @(item.PrimaryProductServer != null ? item.PrimaryProductServer.ServerName : "Not Set")
+                                </td>
+                                @*<td class="label-primary" productName="@item.ProductName" serverColumn="secondaryColumn">
+                                    @(item.SecondaryProductServer != null ? @item.SecondaryProductServer.ServerName : "Not Set")
+                                </td>*@
                             </tr>
                         }
                     </tbody>
@@ -123,7 +142,7 @@
 
         <div class="col-md-5">
             <div class="table">
-                <table class="table table-responsive">
+                <table class="table table-condensed">
                     <thead>
                         <tr>
                             <th>HORDE</th>
@@ -139,7 +158,7 @@
                             <tr>
                                 <td id="@item.Id" class="success">@item.ProductName</td>
                                 @*<td>@Html.ActionLink("Link", "Index", "Products",  new { id=item.Id, serverId = 1} ) </td>*@
-                                <td id="@item.ProductName" serverCell="tableCell">@if (item.ProductServer != null) { @item.ProductServer.ServerName; }</td>
+                                <td id="@item.ProductName" productName="@item.ProductName" serverCell="primaryColumn">@if (item.PrimaryProductServer != null) { @item.PrimaryProductServer.ServerName; }</td>
                                 <td>Status</td>
                             </tr>
                         }
@@ -150,7 +169,7 @@
 
         <div class="col-md-5">
             <div class="table">
-                <table class="table table-responsive">
+                <table class="table table-condensed">
                     <thead>
                         <tr>
                             <th>UBER</th>
@@ -166,7 +185,7 @@
                             <tr>
                                 <td id="@item.Id" class="success">@item.ProductName</td>
                                 @*<td>@Html.ActionLink("Link", "Index", "Products",  new { id=item.Id, serverId = 1} ) </td>*@
-                                <td id="@item.ProductName" serverCell="tableCell">@if (item.ProductServer != null) { @item.ProductServer.ServerName; }</td>
+                                <td id="@item.ProductName" productName="@item.ProductName" serverCell="primaryColumn">@if (item.PrimaryProductServer != null) { @item.PrimaryProductServer.ServerName; }</td>
                                 <td>Status</td>
                             </tr>
                         }
@@ -177,7 +196,7 @@
 
         <div class="col-md-5">
             <div class="table">
-                <table class="table table-responsive">
+                <table class="table table-condensed">
                     <thead>
                         <tr>
                             <th>IPAWS</th>
@@ -193,7 +212,7 @@
                             <tr>
                                 <td id="@item.Id" class="success">@item.ProductName</td>
                                 @*<td>@Html.ActionLink("Link", "Index", "Products",  new { id=item.Id, serverId = 1} ) </td>*@
-                                <td id="@item.ProductName" serverCell="tableCell">@if (item.ProductServer != null) { @item.ProductServer.ServerName; }</td>
+                                <td id="@item.ProductName" productName="@item.ProductName" serverCell="primaryColumn">@if (item.PrimaryProductServer != null) { @item.PrimaryProductServer.ServerName; }</td>
                                 <td>Status</td>
                             </tr>
                         }
@@ -214,12 +233,11 @@
             <div class="modal-body">
                 <ul>
                     <li id="modalTd">@Html.DropDownList("ServerSelectList", ViewBag.serverList as SelectList, "Select Server", new {onchange = "serverListChange()" })</li>
-                    @*<li>@Html.DropDownList("ServerList", ViewBag.serverList as SelectList, "Select")</li>*@
+                    @*<li>@Html.DropDownList("StatusSelectList", statusSelectList, "Select Status", new { onchange = "statusListChange()" })</li>*@
                 </ul>
             </div>
             <div class="modal-footer">
                 <button id="saveButton" class="btn btn-success">Save</button>
-                <h4>End Servers</h4>
             </div>
         </div>
     </div>

@@ -1,6 +1,8 @@
 ﻿
 // Global variable needed to send to controller
 var productName;
+var serverColumn;
+var serverGroup;
 
 $(document).ready(function () {
     //alert("ready");
@@ -13,11 +15,14 @@ $(document).ready(function () {
 
     //    alert($(this).attr("cellClass"));
     //});
-    $('[serverCell]').click(function () {
+    $('[serverColumn]').click(function () {
         var currentCellIdPosition = $(this).offset();
-        //alert("Clicked");
-        productName = $(this).attr('id');
-
+        //alert($(this).text());
+        productName = $(this).attr('productName');
+        serverColumn = $(this).attr('serverColumn');
+        serverGroup = $(this).attr('serverGroup'); // Used in future iteration for color grouping
+        //alert(productName);
+        //alert($('[productName]').attr('[productName]'));
         //alert(currentId.left);
         //function getProductId() {
 
@@ -53,6 +58,7 @@ function serverListChange() {
     $.post("products/SaveSelectedServer",
         {
             productName: productName,
+            serverColumn: serverColumn,
             serverId: serverId
         },
         function (data, status) {

@@ -7,8 +7,6 @@
 <head>
     <meta charset="utf-8" />
     <title>@ViewBag.Title</title>
-
-    
     <environment names="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
         @*<link href="~/lib/jquery-modal/jquery.modal.css" rel="stylesheet" />*@
@@ -19,13 +17,11 @@
         <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/css/bootstrap.min.css"
               asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute"/>
-        <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
     </environment>
-
 </head>
 <body>
-    <nav class="navbar navbar navbar-fixed-top">
-        @*<div class="container">*@
+    <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="navbar-header">
                 <a class="navbar-brand">ECN - NOC Site</a>
             </div>
@@ -33,7 +29,6 @@
                 <li><a asp-area="" asp-controller="App" asp-action="Index">News</a></li>
                 <li><a asp-area="" asp-controller="TableDataVMs" asp-action="Index">Tables</a></li>
             </ul>
-        @*</div>*@
     </nav>
     <div>
         <div class="container-fluid">
@@ -45,28 +40,6 @@
             </div>
         </div>
     </div>
-
-    @*<div class="modal fade" id="serverModal" role="menu">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 id="modalTitle" class="modal-title">Server Select</h4>
-                    <button id="windowClose" class="fa fa-window-close" data-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <ul>
-                        <li id="modalTd">@Html.DropDownList("ServerList", ViewBag.serverList as SelectList, "Select Server")</li>
-                        <li>ViewBag.Servers</li>
-                    </ul>
-                </div>
-                <div class="modal-footer">
-                    <button class="btn btn-danger" data-dismiss="modal">Close</button>
-                    <h4>End Servers</h4>
-                </div>
-            </div>
-        </div>
-    </div>*@
-
     
     <environment names="Development">
         <script type="text/javascript" src="~/lib/jquery/dist/jquery.min.js"></script>

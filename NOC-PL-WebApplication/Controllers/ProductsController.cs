@@ -29,49 +29,49 @@ namespace NOC_PL_WebApplication.Controllers
         /// <param name="id">Id of the product to set</param>
         /// <param name="serverId">Id of the server to set to product</param>
         /// <returns>RedirectToRoute of Controller="TableDataVMs"/Action="Index"</returns>
-        public async Task<IActionResult> Index(int? id, int? serverId) {
-            if (id == null) {
-                return NotFound();
-            }
-            try {
-                if (!ProductExists((int)id)) {
-                    return NotFound();
-                }
-                //var product = await _context.Products.SingleOrDefaultAsync(m => m.Id == id);
-                //var servers = await _context.Servers.ToListAsync();
+        //public async Task<IActionResult> Index(int? id, int? serverId) {
+        //    if (id == null) {
+        //        return NotFound();
+        //    }
+        //    try {
+        //        if (!ProductExists((int)id)) {
+        //            return NotFound();
+        //        }
+        //        //var product = await _context.Products.SingleOrDefaultAsync(m => m.Id == id);
+        //        //var servers = await _context.Servers.ToListAsync();
 
-                //product.ProductServer = servers.Single(s => s.Id == serverId);
+        //        //product.ProductServer = servers.Single(s => s.Id == serverId);
 
-                //_context.Update(product);
-                //await _context.SaveChangesAsync();
-                return RedirectToRoute(new { Controller = "TableDataVMs", Action = "Index" });
-            }
-            catch (Exception ex) { // TODO: Add logger for exception catching.
-                return RedirectToRoute(new { Controller = "TableDataVMs", Action = "Index" });
-            }
-            //if (product.ProductServer == null) {
-            //    product.ProductServer = new Server { ServerName = server };
-            //    product.ProductGroup = "Testing";
-            //    _context.Update(product);
-            //    //_context.Update(TableDataVM);
-            //    await _context.SaveChangesAsync();
+        //        //_context.Update(product);
+        //        //await _context.SaveChangesAsync();
+        //        return RedirectToRoute(new { Controller = "TableDataVMs", Action = "Index" });
+        //    }
+        //    catch (Exception ex) { // TODO: Add logger for exception catching.
+        //        return RedirectToRoute(new { Controller = "TableDataVMs", Action = "Index" });
+        //    }
+        //    //if (product.ProductServer == null) {
+        //    //    product.ProductServer = new Server { ServerName = server };
+        //    //    product.ProductGroup = "Testing";
+        //    //    _context.Update(product);
+        //    //    //_context.Update(TableDataVM);
+        //    //    await _context.SaveChangesAsync();
 
-            //    return RedirectToRoute(new { Controller = "TableDataVMs", Action = "Index" });
-            //}
-            //else {
-            //    product.ProductServer.ServerName += "New Name";
-            //    _context.Update(product);
-            //    _context.SaveChanges();
-            //    return RedirectToRoute(new { Controller = "TableDataVMs", Action = "Index"});
-            //}
+        //    //    return RedirectToRoute(new { Controller = "TableDataVMs", Action = "Index" });
+        //    //}
+        //    //else {
+        //    //    product.ProductServer.ServerName += "New Name";
+        //    //    _context.Update(product);
+        //    //    _context.SaveChanges();
+        //    //    return RedirectToRoute(new { Controller = "TableDataVMs", Action = "Index"});
+        //    //}
 
-            //await _context.SaveChangesAsync();
-            //return View();
-            //return RedirectToRoute("Tables", new { Controller = "TableDataVMs", Action = "Index" });
-        }
+        //    //await _context.SaveChangesAsync();
+        //    //return View();
+        //    //return RedirectToRoute("Tables", new { Controller = "TableDataVMs", Action = "Index" });
+        //}
 
         [HttpPost]
-        public async Task<IActionResult> SaveSelectedServer(string productName, int? serverId) {
+        public async Task<IActionResult> SaveSelectedServer(string productName, string serverColumn, int serverId) {
             
             var products = await _context.Products.ToListAsync();
                 
@@ -81,9 +81,13 @@ namespace NOC_PL_WebApplication.Controllers
             //}
             var product = products.Find(p => p.ProductName == productName);
 
-            product.ProductServer = servers.Single(s => s.Id == serverId);
-
-            _context.Update(product);
+            if (serverColumn.Contains("primary")) {
+                product.PrimaryProductServer = servers.Single(s => s.Id == serverId);
+            } else {
+                product.SecondaryProductServer = servers.Single(s => s.Id == serverId);
+            }
+            
+            //_context.Update(product);
             await _context.SaveChangesAsync();
             return Ok();
         }
