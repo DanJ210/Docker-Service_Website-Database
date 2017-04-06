@@ -1,44 +1,20 @@
 ﻿
-// Global variable needed to send to controller
+
 var productName;
 var serverColumn;
 var serverGroup;
 
 $(document).ready(function () {
-    //alert("ready");
-    //var serverCell = $().attr("cellClass");
-
-    //serverCell.click(function () {
-    //    alert("Cell class clicked");
-    //});
-    //$('td').click(function () {
-
-    //    alert($(this).attr("cellClass"));
-    //});
     $('[serverColumn]').click(function () {
         var currentCellIdPosition = $(this).offset();
         //alert($(this).text());
         productName = $(this).attr('productName');
         serverColumn = $(this).attr('serverColumn');
         serverGroup = $(this).attr('serverGroup'); // Used in future iteration for color grouping
-        //alert(productName);
-        //alert($('[productName]').attr('[productName]'));
-        //alert(currentId.left);
-        //function getProductId() {
 
-        //    return cellId
-        //}
-
-
-        $('#serverModal').on('show.bs.modal', function () {
-
-
-            // Get that got all servers from a past web API
-            //$.get("/api/servers/", function (data, status) {
-            //    $('#modalTd').text(data);
-            //});
-        });
-        $('#serverModal').modal().css("left", currentCellIdPosition.left).css("top", currentCellIdPosition.top);
+        //$('#serverModal').on('show.bs.modal', function () {
+        //});
+        $('#serverModal').modal();   /*.css("left", currentCellIdPosition.left).css("top", currentCellIdPosition.top);*/
 
         $('#saveButton').click(function () {
             //alert("#ServerList").attr('id');
@@ -62,17 +38,13 @@ function serverListChange() {
             serverId: serverId
         },
         function (data, status) {
-            //alert("data: " + data + "\nStatus: " + status);
-            
         });
     //$.post("servers/GetServerNameById",
     //    {
     //        serverId: serverId
     //    },
     //    function (data, status) {
-    //        //$('td').attr('id', data).text("Testing");
-    //        //alert(data + "  " + status);
+    //        alert($('[serverColumn]="' + serverColumn + '"'));
     //    }
     //);
-    //$('[serverCell]').text("Test");
 }
