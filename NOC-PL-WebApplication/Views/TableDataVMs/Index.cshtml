@@ -157,9 +157,12 @@
                         @foreach (var item in Model.TableProducts.Where(product => product.TableNumber == 5)) {
                             <tr>
                                 <td id="@item.Id" class="success">@item.ProductName</td>
-                                @*<td>@Html.ActionLink("Link", "Index", "Products",  new { id=item.Id, serverId = 1} ) </td>*@
-                                <td id="@item.ProductName" productName="@item.ProductName" serverCell="primaryColumn">@if (item.PrimaryProductServer != null) { @item.PrimaryProductServer.ServerName; }</td>
-                                <td>Status</td>
+                                <td class="" productName="@item.ProductName" serverColumn="primaryColumn">
+                                    @(item.PrimaryProductServer != null ? item.PrimaryProductServer.ServerName : "Not Set")
+                                </td>
+                                <td class="label-primary" productName="@item.ProductName" serverColumn="secondaryColumn">
+                                    @(item.SecondaryProductServer != null ? @item.SecondaryProductServer.ServerName : "Not Set")
+                                </td>
                             </tr>
                         }
                     </tbody>
@@ -175,7 +178,6 @@
                             <th>UBER</th>
                         </tr>
                         <tr>
-                            <th>Uber</th>
                             <th>Product</th>
                             <th>Uber Server</th>
                         </tr>
@@ -184,9 +186,9 @@
                         @foreach (var item in Model.TableProducts.Where(product => product.TableNumber == 6)) {
                             <tr>
                                 <td id="@item.Id" class="success">@item.ProductName</td>
-                                @*<td>@Html.ActionLink("Link", "Index", "Products",  new { id=item.Id, serverId = 1} ) </td>*@
-                                <td id="@item.ProductName" productName="@item.ProductName" serverCell="primaryColumn">@if (item.PrimaryProductServer != null) { @item.PrimaryProductServer.ServerName; }</td>
-                                <td>Status</td>
+                                <td class="" productName="@item.ProductName" serverColumn="primaryColumn">
+                                    @(item.PrimaryProductServer != null ? item.PrimaryProductServer.ServerName : "Not Set")
+                                </td>
                             </tr>
                         }
                     </tbody>
@@ -211,9 +213,12 @@
                         @foreach (var item in Model.TableProducts.Where(product => product.TableNumber == 7)) {
                             <tr>
                                 <td id="@item.Id" class="success">@item.ProductName</td>
-                                @*<td>@Html.ActionLink("Link", "Index", "Products",  new { id=item.Id, serverId = 1} ) </td>*@
-                                <td id="@item.ProductName" productName="@item.ProductName" serverCell="primaryColumn">@if (item.PrimaryProductServer != null) { @item.PrimaryProductServer.ServerName; }</td>
-                                <td>Status</td>
+                                <td class="" productName="@item.ProductName" serverColumn="primaryColumn">
+                                    @(item.PrimaryProductServer != null ? item.PrimaryProductServer.ServerName : "Not Set")
+                                </td>
+                                <td class="label-primary" productName="@item.ProductName" serverColumn="secondaryColumn">
+                                    @(item.SecondaryProductServer != null ? @item.SecondaryProductServer.ServerName : "Not Set")
+                                </td>
                             </tr>
                         }
                     </tbody>
