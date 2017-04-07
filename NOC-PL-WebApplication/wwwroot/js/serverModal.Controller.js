@@ -41,7 +41,7 @@
         var serverId = $('#ServerSelectList').val();
         $.post("products/SaveSelectedServer",
             {
-                productId: productId,
+                productId: 100,
                 serverColumn: serverColumn,
                 serverId: serverId
             });

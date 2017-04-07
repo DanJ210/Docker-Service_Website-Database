@@ -8,16 +8,16 @@ using Microsoft.EntityFrameworkCore;
 using NOCPLWebApplication.Models;
 using Microsoft.AspNetCore.Http;
 using System.Data.SqlClient;
+using Microsoft.Extensions.Logging;
 
-namespace NOC_PL_WebApplication.Controllers
-{
-    public class ProductsController : Controller
-    {
+namespace NOC_PL_WebApplication.Controllers {
+    public class ProductsController : Controller {
         private readonly ProductLocationContext _context;
+        private ILogger _loggerFactory;
 
-        public ProductsController(ProductLocationContext context)
-        {
-            _context = context;    
+        public ProductsController(ProductLocationContext context, ILogger<ProductsController> loggerFactory) {
+            _context = context;
+            _loggerFactory = loggerFactory;
         }
 
         
@@ -49,8 +49,10 @@ namespace NOC_PL_WebApplication.Controllers
                 await _context.SaveChangesAsync();
 
             } catch(Exception ex) {
-                
 
+                _loggerFactory.LogError($"Failed to save to database: {ex.Message}");
+                _loggerFactory.LogDebug("Failed to save to database");
+                return Redirect("/Error");
             }
             return Ok();
         }

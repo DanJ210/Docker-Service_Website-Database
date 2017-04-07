@@ -20,6 +20,8 @@ namespace NOC_PL_WebApplication {
 
             services.AddTransient<ProductServerSeedData>();
 
+            //services.AddLogging(); May not be needed
+
             services.AddMvc();
         }
 
@@ -29,6 +31,9 @@ namespace NOC_PL_WebApplication {
 
             if (env.IsDevelopment()) {
                 app.UseDeveloperExceptionPage();
+                loggerFactory.AddDebug(LogLevel.Information);
+            } else {
+                loggerFactory.AddDebug(LogLevel.Error);
             }
 
             app.UseStaticFiles();
