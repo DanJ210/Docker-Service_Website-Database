@@ -1,4 +1,5 @@
-﻿
+﻿// Logic for the modal window. Saves a selected server to the database.
+// Reloads the page on close
 
 var productName;
 var serverColumn;
@@ -7,18 +8,14 @@ var serverGroup;
 $(document).ready(function () {
     $('[serverColumn]').click(function () {
         var currentCellIdPosition = $(this).offset();
-        //alert($(this).text());
         productName = $(this).attr('productName');
         serverColumn = $(this).attr('serverColumn');
-        serverGroup = $(this).attr('serverGroup'); // Used in future iteration for color grouping
+        serverGroup = $(this).attr('serverGroup'); // Used in future iteration for color grouping of servers
 
-        //$('#serverModal').on('show.bs.modal', function () {
-        //});
-        $('#serverModal').modal();   /*.css("left", currentCellIdPosition.left).css("top", currentCellIdPosition.top);*/
+        $('#serverModal').modal();
 
         $('#saveButton').click(function () {
-            //alert("#ServerList").attr('id');
-            $('#serverModal').modal('hide')
+            $('#serverModal').modal('hide');
         });
         // Keeping this seperate makes it work faster.
         $('#serverModal').on('hide.bs.modal', function () {
@@ -27,10 +24,8 @@ $(document).ready(function () {
     });
 });
 
-
 function serverListChange() {
     var serverId = $('#ServerSelectList').val();
-    //alert(serverId);
     $.post("products/SaveSelectedServer",
         {
             productName: productName,
@@ -39,12 +34,4 @@ function serverListChange() {
         },
         function (data, status) {
         });
-    //$.post("servers/GetServerNameById",
-    //    {
-    //        serverId: serverId
-    //    },
-    //    function (data, status) {
-    //        alert($('[serverColumn]="' + serverColumn + '"'));
-    //    }
-    //);
 }

@@ -15,12 +15,46 @@ namespace NOC_PL_WebApplication.Controllers
     {
         private readonly ProductLocationContext _context;
 
-        
-
         public ProductsController(ProductLocationContext context)
         {
             _context = context;    
         }
+
+        
+        /// <summary>
+        /// Task is activated from an ajax post in the serverModal.Controller.js file.
+        /// </summary>
+        /// <param name="productName">Name of the product to have a server saved to</param>
+        /// <param name="serverColumn">The column of which the server belongs</param>
+        /// <param name="serverId">The database id of the server to be applied to the product</param>
+        /// <returns></returns>
+        [HttpPost]
+        public async Task<IActionResult> SaveSelectedServer(string productName, string serverColumn, int serverId) {
+            
+            var products = await _context.Products.ToListAsync();
+                
+            var servers = await _context.Servers.ToListAsync();
+            var product = products.Find(p => p.ProductName == productName);
+
+            if (serverColumn.Contains("primary")) {
+                product.PrimaryProductServer = servers.Single(s => s.Id == serverId);
+            } else {
+                product.SecondaryProductServer = servers.Single(s => s.Id == serverId);
+            }
+            await _context.SaveChangesAsync();
+            return Ok();
+        }
+
+
+
+
+
+
+        // Below here is for reference. No need to review.
+
+
+
+
 
         // GET: Products/Edit/5/9
         /// <summary>
@@ -69,28 +103,6 @@ namespace NOC_PL_WebApplication.Controllers
         //    //return View();
         //    //return RedirectToRoute("Tables", new { Controller = "TableDataVMs", Action = "Index" });
         //}
-
-        [HttpPost]
-        public async Task<IActionResult> SaveSelectedServer(string productName, string serverColumn, int serverId) {
-            
-            var products = await _context.Products.ToListAsync();
-                
-            var servers = await _context.Servers.ToListAsync();
-            //if (products.Any(p => p.ProductName == productName)) {
-                
-            //}
-            var product = products.Find(p => p.ProductName == productName);
-
-            if (serverColumn.Contains("primary")) {
-                product.PrimaryProductServer = servers.Single(s => s.Id == serverId);
-            } else {
-                product.SecondaryProductServer = servers.Single(s => s.Id == serverId);
-            }
-            
-            //_context.Update(product);
-            await _context.SaveChangesAsync();
-            return Ok();
-        }
 
         // GET: Products
         //public async Task<IActionResult> Index()

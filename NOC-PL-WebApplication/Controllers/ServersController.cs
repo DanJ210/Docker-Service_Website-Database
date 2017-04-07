@@ -32,15 +32,24 @@ namespace NOC_PL_WebApplication.Controllers
             if (!ModelState.IsValid) {
                 return BadRequest(ModelState);
             }
-
             var server = await _context.Servers.SingleOrDefaultAsync(s => s.Id == serverId);
-            //var serverName = server.ServerName;
             if (server == null) {
                 return NotFound();
             }
-
             return Ok(server.ServerName);
         }
+
+
+
+
+
+        // Code below is only for reference. No need to review
+
+
+
+
+
+
 
         // GET: api/Servers/5
         //[HttpGet("{id}")]
