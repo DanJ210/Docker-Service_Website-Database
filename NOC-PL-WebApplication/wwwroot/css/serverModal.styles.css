@@ -1,9 +1,12 @@
 ﻿.modal-dialog {
-    width: 200px;
-    position: absolute;
+    width: 370px;
+    /*position: absolute;
     left: 0;
-    top: 0;
+    top: 0;*/
 }
+    .modal-dialog ul li{
+        list-style-type: none;
+    }
 
 .modal-header {
     background-color: #b2b2b2;
@@ -14,20 +17,15 @@
     text-align: center;
 }
 
+/* The X button to close modal window*/
 #windowClose {
     position: absolute;
-    left: 162px;
+    left: 330px;
     top: 1px;
     background-color: #575555;
 }
-/*.modal-content {
-    
-    
-}*/
+
 .modal-footer {
     text-align: center;
     background-color: #b2b2b2
 }
-/*#serverModal {
-    width: 200px;
-}*/

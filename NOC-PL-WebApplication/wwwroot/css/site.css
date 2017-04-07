@@ -1,7 +1,7 @@
 ﻿
 /* Settings for the top navbar to be with company standards */
-.navbar {
-    background-color: darkred; /* Background-color changes immediately but text color is not */
+/*.navbar {
+    background-color: darkred;
     font-size: 188%;
 }
 .navbar-brand {
@@ -9,7 +9,7 @@
 }
 .navbar a {
     color: black;
-}
+}*/
 
 /* Settings for the top navbar overlapping the body content */
 body {

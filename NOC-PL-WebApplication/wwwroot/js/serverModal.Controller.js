@@ -1,34 +1,37 @@
-﻿$(document).ready(function () {
-    alert("ready");
-    $('td').click(function () {
-        var currentId = $(this).offset();
-        alert("Clicked");
-        //alert(currentId.left);
-        //awesome.id();
-        //alert(awesome.screenX);
-        //alert(awesome.returnValue);
-        //alert(awesome.result);
-        //alert(awesome.pageX);
-        //alert(awesome.pagey);
-        //var position = this.position();
-        //var x = awesome.pageX;
-        //var position = awesome.position;
-        //alert(x);
-        //alert(position);
+﻿// Logic for the modal window. Saves a selected server to the database.
+// Reloads the page on close
 
-        //alert("clicked");
-        //$('#serverModal').text("Hello");
-        
-        $('#serverModal').on('show.bs.modal', function () {
+var productName;
+var serverColumn;
+var serverGroup;
 
+$(document).ready(function () {
+    $('[serverColumn]').click(function () {
+        var currentCellIdPosition = $(this).offset();
+        productName = $(this).attr('productName');
+        serverColumn = $(this).attr('serverColumn');
+        serverGroup = $(this).attr('serverGroup'); // Used in future iteration for color grouping of servers
 
-            // Get that got all servers from a past web API
-            //$.get("/api/servers/", function (data, status) {
-            //    $('#modalTd').text(data);
-            //});
+        $('#serverModal').modal();
+
+        $('#saveButton').click(function () {
+            $('#serverModal').modal('hide');
         });
-        $('#serverModal').modal().css("left", currentId.left).css("top", currentId.top);
-        
-
+        // Keeping this seperate makes it work faster.
+        $('#serverModal').on('hide.bs.modal', function () {
+            location.reload();
+        });
     });
 });
+
+function serverListChange() {
+    var serverId = $('#ServerSelectList').val();
+    $.post("products/SaveSelectedServer",
+        {
+            productName: productName,
+            serverColumn: serverColumn,
+            serverId: serverId
+        },
+        function (data, status) {
+        });
+}

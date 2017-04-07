@@ -8,9 +8,10 @@ using NOCPLWebApplication.Models;
 namespace NOCPLWebApplication.Migrations
 {
     [DbContext(typeof(ProductLocationContext))]
-    partial class ProductLocationContextModelSnapshot : ModelSnapshot
+    [Migration("20170406173250_ProductEntityChanges")]
+    partial class ProductEntityChanges
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.1.1")
@@ -28,6 +29,8 @@ namespace NOCPLWebApplication.Migrations
                     b.Property<string>("ProductName");
 
                     b.Property<int?>("SecondaryProductServerId");
+
+                    b.Property<string>("Status");
 
                     b.Property<int?>("TableDataVMId");
 
@@ -54,6 +57,8 @@ namespace NOCPLWebApplication.Migrations
                     b.Property<string>("ServerName");
 
                     b.Property<int?>("TableDataVMId");
+
+                    b.Property<int>("TableNumber");
 
                     b.HasKey("Id");
 

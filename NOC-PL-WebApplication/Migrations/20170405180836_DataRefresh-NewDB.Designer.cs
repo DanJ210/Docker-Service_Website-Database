@@ -8,9 +8,10 @@ using NOCPLWebApplication.Models;
 namespace NOCPLWebApplication.Migrations
 {
     [DbContext(typeof(ProductLocationContext))]
-    partial class ProductLocationContextModelSnapshot : ModelSnapshot
+    [Migration("20170405180836_DataRefresh-NewDB")]
+    partial class DataRefreshNewDB
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.1.1")
@@ -21,13 +22,11 @@ namespace NOCPLWebApplication.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<int?>("PrimaryProductServerId");
-
                     b.Property<string>("ProductGroup");
 
                     b.Property<string>("ProductName");
 
-                    b.Property<int?>("SecondaryProductServerId");
+                    b.Property<int?>("ProductServerId");
 
                     b.Property<int?>("TableDataVMId");
 
@@ -35,9 +34,7 @@ namespace NOCPLWebApplication.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("PrimaryProductServerId");
-
-                    b.HasIndex("SecondaryProductServerId");
+                    b.HasIndex("ProductServerId");
 
                     b.HasIndex("TableDataVMId");
 
@@ -54,6 +51,8 @@ namespace NOCPLWebApplication.Migrations
                     b.Property<string>("ServerName");
 
                     b.Property<int?>("TableDataVMId");
+
+                    b.Property<int>("TableNumber");
 
                     b.HasKey("Id");
 
@@ -74,13 +73,9 @@ namespace NOCPLWebApplication.Migrations
 
             modelBuilder.Entity("NOCPLWebApplication.Models.Product", b =>
                 {
-                    b.HasOne("NOCPLWebApplication.Models.Server", "PrimaryProductServer")
+                    b.HasOne("NOCPLWebApplication.Models.Server", "ProductServer")
                         .WithMany()
-                        .HasForeignKey("PrimaryProductServerId");
-
-                    b.HasOne("NOCPLWebApplication.Models.Server", "SecondaryProductServer")
-                        .WithMany()
-                        .HasForeignKey("SecondaryProductServerId");
+                        .HasForeignKey("ProductServerId");
 
                     b.HasOne("NOCPLWebApplication.Models.TableDataVM")
                         .WithMany("TableProducts")

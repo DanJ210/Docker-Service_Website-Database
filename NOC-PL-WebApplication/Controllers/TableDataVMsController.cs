@@ -16,6 +16,11 @@ namespace NOC_PL_WebApplication.Controllers {
             _context = context;    
         }
 
+        /// <summary>
+        /// Generates a list of products and servers mapped to a VM.
+        /// Creates a select list of servers and sets to ViewBag.
+        /// </summary>
+        /// <returns>A ViewModel of Products and Servers and a SelectList</returns>
         // GET: TableDataVMs
         public async Task<IActionResult> Index() {
             
@@ -27,6 +32,16 @@ namespace NOC_PL_WebApplication.Controllers {
             ViewBag.serverList = serverList;
             return View(tableDataVM);
         }
+
+
+
+
+        // Code below is for reference. No need to review.
+
+
+
+
+
 
         // GET: TableDataVMs/Details/5
         //public async Task<IActionResult> Details(int? id)
