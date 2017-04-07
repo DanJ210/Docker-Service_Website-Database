@@ -5,6 +5,11 @@
     <PackageTargetFallback>portable-net45+win8</PackageTargetFallback>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Content Include="wwwroot\js\jsmodules\ScrollPositionModule.js" />
+    <Content Include="wwwroot\js\ScrollPositionModule.js" />
+  </ItemGroup>
+
   <!--Below was commented out to get bitbucket pipeline builds to work, not sure what affect this will have in the future.-->
   <!--<ItemGroup>
     <Content Include="wwwroot\css\serverModal.styles.css" />
@@ -15,6 +20,7 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.0.0" />
     <PackageReference Include="Microsoft.AspNetCore" Version="1.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="1.1.1" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="1.1.2" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.TagHelpers" Version="1.1.2" />
     <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="1.1.1" />

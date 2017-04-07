@@ -29,19 +29,29 @@ namespace NOC_PL_WebApplication.Controllers
         /// <param name="serverId">The database id of the server to be applied to the product</param>
         /// <returns></returns>
         [HttpPost]
-        public async Task<IActionResult> SaveSelectedServer(string productName, string serverColumn, int serverId) {
-            
-            var products = await _context.Products.ToListAsync();
-                
-            var servers = await _context.Servers.ToListAsync();
-            var product = products.Find(p => p.ProductName == productName);
+        public async Task<IActionResult> SaveSelectedServer(int productId, string serverColumn, int serverId) {
 
-            if (serverColumn.Contains("primary")) {
-                product.PrimaryProductServer = servers.Single(s => s.Id == serverId);
-            } else {
-                product.SecondaryProductServer = servers.Single(s => s.Id == serverId);
+            try {
+
+                var products = await _context.Products.ToListAsync();
+
+                var servers = await _context.Servers.ToListAsync();
+
+                var product = await _context.Products.SingleAsync(p => p.Id == productId);
+                //var product = products.Find(p => p.ProductName == productName);
+                
+                if (serverColumn.Contains("primary")) {
+                    product.PrimaryProductServer = servers.Single(s => s.Id == serverId);
+                }
+                else {
+                    product.SecondaryProductServer = servers.Single(s => s.Id == serverId);
+                }
+                await _context.SaveChangesAsync();
+
+            } catch(Exception ex) {
+                
+
             }
-            await _context.SaveChangesAsync();
             return Ok();
         }
 
