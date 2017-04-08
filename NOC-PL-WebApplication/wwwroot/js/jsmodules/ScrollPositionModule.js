@@ -12,7 +12,7 @@
                 $(window).scrollTop(posReader);
                 localStorage.removeItem("posStorage");
             }
-            $(this).click(function (e) {
+            $(this).click(function () {
                 localStorage["posStorage"] = $(window).scrollTop();
             });
 

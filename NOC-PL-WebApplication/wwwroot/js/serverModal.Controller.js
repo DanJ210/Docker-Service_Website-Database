@@ -28,7 +28,7 @@
             });
             // Keeping this seperate makes it work faster.
             $('#serverModal').on('hide.bs.modal', function () {
-                location.reload();
+                location.reload(true);
             });
         });
     });
@@ -41,14 +41,14 @@
         var serverId = $('#ServerSelectList').val();
         $.post("products/SaveSelectedServer",
             {
-                productId: 100,
+                productId: productId,
                 serverColumn: serverColumn,
                 serverId: serverId
             });
-            // function (data, status) {
-            //     alert(data + "status" + status);
-            // });
-    }
+        // function (data, status) {
+        //     alert(data + "status" + status);
+        // });
+    };
 }(jQuery));
 
 

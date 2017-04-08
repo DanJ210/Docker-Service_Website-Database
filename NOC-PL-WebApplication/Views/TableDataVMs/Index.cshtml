@@ -108,7 +108,7 @@
 
 
         @*TODO: ADD serverGroup code.*@
-        <div class="col-md-4">
+        <div class="col-md-3">
             <div class="table">
                 <table class="table table-condensed">
                     <thead>
@@ -167,7 +167,7 @@
             </div>
         </div>
 
-        <div class="col-md-4">
+        <div class="col-md-3">
             <div class="table">
                 <table class="table table-condensed">
                     <thead>
@@ -193,7 +193,7 @@
             </div>
         </div>
 
-        <div class="col-md-4">
+        <div class="col-md-3">
             <div class="table">
                 <table class="table table-condensed">
                     <thead>
@@ -201,7 +201,7 @@
                             <th>IPAWS</th>
                         </tr>
                         <tr>
-                            <th>IPAWS</th>
+                            
                             <th>Server</th>
                             <th>Active Site</th>
                         </tr>
@@ -209,7 +209,7 @@
                     <tbody>
                         @foreach (var item in Model.TableProducts.Where(product => product.TableNumber == 7)) {
                             <tr>
-                                <td class="success">@item.ProductName</td>
+                                
                                 <td class="" productId="@item.Id" productName="@item.ProductName" serverColumn="primaryColumn">
                                     @(item.PrimaryProductServer != null ? item.PrimaryProductServer.ServerName : "Not Set")
                                 </td>
