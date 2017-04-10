@@ -20,7 +20,7 @@ namespace NOC_PL_WebApplication {
             //.MinimumLevel.Debug()
             //.Enrich.FromLogContext()
             .WriteTo.LiterateConsole()
-            //.WriteTo.RollingFile("logs\\myapp-{Date}.txt");
+            .WriteTo.RollingFile("logs\\myapp-{Date}.txt")
             .CreateLogger();
         }
 
@@ -37,8 +37,13 @@ namespace NOC_PL_WebApplication {
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory, ProductServerSeedData seeder) {
-            loggerFactory.AddConsole();
+        public void Configure(IApplicationBuilder app,
+            IHostingEnvironment env,
+            ILoggerFactory loggerFactory,
+            IApplicationLifetime appLifetime,
+            ProductServerSeedData seeder) {
+
+            //loggerFactory.AddConsole();
 
             if (env.IsDevelopment()) {
                 app.UseDeveloperExceptionPage();
@@ -47,7 +52,7 @@ namespace NOC_PL_WebApplication {
             } else {
                 //loggerFactory.AddDebug(LogLevel.Error);
             }
-            
+            appLifetime.ApplicationStopped.Register(Log.CloseAndFlush);
             app.UseStaticFiles();
 
             app.UseMvc(config => {
