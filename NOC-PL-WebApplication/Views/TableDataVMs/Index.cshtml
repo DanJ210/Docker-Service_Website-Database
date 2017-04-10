@@ -27,12 +27,14 @@
                         @foreach (var item in Model.TableProducts.Where(product => product.TableNumber == 1)) {
                             <tr>
                                 <td id="@item.Id" class="label-warning">@item.ProductName</td>
-                                <td class="label-info fa fa-server" productId="@item.Id" productName="@item.ProductName" serverColumn="primaryColumn" 
+                                <td class="label-info" productId="@item.Id" productName="@item.ProductName" serverColumn="primaryColumn" 
                                     serverGroup="@(item.PrimaryProductServer != null ? item.PrimaryProductServer.ServerGroup : "Empty")">
+                                    <i class="fa fa-server"></i>
                                         @(item.PrimaryProductServer != null ? item.PrimaryProductServer.ServerName : "Not Set") @*Shown in the cell*@
                                 </td>
-                                <td class="label-primary fa fa-server" productId="@item.Id" productName="@item.ProductName" serverColumn="secondaryColumn" 
+                                <td class="label-primary" productId="@item.Id" productName="@item.ProductName" serverColumn="secondaryColumn" 
                                     serverGroup="@(item.SecondaryProductServer != null ? item.SecondaryProductServer.ServerGroup : "Empty")">
+                                    <i class="fa fa-server"></i>  
                                         @(item.SecondaryProductServer != null ? @item.SecondaryProductServer.ServerName : "Not Set") @*Shown in the cell*@
                                 </td>
                             </tr>
@@ -209,7 +211,6 @@
                     <tbody>
                         @foreach (var item in Model.TableProducts.Where(product => product.TableNumber == 7)) {
                             <tr>
-                                
                                 <td class="" productId="@item.Id" productName="@item.ProductName" serverColumn="primaryColumn">
                                     @(item.PrimaryProductServer != null ? item.PrimaryProductServer.ServerName : "Not Set")
                                 </td>
@@ -233,7 +234,10 @@
             </div>
             <div class="modal-body">
                 <ul>
-                    <li id="modalTd">@Html.DropDownList("ServerSelectList", ViewBag.serverList as SelectList, "Select Server", new {onchange = "$.fn.serverListChangeFunction()" })</li>
+                    <li id="modalTd">@Html.DropDownList("ServerSelectList", 
+                                    ViewBag.serverList as SelectList, "Select Server", 
+                                    new {onchange = "$.fn.serverListChangeFunction()" })
+                    </li>
                 </ul>
             </div>
             <div class="modal-footer">
