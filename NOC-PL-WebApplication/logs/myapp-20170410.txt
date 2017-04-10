@@ -455,3 +455,41 @@ FROM [Servers] AS [s]
 2017-04-10 17:17:00.290 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/js/serverModal.Controller.js  
 2017-04-10 17:17:00.290 -04:00 [Information] Sending file. Request path: '"/js/serverModal.Controller.js"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\js\serverModal.Controller.js"'
 2017-04-10 17:17:00.291 -04:00 [Information] Request finished in 1.0969ms 200 application/javascript
+2017-04-10 18:53:23.552 -04:00 [Information] Executed DbCommand (70ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Products] AS [p])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2017-04-10 18:53:23.692 -04:00 [Information] Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Servers] AS [s])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2017-04-10 18:53:24.171 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/  
+2017-04-10 18:53:24.171 -04:00 [Information] Request starting HTTP/1.1 DEBUG http://localhost:12170/  0
+2017-04-10 18:53:24.393 -04:00 [Information] Request finished in 223.9399ms 200 
+2017-04-10 18:53:24.837 -04:00 [Information] Executing action method "NOC_PL_WebApplication.Controllers.TableDataVMsController.Index (NOC-PL-WebApplication)" with arguments (null) - ModelState is Valid
+2017-04-10 18:53:25.055 -04:00 [Information] Executed DbCommand (47ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[PrimaryProductServerId], [p].[ProductGroup], [p].[ProductName], [p].[SecondaryProductServerId], [p].[TableDataVMId], [p].[TableNumber]
+FROM [Products] AS [p]
+2017-04-10 18:53:25.228 -04:00 [Information] Executed DbCommand (26ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[ServerGroup], [s].[ServerName], [s].[TableDataVMId]
+FROM [Servers] AS [s]
+2017-04-10 18:53:25.315 -04:00 [Information] Database queries successful
+2017-04-10 18:53:29.305 -04:00 [Information] Executing ViewResult, running view at path "/Views/TableDataVMs/Index.cshtml".
+2017-04-10 18:53:29.445 -04:00 [Information] User profile is available. Using '"C:\Users\DanJ2\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2017-04-10 18:53:30.137 -04:00 [Information] Executed action "NOC_PL_WebApplication.Controllers.TableDataVMsController.Index (NOC-PL-WebApplication)" in 5368.491ms
+2017-04-10 18:53:30.156 -04:00 [Information] Request finished in 6018.201ms 200 text/html; charset=utf-8
+2017-04-10 18:53:30.359 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/js/jsmodules/ScrollPositionModule.js?v=nMtTymepNGTcJY1TyjArpj4eAyNo6Vtrk2PhD6EGS8g  
+2017-04-10 18:53:30.364 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/js/site.min.js?v=NpMUj71zExRQni6K27BChnEFiXr3zPwMp_IYP45LeJE  
+2017-04-10 18:53:30.369 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/js/serverModal.Controller.js  
+2017-04-10 18:53:30.398 -04:00 [Information] The file "/js/site.min.js" was not modified
+2017-04-10 18:53:30.399 -04:00 [Information] The file "/js/jsmodules/ScrollPositionModule.js" was not modified
+2017-04-10 18:53:30.399 -04:00 [Information] The file "/js/serverModal.Controller.js" was not modified
+2017-04-10 18:53:30.406 -04:00 [Information] Request finished in 47.3164ms 304 application/javascript
+2017-04-10 18:53:30.406 -04:00 [Information] Request finished in 36.889ms 304 application/javascript
+2017-04-10 18:53:30.406 -04:00 [Information] Request finished in 41.952ms 304 application/javascript
