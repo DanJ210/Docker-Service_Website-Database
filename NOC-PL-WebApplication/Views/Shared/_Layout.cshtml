@@ -31,14 +31,15 @@
             </ul>
     </nav>
     <div>
-        <div class="container-fluid">
+        @*<div class="container">
             <div class="row">
-                <div class="col-md-offset-2">
-                    @RenderBody()
+                <div class="">
+                    
                     
                 </div>
             </div>
-        </div>
+        </div>*@
+        @RenderBody()
     </div>
     
     <environment names="Development">
@@ -48,6 +49,7 @@
         <script src="~/lib/angular2/angular.min.js"></script> @*TODO Add angular URL to staging,production below*@
         @*<script type="text/javascript" src="~/js/site.js"></script>*@
         <script src="~/js/site.min.js" asp-append-version="true"></script>
+        <script src="~/js/jsmodules/ScrollPositionModule.js" asp-append-version="true"></script>
     </environment>
     <environment names="Staging,Production">
         <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
@@ -59,6 +61,7 @@
                 asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal">
         </script>
         <script src="~/js/site.min.js" asp-append-version="true"></script>
+        <script src="~/js/jsmodules/ScrollPositionModule.min.js" asp-append-version="true"></script>
     </environment>
     @RenderSection("scripts", false)
 </body>

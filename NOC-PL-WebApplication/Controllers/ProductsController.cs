@@ -8,16 +8,17 @@ using Microsoft.EntityFrameworkCore;
 using NOCPLWebApplication.Models;
 using Microsoft.AspNetCore.Http;
 using System.Data.SqlClient;
+using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Authorization;
 
-namespace NOC_PL_WebApplication.Controllers
-{
-    public class ProductsController : Controller
-    {
+namespace NOC_PL_WebApplication.Controllers {
+    public class ProductsController : Controller {
         private readonly ProductLocationContext _context;
+        private ILogger _loggerFactory;
 
-        public ProductsController(ProductLocationContext context)
-        {
-            _context = context;    
+        public ProductsController(ProductLocationContext context, ILogger<ProductsController> loggerFactory) {
+            _context = context;
+            _loggerFactory = loggerFactory;
         }
 
         
@@ -28,20 +29,33 @@ namespace NOC_PL_WebApplication.Controllers
         /// <param name="serverColumn">The column of which the server belongs</param>
         /// <param name="serverId">The database id of the server to be applied to the product</param>
         /// <returns></returns>
+        [Authorize]
         [HttpPost]
-        public async Task<IActionResult> SaveSelectedServer(string productName, string serverColumn, int serverId) {
-            
-            var products = await _context.Products.ToListAsync();
-                
-            var servers = await _context.Servers.ToListAsync();
-            var product = products.Find(p => p.ProductName == productName);
+        public async Task<IActionResult> SaveSelectedServer(int productId, string serverColumn, int serverId) {
 
-            if (serverColumn.Contains("primary")) {
-                product.PrimaryProductServer = servers.Single(s => s.Id == serverId);
-            } else {
-                product.SecondaryProductServer = servers.Single(s => s.Id == serverId);
+            try {
+
+                var products = await _context.Products.ToListAsync();
+
+                var servers = await _context.Servers.ToListAsync();
+
+                var product = await _context.Products.SingleAsync(p => p.Id == productId);
+                //var product = products.Find(p => p.ProductName == productName);
+                
+                if (serverColumn.Contains("primary")) {
+                    product.PrimaryProductServer = servers.Single(s => s.Id == serverId);
+                }
+                else {
+                    product.SecondaryProductServer = servers.Single(s => s.Id == serverId);
+                }
+                await _context.SaveChangesAsync();
+
+            } catch(Exception ex) {
+
+                _loggerFactory.LogError($"Failed to save to database: {ex.Message}");
+                _loggerFactory.LogDebug("Failed to save to database");
+                return Redirect("/Error");
             }
-            await _context.SaveChangesAsync();
             return Ok();
         }
 

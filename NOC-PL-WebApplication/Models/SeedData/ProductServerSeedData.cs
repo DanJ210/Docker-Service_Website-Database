@@ -82,7 +82,7 @@ namespace NOCPLWebApplication.Models.SeedData {
                     new Product { ProductName = "CRNEXT", ProductGroup = "NEXT SQL", TableNumber = 4 },
                     new Product { ProductName = "CRSQL", ProductGroup = "SQL", TableNumber = 4 },
                     new Product { ProductName = "AWNEXT", ProductGroup = "AW NEXT SQL", TableNumber = 4 },
-                    new Product { ProductName = "TNG", ProductGroup = "TNG SQL", TableNumber = 4 },
+                    new Product { ProductName = "TNG ", ProductGroup = "TNG SQL", TableNumber = 4 },
                     new Product { ProductName = "ECNSQL", ProductGroup = "ECN SQL", TableNumber = 4 },
                     new Product { ProductName = "MCSQL", ProductGroup = "MC SQL", TableNumber = 4 },
 
@@ -99,7 +99,7 @@ namespace NOCPLWebApplication.Models.SeedData {
                     // Table 6
                     new Product { ProductName = "Code Ed", ProductGroup = "UBER", TableNumber = 6 },
                     new Product { ProductName = "CodeRed Classic", ProductGroup = "UBER", TableNumber = 6 },
-                    new Product { ProductName = "TNG", ProductGroup = "UBER", TableNumber = 6 },
+                    new Product { ProductName = "TNG  ", ProductGroup = "UBER", TableNumber = 6 },
                     new Product { ProductName = "Message Centric", ProductGroup = "UBER", TableNumber = 6 },
 
                     // IPAWS

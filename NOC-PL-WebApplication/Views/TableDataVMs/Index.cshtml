@@ -10,7 +10,7 @@
 
 <div class="container-fluid">
     <div class="row">
-        <div class="col-md-5">
+        <div class="col-md-4">
             <div class="table">
                 <table class="table table-condensed">
                     <thead>
@@ -26,13 +26,15 @@
                     <tbody>
                         @foreach (var item in Model.TableProducts.Where(product => product.TableNumber == 1)) {
                             <tr>
-                                <td id="@item.Id" class="label-warning fa fa-server">@item.ProductName</td>
-                                <td class="label-info" productName="@item.ProductName" serverColumn="primaryColumn" 
+                                <td id="@item.Id" class="label-warning">@item.ProductName</td>
+                                <td class="label-info" productId="@item.Id" productName="@item.ProductName" serverColumn="primaryColumn" 
                                     serverGroup="@(item.PrimaryProductServer != null ? item.PrimaryProductServer.ServerGroup : "Empty")">
+                                    <i class="fa fa-server"></i>
                                         @(item.PrimaryProductServer != null ? item.PrimaryProductServer.ServerName : "Not Set") @*Shown in the cell*@
                                 </td>
-                                <td class="label-primary" productName="@item.ProductName" serverColumn="secondaryColumn" 
+                                <td class="label-primary" productId="@item.Id" productName="@item.ProductName" serverColumn="secondaryColumn" 
                                     serverGroup="@(item.SecondaryProductServer != null ? item.SecondaryProductServer.ServerGroup : "Empty")">
+                                    <i class="fa fa-server"></i>  
                                         @(item.SecondaryProductServer != null ? @item.SecondaryProductServer.ServerName : "Not Set") @*Shown in the cell*@
                                 </td>
                             </tr>
@@ -42,9 +44,9 @@
             </div>
         </div>
 
-        <div class="col-md-5">
+        <div class="col-md-4">
             <div class="table">
-                <table class="table table-responsive">
+                <table class="table table-condensed">
                     <thead>
                         <tr>
                             <th>Table 2</th>
@@ -58,12 +60,12 @@
                     <tbody>
                         @foreach (var item in Model.TableProducts.Where(product => product.TableNumber == 2)) {
                             <tr>
-                                <td id="@item.Id" class="label-warning">@item.ProductName</td>
-                                <td class="label-info" productName="@item.ProductName" serverColumn="primaryColumn"
+                                <td class="label-warning">@item.ProductName</td>
+                                <td class="label-info" productId="@item.Id" productName="@item.ProductName" serverColumn="primaryColumn"
                                     serverGroup="@(item.PrimaryProductServer != null ? item.PrimaryProductServer.ServerGroup : "Empty")">
                                     @(item.PrimaryProductServer != null ? item.PrimaryProductServer.ServerName : "Not Set") @*Shown in the cell*@
                                 </td>
-                                <td class="label-primary" productName="@item.ProductName" serverColumn="secondaryColumn"
+                                <td class="label-primary" productId="@item.Id" productName="@item.ProductName" serverColumn="secondaryColumn"
                                     serverGroup="@(item.SecondaryProductServer != null ? item.SecondaryProductServer.ServerGroup : "Empty")">
                                     @(item.SecondaryProductServer != null ? @item.SecondaryProductServer.ServerName : "Not Set") @*Shown in the cell*@
                                 </td>
@@ -74,7 +76,7 @@
             </div>
         </div>
 
-        <div class="col-md-5">
+        <div class="col-md-4">
             <div class="table">
                 <table class="table table-condensed">
                     <thead>
@@ -90,12 +92,12 @@
                     <tbody>
                         @foreach (var item in Model.TableProducts.Where(product => product.TableNumber == 3)) {
                             <tr>
-                                <td id="@item.Id" class="label-default">@item.ProductName</td>
-                                <td class="label-info" productName="@item.ProductName" serverColumn="primaryColumn"
+                                <td class="label-default">@item.ProductName</td>
+                                <td class="label-info" productId="@item.Id" productName="@item.ProductName" serverColumn="primaryColumn"
                                     serverGroup="@(item.PrimaryProductServer != null ? item.PrimaryProductServer.ServerGroup : "Empty")">
                                     @(item.PrimaryProductServer != null ? item.PrimaryProductServer.ServerName : "Not Set") @*Shown in the cell*@
                                 </td>
-                                <td class="label-primary" productName="@item.ProductName" serverColumn="secondaryColumn"
+                                <td class="label-primary" productId="@item.Id" productName="@item.ProductName" serverColumn="secondaryColumn"
                                     serverGroup="@(item.SecondaryProductServer != null ? item.SecondaryProductServer.ServerGroup : "Empty")">
                                     @(item.SecondaryProductServer != null ? @item.SecondaryProductServer.ServerName : "Not Set") @*Shown in the cell*@
                                 </td>
@@ -108,7 +110,7 @@
 
 
         @*TODO: ADD serverGroup code.*@
-        <div class="col-md-5">
+        <div class="col-md-3">
             <div class="table">
                 <table class="table table-condensed">
                     <thead>
@@ -123,8 +125,8 @@
                     <tbody>
                         @foreach (var item in Model.TableProducts.Where(product => product.TableNumber == 4)) {
                             <tr>
-                                <td id="@item.Id" class="">@item.ProductName</td>
-                                <td class="" productName="@item.ProductName" serverColumn="primaryColumn">
+                                <td class="">@item.ProductName</td>
+                                <td class="" productId="@item.Id" productName="@item.ProductName" serverColumn="primaryColumn">
                                     @(item.PrimaryProductServer != null ? item.PrimaryProductServer.ServerName : "Not Set")
                                 </td>
                                 @*<td class="label-primary" productName="@item.ProductName" serverColumn="secondaryColumn">
@@ -137,7 +139,7 @@
             </div>
         </div>
 
-        <div class="col-md-5">
+        <div class="col-md-4">
             <div class="table">
                 <table class="table table-condensed">
                     <thead>
@@ -153,11 +155,11 @@
                     <tbody>
                         @foreach (var item in Model.TableProducts.Where(product => product.TableNumber == 5)) {
                             <tr>
-                                <td id="@item.Id" class="success">@item.ProductName</td>
-                                <td class="" productName="@item.ProductName" serverColumn="primaryColumn">
+                                <td class="success">@item.ProductName</td>
+                                <td class="" productId="@item.Id" productName="@item.ProductName" serverColumn="primaryColumn">
                                     @(item.PrimaryProductServer != null ? item.PrimaryProductServer.ServerName : "Not Set")
                                 </td>
-                                <td class="label-primary" productName="@item.ProductName" serverColumn="secondaryColumn">
+                                <td class="label-primary" productId="@item.Id" productName="@item.ProductName" serverColumn="secondaryColumn">
                                     @(item.SecondaryProductServer != null ? @item.SecondaryProductServer.ServerName : "Not Set")
                                 </td>
                             </tr>
@@ -167,7 +169,7 @@
             </div>
         </div>
 
-        <div class="col-md-5">
+        <div class="col-md-3">
             <div class="table">
                 <table class="table table-condensed">
                     <thead>
@@ -182,8 +184,8 @@
                     <tbody>
                         @foreach (var item in Model.TableProducts.Where(product => product.TableNumber == 6)) {
                             <tr>
-                                <td id="@item.Id" class="success">@item.ProductName</td>
-                                <td class="" productName="@item.ProductName" serverColumn="primaryColumn">
+                                <td class="success">@item.ProductName</td>
+                                <td class="" productId="@item.Id" productName="@item.ProductName" serverColumn="primaryColumn">
                                     @(item.PrimaryProductServer != null ? item.PrimaryProductServer.ServerName : "Not Set")
                                 </td>
                             </tr>
@@ -193,7 +195,7 @@
             </div>
         </div>
 
-        <div class="col-md-5">
+        <div class="col-md-3">
             <div class="table">
                 <table class="table table-condensed">
                     <thead>
@@ -201,7 +203,7 @@
                             <th>IPAWS</th>
                         </tr>
                         <tr>
-                            <th>IPAWS</th>
+                            
                             <th>Server</th>
                             <th>Active Site</th>
                         </tr>
@@ -209,11 +211,10 @@
                     <tbody>
                         @foreach (var item in Model.TableProducts.Where(product => product.TableNumber == 7)) {
                             <tr>
-                                <td id="@item.Id" class="success">@item.ProductName</td>
-                                <td class="" productName="@item.ProductName" serverColumn="primaryColumn">
+                                <td class="" productId="@item.Id" productName="@item.ProductName" serverColumn="primaryColumn">
                                     @(item.PrimaryProductServer != null ? item.PrimaryProductServer.ServerName : "Not Set")
                                 </td>
-                                <td class="label-primary" productName="@item.ProductName" serverColumn="secondaryColumn">
+                                <td class="label-primary" productId="@item.Id" productName="@item.ProductName" serverColumn="secondaryColumn">
                                     @(item.SecondaryProductServer != null ? @item.SecondaryProductServer.ServerName : "Not Set")
                                 </td>
                             </tr>
@@ -230,11 +231,13 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h4 id="modalTitle" class="modal-title">Server Select</h4>
-                @*<button id="windowClose" class="fa fa-window-close" data-dismiss="modal"></button>*@
             </div>
             <div class="modal-body">
                 <ul>
-                    <li id="modalTd">@Html.DropDownList("ServerSelectList", ViewBag.serverList as SelectList, "Select Server", new {onchange = "serverListChange()" })</li>
+                    <li id="modalTd">@Html.DropDownList("ServerSelectList", 
+                                    ViewBag.serverList as SelectList, "Select Server", 
+                                    new {onchange = "$.fn.serverListChangeFunction()" })
+                    </li>
                 </ul>
             </div>
             <div class="modal-footer">

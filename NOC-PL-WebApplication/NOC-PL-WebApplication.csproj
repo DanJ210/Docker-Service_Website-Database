@@ -11,10 +11,13 @@
     <Content Include="wwwroot\css\site.css" />
     <Content Include="wwwroot\js\serverModal.Controller.js" />
     <Content Include="wwwroot\js\site.js" />
+    <Content Include="wwwroot\js\jsmodules\ScrollPositionModule.js" />
+    <Content Include="wwwroot\js\ScrollPositionModule.js" />
   </ItemGroup>-->
   <ItemGroup>
     <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.0.0" />
     <PackageReference Include="Microsoft.AspNetCore" Version="1.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="1.1.1" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="1.1.2" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.TagHelpers" Version="1.1.2" />
     <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="1.1.1" />
