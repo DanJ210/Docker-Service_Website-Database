@@ -9,6 +9,7 @@ using NOCPLWebApplication.Models;
 using Microsoft.AspNetCore.Http;
 using System.Data.SqlClient;
 using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Authorization;
 
 namespace NOC_PL_WebApplication.Controllers {
     public class ProductsController : Controller {
@@ -28,6 +29,7 @@ namespace NOC_PL_WebApplication.Controllers {
         /// <param name="serverColumn">The column of which the server belongs</param>
         /// <param name="serverId">The database id of the server to be applied to the product</param>
         /// <returns></returns>
+        [Authorize]
         [HttpPost]
         public async Task<IActionResult> SaveSelectedServer(int productId, string serverColumn, int serverId) {
 
