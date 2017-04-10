@@ -52,7 +52,9 @@ namespace NOC_PL_WebApplication {
             } else {
                 //loggerFactory.AddDebug(LogLevel.Error);
             }
+            // Ensures that any logs are written to file before app completely stops.
             appLifetime.ApplicationStopped.Register(Log.CloseAndFlush);
+
             app.UseStaticFiles();
 
             app.UseMvc(config => {

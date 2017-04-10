@@ -63,6 +63,9 @@ namespace NOC_PL_WebApplication.Controllers {
                 //Log.Fatal("Fatal level");
                 //_testingLogging.("Inforemation level");
                 _logger.LogInformation("Testing Logging Debug");
+                _logger.LogError("Erro");
+                _logger.LogDebug("Debug");
+                //_logger.Log.ModelState();
                 //Log.Logger = _logger;
 
             } catch(Exception ex) {
