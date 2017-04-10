@@ -7,13 +7,16 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using NOCPLWebApplication.Models;
 using System.Collections;
+using Microsoft.Extensions.Logging;
 
 namespace NOC_PL_WebApplication.Controllers {
     public class TableDataVMsController : Controller {
         private readonly ProductLocationContext _context;
+        private ILogger<TableDataVMsController> _logger;
 
-        public TableDataVMsController(ProductLocationContext context) {
-            _context = context;    
+        public TableDataVMsController(ProductLocationContext context, ILogger<TableDataVMsController> logger) {
+            _context = context;
+            _logger = logger;
         }
 
         /// <summary>
@@ -25,11 +28,16 @@ namespace NOC_PL_WebApplication.Controllers {
         public async Task<IActionResult> Index() {
             
             var tableDataVM = new TableDataVM();
-            tableDataVM.TableProducts = await _context.Products.ToListAsync();
-            tableDataVM.TableServers = await _context.Servers.ToListAsync();
-            SelectList serverList = new SelectList(tableDataVM.TableServers, "Id", "ServerName");
+            try {
+                tableDataVM.TableProducts = await _context.Products.ToListAsync();
+                tableDataVM.TableServers = await _context.Servers.ToListAsync();
+                SelectList serverList = new SelectList(tableDataVM.TableServers, "Id", "ServerName");
+
+                ViewBag.serverList = serverList;
+            } catch(Exception ex) {
+                _logger.LogDebug($"Error generating view from product and server entities in database: {ex.Message}");
+            }
             
-            ViewBag.serverList = serverList;
             return View(tableDataVM);
         }
 
