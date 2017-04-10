@@ -15,8 +15,6 @@ using Serilog;
 namespace NOC_PL_WebApplication.Controllers {
     public class ProductsController : Controller {
         private readonly ProductLocationContext _context;
-        private ILoggerFactory _testingLogging;
-        //private ILogger logger = new LoggerConfiguration();
         private ILogger<ProductsController> _logger;
 
         public ProductsController(ProductLocationContext context, ILogger<ProductsController> logger) {
@@ -65,6 +63,10 @@ namespace NOC_PL_WebApplication.Controllers {
                 //Log.Fatal("Fatal level");
                 //_testingLogging.("Inforemation level");
                 _logger.LogInformation("Testing Logging Debug");
+                _logger.LogError("Erro");
+                _logger.LogDebug("Debug");
+                //_logger.Log.ModelState();
+                //Log.Logger = _logger;
 
             } catch(Exception ex) {
 
