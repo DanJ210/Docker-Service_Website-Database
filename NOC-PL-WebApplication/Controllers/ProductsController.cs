@@ -10,15 +10,24 @@ using Microsoft.AspNetCore.Http;
 using System.Data.SqlClient;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Authorization;
+using Serilog;
 
 namespace NOC_PL_WebApplication.Controllers {
     public class ProductsController : Controller {
         private readonly ProductLocationContext _context;
-        private ILogger _loggerFactory;
+        private ILoggerFactory _testingLogging;
+        //private ILogger logger = new LoggerConfiguration();
+        private ILogger<ProductsController> _logger;
 
-        public ProductsController(ProductLocationContext context, ILogger<ProductsController> loggerFactory) {
+        public ProductsController(ProductLocationContext context, ILogger<ProductsController> logger) {
             _context = context;
-            _loggerFactory = loggerFactory;
+            _logger = logger;
+            //Log.Logger = new LoggerConfiguration()
+            ////.MinimumLevel.Debug()
+            ////.Enrich.FromLogContext()
+            //.WriteTo.File("myfile.txt")
+            ////.WriteTo.RollingFile("logs\\myapp-{Date}.txt");
+            //.CreateLogger();
         }
 
         
@@ -29,7 +38,7 @@ namespace NOC_PL_WebApplication.Controllers {
         /// <param name="serverColumn">The column of which the server belongs</param>
         /// <param name="serverId">The database id of the server to be applied to the product</param>
         /// <returns></returns>
-        [Authorize]
+        //[Authorize]
         [HttpPost]
         public async Task<IActionResult> SaveSelectedServer(int productId, string serverColumn, int serverId) {
 
@@ -49,11 +58,18 @@ namespace NOC_PL_WebApplication.Controllers {
                     product.SecondaryProductServer = servers.Single(s => s.Id == serverId);
                 }
                 await _context.SaveChangesAsync();
+                //_loggerFactory.LogDebug("Successful save to database entity product");
+                //Log.Information("Inforemation level");
+                //Log.Debug("Debug Level");
+                //Log.Error("Error Leve");
+                //Log.Fatal("Fatal level");
+                //_testingLogging.("Inforemation level");
+                _logger.LogInformation("Testing Logging Debug");
 
             } catch(Exception ex) {
 
-                _loggerFactory.LogError($"Failed to save to database: {ex.Message}");
-                _loggerFactory.LogDebug("Failed to save to database");
+                //_loggerFactory.LogError($"Failed to save to database: {ex.Message}");
+                //_loggerFactory.LogDebug("Failed to save to database");
                 return Redirect("/Error");
             }
             return Ok();
