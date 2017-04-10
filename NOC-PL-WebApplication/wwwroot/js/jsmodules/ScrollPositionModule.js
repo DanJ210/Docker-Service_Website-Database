@@ -1,8 +1,7 @@
 ﻿; (function ($) {
 
     /**
-     * Store scroll position for and set it after reload
-     *
+     * @desc Store scroll position for and set it after reload
      * @return {boolean} [loacalStorage is available]
      */
     $.fn.scrollPosReaload = function () {
@@ -12,6 +11,9 @@
                 $(window).scrollTop(posReader);
                 localStorage.removeItem("posStorage");
             }
+            /**
+             * @param {object} Event Object
+             */
             $(this).click(function (e) {
                 localStorage["posStorage"] = $(window).scrollTop();
             });
@@ -21,9 +23,7 @@
 
         return false;
     };
-
-    /* ================================================== */
-
+    // Adds the jQuery function to modal save button
     $(document).ready(function () {
         $('#saveButton').scrollPosReaload();
     });
