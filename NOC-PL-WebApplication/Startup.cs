@@ -14,6 +14,10 @@ namespace NOC_PL_WebApplication {
     public class Startup {
         // This method gets called by the runtime. Use this method to add services to the container.
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
+        Log.Logger = new LoggerConfiguration()
+            .Enrich.FromLogContext()
+            .WriteTo.LiterateConsole()
+            .CreateLogger();
         public void ConfigureServices(IServiceCollection services) {
 
             services.AddDbContext<ProductLocationContext>();
@@ -21,6 +25,7 @@ namespace NOC_PL_WebApplication {
             services.AddTransient<ProductServerSeedData>();
 
             //services.AddLogging(); May not be needed
+            
 
             services.AddMvc();
         }
@@ -31,9 +36,10 @@ namespace NOC_PL_WebApplication {
 
             if (env.IsDevelopment()) {
                 app.UseDeveloperExceptionPage();
-                loggerFactory.AddDebug(LogLevel.Information);
+                //loggerFactory.AddDebug(LogLevel.Information);
+                loggerFactory.AddSerilog();
             } else {
-                loggerFactory.AddDebug(LogLevel.Error);
+                //loggerFactory.AddDebug(LogLevel.Error);
             }
 
             app.UseStaticFiles();
@@ -42,7 +48,7 @@ namespace NOC_PL_WebApplication {
             config.MapRoute(
                 name: "Default",
                 template: "{Controller}/{Action}/{id?}",
-                defaults: new { controller = "App", action = "Index" }
+                defaults: new { controller = "TableDataVMs", action = "Index" }
                 );
             config.MapRoute(
                 name: "Tables",
