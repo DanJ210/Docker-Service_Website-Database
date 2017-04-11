@@ -623,3 +623,251 @@ FROM [Servers] AS [s]
 2017-04-11 12:07:50.865 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/js/serverModal.Controller.js  
 2017-04-11 12:07:50.865 -04:00 [Information] Sending file. Request path: '"/js/serverModal.Controller.js"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\js\serverModal.Controller.js"'
 2017-04-11 12:07:50.867 -04:00 [Information] Request finished in 1.5663ms 200 application/javascript
+2017-04-11 13:50:10.036 -04:00 [Information] Executed DbCommand (39ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Products] AS [p])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2017-04-11 13:50:10.548 -04:00 [Information] Executed DbCommand (148ms) [Parameters=[@p0='?', @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?', @p4='?', @p5='?', @p6='?', @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?', @p10='?', @p11='?', @p12='?', @p13='?' (Size = 4000), @p14='?' (Size = 4000), @p15='?', @p16='?', @p17='?', @p18='?', @p19='?' (Size = 4000), @p20='?' (Size = 4000), @p21='?', @p22='?', @p23='?', @p24='?', @p25='?' (Size = 4000), @p26='?' (Size = 4000), @p27='?', @p28='?', @p29='?', @p30='?', @p31='?' (Size = 4000), @p32='?' (Size = 4000), @p33='?', @p34='?', @p35='?', @p36='?', @p37='?' (Size = 4000), @p38='?' (Size = 4000), @p39='?', @p40='?', @p41='?', @p42='?', @p43='?' (Size = 4000), @p44='?' (Size = 4000), @p45='?', @p46='?', @p47='?', @p48='?', @p49='?' (Size = 4000), @p50='?' (Size = 4000), @p51='?', @p52='?', @p53='?', @p54='?', @p55='?' (Size = 4000), @p56='?' (Size = 4000), @p57='?', @p58='?', @p59='?', @p60='?', @p61='?' (Size = 4000), @p62='?' (Size = 4000), @p63='?', @p64='?', @p65='?', @p66='?', @p67='?' (Size = 4000), @p68='?' (Size = 4000), @p69='?', @p70='?', @p71='?', @p72='?', @p73='?' (Size = 4000), @p74='?' (Size = 4000), @p75='?', @p76='?', @p77='?', @p78='?', @p79='?' (Size = 4000), @p80='?' (Size = 4000), @p81='?', @p82='?', @p83='?', @p84='?', @p85='?' (Size = 4000), @p86='?' (Size = 4000), @p87='?', @p88='?', @p89='?', @p90='?', @p91='?' (Size = 4000), @p92='?' (Size = 4000), @p93='?', @p94='?', @p95='?', @p96='?', @p97='?' (Size = 4000), @p98='?' (Size = 4000), @p99='?', @p100='?', @p101='?', @p102='?', @p103='?' (Size = 4000), @p104='?' (Size = 4000), @p105='?', @p106='?', @p107='?', @p108='?', @p109='?' (Size = 4000), @p110='?' (Size = 4000), @p111='?', @p112='?', @p113='?', @p114='?', @p115='?' (Size = 4000), @p116='?' (Size = 4000), @p117='?', @p118='?', @p119='?', @p120='?', @p121='?' (Size = 4000), @p122='?' (Size = 4000), @p123='?', @p124='?', @p125='?', @p126='?', @p127='?' (Size = 4000), @p128='?' (Size = 4000), @p129='?', @p130='?', @p131='?', @p132='?', @p133='?' (Size = 4000), @p134='?' (Size = 4000), @p135='?', @p136='?', @p137='?', @p138='?', @p139='?' (Size = 4000), @p140='?' (Size = 4000), @p141='?', @p142='?', @p143='?', @p144='?', @p145='?' (Size = 4000), @p146='?' (Size = 4000), @p147='?', @p148='?', @p149='?', @p150='?', @p151='?' (Size = 4000), @p152='?' (Size = 4000), @p153='?', @p154='?', @p155='?', @p156='?', @p157='?' (Size = 4000), @p158='?' (Size = 4000), @p159='?', @p160='?', @p161='?', @p162='?', @p163='?' (Size = 4000), @p164='?' (Size = 4000), @p165='?', @p166='?', @p167='?', @p168='?', @p169='?' (Size = 4000), @p170='?' (Size = 4000), @p171='?', @p172='?', @p173='?', @p174='?', @p175='?' (Size = 4000), @p176='?' (Size = 4000), @p177='?', @p178='?', @p179='?', @p180='?', @p181='?' (Size = 4000), @p182='?' (Size = 4000), @p183='?', @p184='?', @p185='?', @p186='?', @p187='?' (Size = 4000), @p188='?' (Size = 4000), @p189='?', @p190='?', @p191='?', @p192='?', @p193='?' (Size = 4000), @p194='?' (Size = 4000), @p195='?', @p196='?', @p197='?', @p198='?', @p199='?' (Size = 4000), @p200='?' (Size = 4000), @p201='?', @p202='?', @p203='?', @p204='?', @p205='?' (Size = 4000), @p206='?' (Size = 4000), @p207='?', @p208='?', @p209='?', @p210='?', @p211='?' (Size = 4000), @p212='?' (Size = 4000), @p213='?', @p214='?', @p215='?', @p216='?', @p217='?' (Size = 4000), @p218='?' (Size = 4000), @p219='?', @p220='?', @p221='?', @p222='?', @p223='?' (Size = 4000), @p224='?' (Size = 4000), @p225='?', @p226='?', @p227='?', @p228='?', @p229='?' (Size = 4000), @p230='?' (Size = 4000), @p231='?', @p232='?', @p233='?', @p234='?', @p235='?' (Size = 4000), @p236='?' (Size = 4000), @p237='?', @p238='?', @p239='?', @p240='?', @p241='?' (Size = 4000), @p242='?' (Size = 4000), @p243='?', @p244='?', @p245='?', @p246='?', @p247='?' (Size = 4000), @p248='?' (Size = 4000), @p249='?', @p250='?', @p251='?', @p252='?', @p253='?' (Size = 4000), @p254='?' (Size = 4000), @p255='?', @p256='?', @p257='?', @p258='?', @p259='?' (Size = 4000), @p260='?' (Size = 4000), @p261='?', @p262='?', @p263='?', @p264='?', @p265='?' (Size = 4000), @p266='?' (Size = 4000), @p267='?', @p268='?', @p269='?', @p270='?', @p271='?' (Size = 4000), @p272='?' (Size = 4000), @p273='?', @p274='?', @p275='?', @p276='?', @p277='?' (Size = 4000), @p278='?' (Size = 4000), @p279='?', @p280='?', @p281='?', @p282='?', @p283='?' (Size = 4000), @p284='?' (Size = 4000), @p285='?', @p286='?', @p287='?', @p288='?', @p289='?' (Size = 4000), @p290='?' (Size = 4000), @p291='?', @p292='?', @p293='?', @p294='?', @p295='?' (Size = 4000), @p296='?' (Size = 4000), @p297='?', @p298='?', @p299='?', @p300='?', @p301='?' (Size = 4000), @p302='?' (Size = 4000), @p303='?', @p304='?', @p305='?', @p306='?', @p307='?' (Size = 4000), @p308='?' (Size = 4000), @p309='?', @p310='?', @p311='?', @p312='?', @p313='?' (Size = 4000), @p314='?' (Size = 4000), @p315='?', @p316='?', @p317='?', @p318='?', @p319='?' (Size = 4000), @p320='?' (Size = 4000), @p321='?', @p322='?', @p323='?', @p324='?', @p325='?' (Size = 4000), @p326='?' (Size = 4000), @p327='?', @p328='?', @p329='?', @p330='?', @p331='?' (Size = 4000), @p332='?' (Size = 4000), @p333='?', @p334='?', @p335='?', @p336='?', @p337='?' (Size = 4000), @p338='?' (Size = 4000), @p339='?', @p340='?', @p341='?', @p342='?', @p343='?' (Size = 4000), @p344='?' (Size = 4000), @p345='?', @p346='?', @p347='?', @p348='?', @p349='?' (Size = 4000), @p350='?' (Size = 4000), @p351='?', @p352='?', @p353='?', @p354='?', @p355='?' (Size = 4000), @p356='?' (Size = 4000), @p357='?', @p358='?', @p359='?', @p360='?', @p361='?' (Size = 4000), @p362='?' (Size = 4000), @p363='?', @p364='?', @p365='?', @p366='?', @p367='?' (Size = 4000), @p368='?' (Size = 4000), @p369='?', @p370='?', @p371='?', @p372='?', @p373='?' (Size = 4000), @p374='?' (Size = 4000), @p375='?', @p376='?', @p377='?', @p378='?', @p379='?' (Size = 4000), @p380='?' (Size = 4000), @p381='?', @p382='?', @p383='?', @p384='?', @p385='?' (Size = 4000), @p386='?' (Size = 4000), @p387='?', @p388='?', @p389='?', @p390='?', @p391='?' (Size = 4000), @p392='?' (Size = 4000), @p393='?', @p394='?', @p395='?'], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+DECLARE @toInsert0 TABLE ([PrimaryProductServerId] int, [ProductGroup] nvarchar(max), [ProductName] nvarchar(max), [SecondaryProductServerId] int, [TableDataVMId] int, [TableNumber] int, [_Position] [int]);
+INSERT INTO @toInsert0
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, 0),
+(@p6, @p7, @p8, @p9, @p10, @p11, 1),
+(@p12, @p13, @p14, @p15, @p16, @p17, 2),
+(@p18, @p19, @p20, @p21, @p22, @p23, 3),
+(@p24, @p25, @p26, @p27, @p28, @p29, 4),
+(@p30, @p31, @p32, @p33, @p34, @p35, 5),
+(@p36, @p37, @p38, @p39, @p40, @p41, 6),
+(@p42, @p43, @p44, @p45, @p46, @p47, 7),
+(@p48, @p49, @p50, @p51, @p52, @p53, 8),
+(@p54, @p55, @p56, @p57, @p58, @p59, 9),
+(@p60, @p61, @p62, @p63, @p64, @p65, 10),
+(@p66, @p67, @p68, @p69, @p70, @p71, 11),
+(@p72, @p73, @p74, @p75, @p76, @p77, 12),
+(@p78, @p79, @p80, @p81, @p82, @p83, 13),
+(@p84, @p85, @p86, @p87, @p88, @p89, 14),
+(@p90, @p91, @p92, @p93, @p94, @p95, 15),
+(@p96, @p97, @p98, @p99, @p100, @p101, 16),
+(@p102, @p103, @p104, @p105, @p106, @p107, 17),
+(@p108, @p109, @p110, @p111, @p112, @p113, 18),
+(@p114, @p115, @p116, @p117, @p118, @p119, 19),
+(@p120, @p121, @p122, @p123, @p124, @p125, 20),
+(@p126, @p127, @p128, @p129, @p130, @p131, 21),
+(@p132, @p133, @p134, @p135, @p136, @p137, 22),
+(@p138, @p139, @p140, @p141, @p142, @p143, 23),
+(@p144, @p145, @p146, @p147, @p148, @p149, 24),
+(@p150, @p151, @p152, @p153, @p154, @p155, 25),
+(@p156, @p157, @p158, @p159, @p160, @p161, 26),
+(@p162, @p163, @p164, @p165, @p166, @p167, 27),
+(@p168, @p169, @p170, @p171, @p172, @p173, 28),
+(@p174, @p175, @p176, @p177, @p178, @p179, 29),
+(@p180, @p181, @p182, @p183, @p184, @p185, 30),
+(@p186, @p187, @p188, @p189, @p190, @p191, 31),
+(@p192, @p193, @p194, @p195, @p196, @p197, 32),
+(@p198, @p199, @p200, @p201, @p202, @p203, 33),
+(@p204, @p205, @p206, @p207, @p208, @p209, 34),
+(@p210, @p211, @p212, @p213, @p214, @p215, 35),
+(@p216, @p217, @p218, @p219, @p220, @p221, 36),
+(@p222, @p223, @p224, @p225, @p226, @p227, 37),
+(@p228, @p229, @p230, @p231, @p232, @p233, 38),
+(@p234, @p235, @p236, @p237, @p238, @p239, 39),
+(@p240, @p241, @p242, @p243, @p244, @p245, 40),
+(@p246, @p247, @p248, @p249, @p250, @p251, 41),
+(@p252, @p253, @p254, @p255, @p256, @p257, 42),
+(@p258, @p259, @p260, @p261, @p262, @p263, 43),
+(@p264, @p265, @p266, @p267, @p268, @p269, 44),
+(@p270, @p271, @p272, @p273, @p274, @p275, 45),
+(@p276, @p277, @p278, @p279, @p280, @p281, 46),
+(@p282, @p283, @p284, @p285, @p286, @p287, 47),
+(@p288, @p289, @p290, @p291, @p292, @p293, 48),
+(@p294, @p295, @p296, @p297, @p298, @p299, 49),
+(@p300, @p301, @p302, @p303, @p304, @p305, 50),
+(@p306, @p307, @p308, @p309, @p310, @p311, 51),
+(@p312, @p313, @p314, @p315, @p316, @p317, 52),
+(@p318, @p319, @p320, @p321, @p322, @p323, 53),
+(@p324, @p325, @p326, @p327, @p328, @p329, 54),
+(@p330, @p331, @p332, @p333, @p334, @p335, 55),
+(@p336, @p337, @p338, @p339, @p340, @p341, 56),
+(@p342, @p343, @p344, @p345, @p346, @p347, 57),
+(@p348, @p349, @p350, @p351, @p352, @p353, 58),
+(@p354, @p355, @p356, @p357, @p358, @p359, 59),
+(@p360, @p361, @p362, @p363, @p364, @p365, 60),
+(@p366, @p367, @p368, @p369, @p370, @p371, 61),
+(@p372, @p373, @p374, @p375, @p376, @p377, 62),
+(@p378, @p379, @p380, @p381, @p382, @p383, 63),
+(@p384, @p385, @p386, @p387, @p388, @p389, 64),
+(@p390, @p391, @p392, @p393, @p394, @p395, 65);
+
+DECLARE @inserted0 TABLE ([Id] int, [_Position] [int]);
+MERGE [Products] USING @toInsert0 AS i ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([PrimaryProductServerId], [ProductGroup], [ProductName], [SecondaryProductServerId], [TableDataVMId], [TableNumber])
+VALUES (i.[PrimaryProductServerId], i.[ProductGroup], i.[ProductName], i.[SecondaryProductServerId], i.[TableDataVMId], i.[TableNumber])
+OUTPUT INSERTED.[Id], i._Position
+INTO @inserted0;
+
+SELECT [t].[Id] FROM [Products] t
+INNER JOIN @inserted0 i ON ([t].[Id] = [i].[Id])
+ORDER BY [i].[_Position];
+2017-04-11 13:50:10.627 -04:00 [Information] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Servers] AS [s])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2017-04-11 13:50:10.676 -04:00 [Information] Executed DbCommand (23ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?', @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?', @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?', @p9='?' (Size = 4000), @p10='?' (Size = 4000), @p11='?', @p12='?' (Size = 4000), @p13='?' (Size = 4000), @p14='?', @p15='?' (Size = 4000), @p16='?' (Size = 4000), @p17='?', @p18='?' (Size = 4000), @p19='?' (Size = 4000), @p20='?', @p21='?' (Size = 4000), @p22='?' (Size = 4000), @p23='?', @p24='?' (Size = 4000), @p25='?' (Size = 4000), @p26='?', @p27='?' (Size = 4000), @p28='?' (Size = 4000), @p29='?', @p30='?' (Size = 4000), @p31='?' (Size = 4000), @p32='?', @p33='?' (Size = 4000), @p34='?' (Size = 4000), @p35='?', @p36='?' (Size = 4000), @p37='?' (Size = 4000), @p38='?', @p39='?' (Size = 4000), @p40='?' (Size = 4000), @p41='?', @p42='?' (Size = 4000), @p43='?' (Size = 4000), @p44='?', @p45='?' (Size = 4000), @p46='?' (Size = 4000), @p47='?', @p48='?' (Size = 4000), @p49='?' (Size = 4000), @p50='?', @p51='?' (Size = 4000), @p52='?' (Size = 4000), @p53='?', @p54='?' (Size = 4000), @p55='?' (Size = 4000), @p56='?', @p57='?' (Size = 4000), @p58='?' (Size = 4000), @p59='?', @p60='?' (Size = 4000), @p61='?' (Size = 4000), @p62='?', @p63='?' (Size = 4000), @p64='?' (Size = 4000), @p65='?', @p66='?' (Size = 4000), @p67='?' (Size = 4000), @p68='?', @p69='?' (Size = 4000), @p70='?' (Size = 4000), @p71='?', @p72='?' (Size = 4000), @p73='?' (Size = 4000), @p74='?', @p75='?' (Size = 4000), @p76='?' (Size = 4000), @p77='?', @p78='?' (Size = 4000), @p79='?' (Size = 4000), @p80='?', @p81='?' (Size = 4000), @p82='?' (Size = 4000), @p83='?', @p84='?' (Size = 4000), @p85='?' (Size = 4000), @p86='?', @p87='?' (Size = 4000), @p88='?' (Size = 4000), @p89='?', @p90='?' (Size = 4000), @p91='?' (Size = 4000), @p92='?', @p93='?' (Size = 4000), @p94='?' (Size = 4000), @p95='?', @p96='?' (Size = 4000), @p97='?' (Size = 4000), @p98='?', @p99='?' (Size = 4000), @p100='?' (Size = 4000), @p101='?', @p102='?' (Size = 4000), @p103='?' (Size = 4000), @p104='?', @p105='?' (Size = 4000), @p106='?' (Size = 4000), @p107='?', @p108='?' (Size = 4000), @p109='?' (Size = 4000), @p110='?', @p111='?' (Size = 4000), @p112='?' (Size = 4000), @p113='?', @p114='?' (Size = 4000), @p115='?' (Size = 4000), @p116='?', @p117='?' (Size = 4000), @p118='?' (Size = 4000), @p119='?', @p120='?' (Size = 4000), @p121='?' (Size = 4000), @p122='?', @p123='?' (Size = 4000), @p124='?' (Size = 4000), @p125='?', @p126='?' (Size = 4000), @p127='?' (Size = 4000), @p128='?', @p129='?' (Size = 4000), @p130='?' (Size = 4000), @p131='?', @p132='?' (Size = 4000), @p133='?' (Size = 4000), @p134='?', @p135='?' (Size = 4000), @p136='?' (Size = 4000), @p137='?', @p138='?' (Size = 4000), @p139='?' (Size = 4000), @p140='?', @p141='?' (Size = 4000), @p142='?' (Size = 4000), @p143='?', @p144='?' (Size = 4000), @p145='?' (Size = 4000), @p146='?', @p147='?' (Size = 4000), @p148='?' (Size = 4000), @p149='?', @p150='?' (Size = 4000), @p151='?' (Size = 4000), @p152='?', @p153='?' (Size = 4000), @p154='?' (Size = 4000), @p155='?', @p156='?' (Size = 4000), @p157='?' (Size = 4000), @p158='?', @p159='?' (Size = 4000), @p160='?' (Size = 4000), @p161='?'], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+DECLARE @toInsert0 TABLE ([ServerGroup] nvarchar(max), [ServerName] nvarchar(max), [TableDataVMId] int, [_Position] [int]);
+INSERT INTO @toInsert0
+VALUES (@p0, @p1, @p2, 0),
+(@p3, @p4, @p5, 1),
+(@p6, @p7, @p8, 2),
+(@p9, @p10, @p11, 3),
+(@p12, @p13, @p14, 4),
+(@p15, @p16, @p17, 5),
+(@p18, @p19, @p20, 6),
+(@p21, @p22, @p23, 7),
+(@p24, @p25, @p26, 8),
+(@p27, @p28, @p29, 9),
+(@p30, @p31, @p32, 10),
+(@p33, @p34, @p35, 11),
+(@p36, @p37, @p38, 12),
+(@p39, @p40, @p41, 13),
+(@p42, @p43, @p44, 14),
+(@p45, @p46, @p47, 15),
+(@p48, @p49, @p50, 16),
+(@p51, @p52, @p53, 17),
+(@p54, @p55, @p56, 18),
+(@p57, @p58, @p59, 19),
+(@p60, @p61, @p62, 20),
+(@p63, @p64, @p65, 21),
+(@p66, @p67, @p68, 22),
+(@p69, @p70, @p71, 23),
+(@p72, @p73, @p74, 24),
+(@p75, @p76, @p77, 25),
+(@p78, @p79, @p80, 26),
+(@p81, @p82, @p83, 27),
+(@p84, @p85, @p86, 28),
+(@p87, @p88, @p89, 29),
+(@p90, @p91, @p92, 30),
+(@p93, @p94, @p95, 31),
+(@p96, @p97, @p98, 32),
+(@p99, @p100, @p101, 33),
+(@p102, @p103, @p104, 34),
+(@p105, @p106, @p107, 35),
+(@p108, @p109, @p110, 36),
+(@p111, @p112, @p113, 37),
+(@p114, @p115, @p116, 38),
+(@p117, @p118, @p119, 39),
+(@p120, @p121, @p122, 40),
+(@p123, @p124, @p125, 41),
+(@p126, @p127, @p128, 42),
+(@p129, @p130, @p131, 43),
+(@p132, @p133, @p134, 44),
+(@p135, @p136, @p137, 45),
+(@p138, @p139, @p140, 46),
+(@p141, @p142, @p143, 47),
+(@p144, @p145, @p146, 48),
+(@p147, @p148, @p149, 49),
+(@p150, @p151, @p152, 50),
+(@p153, @p154, @p155, 51),
+(@p156, @p157, @p158, 52),
+(@p159, @p160, @p161, 53);
+
+DECLARE @inserted0 TABLE ([Id] int, [_Position] [int]);
+MERGE [Servers] USING @toInsert0 AS i ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([ServerGroup], [ServerName], [TableDataVMId])
+VALUES (i.[ServerGroup], i.[ServerName], i.[TableDataVMId])
+OUTPUT INSERTED.[Id], i._Position
+INTO @inserted0;
+
+SELECT [t].[Id] FROM [Servers] t
+INNER JOIN @inserted0 i ON ([t].[Id] = [i].[Id])
+ORDER BY [i].[_Position];
+2017-04-11 13:50:11.313 -04:00 [Information] Request starting HTTP/1.1 DEBUG http://localhost:12170/  0
+2017-04-11 13:50:11.313 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/  
+2017-04-11 13:50:11.493 -04:00 [Information] Request finished in 190.9978ms 200 
+2017-04-11 13:50:11.940 -04:00 [Information] Executing action method "NOC_PL_WebApplication.Controllers.TableDataVMsController.Index (NOC-PL-WebApplication)" with arguments (null) - ModelState is Valid
+2017-04-11 13:50:12.031 -04:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[PrimaryProductServerId], [p].[ProductGroup], [p].[ProductName], [p].[SecondaryProductServerId], [p].[TableDataVMId], [p].[TableNumber]
+FROM [Products] AS [p]
+2017-04-11 13:50:12.086 -04:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[ServerGroup], [s].[ServerName], [s].[TableDataVMId]
+FROM [Servers] AS [s]
+2017-04-11 13:50:12.111 -04:00 [Information] Database queries successful
+2017-04-11 13:50:15.916 -04:00 [Information] Executing ViewResult, running view at path "/Views/TableDataVMs/Index.cshtml".
+2017-04-11 13:50:16.052 -04:00 [Information] User profile is available. Using '"C:\Users\DanJ2\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2017-04-11 13:50:16.845 -04:00 [Information] Executed action "NOC_PL_WebApplication.Controllers.TableDataVMsController.Index (NOC-PL-WebApplication)" in 4958.6559ms
+2017-04-11 13:50:16.863 -04:00 [Information] Request finished in 5576.8192ms 200 text/html; charset=utf-8
+2017-04-11 13:50:25.344 -04:00 [Information] Request starting HTTP/1.1 POST http://localhost:12170/products/SaveSelectedServer application/x-www-form-urlencoded; charset=UTF-8 52
+2017-04-11 13:50:25.519 -04:00 [Information] Executing action method "NOC_PL_WebApplication.Controllers.ProductsController.SaveSelectedServer (NOC-PL-WebApplication)" with arguments (["38", "secondaryColumn", "5"]) - ModelState is Valid
+2017-04-11 13:50:25.532 -04:00 [Information] Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[PrimaryProductServerId], [p].[ProductGroup], [p].[ProductName], [p].[SecondaryProductServerId], [p].[TableDataVMId], [p].[TableNumber]
+FROM [Products] AS [p]
+2017-04-11 13:50:25.539 -04:00 [Information] Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[ServerGroup], [s].[ServerName], [s].[TableDataVMId]
+FROM [Servers] AS [s]
+2017-04-11 13:50:25.641 -04:00 [Information] Executed DbCommand (1ms) [Parameters=[@__productId_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [p].[Id], [p].[PrimaryProductServerId], [p].[ProductGroup], [p].[ProductName], [p].[SecondaryProductServerId], [p].[TableDataVMId], [p].[TableNumber]
+FROM [Products] AS [p]
+WHERE [p].[Id] = @__productId_0
+2017-04-11 13:50:25.676 -04:00 [Information] Executed DbCommand (2ms) [Parameters=[@p1='?', @p0='?'], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Products] SET [SecondaryProductServerId] = @p0
+WHERE [Id] = @p1;
+SELECT @@ROWCOUNT;
+2017-04-11 13:50:25.708 -04:00 [Information] Testing Logging Debug
+2017-04-11 13:50:25.709 -04:00 [Error] Erro
+2017-04-11 13:50:25.713 -04:00 [Information] Executing HttpStatusCodeResult, setting HTTP status code 200
+2017-04-11 13:50:25.714 -04:00 [Information] Executed action "NOC_PL_WebApplication.Controllers.ProductsController.SaveSelectedServer (NOC-PL-WebApplication)" in 337.3436ms
+2017-04-11 13:50:25.715 -04:00 [Information] Request finished in 369.4554ms 200 
+2017-04-11 13:50:26.149 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/  
+2017-04-11 13:50:26.150 -04:00 [Information] Executing action method "NOC_PL_WebApplication.Controllers.TableDataVMsController.Index (NOC-PL-WebApplication)" with arguments (null) - ModelState is Valid
+2017-04-11 13:50:26.152 -04:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[PrimaryProductServerId], [p].[ProductGroup], [p].[ProductName], [p].[SecondaryProductServerId], [p].[TableDataVMId], [p].[TableNumber]
+FROM [Products] AS [p]
+2017-04-11 13:50:26.156 -04:00 [Information] Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[ServerGroup], [s].[ServerName], [s].[TableDataVMId]
+FROM [Servers] AS [s]
+2017-04-11 13:50:26.161 -04:00 [Information] Database queries successful
+2017-04-11 13:50:26.165 -04:00 [Information] Executing ViewResult, running view at path "/Views/TableDataVMs/Index.cshtml".
+2017-04-11 13:50:26.172 -04:00 [Information] Executed action "NOC_PL_WebApplication.Controllers.TableDataVMsController.Index (NOC-PL-WebApplication)" in 22.1723ms
+2017-04-11 13:50:26.172 -04:00 [Information] Request finished in 23.359ms 200 text/html; charset=utf-8
+2017-04-11 13:50:26.290 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/bootstrap/dist/css/bootstrap.css  
+2017-04-11 13:50:26.311 -04:00 [Information] Sending file. Request path: '"/lib/bootstrap/dist/css/bootstrap.css"'. Physical path: '"C:\Users\DanJ2\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\lib\bootstrap\dist\css\bootstrap.css"'
+2017-04-11 13:50:26.392 -04:00 [Information] Request finished in 102.4473ms 200 text/css
+2017-04-11 13:50:26.425 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/font-awesome/css/font-awesome.css  
+2017-04-11 13:50:26.426 -04:00 [Information] Sending file. Request path: '"/lib/font-awesome/css/font-awesome.css"'. Physical path: '"C:\Users\DanJ2\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\lib\font-awesome\css\font-awesome.css"'
+2017-04-11 13:50:26.434 -04:00 [Information] Request finished in 8.8296ms 200 text/css
+2017-04-11 13:50:26.442 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/css/site.css?v=SzNlSGmfY0Gj7vZhCGVU9VTI0h4xWhyELf6nIN6Eghc  
+2017-04-11 13:50:26.442 -04:00 [Information] Sending file. Request path: '"/css/site.css"'. Physical path: '"C:\Users\DanJ2\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\css\site.css"'
+2017-04-11 13:50:26.443 -04:00 [Information] Request finished in 1.8383ms 200 text/css
+2017-04-11 13:50:26.471 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/jquery/dist/jquery.min.js  
+2017-04-11 13:50:26.472 -04:00 [Information] Sending file. Request path: '"/lib/jquery/dist/jquery.min.js"'. Physical path: '"C:\Users\DanJ2\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\lib\jquery\dist\jquery.min.js"'
+2017-04-11 13:50:26.489 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0  
+2017-04-11 13:50:26.490 -04:00 [Information] Sending file. Request path: '"/lib/font-awesome/fonts/fontawesome-webfont.woff2"'. Physical path: '"C:\Users\DanJ2\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\lib\font-awesome\fonts\fontawesome-webfont.woff2"'
+2017-04-11 13:50:26.577 -04:00 [Information] Request finished in 88.0909ms 200 application/font-woff2
+2017-04-11 13:50:26.727 -04:00 [Information] Request finished in 256.1216ms 200 application/javascript
+2017-04-11 13:50:26.798 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/bootstrap/dist/js/bootstrap.min.js  
+2017-04-11 13:50:26.799 -04:00 [Information] Sending file. Request path: '"/lib/bootstrap/dist/js/bootstrap.min.js"'. Physical path: '"C:\Users\DanJ2\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js"'
+2017-04-11 13:50:26.832 -04:00 [Information] Request finished in 34.1421ms 200 application/javascript
+2017-04-11 13:50:26.848 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/angular2/angular.min.js  
+2017-04-11 13:50:26.849 -04:00 [Information] Sending file. Request path: '"/lib/angular2/angular.min.js"'. Physical path: '"C:\Users\DanJ2\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\lib\angular2\angular.min.js"'
+2017-04-11 13:50:26.931 -04:00 [Information] Request finished in 83.2649ms 200 application/javascript
+2017-04-11 13:50:26.982 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/js/site.min.js?v=NpMUj71zExRQni6K27BChnEFiXr3zPwMp_IYP45LeJE  
+2017-04-11 13:50:26.982 -04:00 [Information] Sending file. Request path: '"/js/site.min.js"'. Physical path: '"C:\Users\DanJ2\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\js\site.min.js"'
+2017-04-11 13:50:26.983 -04:00 [Information] Request finished in 1.1195ms 200 application/javascript
+2017-04-11 13:50:27.002 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/js/jsmodules/ScrollPositionModule.js?v=nMtTymepNGTcJY1TyjArpj4eAyNo6Vtrk2PhD6EGS8g  
+2017-04-11 13:50:27.003 -04:00 [Information] Sending file. Request path: '"/js/jsmodules/ScrollPositionModule.js"'. Physical path: '"C:\Users\DanJ2\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\js\jsmodules\ScrollPositionModule.js"'
+2017-04-11 13:50:27.004 -04:00 [Information] Request finished in 1.984ms 200 application/javascript
+2017-04-11 13:50:27.016 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/css/serverModal.styles.css  
+2017-04-11 13:50:27.016 -04:00 [Information] Sending file. Request path: '"/css/serverModal.styles.css"'. Physical path: '"C:\Users\DanJ2\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\css\serverModal.styles.css"'
+2017-04-11 13:50:27.031 -04:00 [Information] Request finished in 15.1828ms 200 text/css
+2017-04-11 13:50:27.051 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/js/serverModal.Controller.js  
+2017-04-11 13:50:27.053 -04:00 [Information] Sending file. Request path: '"/js/serverModal.Controller.js"'. Physical path: '"C:\Users\DanJ2\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\js\serverModal.Controller.js"'
+2017-04-11 13:50:27.077 -04:00 [Information] Request finished in 25.2651ms 200 application/javascript
