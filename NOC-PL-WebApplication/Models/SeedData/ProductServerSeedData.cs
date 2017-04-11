@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Identity;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,11 +13,22 @@ namespace NOCPLWebApplication.Models.SeedData {
     /// </summary>
     public class ProductServerSeedData {
         private ProductLocationContext _context;
+        private UserManager<NocUser> _userManager;
 
-        public ProductServerSeedData(ProductLocationContext context) {
+        public ProductServerSeedData(ProductLocationContext context, UserManager<NocUser> userManager) {
             _context = context;
+            _userManager = userManager;
         }
         public async Task EnsureSeedData() {
+
+            //if (_userManager.FindByNameAsync("admin") == null) {
+            //    var user = new NocUser() {
+            //        UserName = "admin"
+            //    };
+
+            //    await _userManager.CreateAsync(user, "P@ssw0rd!");
+            //}
+
             if (!_context.Products.Any()) {
                 var productList = new List<Product>() {
                     // Product Page 1
