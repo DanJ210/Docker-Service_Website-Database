@@ -8,13 +8,13 @@ using NOCPLWebApplication.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace NOCPLWebApplication.Models {
-    public class ProductLocationContext : DbContext {
+    public class ProductLocationContext : IdentityDbContext {
         public ProductLocationContext(DbContextOptions options) : base(options) {
 
         }
         public DbSet<Product> Products { get; set; }
         public DbSet<Server> Servers { get; set; }
-        public DbSet<NOCPLWebApplication.Models.TableDataVM> TableDataVM { get; set; }
+        public DbSet<TableDataVM> TableDataVM { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) {
             base.OnConfiguring(optionsBuilder);
