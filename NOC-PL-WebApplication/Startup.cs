@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -26,7 +27,8 @@ namespace NOC_PL_WebApplication {
 
         public void ConfigureServices(IServiceCollection services) {
 
-            services.AddDbContext<ProductLocationContext>();
+            var connectionString = "Server=(localdb)\\MSSQLLocalDb;Database=PLTablesData;Trusted_Connection=true;MultipleActiveResultSets=true;";
+            services.AddDbContext<ProductLocationContext>(options => options.UseSqlServer(connectionString));
 
             services.AddTransient<ProductServerSeedData>();
 
