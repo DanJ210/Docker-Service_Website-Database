@@ -5,9 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using NOCPLWebApplication.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace NOCPLWebApplication.Models {
-    public class ProductLocationContext : DbContext {
+    public class ProductLocationContext : IdentityDbContext<NocUser> {
         public ProductLocationContext(DbContextOptions options) : base(options) {
 
         }

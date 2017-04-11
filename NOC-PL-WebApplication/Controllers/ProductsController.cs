@@ -20,6 +20,8 @@ namespace NOC_PL_WebApplication.Controllers {
         public ProductsController(ProductLocationContext context, ILogger<ProductsController> logger) {
             _context = context;
             _logger = logger;
+
+            // Create a new logger for each class.
             //Log.Logger = new LoggerConfiguration()
             ////.MinimumLevel.Debug()
             ////.Enrich.FromLogContext()
@@ -56,22 +58,11 @@ namespace NOC_PL_WebApplication.Controllers {
                     product.SecondaryProductServer = servers.Single(s => s.Id == serverId);
                 }
                 await _context.SaveChangesAsync();
-                //_loggerFactory.LogDebug("Successful save to database entity product");
-                //Log.Information("Inforemation level");
-                //Log.Debug("Debug Level");
-                //Log.Error("Error Leve");
-                //Log.Fatal("Fatal level");
-                //_testingLogging.("Inforemation level");
                 _logger.LogInformation("Testing Logging Debug");
                 _logger.LogError("Erro");
                 _logger.LogDebug("Debug");
-                //_logger.Log.ModelState();
-                //Log.Logger = _logger;
 
             } catch(Exception ex) {
-
-                //_loggerFactory.LogError($"Failed to save to database: {ex.Message}");
-                //_loggerFactory.LogDebug("Failed to save to database");
                 return Redirect("/Error");
             }
             return Ok();

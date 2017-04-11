@@ -1,0 +1,310 @@
+2017-04-11 11:02:44.280 -04:00 [Information] Executed DbCommand (191ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Products] AS [p])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2017-04-11 11:02:44.454 -04:00 [Information] Executed DbCommand (30ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Servers] AS [s])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2017-04-11 11:02:45.197 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/  
+2017-04-11 11:02:45.197 -04:00 [Information] Request starting HTTP/1.1 DEBUG http://localhost:12170/  0
+2017-04-11 11:02:45.560 -04:00 [Information] Request finished in 394.07ms 200 
+2017-04-11 11:02:46.359 -04:00 [Information] Executing action method "NOC_PL_WebApplication.Controllers.TableDataVMsController.Index (NOC-PL-WebApplication)" with arguments (null) - ModelState is Valid
+2017-04-11 11:02:46.596 -04:00 [Information] Executed DbCommand (148ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[PrimaryProductServerId], [p].[ProductGroup], [p].[ProductName], [p].[SecondaryProductServerId], [p].[TableDataVMId], [p].[TableNumber]
+FROM [Products] AS [p]
+2017-04-11 11:02:46.701 -04:00 [Information] Executed DbCommand (32ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[ServerGroup], [s].[ServerName], [s].[TableDataVMId]
+FROM [Servers] AS [s]
+2017-04-11 11:02:46.746 -04:00 [Information] Database queries successful
+2017-04-11 11:02:50.261 -04:00 [Information] Executing ViewResult, running view at path "/Views/TableDataVMs/Index.cshtml".
+2017-04-11 11:02:50.373 -04:00 [Information] User profile is available. Using '"C:\Users\djackson\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2017-04-11 11:02:50.922 -04:00 [Information] Executed action "NOC_PL_WebApplication.Controllers.TableDataVMsController.Index (NOC-PL-WebApplication)" in 4799.9186ms
+2017-04-11 11:02:50.930 -04:00 [Information] Request finished in 5796.076ms 200 text/html; charset=utf-8
+2017-04-11 11:02:50.948 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/css/site.css?v=SzNlSGmfY0Gj7vZhCGVU9VTI0h4xWhyELf6nIN6Eghc  
+2017-04-11 11:02:50.964 -04:00 [Information] The file "/css/site.css" was not modified
+2017-04-11 11:02:50.968 -04:00 [Information] Request finished in 20.0182ms 304 text/css
+2017-04-11 11:02:51.274 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/js/site.min.js?v=dU_YKb8K79rGQvmq_jrZQajPKL5t4_ymf1FNDJEC_EY  
+2017-04-11 11:02:51.275 -04:00 [Information] The file "/js/site.min.js" was not modified
+2017-04-11 11:02:51.275 -04:00 [Information] Request finished in 0.5769ms 304 application/javascript
+2017-04-11 11:02:51.337 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/js/jsmodules/ScrollPositionModule.js?v=nMtTymepNGTcJY1TyjArpj4eAyNo6Vtrk2PhD6EGS8g  
+2017-04-11 11:02:51.337 -04:00 [Information] The file "/js/jsmodules/ScrollPositionModule.js" was not modified
+2017-04-11 11:02:51.337 -04:00 [Information] Request finished in 0.6254ms 304 application/javascript
+2017-04-11 11:02:51.364 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/css/serverModal.styles.css  
+2017-04-11 11:02:51.364 -04:00 [Information] The file "/css/serverModal.styles.css" was not modified
+2017-04-11 11:02:51.364 -04:00 [Information] Request finished in 0.6624ms 304 text/css
+2017-04-11 11:02:51.367 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/js/serverModal.Controller.js  
+2017-04-11 11:02:51.368 -04:00 [Information] The file "/js/serverModal.Controller.js" was not modified
+2017-04-11 11:02:51.368 -04:00 [Information] Request finished in 0.7601ms 304 application/javascript
+2017-04-11 11:03:01.378 -04:00 [Information] Request starting HTTP/1.1 POST http://localhost:12170/products/SaveSelectedServer application/x-www-form-urlencoded; charset=UTF-8 50
+2017-04-11 11:03:01.559 -04:00 [Information] Executing action method "NOC_PL_WebApplication.Controllers.ProductsController.SaveSelectedServer (NOC-PL-WebApplication)" with arguments (["17", "primaryColumn", "5"]) - ModelState is Valid
+2017-04-11 11:03:01.592 -04:00 [Information] Executed DbCommand (25ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[PrimaryProductServerId], [p].[ProductGroup], [p].[ProductName], [p].[SecondaryProductServerId], [p].[TableDataVMId], [p].[TableNumber]
+FROM [Products] AS [p]
+2017-04-11 11:03:01.622 -04:00 [Information] Executed DbCommand (26ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[ServerGroup], [s].[ServerName], [s].[TableDataVMId]
+FROM [Servers] AS [s]
+2017-04-11 11:03:01.781 -04:00 [Information] Executed DbCommand (70ms) [Parameters=[@__productId_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [p].[Id], [p].[PrimaryProductServerId], [p].[ProductGroup], [p].[ProductName], [p].[SecondaryProductServerId], [p].[TableDataVMId], [p].[TableNumber]
+FROM [Products] AS [p]
+WHERE [p].[Id] = @__productId_0
+2017-04-11 11:03:01.918 -04:00 [Information] Executed DbCommand (26ms) [Parameters=[@p1='?', @p0='?'], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Products] SET [PrimaryProductServerId] = @p0
+WHERE [Id] = @p1;
+SELECT @@ROWCOUNT;
+2017-04-11 11:03:13.090 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/  
+2017-04-11 11:03:13.156 -04:00 [Information] Testing Logging Debug
+2017-04-11 11:03:13.156 -04:00 [Information] Executing action method "NOC_PL_WebApplication.Controllers.TableDataVMsController.Index (NOC-PL-WebApplication)" with arguments (null) - ModelState is Valid
+2017-04-11 11:03:13.157 -04:00 [Error] Erro
+2017-04-11 11:03:13.177 -04:00 [Information] Executed DbCommand (20ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[PrimaryProductServerId], [p].[ProductGroup], [p].[ProductName], [p].[SecondaryProductServerId], [p].[TableDataVMId], [p].[TableNumber]
+FROM [Products] AS [p]
+2017-04-11 11:03:13.225 -04:00 [Information] Executed DbCommand (29ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[ServerGroup], [s].[ServerName], [s].[TableDataVMId]
+FROM [Servers] AS [s]
+2017-04-11 11:03:13.226 -04:00 [Information] Database queries successful
+2017-04-11 11:03:13.227 -04:00 [Information] Executing HttpStatusCodeResult, setting HTTP status code 200
+2017-04-11 11:03:13.227 -04:00 [Information] Executed action "NOC_PL_WebApplication.Controllers.ProductsController.SaveSelectedServer (NOC-PL-WebApplication)" in 11840.9694ms
+2017-04-11 11:03:13.228 -04:00 [Information] Executing ViewResult, running view at path "/Views/TableDataVMs/Index.cshtml".
+2017-04-11 11:03:13.228 -04:00 [Information] Request finished in 11850.1903ms 200 
+2017-04-11 11:03:13.243 -04:00 [Information] Executed action "NOC_PL_WebApplication.Controllers.TableDataVMsController.Index (NOC-PL-WebApplication)" in 152.1522ms
+2017-04-11 11:03:13.243 -04:00 [Information] Request finished in 152.8946ms 200 text/html; charset=utf-8
+2017-04-11 11:03:13.278 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/bootstrap/dist/css/bootstrap.css  
+2017-04-11 11:03:13.281 -04:00 [Information] Sending file. Request path: '"/lib/bootstrap/dist/css/bootstrap.css"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\lib\bootstrap\dist\css\bootstrap.css"'
+2017-04-11 11:03:13.316 -04:00 [Information] Request finished in 37.255ms 200 text/css
+2017-04-11 11:03:13.338 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/font-awesome/css/font-awesome.css  
+2017-04-11 11:03:13.338 -04:00 [Information] Sending file. Request path: '"/lib/font-awesome/css/font-awesome.css"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\lib\font-awesome\css\font-awesome.css"'
+2017-04-11 11:03:13.352 -04:00 [Information] Request finished in 14.1645ms 200 text/css
+2017-04-11 11:03:13.362 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/css/site.css?v=SzNlSGmfY0Gj7vZhCGVU9VTI0h4xWhyELf6nIN6Eghc  
+2017-04-11 11:03:13.362 -04:00 [Information] Sending file. Request path: '"/css/site.css"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\css\site.css"'
+2017-04-11 11:03:13.363 -04:00 [Information] Request finished in 1.184ms 200 text/css
+2017-04-11 11:03:13.373 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/jquery/dist/jquery.min.js  
+2017-04-11 11:03:13.373 -04:00 [Information] Sending file. Request path: '"/lib/jquery/dist/jquery.min.js"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\lib\jquery\dist\jquery.min.js"'
+2017-04-11 11:03:13.375 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0  
+2017-04-11 11:03:13.375 -04:00 [Information] Sending file. Request path: '"/lib/font-awesome/fonts/fontawesome-webfont.woff2"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\lib\font-awesome\fonts\fontawesome-webfont.woff2"'
+2017-04-11 11:03:13.415 -04:00 [Information] Request finished in 42.0647ms 200 application/javascript
+2017-04-11 11:03:13.425 -04:00 [Information] Request finished in 50.149ms 200 application/font-woff2
+2017-04-11 11:03:13.466 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/bootstrap/dist/js/bootstrap.min.js  
+2017-04-11 11:03:13.467 -04:00 [Information] Sending file. Request path: '"/lib/bootstrap/dist/js/bootstrap.min.js"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js"'
+2017-04-11 11:03:13.490 -04:00 [Information] Request finished in 23.6485ms 200 application/javascript
+2017-04-11 11:03:13.507 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/angular2/angular.min.js  
+2017-04-11 11:03:13.508 -04:00 [Information] Sending file. Request path: '"/lib/angular2/angular.min.js"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\lib\angular2\angular.min.js"'
+2017-04-11 11:03:13.528 -04:00 [Information] Request finished in 20.9121ms 200 application/javascript
+2017-04-11 11:03:13.559 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/js/site.min.js?v=dU_YKb8K79rGQvmq_jrZQajPKL5t4_ymf1FNDJEC_EY  
+2017-04-11 11:03:13.559 -04:00 [Information] Sending file. Request path: '"/js/site.min.js"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\js\site.min.js"'
+2017-04-11 11:03:13.560 -04:00 [Information] Request finished in 1.5417ms 200 application/javascript
+2017-04-11 11:03:13.568 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/js/jsmodules/ScrollPositionModule.js?v=nMtTymepNGTcJY1TyjArpj4eAyNo6Vtrk2PhD6EGS8g  
+2017-04-11 11:03:13.568 -04:00 [Information] Sending file. Request path: '"/js/jsmodules/ScrollPositionModule.js"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\js\jsmodules\ScrollPositionModule.js"'
+2017-04-11 11:03:13.615 -04:00 [Information] Request finished in 47.2553ms 200 application/javascript
+2017-04-11 11:03:13.622 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/css/serverModal.styles.css  
+2017-04-11 11:03:13.623 -04:00 [Information] Sending file. Request path: '"/css/serverModal.styles.css"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\css\serverModal.styles.css"'
+2017-04-11 11:03:13.636 -04:00 [Information] Request finished in 13.8656ms 200 text/css
+2017-04-11 11:03:13.641 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/js/serverModal.Controller.js  
+2017-04-11 11:03:13.642 -04:00 [Information] Sending file. Request path: '"/js/serverModal.Controller.js"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\js\serverModal.Controller.js"'
+2017-04-11 11:03:13.688 -04:00 [Information] Request finished in 46.6899ms 200 application/javascript
+2017-04-11 11:08:29.267 -04:00 [Information] Executed DbCommand (108ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Products] AS [p])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2017-04-11 11:08:29.397 -04:00 [Information] Executed DbCommand (33ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Servers] AS [s])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2017-04-11 11:08:29.781 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/  
+2017-04-11 11:08:29.781 -04:00 [Information] Request starting HTTP/1.1 DEBUG http://localhost:12170/  0
+2017-04-11 11:08:29.923 -04:00 [Information] Request finished in 153.2554ms 200 
+2017-04-11 11:08:30.319 -04:00 [Information] Executing action method "NOC_PL_WebApplication.Controllers.TableDataVMsController.Index (NOC-PL-WebApplication)" with arguments (null) - ModelState is Valid
+2017-04-11 11:08:30.484 -04:00 [Information] Executed DbCommand (53ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[PrimaryProductServerId], [p].[ProductGroup], [p].[ProductName], [p].[SecondaryProductServerId], [p].[TableDataVMId], [p].[TableNumber]
+FROM [Products] AS [p]
+2017-04-11 11:08:30.618 -04:00 [Information] Executed DbCommand (55ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[ServerGroup], [s].[ServerName], [s].[TableDataVMId]
+FROM [Servers] AS [s]
+2017-04-11 11:08:30.668 -04:00 [Information] Database queries successful
+2017-04-11 11:08:32.865 -04:00 [Information] Executing ViewResult, running view at path "/Views/TableDataVMs/Index.cshtml".
+2017-04-11 11:08:32.938 -04:00 [Information] User profile is available. Using '"C:\Users\djackson\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2017-04-11 11:08:33.406 -04:00 [Information] Executed action "NOC_PL_WebApplication.Controllers.TableDataVMsController.Index (NOC-PL-WebApplication)" in 3180.9435ms
+2017-04-11 11:08:33.415 -04:00 [Information] Request finished in 3666.7222ms 200 text/html; charset=utf-8
+2017-04-11 11:15:16.531 -04:00 [Information] Request starting HTTP/1.1 POST http://localhost:12170/products/SaveSelectedServer application/x-www-form-urlencoded; charset=UTF-8 52
+2017-04-11 11:15:16.680 -04:00 [Information] Executing action method "NOC_PL_WebApplication.Controllers.ProductsController.SaveSelectedServer (NOC-PL-WebApplication)" with arguments (["39", "secondaryColumn", "7"]) - ModelState is Valid
+2017-04-11 11:15:16.931 -04:00 [Information] Executed DbCommand (56ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[PrimaryProductServerId], [p].[ProductGroup], [p].[ProductName], [p].[SecondaryProductServerId], [p].[TableDataVMId], [p].[TableNumber]
+FROM [Products] AS [p]
+2017-04-11 11:15:16.979 -04:00 [Information] Executed DbCommand (46ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[ServerGroup], [s].[ServerName], [s].[TableDataVMId]
+FROM [Servers] AS [s]
+2017-04-11 11:15:17.146 -04:00 [Information] Executed DbCommand (61ms) [Parameters=[@__productId_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [p].[Id], [p].[PrimaryProductServerId], [p].[ProductGroup], [p].[ProductName], [p].[SecondaryProductServerId], [p].[TableDataVMId], [p].[TableNumber]
+FROM [Products] AS [p]
+WHERE [p].[Id] = @__productId_0
+2017-04-11 11:15:17.181 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/  
+2017-04-11 11:15:17.199 -04:00 [Information] Executing action method "NOC_PL_WebApplication.Controllers.TableDataVMsController.Index (NOC-PL-WebApplication)" with arguments (null) - ModelState is Valid
+2017-04-11 11:15:17.233 -04:00 [Information] Executed DbCommand (31ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[PrimaryProductServerId], [p].[ProductGroup], [p].[ProductName], [p].[SecondaryProductServerId], [p].[TableDataVMId], [p].[TableNumber]
+FROM [Products] AS [p]
+2017-04-11 11:15:17.265 -04:00 [Information] Executed DbCommand (29ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[ServerGroup], [s].[ServerName], [s].[TableDataVMId]
+FROM [Servers] AS [s]
+2017-04-11 11:15:17.266 -04:00 [Information] Database queries successful
+2017-04-11 11:15:17.268 -04:00 [Information] Executing ViewResult, running view at path "/Views/TableDataVMs/Index.cshtml".
+2017-04-11 11:15:17.272 -04:00 [Information] Executed action "NOC_PL_WebApplication.Controllers.TableDataVMsController.Index (NOC-PL-WebApplication)" in 90.4814ms
+2017-04-11 11:15:17.272 -04:00 [Information] Request finished in 91.1445ms 200 text/html; charset=utf-8
+2017-04-11 11:15:17.308 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/bootstrap/dist/css/bootstrap.css  
+2017-04-11 11:15:17.322 -04:00 [Information] Sending file. Request path: '"/lib/bootstrap/dist/css/bootstrap.css"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\lib\bootstrap\dist\css\bootstrap.css"'
+2017-04-11 11:15:17.347 -04:00 [Information] Request finished in 38.3949ms 200 text/css
+2017-04-11 11:15:17.363 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/font-awesome/css/font-awesome.css  
+2017-04-11 11:15:17.363 -04:00 [Information] Sending file. Request path: '"/lib/font-awesome/css/font-awesome.css"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\lib\font-awesome\css\font-awesome.css"'
+2017-04-11 11:15:17.364 -04:00 [Information] Request finished in 1.1893ms 200 text/css
+2017-04-11 11:15:17.401 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/css/site.css?v=SzNlSGmfY0Gj7vZhCGVU9VTI0h4xWhyELf6nIN6Eghc  
+2017-04-11 11:15:17.401 -04:00 [Information] Sending file. Request path: '"/css/site.css"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\css\site.css"'
+2017-04-11 11:15:17.402 -04:00 [Information] Request finished in 1.2599ms 200 text/css
+2017-04-11 11:15:17.417 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/jquery/dist/jquery.min.js  
+2017-04-11 11:15:17.418 -04:00 [Information] Sending file. Request path: '"/lib/jquery/dist/jquery.min.js"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\lib\jquery\dist\jquery.min.js"'
+2017-04-11 11:15:17.419 -04:00 [Information] Request finished in 2.3513ms 200 application/javascript
+2017-04-11 11:15:17.424 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0  
+2017-04-11 11:15:17.424 -04:00 [Information] Sending file. Request path: '"/lib/font-awesome/fonts/fontawesome-webfont.woff2"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\lib\font-awesome\fonts\fontawesome-webfont.woff2"'
+2017-04-11 11:15:17.425 -04:00 [Information] Request finished in 1.9445ms 200 application/font-woff2
+2017-04-11 11:15:17.436 -04:00 [Information] Executed DbCommand (55ms) [Parameters=[@p1='?', @p0='?'], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Products] SET [SecondaryProductServerId] = @p0
+WHERE [Id] = @p1;
+SELECT @@ROWCOUNT;
+2017-04-11 11:15:17.455 -04:00 [Information] Testing Logging Debug
+2017-04-11 11:15:17.455 -04:00 [Error] Erro
+2017-04-11 11:15:17.459 -04:00 [Information] Executing HttpStatusCodeResult, setting HTTP status code 200
+2017-04-11 11:15:17.460 -04:00 [Information] Executed action "NOC_PL_WebApplication.Controllers.ProductsController.SaveSelectedServer (NOC-PL-WebApplication)" in 914.3478ms
+2017-04-11 11:15:17.461 -04:00 [Information] Request finished in 930.3915ms 200 
+2017-04-11 11:15:17.481 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/bootstrap/dist/js/bootstrap.min.js  
+2017-04-11 11:15:17.481 -04:00 [Information] Sending file. Request path: '"/lib/bootstrap/dist/js/bootstrap.min.js"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js"'
+2017-04-11 11:15:17.482 -04:00 [Information] Request finished in 1.1056ms 200 application/javascript
+2017-04-11 11:15:17.537 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/angular2/angular.min.js  
+2017-04-11 11:15:17.538 -04:00 [Information] Sending file. Request path: '"/lib/angular2/angular.min.js"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\lib\angular2\angular.min.js"'
+2017-04-11 11:15:17.539 -04:00 [Information] Request finished in 1.8275ms 200 application/javascript
+2017-04-11 11:15:17.574 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/js/site.min.js?v=dU_YKb8K79rGQvmq_jrZQajPKL5t4_ymf1FNDJEC_EY  
+2017-04-11 11:15:17.574 -04:00 [Information] Sending file. Request path: '"/js/site.min.js"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\js\site.min.js"'
+2017-04-11 11:15:17.575 -04:00 [Information] Request finished in 1.1694ms 200 application/javascript
+2017-04-11 11:15:17.604 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/js/jsmodules/ScrollPositionModule.js?v=nMtTymepNGTcJY1TyjArpj4eAyNo6Vtrk2PhD6EGS8g  
+2017-04-11 11:15:17.604 -04:00 [Information] Sending file. Request path: '"/js/jsmodules/ScrollPositionModule.js"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\js\jsmodules\ScrollPositionModule.js"'
+2017-04-11 11:15:17.605 -04:00 [Information] Request finished in 1.0422ms 200 application/javascript
+2017-04-11 11:15:17.612 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/css/serverModal.styles.css  
+2017-04-11 11:15:17.613 -04:00 [Information] Sending file. Request path: '"/css/serverModal.styles.css"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\css\serverModal.styles.css"'
+2017-04-11 11:15:17.613 -04:00 [Information] Request finished in 1.003ms 200 text/css
+2017-04-11 11:15:17.622 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/js/serverModal.Controller.js  
+2017-04-11 11:15:17.622 -04:00 [Information] Sending file. Request path: '"/js/serverModal.Controller.js"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\js\serverModal.Controller.js"'
+2017-04-11 11:15:17.654 -04:00 [Information] Request finished in 32.8587ms 200 application/javascript
+2017-04-11 11:46:29.742 -04:00 [Information] Executed DbCommand (120ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Products] AS [p])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2017-04-11 11:46:29.851 -04:00 [Information] Executed DbCommand (16ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Servers] AS [s])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2017-04-11 11:46:30.214 -04:00 [Information] Request starting HTTP/1.1 DEBUG http://localhost:12170/  0
+2017-04-11 11:46:30.214 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/  
+2017-04-11 11:46:30.384 -04:00 [Information] Request finished in 196.4277ms 200 
+2017-04-11 11:46:30.753 -04:00 [Information] Authorization failed for user: null.
+2017-04-11 11:46:30.755 -04:00 [Information] Authorization failed for the request at filter '"Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter"'.
+2017-04-11 11:46:30.760 -04:00 [Information] Executing ChallengeResult with authentication schemes ([]).
+2017-04-11 11:46:30.771 -04:00 [Information] Executed action "NOC_PL_WebApplication.Controllers.TableDataVMsController.Index (NOC-PL-WebApplication)" in 52.0145ms
+2017-04-11 11:46:30.773 -04:00 [Information] Request finished in 593.6589ms 401 
+2017-04-11 11:46:54.618 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/  
+2017-04-11 11:46:54.619 -04:00 [Information] Authorization failed for user: null.
+2017-04-11 11:46:54.619 -04:00 [Information] Authorization failed for the request at filter '"Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter"'.
+2017-04-11 11:46:54.619 -04:00 [Information] Executing ChallengeResult with authentication schemes ([]).
+2017-04-11 11:46:54.619 -04:00 [Information] Executed action "NOC_PL_WebApplication.Controllers.TableDataVMsController.Index (NOC-PL-WebApplication)" in 0.6786ms
+2017-04-11 11:46:54.619 -04:00 [Information] Request finished in 1.4969ms 401 
+2017-04-11 11:46:56.163 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/  
+2017-04-11 11:46:56.164 -04:00 [Information] Authorization failed for user: null.
+2017-04-11 11:46:56.164 -04:00 [Information] Authorization failed for the request at filter '"Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter"'.
+2017-04-11 11:46:56.164 -04:00 [Information] Executing ChallengeResult with authentication schemes ([]).
+2017-04-11 11:46:56.164 -04:00 [Information] Executed action "NOC_PL_WebApplication.Controllers.TableDataVMsController.Index (NOC-PL-WebApplication)" in 0.3511ms
+2017-04-11 11:46:56.164 -04:00 [Information] Request finished in 0.7868ms 401 
+2017-04-11 11:47:01.993 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/  
+2017-04-11 11:47:01.994 -04:00 [Information] Authorization failed for user: null.
+2017-04-11 11:47:01.994 -04:00 [Information] Authorization failed for the request at filter '"Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter"'.
+2017-04-11 11:47:01.994 -04:00 [Information] Executing ChallengeResult with authentication schemes ([]).
+2017-04-11 11:47:01.994 -04:00 [Information] Executed action "NOC_PL_WebApplication.Controllers.TableDataVMsController.Index (NOC-PL-WebApplication)" in 0.3744ms
+2017-04-11 11:47:01.994 -04:00 [Information] Request finished in 0.8537ms 401 
+2017-04-11 11:47:03.319 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/  
+2017-04-11 11:47:03.320 -04:00 [Information] Authorization failed for user: null.
+2017-04-11 11:47:03.320 -04:00 [Information] Authorization failed for the request at filter '"Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter"'.
+2017-04-11 11:47:03.320 -04:00 [Information] Executing ChallengeResult with authentication schemes ([]).
+2017-04-11 11:47:03.320 -04:00 [Information] Executed action "NOC_PL_WebApplication.Controllers.TableDataVMsController.Index (NOC-PL-WebApplication)" in 0.3327ms
+2017-04-11 11:47:03.320 -04:00 [Information] Request finished in 0.7871ms 401 
+2017-04-11 11:47:03.483 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/  
+2017-04-11 11:47:03.484 -04:00 [Information] Authorization failed for user: null.
+2017-04-11 11:47:03.484 -04:00 [Information] Authorization failed for the request at filter '"Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter"'.
+2017-04-11 11:47:03.484 -04:00 [Information] Executing ChallengeResult with authentication schemes ([]).
+2017-04-11 11:47:03.484 -04:00 [Information] Executed action "NOC_PL_WebApplication.Controllers.TableDataVMsController.Index (NOC-PL-WebApplication)" in 0.3455ms
+2017-04-11 11:47:03.484 -04:00 [Information] Request finished in 0.8207ms 401 
+2017-04-11 11:47:16.654 -04:00 [Information] Executed DbCommand (148ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Products] AS [p])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2017-04-11 11:47:16.768 -04:00 [Information] Executed DbCommand (20ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Servers] AS [s])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2017-04-11 11:47:17.011 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/  
+2017-04-11 11:47:17.011 -04:00 [Information] Request starting HTTP/1.1 DEBUG http://localhost:12170/  0
+2017-04-11 11:47:17.148 -04:00 [Information] Request finished in 139.847ms 200 
+2017-04-11 11:47:17.397 -04:00 [Information] Authorization failed for user: null.
+2017-04-11 11:47:17.399 -04:00 [Information] Authorization failed for the request at filter '"Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter"'.
+2017-04-11 11:47:17.404 -04:00 [Information] Executing ChallengeResult with authentication schemes ([]).
+2017-04-11 11:47:17.416 -04:00 [Information] Executed action "NOC_PL_WebApplication.Controllers.TableDataVMsController.Index (NOC-PL-WebApplication)" in 40.011ms
+2017-04-11 11:47:17.419 -04:00 [Information] Request finished in 432.8105ms 401 
+2017-04-11 12:02:28.042 -04:00 [Information] Executed DbCommand (581ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Products] AS [p])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2017-04-11 12:02:28.176 -04:00 [Information] Executed DbCommand (39ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Servers] AS [s])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2017-04-11 12:02:28.525 -04:00 [Information] Request starting HTTP/1.1 DEBUG http://localhost:12170/  0
+2017-04-11 12:02:28.525 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/  
+2017-04-11 12:02:28.671 -04:00 [Information] Request finished in 157.0769ms 200 
+2017-04-11 12:02:29.006 -04:00 [Information] Executing action method "NOC_PL_WebApplication.Controllers.TableDataVMsController.Index (NOC-PL-WebApplication)" with arguments (null) - ModelState is Valid
+2017-04-11 12:02:29.188 -04:00 [Information] Executed DbCommand (76ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[PrimaryProductServerId], [p].[ProductGroup], [p].[ProductName], [p].[SecondaryProductServerId], [p].[TableDataVMId], [p].[TableNumber]
+FROM [Products] AS [p]
+2017-04-11 12:02:29.308 -04:00 [Information] Executed DbCommand (37ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[ServerGroup], [s].[ServerName], [s].[TableDataVMId]
+FROM [Servers] AS [s]
+2017-04-11 12:02:29.358 -04:00 [Information] Database queries successful
+2017-04-11 12:02:31.940 -04:00 [Information] Executing ViewResult, running view at path "/Views/TableDataVMs/Index.cshtml".
+2017-04-11 12:02:32.022 -04:00 [Information] User profile is available. Using '"C:\Users\djackson\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2017-04-11 12:02:32.576 -04:00 [Information] Executed action "NOC_PL_WebApplication.Controllers.TableDataVMsController.Index (NOC-PL-WebApplication)" in 3668.9087ms
+2017-04-11 12:02:32.586 -04:00 [Information] Request finished in 4084.5912ms 200 text/html; charset=utf-8

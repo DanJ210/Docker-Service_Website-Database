@@ -8,8 +8,11 @@ using Microsoft.EntityFrameworkCore;
 using NOCPLWebApplication.Models;
 using System.Collections;
 using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Authorization;
 
 namespace NOC_PL_WebApplication.Controllers {
+
+    
     public class TableDataVMsController : Controller {
         private readonly ProductLocationContext _context;
         private ILogger<TableDataVMsController> _logger;
@@ -25,6 +28,7 @@ namespace NOC_PL_WebApplication.Controllers {
         /// </summary>
         /// <returns>A ViewModel of Products and Servers and a SelectList</returns>
         // GET: TableDataVMs
+        //[Authorize]
         public async Task<IActionResult> Index() {
             
             var tableDataVM = new TableDataVM();
