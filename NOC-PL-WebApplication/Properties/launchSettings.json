@@ -1,4 +1,4 @@
-﻿{
+{
   "iisSettings": {
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
@@ -12,6 +12,7 @@
       "commandName": "IISExpress",
       "launchBrowser": true,
       "environmentVariables": {
+        "connectionStrings:nocProductServerDBConnectionString": "Server=(FakeLocalDb;Database=PLTablesData;Trusted_Connection=true;MultipleActiveResultSets=true;",
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },

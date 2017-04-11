@@ -10,13 +10,23 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using NOCPLWebApplication.Models;
 using NOCPLWebApplication.Models.SeedData;
+using Microsoft.Extensions.Configuration;
 using Serilog;
 
-namespace NOC_PL_WebApplication { 
+
+namespace NOC_PL_WebApplication {
     public class Startup {
+        public static IConfigurationRoot Configuration;
         // This method gets called by the runtime. Use this method to add services to the container.
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public Startup(IHostingEnvironment env) {
+            var builder = new ConfigurationBuilder()
+                .SetBasePath(env.ContentRootPath)
+                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+                .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true, reloadOnChange: true);
+                //.AddEnvironmentVariables(); Use production environment variables when deployed
+            Configuration = builder.Build();
+
             Log.Logger = new LoggerConfiguration()
             //.MinimumLevel.Debug()
             //.Enrich.FromLogContext()
@@ -27,7 +37,7 @@ namespace NOC_PL_WebApplication {
 
         public void ConfigureServices(IServiceCollection services) {
 
-            var connectionString = "Server=(localdb)\\MSSQLLocalDb;Database=PLTablesData;Trusted_Connection=true;MultipleActiveResultSets=true;";
+            var connectionString = Configuration["connectionStrings:nocProductServerDBConnectionString"];
             services.AddDbContext<ProductLocationContext>(options => options.UseSqlServer(connectionString));
 
             services.AddTransient<ProductServerSeedData>();
