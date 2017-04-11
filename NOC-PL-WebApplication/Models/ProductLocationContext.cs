@@ -8,7 +8,7 @@ using NOCPLWebApplication.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace NOCPLWebApplication.Models {
-    public class ProductLocationContext : IdentityDbContext<NocUser> {
+    public class ProductLocationContext : DbContext {
         public ProductLocationContext(DbContextOptions options) : base(options) {
 
         }

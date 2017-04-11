@@ -13,21 +13,21 @@ namespace NOCPLWebApplication.Models.SeedData {
     /// </summary>
     public class ProductServerSeedData {
         private ProductLocationContext _context;
-        private UserManager<NocUser> _userManager;
+        //private UserManager<NocUser> _userManager;
 
-        public ProductServerSeedData(ProductLocationContext context, UserManager<NocUser> userManager) {
+        public ProductServerSeedData(ProductLocationContext context) {
             _context = context;
-            _userManager = userManager;
+            //_userManager = userManager;
         }
         public async Task EnsureSeedData() {
 
-            if (_userManager.FindByNameAsync("admin") == null) {
-                var user = new NocUser() {
-                    UserName = "admin"
-                };
+            //if (_userManager.FindByNameAsync("admin") == null) {
+            //    var user = new NocUser() {
+            //        UserName = "admin"
+            //    };
 
-                await _userManager.CreateAsync(user, "P@ssw0rd!");
-            }
+            //    await _userManager.CreateAsync(user, "P@ssw0rd!");
+            //}
 
             if (!_context.Products.Any()) {
                 var productList = new List<Product>() {
