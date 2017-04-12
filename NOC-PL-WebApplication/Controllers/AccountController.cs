@@ -23,7 +23,7 @@ namespace NOC_PL_WebApplication.Controllers {
         }
 
         [HttpGet]
-        public async Task<IActionResult> Login() {
+        public IActionResult Login() {
             return View();
         }
 

@@ -7,4 +7,6 @@ body {
 #loginSection {
     padding-right: 25px;
     color: white;
+    font-size: larger;
+    text-align: center;
 }
