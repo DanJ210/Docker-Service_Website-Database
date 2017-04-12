@@ -37,7 +37,7 @@ namespace NOC_PL_WebApplication.Controllers {
                         if (Url.IsLocalUrl(model.ReturnUrl)) {
                             return Redirect(model.ReturnUrl);
                         } else {
-                            return RedirectToAction("TableDataVms", "Index");
+                            return RedirectToAction("Index", "TableDataVMs");
                         }
                     }
                 }
@@ -52,7 +52,7 @@ namespace NOC_PL_WebApplication.Controllers {
         [HttpPost, ValidateAntiForgeryToken]
         public async Task<IActionResult> Logout() {
             await _signInManager.SignOutAsync();
-            return RedirectToAction("TableDataVMs", "Index");
+            return RedirectToAction("Index", "TableDataVMs");
         }
     }
 }

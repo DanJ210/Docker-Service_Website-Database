@@ -6,4 +6,5 @@ body {
 /*Needed to keep the section from off screen*/
 #loginSection {
     padding-right: 25px;
+    color: white;
 }
