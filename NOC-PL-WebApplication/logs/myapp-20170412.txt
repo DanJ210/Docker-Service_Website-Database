@@ -2652,3 +2652,152 @@ System.InvalidOperationException: The model item passed into the ViewDataDiction
    at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
    at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
 2017-04-12 14:33:47.662 -04:00 [Information] Request finished in 2335.745ms 500 text/html; charset=utf-8
+2017-04-12 14:45:15.720 -04:00 [Information] Executed DbCommand (46ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Products] AS [p])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2017-04-12 14:45:15.803 -04:00 [Information] Executed DbCommand (11ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Servers] AS [s])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2017-04-12 14:45:15.851 -04:00 [Information] User profile is available. Using '"C:\Users\djackson\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2017-04-12 14:45:16.267 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/  
+2017-04-12 14:45:16.268 -04:00 [Information] Request starting HTTP/1.1 DEBUG http://localhost:12170/  0
+2017-04-12 14:45:16.385 -04:00 [Information] Request finished in 133.7551ms 200 
+2017-04-12 14:45:16.781 -04:00 [Information] Executed DbCommand (52ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-12 14:45:16.799 -04:00 [Information] Executed DbCommand (15ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-12 14:45:16.821 -04:00 [Information] Executed DbCommand (21ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2017-04-12 14:45:16.922 -04:00 [Information] Executing action method "NOC_PL_WebApplication.Controllers.TableDataVMsController.Index (NOC-PL-WebApplication)" with arguments (null) - ModelState is Valid
+2017-04-12 14:45:17.175 -04:00 [Information] Executed DbCommand (78ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[PrimaryProductServerId], [p].[ProductGroup], [p].[ProductName], [p].[SecondaryProductServerId], [p].[TableDataVMId], [p].[TableNumber]
+FROM [Products] AS [p]
+2017-04-12 14:45:17.292 -04:00 [Information] Executed DbCommand (34ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[ServerGroup], [s].[ServerName], [s].[TableDataVMId]
+FROM [Servers] AS [s]
+2017-04-12 14:45:17.336 -04:00 [Information] Database queries successful
+2017-04-12 14:45:19.516 -04:00 [Information] Executing ViewResult, running view at path "/Views/TableDataVMs/Index.cshtml".
+2017-04-12 14:45:20.144 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/font-awesome/css/font-awesome.css  
+2017-04-12 14:45:20.145 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/css/site.css?v=WYnjj1Nq8jVvPXKJG7DD0QjKpGOnmjPSqWSKfqFYahU  
+2017-04-12 14:45:20.144 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/bootstrap/dist/css/bootstrap.css  
+2017-04-12 14:45:20.153 -04:00 [Information] Executed action "NOC_PL_WebApplication.Controllers.TableDataVMsController.Index (NOC-PL-WebApplication)" in 3440.2885ms
+2017-04-12 14:45:20.159 -04:00 [Information] Sending file. Request path: '"/lib/font-awesome/css/font-awesome.css"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\lib\font-awesome\css\font-awesome.css"'
+2017-04-12 14:45:20.159 -04:00 [Information] Sending file. Request path: '"/lib/bootstrap/dist/css/bootstrap.css"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\lib\bootstrap\dist\css\bootstrap.css"'
+2017-04-12 14:45:20.160 -04:00 [Information] Sending file. Request path: '"/css/site.css"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\css\site.css"'
+2017-04-12 14:45:20.164 -04:00 [Information] Request finished in 3920.6038ms 200 text/html; charset=utf-8
+2017-04-12 14:45:20.188 -04:00 [Information] Request finished in 43.5376ms 200 text/css
+2017-04-12 14:45:20.195 -04:00 [Information] Request finished in 50.7458ms 200 text/css
+2017-04-12 14:45:20.198 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/js/site.min.js?v=NpMUj71zExRQni6K27BChnEFiXr3zPwMp_IYP45LeJE  
+2017-04-12 14:45:20.201 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/jquery/dist/jquery.min.js  
+2017-04-12 14:45:20.201 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/bootstrap/dist/js/bootstrap.min.js  
+2017-04-12 14:45:20.201 -04:00 [Information] Sending file. Request path: '"/js/site.min.js"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\js\site.min.js"'
+2017-04-12 14:45:20.202 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/angular2/angular.min.js  
+2017-04-12 14:45:20.202 -04:00 [Information] Sending file. Request path: '"/lib/bootstrap/dist/js/bootstrap.min.js"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js"'
+2017-04-12 14:45:20.202 -04:00 [Information] Sending file. Request path: '"/lib/jquery/dist/jquery.min.js"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\lib\jquery\dist\jquery.min.js"'
+2017-04-12 14:45:20.203 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/css/serverModal.styles.css  
+2017-04-12 14:45:20.202 -04:00 [Information] Sending file. Request path: '"/lib/angular2/angular.min.js"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\lib\angular2\angular.min.js"'
+2017-04-12 14:45:20.203 -04:00 [Information] Sending file. Request path: '"/css/serverModal.styles.css"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\css\serverModal.styles.css"'
+2017-04-12 14:45:20.203 -04:00 [Information] Request finished in 4.6441ms 200 application/javascript
+2017-04-12 14:45:20.206 -04:00 [Information] Request finished in 4.7399ms 200 application/javascript
+2017-04-12 14:45:20.209 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/js/jsmodules/ScrollPositionModule.js?v=nMtTymepNGTcJY1TyjArpj4eAyNo6Vtrk2PhD6EGS8g  
+2017-04-12 14:45:20.210 -04:00 [Information] Request finished in 65.5659ms 200 text/css
+2017-04-12 14:45:20.210 -04:00 [Information] Sending file. Request path: '"/js/jsmodules/ScrollPositionModule.js"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\js\jsmodules\ScrollPositionModule.js"'
+2017-04-12 14:45:20.210 -04:00 [Information] Request finished in 7.8168ms 200 text/css
+2017-04-12 14:45:20.222 -04:00 [Information] Request finished in 13.2258ms 200 application/javascript
+2017-04-12 14:45:20.254 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2  
+2017-04-12 14:45:20.254 -04:00 [Information] Sending file. Request path: '"/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\lib\bootstrap\dist\fonts\glyphicons-halflings-regular.woff2"'
+2017-04-12 14:45:20.273 -04:00 [Information] Request finished in 19.7193ms 200 application/font-woff2
+2017-04-12 14:45:20.274 -04:00 [Information] Request finished in 73.0217ms 200 application/javascript
+2017-04-12 14:45:20.279 -04:00 [Information] Request finished in 77.9359ms 200 application/javascript
+2017-04-12 14:45:20.295 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0  
+2017-04-12 14:45:20.298 -04:00 [Information] Sending file. Request path: '"/lib/font-awesome/fonts/fontawesome-webfont.woff2"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\lib\font-awesome\fonts\fontawesome-webfont.woff2"'
+2017-04-12 14:45:20.310 -04:00 [Information] Request finished in 14.9781ms 200 application/font-woff2
+2017-04-12 14:45:20.321 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/js/serverModal.Controller.js  
+2017-04-12 14:45:20.324 -04:00 [Information] Sending file. Request path: '"/js/serverModal.Controller.js"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\js\serverModal.Controller.js"'
+2017-04-12 14:45:20.326 -04:00 [Information] Request finished in 5.5495ms 200 application/javascript
+2017-04-12 14:45:25.706 -04:00 [Information] Request starting HTTP/1.1 POST http://localhost:12170/products/SaveSelectedServer application/x-www-form-urlencoded; charset=UTF-8 50
+2017-04-12 14:45:25.730 -04:00 [Information] Authorization failed for user: null.
+2017-04-12 14:45:25.731 -04:00 [Information] Authorization failed for the request at filter '"Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter"'.
+2017-04-12 14:45:25.734 -04:00 [Information] Executing ChallengeResult with authentication schemes ([]).
+2017-04-12 14:45:25.757 -04:00 [Information] AuthenticationScheme: "Identity.Application" was challenged.
+2017-04-12 14:45:25.757 -04:00 [Information] Executed action "NOC_PL_WebApplication.Controllers.ProductsController.SaveSelectedServer (NOC-PL-WebApplication)" in 43.4284ms
+2017-04-12 14:45:25.759 -04:00 [Information] Request finished in 53.7132ms 401 
+2017-04-12 14:45:26.552 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/  
+2017-04-12 14:45:26.575 -04:00 [Information] Executed DbCommand (22ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-12 14:45:26.592 -04:00 [Information] Executed DbCommand (15ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-12 14:45:26.608 -04:00 [Information] Executed DbCommand (14ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2017-04-12 14:45:26.624 -04:00 [Information] Executing action method "NOC_PL_WebApplication.Controllers.TableDataVMsController.Index (NOC-PL-WebApplication)" with arguments (null) - ModelState is Valid
+2017-04-12 14:45:26.649 -04:00 [Information] Executed DbCommand (20ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[PrimaryProductServerId], [p].[ProductGroup], [p].[ProductName], [p].[SecondaryProductServerId], [p].[TableDataVMId], [p].[TableNumber]
+FROM [Products] AS [p]
+2017-04-12 14:45:26.680 -04:00 [Information] Executed DbCommand (28ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[ServerGroup], [s].[ServerName], [s].[TableDataVMId]
+FROM [Servers] AS [s]
+2017-04-12 14:45:26.681 -04:00 [Information] Database queries successful
+2017-04-12 14:45:26.682 -04:00 [Information] Executing ViewResult, running view at path "/Views/TableDataVMs/Index.cshtml".
+2017-04-12 14:45:26.687 -04:00 [Information] Executed action "NOC_PL_WebApplication.Controllers.TableDataVMsController.Index (NOC-PL-WebApplication)" in 134.9236ms
+2017-04-12 14:45:26.688 -04:00 [Information] Request finished in 136.4765ms 200 text/html; charset=utf-8
+2017-04-12 14:45:26.717 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/bootstrap/dist/css/bootstrap.css  
+2017-04-12 14:45:26.718 -04:00 [Information] Sending file. Request path: '"/lib/bootstrap/dist/css/bootstrap.css"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\lib\bootstrap\dist\css\bootstrap.css"'
+2017-04-12 14:45:26.727 -04:00 [Information] Request finished in 3.4769ms 200 text/css
+2017-04-12 14:45:26.739 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/font-awesome/css/font-awesome.css  
+2017-04-12 14:45:26.739 -04:00 [Information] Sending file. Request path: '"/lib/font-awesome/css/font-awesome.css"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\lib\font-awesome\css\font-awesome.css"'
+2017-04-12 14:45:26.740 -04:00 [Information] Request finished in 1.2048ms 200 text/css
+2017-04-12 14:45:26.746 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/css/site.css?v=WYnjj1Nq8jVvPXKJG7DD0QjKpGOnmjPSqWSKfqFYahU  
+2017-04-12 14:45:26.746 -04:00 [Information] Sending file. Request path: '"/css/site.css"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\css\site.css"'
+2017-04-12 14:45:26.747 -04:00 [Information] Request finished in 1.1986ms 200 text/css
+2017-04-12 14:45:26.756 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/jquery/dist/jquery.min.js  
+2017-04-12 14:45:26.757 -04:00 [Information] Sending file. Request path: '"/lib/jquery/dist/jquery.min.js"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\lib\jquery\dist\jquery.min.js"'
+2017-04-12 14:45:26.759 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2  
+2017-04-12 14:45:26.759 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0  
+2017-04-12 14:45:26.759 -04:00 [Information] Sending file. Request path: '"/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\lib\bootstrap\dist\fonts\glyphicons-halflings-regular.woff2"'
+2017-04-12 14:45:26.759 -04:00 [Information] Sending file. Request path: '"/lib/font-awesome/fonts/fontawesome-webfont.woff2"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\lib\font-awesome\fonts\fontawesome-webfont.woff2"'
+2017-04-12 14:45:26.761 -04:00 [Information] Request finished in 2.7509ms 200 application/font-woff2
+2017-04-12 14:45:26.796 -04:00 [Information] Request finished in 37.7859ms 200 application/javascript
+2017-04-12 14:45:26.806 -04:00 [Information] Request finished in 47.783ms 200 application/font-woff2
+2017-04-12 14:45:26.828 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/bootstrap/dist/js/bootstrap.min.js  
+2017-04-12 14:45:26.829 -04:00 [Information] Sending file. Request path: '"/lib/bootstrap/dist/js/bootstrap.min.js"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js"'
+2017-04-12 14:45:26.829 -04:00 [Information] Request finished in 1.2176ms 200 application/javascript
+2017-04-12 14:45:26.852 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/angular2/angular.min.js  
+2017-04-12 14:45:26.852 -04:00 [Information] Sending file. Request path: '"/lib/angular2/angular.min.js"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\lib\angular2\angular.min.js"'
+2017-04-12 14:45:26.854 -04:00 [Information] Request finished in 2.3883ms 200 application/javascript
+2017-04-12 14:45:26.888 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/js/site.min.js?v=NpMUj71zExRQni6K27BChnEFiXr3zPwMp_IYP45LeJE  
+2017-04-12 14:45:26.888 -04:00 [Information] Sending file. Request path: '"/js/site.min.js"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\js\site.min.js"'
+2017-04-12 14:45:26.889 -04:00 [Information] Request finished in 1.4353ms 200 application/javascript
+2017-04-12 14:45:26.897 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/js/jsmodules/ScrollPositionModule.js?v=nMtTymepNGTcJY1TyjArpj4eAyNo6Vtrk2PhD6EGS8g  
+2017-04-12 14:45:26.897 -04:00 [Information] Sending file. Request path: '"/js/jsmodules/ScrollPositionModule.js"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\js\jsmodules\ScrollPositionModule.js"'
+2017-04-12 14:45:26.898 -04:00 [Information] Request finished in 1.184ms 200 application/javascript
+2017-04-12 14:45:26.905 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/css/serverModal.styles.css  
+2017-04-12 14:45:26.906 -04:00 [Information] Sending file. Request path: '"/css/serverModal.styles.css"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\css\serverModal.styles.css"'
+2017-04-12 14:45:26.907 -04:00 [Information] Request finished in 1.5152ms 200 text/css
+2017-04-12 14:45:26.911 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/js/serverModal.Controller.js  
+2017-04-12 14:45:26.911 -04:00 [Information] Sending file. Request path: '"/js/serverModal.Controller.js"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\js\serverModal.Controller.js"'
+2017-04-12 14:45:26.912 -04:00 [Information] Request finished in 1.2667ms 200 application/javascript
+2017-04-12 14:45:28.970 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/Account/Login  
+2017-04-12 14:45:28.990 -04:00 [Information] Executed DbCommand (17ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-12 14:45:29.007 -04:00 [Information] Executed DbCommand (16ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-12 14:45:29.023 -04:00 [Information] Executed DbCommand (14ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2017-04-12 14:45:29.043 -04:00 [Information] Executing action method "NOC_PL_WebApplication.Controllers.AccountController.Login (NOC-PL-WebApplication)" with arguments (null) - ModelState is Valid
+2017-04-12 14:45:29.190 -04:00 [Information] Executing ViewResult, running view at path "/Views/Account/Login.cshtml".
+2017-04-12 14:45:29.376 -04:00 [Information] Executed action "NOC_PL_WebApplication.Controllers.AccountController.Login (NOC-PL-WebApplication)" in 404.1867ms
+2017-04-12 14:45:29.377 -04:00 [Information] Request finished in 407.4412ms 200 text/html; charset=utf-8
