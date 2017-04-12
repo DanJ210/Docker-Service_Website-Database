@@ -3,7 +3,7 @@
     var productId;
     var serverColumn;
     var serverGroup;
-
+    
     /**
          * @desc Sets up logic for modal window. Creates jquery method to listen
          *       for a change on the server select list in the modal window.

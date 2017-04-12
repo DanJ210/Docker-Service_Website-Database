@@ -13,6 +13,7 @@ using Microsoft.AspNetCore.Authorization;
 using Serilog;
 
 namespace NOC_PL_WebApplication.Controllers {
+    [Authorize]
     public class ProductsController : Controller {
         private readonly ProductLocationContext _context;
         private ILogger<ProductsController> _logger;
@@ -41,7 +42,7 @@ namespace NOC_PL_WebApplication.Controllers {
         //[Authorize]
         [HttpPost]
         public async Task<IActionResult> SaveSelectedServer(int productId, string serverColumn, int serverId) {
-
+            
             try {
 
                 var products = await _context.Products.ToListAsync();

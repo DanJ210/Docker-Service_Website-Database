@@ -12,7 +12,7 @@ using NOCPLWebApplication.Models;
 using NOCPLWebApplication.Models.SeedData;
 using Microsoft.Extensions.Configuration;
 using Serilog;
-
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace NOC_PL_WebApplication {
     public class Startup {
@@ -39,7 +39,8 @@ namespace NOC_PL_WebApplication {
 
             var connectionString = Configuration["connectionStrings:nocProductServerDBConnectionString"];
             services.AddDbContext<ProductLocationContext>(options => options.UseSqlServer(connectionString));
-
+            services.AddIdentity<NocUser, IdentityRole>()
+                .AddEntityFrameworkStores<ProductLocationContext>();
             services.AddTransient<ProductServerSeedData>();
 
             //services.AddLogging(); May not be needed
@@ -64,6 +65,8 @@ namespace NOC_PL_WebApplication {
             } else {
                 //loggerFactory.AddDebug(LogLevel.Error);
             }
+
+            app.UseIdentity();
             // Ensures that any logs are written to file before app completely stops.
             appLifetime.ApplicationStopped.Register(Log.CloseAndFlush);
 

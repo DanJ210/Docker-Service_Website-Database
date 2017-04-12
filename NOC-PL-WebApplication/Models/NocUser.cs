@@ -1,9 +1,10 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace NOCPLWebApplication.Models {
-    public class NocUser {
+    public class NocUser : IdentityUser {
     }
 }
