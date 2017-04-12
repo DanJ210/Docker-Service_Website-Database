@@ -46,9 +46,9 @@
                 serverId: serverId
             }
             , function (data, status) {
-                alert("Success: " + status);
-                alert("test");
-                //$('#serverModal').modal('hide');
+                //alert("Success: " + status);
+                //alert("test");
+                $('#serverModal').modal('hide');
             }
             //, function (data, status) {
             //    alert("Failure: " + status);
