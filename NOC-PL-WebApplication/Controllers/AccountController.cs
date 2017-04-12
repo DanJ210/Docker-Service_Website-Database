@@ -46,7 +46,7 @@ namespace NOC_PL_WebApplication.Controllers {
                 _logger.LogError($"Could not sign in user with message: {ex.Message}");
             }
             ModelState.AddModelError("", "Could not login");
-            return View(model);
+            return View();
         }
 
         [HttpPost, ValidateAntiForgeryToken]

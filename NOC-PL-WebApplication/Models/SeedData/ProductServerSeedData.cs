@@ -21,14 +21,14 @@ namespace NOCPLWebApplication.Models.SeedData {
         }
         public async Task EnsureSeedData() {
 
-            //if (_userManager.FindByNameAsync("admin") == null) {
-            //    var user = new NocUser() {
-            //        UserName = "admin"
-            //    };
+            
+            if (!_userManager.Users.Any()){
+                var user = new NocUser() {
+                    UserName = "admin"
+                };
 
-            //    await _userManager.CreateAsync(user, "P@ssw0rd!");
-            //}
-            //if (_userManager)
+                await _userManager.CreateAsync(user, "P@ssw0rd!");
+            }
 
             if (!_context.Products.Any()) {
                 var productList = new List<Product>() {
