@@ -4,9 +4,12 @@ body {
 }
 
 /*Needed to keep the section from off screen*/
-#loginSection {
+#loginComponent {
     padding-right: 25px;
     color: white;
     font-size: larger;
+    text-align: center;
+}
+#loginLabel {
     text-align: center;
 }

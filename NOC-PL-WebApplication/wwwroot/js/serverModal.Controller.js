@@ -44,7 +44,16 @@
                 productId: productId,
                 serverColumn: serverColumn,
                 serverId: serverId
-            });
+            }
+            , function (data, status) {
+                alert("Success: " + status);
+                alert("test");
+                //$('#serverModal').modal('hide');
+            }
+            //, function (data, status) {
+            //    alert("Failure: " + status);
+            //}
+        );
         // function (data, status) {
         //     alert(data + "status" + status);
         // });
