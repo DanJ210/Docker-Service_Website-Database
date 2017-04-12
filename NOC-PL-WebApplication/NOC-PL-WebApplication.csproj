@@ -43,9 +43,5 @@
   <ItemGroup>
     <WCFMetadata Include="Connected Services" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\Account\" />
-    <Folder Include="Views\Account\" />
-  </ItemGroup>
 
 </Project>

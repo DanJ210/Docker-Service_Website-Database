@@ -882,3 +882,956 @@ FROM [Servers] AS [s]
 2017-04-12 13:15:51.351 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/js/serverModal.Controller.js  
 2017-04-12 13:15:51.389 -04:00 [Information] Sending file. Request path: '"/js/serverModal.Controller.js"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\js\serverModal.Controller.js"'
 2017-04-12 13:15:51.392 -04:00 [Information] Request finished in 41.381ms 200 application/javascript
+2017-04-12 13:47:26.537 -04:00 [Information] Executed DbCommand (53ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Products] AS [p])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2017-04-12 13:47:26.615 -04:00 [Information] Executed DbCommand (17ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Servers] AS [s])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2017-04-12 13:47:26.669 -04:00 [Information] User profile is available. Using '"C:\Users\djackson\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2017-04-12 13:47:26.905 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/  
+2017-04-12 13:47:26.905 -04:00 [Information] Request starting HTTP/1.1 DEBUG http://localhost:12170/  0
+2017-04-12 13:47:27.022 -04:00 [Information] Request finished in 134.0285ms 200 
+2017-04-12 13:47:27.328 -04:00 [Information] Executed DbCommand (22ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-12 13:47:27.347 -04:00 [Information] Executed DbCommand (17ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-12 13:47:27.365 -04:00 [Information] Executed DbCommand (18ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2017-04-12 13:47:27.437 -04:00 [Information] Executing action method "NOC_PL_WebApplication.Controllers.TableDataVMsController.Index (NOC-PL-WebApplication)" with arguments (null) - ModelState is Valid
+2017-04-12 13:47:27.591 -04:00 [Information] Executed DbCommand (67ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[PrimaryProductServerId], [p].[ProductGroup], [p].[ProductName], [p].[SecondaryProductServerId], [p].[TableDataVMId], [p].[TableNumber]
+FROM [Products] AS [p]
+2017-04-12 13:47:27.722 -04:00 [Information] Executed DbCommand (58ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[ServerGroup], [s].[ServerName], [s].[TableDataVMId]
+FROM [Servers] AS [s]
+2017-04-12 13:47:27.768 -04:00 [Information] Database queries successful
+2017-04-12 13:47:29.787 -04:00 [Information] Executing ViewResult, running view at path "/Views/TableDataVMs/Index.cshtml".
+2017-04-12 13:47:30.323 -04:00 [Information] Executed action "NOC_PL_WebApplication.Controllers.TableDataVMsController.Index (NOC-PL-WebApplication)" in 3034.6962ms
+2017-04-12 13:47:30.334 -04:00 [Information] Request finished in 3453.6984ms 200 text/html; charset=utf-8
+2017-04-12 13:47:30.395 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/js/serverModal.Controller.js  
+2017-04-12 13:47:30.408 -04:00 [Information] The file "/js/serverModal.Controller.js" was not modified
+2017-04-12 13:47:30.412 -04:00 [Information] Request finished in 17.2831ms 304 application/javascript
+2017-04-12 13:54:19.935 -04:00 [Information] Executed DbCommand (72ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Products] AS [p])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2017-04-12 13:54:20.012 -04:00 [Information] Executed DbCommand (17ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Servers] AS [s])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2017-04-12 13:54:20.059 -04:00 [Information] User profile is available. Using '"C:\Users\djackson\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2017-04-12 13:54:20.429 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/  
+2017-04-12 13:54:20.429 -04:00 [Information] Request starting HTTP/1.1 DEBUG http://localhost:12170/  0
+2017-04-12 13:54:20.549 -04:00 [Information] Request finished in 136.3991ms 200 
+2017-04-12 13:54:20.835 -04:00 [Information] Executed DbCommand (23ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-12 13:54:20.854 -04:00 [Information] Executed DbCommand (17ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-12 13:54:20.875 -04:00 [Information] Executed DbCommand (20ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2017-04-12 13:54:20.931 -04:00 [Information] Executing action method "NOC_PL_WebApplication.Controllers.TableDataVMsController.Index (NOC-PL-WebApplication)" with arguments (null) - ModelState is Valid
+2017-04-12 13:54:21.099 -04:00 [Information] Executed DbCommand (76ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[PrimaryProductServerId], [p].[ProductGroup], [p].[ProductName], [p].[SecondaryProductServerId], [p].[TableDataVMId], [p].[TableNumber]
+FROM [Products] AS [p]
+2017-04-12 13:54:21.206 -04:00 [Information] Executed DbCommand (34ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[ServerGroup], [s].[ServerName], [s].[TableDataVMId]
+FROM [Servers] AS [s]
+2017-04-12 13:54:21.258 -04:00 [Information] Database queries successful
+2017-04-12 13:54:23.268 -04:00 [Information] Executing ViewResult, running view at path "/Views/TableDataVMs/Index.cshtml".
+2017-04-12 13:54:23.881 -04:00 [Information] Executed action "NOC_PL_WebApplication.Controllers.TableDataVMsController.Index (NOC-PL-WebApplication)" in 3082.5449ms
+2017-04-12 13:54:23.891 -04:00 [Information] Request finished in 3485.4487ms 200 text/html; charset=utf-8
+2017-04-12 13:54:23.944 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/js/serverModal.Controller.js  
+2017-04-12 13:54:23.959 -04:00 [Information] The file "/js/serverModal.Controller.js" was not modified
+2017-04-12 13:54:23.963 -04:00 [Information] Request finished in 18.9769ms 304 application/javascript
+2017-04-12 13:55:08.211 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/  
+2017-04-12 13:55:08.259 -04:00 [Information] Executed DbCommand (42ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-12 13:55:08.290 -04:00 [Information] Executed DbCommand (29ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-12 13:55:08.305 -04:00 [Information] Executed DbCommand (14ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2017-04-12 13:55:08.321 -04:00 [Information] Executing action method "NOC_PL_WebApplication.Controllers.TableDataVMsController.Index (NOC-PL-WebApplication)" with arguments (null) - ModelState is Valid
+2017-04-12 13:55:08.344 -04:00 [Information] Executed DbCommand (20ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[PrimaryProductServerId], [p].[ProductGroup], [p].[ProductName], [p].[SecondaryProductServerId], [p].[TableDataVMId], [p].[TableNumber]
+FROM [Products] AS [p]
+2017-04-12 13:55:08.372 -04:00 [Information] Executed DbCommand (24ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[ServerGroup], [s].[ServerName], [s].[TableDataVMId]
+FROM [Servers] AS [s]
+2017-04-12 13:55:08.373 -04:00 [Information] Database queries successful
+2017-04-12 13:55:08.374 -04:00 [Information] Executing ViewResult, running view at path "/Views/TableDataVMs/Index.cshtml".
+2017-04-12 13:55:08.608 -04:00 [Information] Executed action "NOC_PL_WebApplication.Controllers.TableDataVMsController.Index (NOC-PL-WebApplication)" in 392.9996ms
+2017-04-12 13:55:08.611 -04:00 [Error] An unhandled exception has occurred while executing the request
+Microsoft.AspNetCore.Mvc.Razor.Compilation.CompilationFailedException: One or more compilation failures occurred:
+/Views/Shared/Components/LoginLogout/Default.cshtml(7,14): error CS1002: ; expected
+/Views/Shared/Components/LoginLogout/Default.cshtml(7,5): error CS0103: The name 'Anonymous' does not exist in the current context
+   at Microsoft.AspNetCore.Mvc.Razor.Compilation.CompilationResult.EnsureSuccessful()
+   at Microsoft.AspNetCore.Mvc.Razor.Internal.CompilerCache.CreateCacheEntry(String relativePath, String normalizedPath, Func`2 compile)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Razor.Internal.CompilerCache.GetOrAdd(String relativePath, Func`2 compile)
+   at Microsoft.AspNetCore.Mvc.Razor.Internal.DefaultRazorPageFactoryProvider.CreateFactory(String relativePath)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.CreateCacheResult(HashSet`1 expirationTokens, String relativePath, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.OnCacheMiss(ViewLocationExpanderContext expanderContext, ViewLocationCacheKey cacheKey)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.LocatePageFromViewLocations(ActionContext actionContext, String pageName, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.FindView(ActionContext context, String viewName, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.ViewEngines.CompositeViewEngine.FindView(ActionContext context, String viewName, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.ViewComponents.ViewViewComponentResult.<ExecuteAsync>d__20.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.ViewComponents.DefaultViewComponentInvoker.<InvokeAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.ViewComponents.DefaultViewComponentHelper.<InvokeCoreAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at AspNetCore._Views_Shared__Layout_cshtml.<ExecuteAsync>d__62.MoveNext() in /Views/Shared/_Layout.cshtml:line 35
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.<RenderPageAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.<RenderLayoutAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.<RenderAsync>d__13.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.<ExecuteAsync>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.ViewResult.<ExecuteResultAsync>d__26.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeResultAsync>d__30.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextResultFilterAsync>d__28.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ResultExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeAsync>d__20.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware`1.<Invoke>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware`1.<Invoke>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware`1.<Invoke>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware`1.<Invoke>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware`1.<Invoke>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware`1.<Invoke>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware`1.<Invoke>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware`1.<Invoke>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
+2017-04-12 13:55:08.845 -04:00 [Information] Request finished in 634.2109ms 500 text/html; charset=utf-8
+2017-04-12 13:55:13.649 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/  
+2017-04-12 13:55:13.667 -04:00 [Information] Executed DbCommand (16ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-12 13:55:13.715 -04:00 [Information] Executed DbCommand (48ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-12 13:55:13.732 -04:00 [Information] Executed DbCommand (16ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2017-04-12 13:55:13.748 -04:00 [Information] Executing action method "NOC_PL_WebApplication.Controllers.TableDataVMsController.Index (NOC-PL-WebApplication)" with arguments (null) - ModelState is Valid
+2017-04-12 13:55:13.772 -04:00 [Information] Executed DbCommand (22ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[PrimaryProductServerId], [p].[ProductGroup], [p].[ProductName], [p].[SecondaryProductServerId], [p].[TableDataVMId], [p].[TableNumber]
+FROM [Products] AS [p]
+2017-04-12 13:55:13.806 -04:00 [Information] Executed DbCommand (33ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[ServerGroup], [s].[ServerName], [s].[TableDataVMId]
+FROM [Servers] AS [s]
+2017-04-12 13:55:13.807 -04:00 [Information] Database queries successful
+2017-04-12 13:55:13.807 -04:00 [Information] Executing ViewResult, running view at path "/Views/TableDataVMs/Index.cshtml".
+2017-04-12 13:55:13.938 -04:00 [Information] Executed action "NOC_PL_WebApplication.Controllers.TableDataVMsController.Index (NOC-PL-WebApplication)" in 288.7666ms
+2017-04-12 13:55:13.940 -04:00 [Error] An unhandled exception has occurred while executing the request
+Microsoft.AspNetCore.Mvc.Razor.Compilation.CompilationFailedException: One or more compilation failures occurred:
+/Views/Shared/Components/LoginLogout/Default.cshtml(7,14): error CS1002: ; expected
+/Views/Shared/Components/LoginLogout/Default.cshtml(7,5): error CS0103: The name 'Anonymous' does not exist in the current context
+   at Microsoft.AspNetCore.Mvc.Razor.Compilation.CompilationResult.EnsureSuccessful()
+   at Microsoft.AspNetCore.Mvc.Razor.Internal.CompilerCache.CreateCacheEntry(String relativePath, String normalizedPath, Func`2 compile)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Razor.Internal.CompilerCache.GetOrAdd(String relativePath, Func`2 compile)
+   at Microsoft.AspNetCore.Mvc.Razor.Internal.DefaultRazorPageFactoryProvider.CreateFactory(String relativePath)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.CreateCacheResult(HashSet`1 expirationTokens, String relativePath, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.OnCacheMiss(ViewLocationExpanderContext expanderContext, ViewLocationCacheKey cacheKey)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.LocatePageFromViewLocations(ActionContext actionContext, String pageName, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.FindView(ActionContext context, String viewName, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.ViewEngines.CompositeViewEngine.FindView(ActionContext context, String viewName, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.ViewComponents.ViewViewComponentResult.<ExecuteAsync>d__20.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.ViewComponents.DefaultViewComponentInvoker.<InvokeAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.ViewComponents.DefaultViewComponentHelper.<InvokeCoreAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at AspNetCore._Views_Shared__Layout_cshtml.<ExecuteAsync>d__62.MoveNext() in /Views/Shared/_Layout.cshtml:line 35
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.<RenderPageAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.<RenderLayoutAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.<RenderAsync>d__13.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.<ExecuteAsync>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.ViewResult.<ExecuteResultAsync>d__26.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeResultAsync>d__30.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextResultFilterAsync>d__28.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ResultExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeAsync>d__20.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware`1.<Invoke>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware`1.<Invoke>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware`1.<Invoke>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware`1.<Invoke>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware`1.<Invoke>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware`1.<Invoke>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware`1.<Invoke>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware`1.<Invoke>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
+2017-04-12 13:55:13.992 -04:00 [Information] Request finished in 343.3927ms 500 text/html; charset=utf-8
+2017-04-12 13:55:36.162 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/  
+2017-04-12 13:55:36.179 -04:00 [Information] Executed DbCommand (16ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-12 13:55:36.200 -04:00 [Information] Executed DbCommand (20ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-12 13:55:36.214 -04:00 [Information] Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2017-04-12 13:55:36.229 -04:00 [Information] Executing action method "NOC_PL_WebApplication.Controllers.TableDataVMsController.Index (NOC-PL-WebApplication)" with arguments (null) - ModelState is Valid
+2017-04-12 13:55:36.256 -04:00 [Information] Executed DbCommand (26ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[PrimaryProductServerId], [p].[ProductGroup], [p].[ProductName], [p].[SecondaryProductServerId], [p].[TableDataVMId], [p].[TableNumber]
+FROM [Products] AS [p]
+2017-04-12 13:55:36.300 -04:00 [Information] Executed DbCommand (42ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[ServerGroup], [s].[ServerName], [s].[TableDataVMId]
+FROM [Servers] AS [s]
+2017-04-12 13:55:36.301 -04:00 [Information] Database queries successful
+2017-04-12 13:55:36.302 -04:00 [Information] Executing ViewResult, running view at path "/Views/TableDataVMs/Index.cshtml".
+2017-04-12 13:55:36.374 -04:00 [Information] Executed action "NOC_PL_WebApplication.Controllers.TableDataVMsController.Index (NOC-PL-WebApplication)" in 211.9174ms
+2017-04-12 13:55:36.375 -04:00 [Information] Request finished in 212.8517ms 200 text/html; charset=utf-8
+2017-04-12 13:55:45.046 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/  
+2017-04-12 13:55:45.060 -04:00 [Information] Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-12 13:55:45.080 -04:00 [Information] Executed DbCommand (18ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-12 13:55:45.094 -04:00 [Information] Executed DbCommand (14ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2017-04-12 13:55:45.108 -04:00 [Information] Executing action method "NOC_PL_WebApplication.Controllers.TableDataVMsController.Index (NOC-PL-WebApplication)" with arguments (null) - ModelState is Valid
+2017-04-12 13:55:45.139 -04:00 [Information] Executed DbCommand (29ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[PrimaryProductServerId], [p].[ProductGroup], [p].[ProductName], [p].[SecondaryProductServerId], [p].[TableDataVMId], [p].[TableNumber]
+FROM [Products] AS [p]
+2017-04-12 13:55:45.173 -04:00 [Information] Executed DbCommand (32ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[ServerGroup], [s].[ServerName], [s].[TableDataVMId]
+FROM [Servers] AS [s]
+2017-04-12 13:55:45.174 -04:00 [Information] Database queries successful
+2017-04-12 13:55:45.174 -04:00 [Information] Executing ViewResult, running view at path "/Views/TableDataVMs/Index.cshtml".
+2017-04-12 13:55:45.176 -04:00 [Information] Executed action "NOC_PL_WebApplication.Controllers.TableDataVMsController.Index (NOC-PL-WebApplication)" in 129.8371ms
+2017-04-12 13:55:45.176 -04:00 [Information] Request finished in 130.764ms 200 text/html; charset=utf-8
+2017-04-12 13:55:48.066 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/  
+2017-04-12 13:55:48.083 -04:00 [Information] Executed DbCommand (16ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-12 13:55:48.110 -04:00 [Information] Executed DbCommand (26ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-12 13:55:48.124 -04:00 [Information] Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2017-04-12 13:55:48.139 -04:00 [Information] Executing action method "NOC_PL_WebApplication.Controllers.TableDataVMsController.Index (NOC-PL-WebApplication)" with arguments (null) - ModelState is Valid
+2017-04-12 13:55:48.166 -04:00 [Information] Executed DbCommand (26ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[PrimaryProductServerId], [p].[ProductGroup], [p].[ProductName], [p].[SecondaryProductServerId], [p].[TableDataVMId], [p].[TableNumber]
+FROM [Products] AS [p]
+2017-04-12 13:55:48.198 -04:00 [Information] Executed DbCommand (30ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[ServerGroup], [s].[ServerName], [s].[TableDataVMId]
+FROM [Servers] AS [s]
+2017-04-12 13:55:48.199 -04:00 [Information] Database queries successful
+2017-04-12 13:55:48.199 -04:00 [Information] Executing ViewResult, running view at path "/Views/TableDataVMs/Index.cshtml".
+2017-04-12 13:55:48.202 -04:00 [Information] Executed action "NOC_PL_WebApplication.Controllers.TableDataVMsController.Index (NOC-PL-WebApplication)" in 134.7737ms
+2017-04-12 13:55:48.202 -04:00 [Information] Request finished in 135.5655ms 200 text/html; charset=utf-8
+2017-04-12 13:55:49.283 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/  
+2017-04-12 13:55:49.300 -04:00 [Information] Executed DbCommand (15ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-12 13:55:49.319 -04:00 [Information] Executed DbCommand (18ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-12 13:55:49.334 -04:00 [Information] Executed DbCommand (14ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2017-04-12 13:55:49.355 -04:00 [Information] Executing action method "NOC_PL_WebApplication.Controllers.TableDataVMsController.Index (NOC-PL-WebApplication)" with arguments (null) - ModelState is Valid
+2017-04-12 13:55:49.376 -04:00 [Information] Executed DbCommand (20ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[PrimaryProductServerId], [p].[ProductGroup], [p].[ProductName], [p].[SecondaryProductServerId], [p].[TableDataVMId], [p].[TableNumber]
+FROM [Products] AS [p]
+2017-04-12 13:55:49.409 -04:00 [Information] Executed DbCommand (31ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[ServerGroup], [s].[ServerName], [s].[TableDataVMId]
+FROM [Servers] AS [s]
+2017-04-12 13:55:49.410 -04:00 [Information] Database queries successful
+2017-04-12 13:55:49.410 -04:00 [Information] Executing ViewResult, running view at path "/Views/TableDataVMs/Index.cshtml".
+2017-04-12 13:55:49.412 -04:00 [Information] Executed action "NOC_PL_WebApplication.Controllers.TableDataVMsController.Index (NOC-PL-WebApplication)" in 128.6276ms
+2017-04-12 13:55:49.413 -04:00 [Information] Request finished in 129.2966ms 200 text/html; charset=utf-8
+2017-04-12 13:56:02.142 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/  
+2017-04-12 13:56:02.166 -04:00 [Information] Executed DbCommand (22ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-12 13:56:02.181 -04:00 [Information] Executed DbCommand (14ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-12 13:56:02.205 -04:00 [Information] Executed DbCommand (23ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2017-04-12 13:56:02.233 -04:00 [Information] Executing action method "NOC_PL_WebApplication.Controllers.TableDataVMsController.Index (NOC-PL-WebApplication)" with arguments (null) - ModelState is Valid
+2017-04-12 13:56:02.259 -04:00 [Information] Executed DbCommand (24ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[PrimaryProductServerId], [p].[ProductGroup], [p].[ProductName], [p].[SecondaryProductServerId], [p].[TableDataVMId], [p].[TableNumber]
+FROM [Products] AS [p]
+2017-04-12 13:56:02.297 -04:00 [Information] Executed DbCommand (37ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[ServerGroup], [s].[ServerName], [s].[TableDataVMId]
+FROM [Servers] AS [s]
+2017-04-12 13:56:02.299 -04:00 [Information] Database queries successful
+2017-04-12 13:56:02.299 -04:00 [Information] Executing ViewResult, running view at path "/Views/TableDataVMs/Index.cshtml".
+2017-04-12 13:56:02.362 -04:00 [Information] Executed action "NOC_PL_WebApplication.Controllers.TableDataVMsController.Index (NOC-PL-WebApplication)" in 218.7866ms
+2017-04-12 13:56:02.362 -04:00 [Information] Request finished in 219.4055ms 200 text/html; charset=utf-8
+2017-04-12 13:56:02.394 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/bootstrap/dist/css/bootstrap.css  
+2017-04-12 13:56:02.395 -04:00 [Information] The file "/lib/bootstrap/dist/css/bootstrap.css" was not modified
+2017-04-12 13:56:02.395 -04:00 [Information] Request finished in 0.5993ms 304 text/css
+2017-04-12 13:56:02.413 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/font-awesome/css/font-awesome.css  
+2017-04-12 13:56:02.414 -04:00 [Information] The file "/lib/font-awesome/css/font-awesome.css" was not modified
+2017-04-12 13:56:02.414 -04:00 [Information] Request finished in 0.756ms 304 text/css
+2017-04-12 13:56:02.419 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/css/site.css?v=SzNlSGmfY0Gj7vZhCGVU9VTI0h4xWhyELf6nIN6Eghc  
+2017-04-12 13:56:02.420 -04:00 [Information] The file "/css/site.css" was not modified
+2017-04-12 13:56:02.420 -04:00 [Information] Request finished in 0.4839ms 304 text/css
+2017-04-12 13:56:02.440 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/jquery/dist/jquery.min.js  
+2017-04-12 13:56:02.440 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0  
+2017-04-12 13:56:02.440 -04:00 [Information] The file "/lib/jquery/dist/jquery.min.js" was not modified
+2017-04-12 13:56:02.440 -04:00 [Information] Request finished in 0.5284ms 304 application/javascript
+2017-04-12 13:56:02.440 -04:00 [Information] The file "/lib/font-awesome/fonts/fontawesome-webfont.woff2" was not modified
+2017-04-12 13:56:02.444 -04:00 [Information] Request finished in 4.4143ms 304 application/font-woff2
+2017-04-12 13:56:02.483 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/bootstrap/dist/js/bootstrap.min.js  
+2017-04-12 13:56:02.483 -04:00 [Information] The file "/lib/bootstrap/dist/js/bootstrap.min.js" was not modified
+2017-04-12 13:56:02.484 -04:00 [Information] Request finished in 0.5554ms 304 application/javascript
+2017-04-12 13:56:02.501 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/angular2/angular.min.js  
+2017-04-12 13:56:02.501 -04:00 [Information] The file "/lib/angular2/angular.min.js" was not modified
+2017-04-12 13:56:02.502 -04:00 [Information] Request finished in 0.5508ms 304 application/javascript
+2017-04-12 13:56:02.522 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/js/site.min.js?v=NpMUj71zExRQni6K27BChnEFiXr3zPwMp_IYP45LeJE  
+2017-04-12 13:56:02.522 -04:00 [Information] The file "/js/site.min.js" was not modified
+2017-04-12 13:56:02.522 -04:00 [Information] Request finished in 0.4994ms 304 application/javascript
+2017-04-12 13:56:02.527 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/js/jsmodules/ScrollPositionModule.js?v=nMtTymepNGTcJY1TyjArpj4eAyNo6Vtrk2PhD6EGS8g  
+2017-04-12 13:56:02.528 -04:00 [Information] The file "/js/jsmodules/ScrollPositionModule.js" was not modified
+2017-04-12 13:56:02.528 -04:00 [Information] Request finished in 0.4761ms 304 application/javascript
+2017-04-12 13:56:02.532 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/css/serverModal.styles.css  
+2017-04-12 13:56:02.533 -04:00 [Information] The file "/css/serverModal.styles.css" was not modified
+2017-04-12 13:56:02.533 -04:00 [Information] Request finished in 0.8941ms 304 text/css
+2017-04-12 13:56:02.537 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/js/serverModal.Controller.js  
+2017-04-12 13:56:02.537 -04:00 [Information] The file "/js/serverModal.Controller.js" was not modified
+2017-04-12 13:56:02.537 -04:00 [Information] Request finished in 0.8627ms 304 application/javascript
+2017-04-12 13:56:02.791 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/  
+2017-04-12 13:56:02.806 -04:00 [Information] Executed DbCommand (14ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-12 13:56:02.823 -04:00 [Information] Executed DbCommand (17ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-12 13:56:02.839 -04:00 [Information] Executed DbCommand (14ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2017-04-12 13:56:02.866 -04:00 [Information] Executing action method "NOC_PL_WebApplication.Controllers.TableDataVMsController.Index (NOC-PL-WebApplication)" with arguments (null) - ModelState is Valid
+2017-04-12 13:56:02.888 -04:00 [Information] Executed DbCommand (20ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[PrimaryProductServerId], [p].[ProductGroup], [p].[ProductName], [p].[SecondaryProductServerId], [p].[TableDataVMId], [p].[TableNumber]
+FROM [Products] AS [p]
+2017-04-12 13:56:02.917 -04:00 [Information] Executed DbCommand (27ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[ServerGroup], [s].[ServerName], [s].[TableDataVMId]
+FROM [Servers] AS [s]
+2017-04-12 13:56:02.918 -04:00 [Information] Database queries successful
+2017-04-12 13:56:02.918 -04:00 [Information] Executing ViewResult, running view at path "/Views/TableDataVMs/Index.cshtml".
+2017-04-12 13:56:02.920 -04:00 [Information] Executed action "NOC_PL_WebApplication.Controllers.TableDataVMsController.Index (NOC-PL-WebApplication)" in 129.3463ms
+2017-04-12 13:56:02.921 -04:00 [Information] Request finished in 130.0427ms 200 text/html; charset=utf-8
+2017-04-12 13:56:02.950 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/bootstrap/dist/css/bootstrap.css  
+2017-04-12 13:56:02.951 -04:00 [Information] The file "/lib/bootstrap/dist/css/bootstrap.css" was not modified
+2017-04-12 13:56:02.951 -04:00 [Information] Request finished in 0.5069ms 304 text/css
+2017-04-12 13:56:02.968 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/font-awesome/css/font-awesome.css  
+2017-04-12 13:56:02.969 -04:00 [Information] The file "/lib/font-awesome/css/font-awesome.css" was not modified
+2017-04-12 13:56:02.969 -04:00 [Information] Request finished in 0.4839ms 304 text/css
+2017-04-12 13:56:02.975 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/css/site.css?v=SzNlSGmfY0Gj7vZhCGVU9VTI0h4xWhyELf6nIN6Eghc  
+2017-04-12 13:56:02.975 -04:00 [Information] The file "/css/site.css" was not modified
+2017-04-12 13:56:02.975 -04:00 [Information] Request finished in 0.65ms 304 text/css
+2017-04-12 13:56:02.986 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/jquery/dist/jquery.min.js  
+2017-04-12 13:56:02.987 -04:00 [Information] The file "/lib/jquery/dist/jquery.min.js" was not modified
+2017-04-12 13:56:02.987 -04:00 [Information] Request finished in 0.5806ms 304 application/javascript
+2017-04-12 13:56:02.989 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0  
+2017-04-12 13:56:02.989 -04:00 [Information] The file "/lib/font-awesome/fonts/fontawesome-webfont.woff2" was not modified
+2017-04-12 13:56:02.990 -04:00 [Information] Request finished in 0.5697ms 304 application/font-woff2
+2017-04-12 13:56:03.028 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/bootstrap/dist/js/bootstrap.min.js  
+2017-04-12 13:56:03.028 -04:00 [Information] The file "/lib/bootstrap/dist/js/bootstrap.min.js" was not modified
+2017-04-12 13:56:03.029 -04:00 [Information] Request finished in 0.5029ms 304 application/javascript
+2017-04-12 13:56:03.056 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/angular2/angular.min.js  
+2017-04-12 13:56:03.057 -04:00 [Information] The file "/lib/angular2/angular.min.js" was not modified
+2017-04-12 13:56:03.057 -04:00 [Information] Request finished in 6.7892ms 304 application/javascript
+2017-04-12 13:56:03.076 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/js/site.min.js?v=NpMUj71zExRQni6K27BChnEFiXr3zPwMp_IYP45LeJE  
+2017-04-12 13:56:03.076 -04:00 [Information] The file "/js/site.min.js" was not modified
+2017-04-12 13:56:03.076 -04:00 [Information] Request finished in 0.4963ms 304 application/javascript
+2017-04-12 13:56:03.082 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/js/jsmodules/ScrollPositionModule.js?v=nMtTymepNGTcJY1TyjArpj4eAyNo6Vtrk2PhD6EGS8g  
+2017-04-12 13:56:03.083 -04:00 [Information] The file "/js/jsmodules/ScrollPositionModule.js" was not modified
+2017-04-12 13:56:03.083 -04:00 [Information] Request finished in 0.505ms 304 application/javascript
+2017-04-12 13:56:03.086 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/css/serverModal.styles.css  
+2017-04-12 13:56:03.087 -04:00 [Information] The file "/css/serverModal.styles.css" was not modified
+2017-04-12 13:56:03.087 -04:00 [Information] Request finished in 0.4858ms 304 text/css
+2017-04-12 13:56:03.090 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/js/serverModal.Controller.js  
+2017-04-12 13:56:03.091 -04:00 [Information] The file "/js/serverModal.Controller.js" was not modified
+2017-04-12 13:56:03.091 -04:00 [Information] Request finished in 1.2275ms 304 application/javascript
+2017-04-12 13:56:13.389 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/  
+2017-04-12 13:56:13.413 -04:00 [Information] Executed DbCommand (22ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-12 13:56:13.430 -04:00 [Information] Executed DbCommand (16ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-12 13:56:13.449 -04:00 [Information] Executed DbCommand (18ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2017-04-12 13:56:13.465 -04:00 [Information] Executing action method "NOC_PL_WebApplication.Controllers.TableDataVMsController.Index (NOC-PL-WebApplication)" with arguments (null) - ModelState is Valid
+2017-04-12 13:56:13.491 -04:00 [Information] Executed DbCommand (25ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[PrimaryProductServerId], [p].[ProductGroup], [p].[ProductName], [p].[SecondaryProductServerId], [p].[TableDataVMId], [p].[TableNumber]
+FROM [Products] AS [p]
+2017-04-12 13:56:13.517 -04:00 [Information] Executed DbCommand (23ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[ServerGroup], [s].[ServerName], [s].[TableDataVMId]
+FROM [Servers] AS [s]
+2017-04-12 13:56:13.518 -04:00 [Information] Database queries successful
+2017-04-12 13:56:13.518 -04:00 [Information] Executing ViewResult, running view at path "/Views/TableDataVMs/Index.cshtml".
+2017-04-12 13:56:13.568 -04:00 [Information] Executed action "NOC_PL_WebApplication.Controllers.TableDataVMsController.Index (NOC-PL-WebApplication)" in 178.6556ms
+2017-04-12 13:56:13.568 -04:00 [Information] Request finished in 179.314ms 200 text/html; charset=utf-8
+2017-04-12 13:56:13.600 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/bootstrap/dist/css/bootstrap.css  
+2017-04-12 13:56:13.600 -04:00 [Information] The file "/lib/bootstrap/dist/css/bootstrap.css" was not modified
+2017-04-12 13:56:13.600 -04:00 [Information] Request finished in 0.5054ms 304 text/css
+2017-04-12 13:56:13.619 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/font-awesome/css/font-awesome.css  
+2017-04-12 13:56:13.619 -04:00 [Information] The file "/lib/font-awesome/css/font-awesome.css" was not modified
+2017-04-12 13:56:13.619 -04:00 [Information] Request finished in 0.4917ms 304 text/css
+2017-04-12 13:56:13.624 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/css/site.css?v=SzNlSGmfY0Gj7vZhCGVU9VTI0h4xWhyELf6nIN6Eghc  
+2017-04-12 13:56:13.624 -04:00 [Information] The file "/css/site.css" was not modified
+2017-04-12 13:56:13.625 -04:00 [Information] Request finished in 0.4674ms 304 text/css
+2017-04-12 13:56:13.634 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/jquery/dist/jquery.min.js  
+2017-04-12 13:56:13.635 -04:00 [Information] The file "/lib/jquery/dist/jquery.min.js" was not modified
+2017-04-12 13:56:13.635 -04:00 [Information] Request finished in 0.5138ms 304 application/javascript
+2017-04-12 13:56:13.637 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0  
+2017-04-12 13:56:13.638 -04:00 [Information] The file "/lib/font-awesome/fonts/fontawesome-webfont.woff2" was not modified
+2017-04-12 13:56:13.638 -04:00 [Information] Request finished in 1.4938ms 304 application/font-woff2
+2017-04-12 13:56:13.680 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/bootstrap/dist/js/bootstrap.min.js  
+2017-04-12 13:56:13.680 -04:00 [Information] The file "/lib/bootstrap/dist/js/bootstrap.min.js" was not modified
+2017-04-12 13:56:13.680 -04:00 [Information] Request finished in 0.4917ms 304 application/javascript
+2017-04-12 13:56:13.698 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/angular2/angular.min.js  
+2017-04-12 13:56:13.699 -04:00 [Information] The file "/lib/angular2/angular.min.js" was not modified
+2017-04-12 13:56:13.699 -04:00 [Information] Request finished in 0.5458ms 304 application/javascript
+2017-04-12 13:56:13.715 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/js/site.min.js?v=NpMUj71zExRQni6K27BChnEFiXr3zPwMp_IYP45LeJE  
+2017-04-12 13:56:13.716 -04:00 [Information] The file "/js/site.min.js" was not modified
+2017-04-12 13:56:13.716 -04:00 [Information] Request finished in 0.9184ms 304 application/javascript
+2017-04-12 13:56:13.721 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/js/jsmodules/ScrollPositionModule.js?v=nMtTymepNGTcJY1TyjArpj4eAyNo6Vtrk2PhD6EGS8g  
+2017-04-12 13:56:13.721 -04:00 [Information] The file "/js/jsmodules/ScrollPositionModule.js" was not modified
+2017-04-12 13:56:13.722 -04:00 [Information] Request finished in 0.5228ms 304 application/javascript
+2017-04-12 13:56:13.725 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/css/serverModal.styles.css  
+2017-04-12 13:56:13.726 -04:00 [Information] The file "/css/serverModal.styles.css" was not modified
+2017-04-12 13:56:13.726 -04:00 [Information] Request finished in 0.5417ms 304 text/css
+2017-04-12 13:56:13.729 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/js/serverModal.Controller.js  
+2017-04-12 13:56:13.730 -04:00 [Information] The file "/js/serverModal.Controller.js" was not modified
+2017-04-12 13:56:13.730 -04:00 [Information] Request finished in 0.8637ms 304 application/javascript
+2017-04-12 13:56:49.295 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/  
+2017-04-12 13:56:49.310 -04:00 [Information] Executed DbCommand (15ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-12 13:56:49.325 -04:00 [Information] Executed DbCommand (14ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-12 13:56:49.343 -04:00 [Information] Executed DbCommand (17ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2017-04-12 13:56:49.359 -04:00 [Information] Executing action method "NOC_PL_WebApplication.Controllers.TableDataVMsController.Index (NOC-PL-WebApplication)" with arguments (null) - ModelState is Valid
+2017-04-12 13:56:49.397 -04:00 [Information] Executed DbCommand (36ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[PrimaryProductServerId], [p].[ProductGroup], [p].[ProductName], [p].[SecondaryProductServerId], [p].[TableDataVMId], [p].[TableNumber]
+FROM [Products] AS [p]
+2017-04-12 13:56:49.435 -04:00 [Information] Executed DbCommand (35ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[ServerGroup], [s].[ServerName], [s].[TableDataVMId]
+FROM [Servers] AS [s]
+2017-04-12 13:56:49.436 -04:00 [Information] Database queries successful
+2017-04-12 13:56:49.436 -04:00 [Information] Executing ViewResult, running view at path "/Views/TableDataVMs/Index.cshtml".
+2017-04-12 13:56:49.554 -04:00 [Information] Executed action "NOC_PL_WebApplication.Controllers.TableDataVMsController.Index (NOC-PL-WebApplication)" in 258.9437ms
+2017-04-12 13:56:49.554 -04:00 [Information] Request finished in 259.6376ms 200 text/html; charset=utf-8
+2017-04-12 13:56:49.586 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/bootstrap/dist/css/bootstrap.css  
+2017-04-12 13:56:49.587 -04:00 [Information] The file "/lib/bootstrap/dist/css/bootstrap.css" was not modified
+2017-04-12 13:56:49.587 -04:00 [Information] Request finished in 0.5784ms 304 text/css
+2017-04-12 13:56:49.605 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/font-awesome/css/font-awesome.css  
+2017-04-12 13:56:49.605 -04:00 [Information] The file "/lib/font-awesome/css/font-awesome.css" was not modified
+2017-04-12 13:56:49.605 -04:00 [Information] Request finished in 0.5259ms 304 text/css
+2017-04-12 13:56:49.610 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/css/site.css?v=SzNlSGmfY0Gj7vZhCGVU9VTI0h4xWhyELf6nIN6Eghc  
+2017-04-12 13:56:49.610 -04:00 [Information] The file "/css/site.css" was not modified
+2017-04-12 13:56:49.610 -04:00 [Information] Request finished in 0.5464ms 304 text/css
+2017-04-12 13:56:49.620 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/jquery/dist/jquery.min.js  
+2017-04-12 13:56:49.621 -04:00 [Information] The file "/lib/jquery/dist/jquery.min.js" was not modified
+2017-04-12 13:56:49.621 -04:00 [Information] Request finished in 0.5993ms 304 application/javascript
+2017-04-12 13:56:49.622 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0  
+2017-04-12 13:56:49.623 -04:00 [Information] The file "/lib/font-awesome/fonts/fontawesome-webfont.woff2" was not modified
+2017-04-12 13:56:49.624 -04:00 [Information] Request finished in 1.3796ms 304 application/font-woff2
+2017-04-12 13:56:49.679 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/bootstrap/dist/js/bootstrap.min.js  
+2017-04-12 13:56:49.679 -04:00 [Information] The file "/lib/bootstrap/dist/js/bootstrap.min.js" was not modified
+2017-04-12 13:56:49.679 -04:00 [Information] Request finished in 0.5676ms 304 application/javascript
+2017-04-12 13:56:49.700 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/angular2/angular.min.js  
+2017-04-12 13:56:49.700 -04:00 [Information] The file "/lib/angular2/angular.min.js" was not modified
+2017-04-12 13:56:49.701 -04:00 [Information] Request finished in 1.0011ms 304 application/javascript
+2017-04-12 13:56:49.725 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/js/site.min.js?v=NpMUj71zExRQni6K27BChnEFiXr3zPwMp_IYP45LeJE  
+2017-04-12 13:56:49.725 -04:00 [Information] The file "/js/site.min.js" was not modified
+2017-04-12 13:56:49.725 -04:00 [Information] Request finished in 0.5346ms 304 application/javascript
+2017-04-12 13:56:49.733 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/js/jsmodules/ScrollPositionModule.js?v=nMtTymepNGTcJY1TyjArpj4eAyNo6Vtrk2PhD6EGS8g  
+2017-04-12 13:56:49.733 -04:00 [Information] The file "/js/jsmodules/ScrollPositionModule.js" was not modified
+2017-04-12 13:56:49.733 -04:00 [Information] Request finished in 0.5918ms 304 application/javascript
+2017-04-12 13:56:49.737 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/css/serverModal.styles.css  
+2017-04-12 13:56:49.738 -04:00 [Information] The file "/css/serverModal.styles.css" was not modified
+2017-04-12 13:56:49.738 -04:00 [Information] Request finished in 0.7968ms 304 text/css
+2017-04-12 13:56:49.742 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/js/serverModal.Controller.js  
+2017-04-12 13:56:49.742 -04:00 [Information] The file "/js/serverModal.Controller.js" was not modified
+2017-04-12 13:56:49.742 -04:00 [Information] Request finished in 0.552ms 304 application/javascript
+2017-04-12 13:58:09.886 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/  
+2017-04-12 13:58:09.905 -04:00 [Information] Executed DbCommand (18ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-12 13:58:09.928 -04:00 [Information] Executed DbCommand (22ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-12 13:58:09.949 -04:00 [Information] Executed DbCommand (20ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2017-04-12 13:58:09.975 -04:00 [Information] Executing action method "NOC_PL_WebApplication.Controllers.TableDataVMsController.Index (NOC-PL-WebApplication)" with arguments (null) - ModelState is Valid
+2017-04-12 13:58:09.995 -04:00 [Information] Executed DbCommand (19ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[PrimaryProductServerId], [p].[ProductGroup], [p].[ProductName], [p].[SecondaryProductServerId], [p].[TableDataVMId], [p].[TableNumber]
+FROM [Products] AS [p]
+2017-04-12 13:58:10.027 -04:00 [Information] Executed DbCommand (29ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[ServerGroup], [s].[ServerName], [s].[TableDataVMId]
+FROM [Servers] AS [s]
+2017-04-12 13:58:10.028 -04:00 [Information] Database queries successful
+2017-04-12 13:58:10.028 -04:00 [Information] Executing ViewResult, running view at path "/Views/TableDataVMs/Index.cshtml".
+2017-04-12 13:58:10.171 -04:00 [Information] Executed action "NOC_PL_WebApplication.Controllers.TableDataVMsController.Index (NOC-PL-WebApplication)" in 284.9121ms
+2017-04-12 13:58:10.172 -04:00 [Information] Request finished in 285.648ms 200 text/html; charset=utf-8
+2017-04-12 13:58:10.205 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/bootstrap/dist/css/bootstrap.css  
+2017-04-12 13:58:10.205 -04:00 [Information] The file "/lib/bootstrap/dist/css/bootstrap.css" was not modified
+2017-04-12 13:58:10.205 -04:00 [Information] Request finished in 0.5094ms 304 text/css
+2017-04-12 13:58:10.223 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/font-awesome/css/font-awesome.css  
+2017-04-12 13:58:10.223 -04:00 [Information] The file "/lib/font-awesome/css/font-awesome.css" was not modified
+2017-04-12 13:58:10.223 -04:00 [Information] Request finished in 0.4646ms 304 text/css
+2017-04-12 13:58:10.228 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/css/site.css?v=SzNlSGmfY0Gj7vZhCGVU9VTI0h4xWhyELf6nIN6Eghc  
+2017-04-12 13:58:10.229 -04:00 [Information] The file "/css/site.css" was not modified
+2017-04-12 13:58:10.229 -04:00 [Information] Request finished in 0.4774ms 304 text/css
+2017-04-12 13:58:10.239 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/jquery/dist/jquery.min.js  
+2017-04-12 13:58:10.239 -04:00 [Information] The file "/lib/jquery/dist/jquery.min.js" was not modified
+2017-04-12 13:58:10.239 -04:00 [Information] Request finished in 0.5483ms 304 application/javascript
+2017-04-12 13:58:10.243 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0  
+2017-04-12 13:58:10.243 -04:00 [Information] The file "/lib/font-awesome/fonts/fontawesome-webfont.woff2" was not modified
+2017-04-12 13:58:10.243 -04:00 [Information] Request finished in 0.8798ms 304 application/font-woff2
+2017-04-12 13:58:10.291 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/bootstrap/dist/js/bootstrap.min.js  
+2017-04-12 13:58:10.292 -04:00 [Information] The file "/lib/bootstrap/dist/js/bootstrap.min.js" was not modified
+2017-04-12 13:58:10.292 -04:00 [Information] Request finished in 0.4827ms 304 application/javascript
+2017-04-12 13:58:10.309 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/angular2/angular.min.js  
+2017-04-12 13:58:10.309 -04:00 [Information] The file "/lib/angular2/angular.min.js" was not modified
+2017-04-12 13:58:10.310 -04:00 [Information] Request finished in 0.5473ms 304 application/javascript
+2017-04-12 13:58:10.327 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/js/site.min.js?v=NpMUj71zExRQni6K27BChnEFiXr3zPwMp_IYP45LeJE  
+2017-04-12 13:58:10.327 -04:00 [Information] The file "/js/site.min.js" was not modified
+2017-04-12 13:58:10.327 -04:00 [Information] Request finished in 0.5564ms 304 application/javascript
+2017-04-12 13:58:10.332 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/js/jsmodules/ScrollPositionModule.js?v=nMtTymepNGTcJY1TyjArpj4eAyNo6Vtrk2PhD6EGS8g  
+2017-04-12 13:58:10.333 -04:00 [Information] The file "/js/jsmodules/ScrollPositionModule.js" was not modified
+2017-04-12 13:58:10.333 -04:00 [Information] Request finished in 0.5856ms 304 application/javascript
+2017-04-12 13:58:10.338 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/css/serverModal.styles.css  
+2017-04-12 13:58:10.338 -04:00 [Information] The file "/css/serverModal.styles.css" was not modified
+2017-04-12 13:58:10.338 -04:00 [Information] Request finished in 0.5159ms 304 text/css
+2017-04-12 13:58:10.342 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/js/serverModal.Controller.js  
+2017-04-12 13:58:10.342 -04:00 [Information] The file "/js/serverModal.Controller.js" was not modified
+2017-04-12 13:58:10.342 -04:00 [Information] Request finished in 0.589ms 304 application/javascript
+2017-04-12 13:58:44.332 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/  
+2017-04-12 13:58:44.364 -04:00 [Information] Executed DbCommand (25ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-12 13:58:44.379 -04:00 [Information] Executed DbCommand (14ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-12 13:58:44.394 -04:00 [Information] Executed DbCommand (14ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2017-04-12 13:58:44.418 -04:00 [Information] Executing action method "NOC_PL_WebApplication.Controllers.TableDataVMsController.Index (NOC-PL-WebApplication)" with arguments (null) - ModelState is Valid
+2017-04-12 13:58:44.444 -04:00 [Information] Executed DbCommand (25ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[PrimaryProductServerId], [p].[ProductGroup], [p].[ProductName], [p].[SecondaryProductServerId], [p].[TableDataVMId], [p].[TableNumber]
+FROM [Products] AS [p]
+2017-04-12 13:58:44.489 -04:00 [Information] Executed DbCommand (37ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[ServerGroup], [s].[ServerName], [s].[TableDataVMId]
+FROM [Servers] AS [s]
+2017-04-12 13:58:44.490 -04:00 [Information] Database queries successful
+2017-04-12 13:58:44.490 -04:00 [Information] Executing ViewResult, running view at path "/Views/TableDataVMs/Index.cshtml".
+2017-04-12 13:58:44.498 -04:00 [Information] Executed action "NOC_PL_WebApplication.Controllers.TableDataVMsController.Index (NOC-PL-WebApplication)" in 159.4656ms
+2017-04-12 13:58:44.499 -04:00 [Information] Request finished in 167.0023ms 200 text/html; charset=utf-8
+2017-04-12 13:58:44.536 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/bootstrap/dist/css/bootstrap.css  
+2017-04-12 13:58:44.537 -04:00 [Information] The file "/lib/bootstrap/dist/css/bootstrap.css" was not modified
+2017-04-12 13:58:44.537 -04:00 [Information] Request finished in 1.1756ms 304 text/css
+2017-04-12 13:58:44.558 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/font-awesome/css/font-awesome.css  
+2017-04-12 13:58:44.559 -04:00 [Information] The file "/lib/font-awesome/css/font-awesome.css" was not modified
+2017-04-12 13:58:44.559 -04:00 [Information] Request finished in 0.5327ms 304 text/css
+2017-04-12 13:58:44.566 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/css/site.css?v=nELE4wkClSFbPkESyce-SYsNW-6ZMMeQuM7Jevb6ABY  
+2017-04-12 13:58:44.570 -04:00 [Information] Sending file. Request path: '"/css/site.css"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\css\site.css"'
+2017-04-12 13:58:44.594 -04:00 [Information] Request finished in 28.2092ms 200 text/css
+2017-04-12 13:58:44.599 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/jquery/dist/jquery.min.js  
+2017-04-12 13:58:44.599 -04:00 [Information] The file "/lib/jquery/dist/jquery.min.js" was not modified
+2017-04-12 13:58:44.600 -04:00 [Information] Request finished in 0.5153ms 304 application/javascript
+2017-04-12 13:58:44.618 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/bootstrap/dist/js/bootstrap.min.js  
+2017-04-12 13:58:44.618 -04:00 [Information] The file "/lib/bootstrap/dist/js/bootstrap.min.js" was not modified
+2017-04-12 13:58:44.618 -04:00 [Information] Request finished in 0.5013ms 304 application/javascript
+2017-04-12 13:58:44.637 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/angular2/angular.min.js  
+2017-04-12 13:58:44.638 -04:00 [Information] The file "/lib/angular2/angular.min.js" was not modified
+2017-04-12 13:58:44.638 -04:00 [Information] Request finished in 0.5147ms 304 application/javascript
+2017-04-12 13:58:44.647 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0  
+2017-04-12 13:58:44.647 -04:00 [Information] The file "/lib/font-awesome/fonts/fontawesome-webfont.woff2" was not modified
+2017-04-12 13:58:44.647 -04:00 [Information] Request finished in 0.5551ms 304 application/font-woff2
+2017-04-12 13:58:44.691 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/js/site.min.js?v=NpMUj71zExRQni6K27BChnEFiXr3zPwMp_IYP45LeJE  
+2017-04-12 13:58:44.691 -04:00 [Information] The file "/js/site.min.js" was not modified
+2017-04-12 13:58:44.691 -04:00 [Information] Request finished in 0.4795ms 304 application/javascript
+2017-04-12 13:58:44.706 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/js/jsmodules/ScrollPositionModule.js?v=nMtTymepNGTcJY1TyjArpj4eAyNo6Vtrk2PhD6EGS8g  
+2017-04-12 13:58:44.707 -04:00 [Information] The file "/js/jsmodules/ScrollPositionModule.js" was not modified
+2017-04-12 13:58:44.707 -04:00 [Information] Request finished in 0.5582ms 304 application/javascript
+2017-04-12 13:58:44.718 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/css/serverModal.styles.css  
+2017-04-12 13:58:44.718 -04:00 [Information] The file "/css/serverModal.styles.css" was not modified
+2017-04-12 13:58:44.718 -04:00 [Information] Request finished in 0.5411ms 304 text/css
+2017-04-12 13:58:44.727 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/js/serverModal.Controller.js  
+2017-04-12 13:58:44.728 -04:00 [Information] The file "/js/serverModal.Controller.js" was not modified
+2017-04-12 13:58:44.728 -04:00 [Information] Request finished in 0.6214ms 304 application/javascript
+2017-04-12 13:59:42.199 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/  
+2017-04-12 13:59:42.217 -04:00 [Information] Executed DbCommand (16ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-12 13:59:42.235 -04:00 [Information] Executed DbCommand (18ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-12 13:59:42.260 -04:00 [Information] Executed DbCommand (23ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2017-04-12 13:59:42.277 -04:00 [Information] Executing action method "NOC_PL_WebApplication.Controllers.TableDataVMsController.Index (NOC-PL-WebApplication)" with arguments (null) - ModelState is Valid
+2017-04-12 13:59:42.304 -04:00 [Information] Executed DbCommand (26ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[PrimaryProductServerId], [p].[ProductGroup], [p].[ProductName], [p].[SecondaryProductServerId], [p].[TableDataVMId], [p].[TableNumber]
+FROM [Products] AS [p]
+2017-04-12 13:59:42.343 -04:00 [Information] Executed DbCommand (36ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[ServerGroup], [s].[ServerName], [s].[TableDataVMId]
+FROM [Servers] AS [s]
+2017-04-12 13:59:42.344 -04:00 [Information] Database queries successful
+2017-04-12 13:59:42.344 -04:00 [Information] Executing ViewResult, running view at path "/Views/TableDataVMs/Index.cshtml".
+2017-04-12 13:59:42.401 -04:00 [Information] Executed action "NOC_PL_WebApplication.Controllers.TableDataVMsController.Index (NOC-PL-WebApplication)" in 201.6204ms
+2017-04-12 13:59:42.401 -04:00 [Information] Request finished in 202.3644ms 200 text/html; charset=utf-8
+2017-04-12 13:59:42.444 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/bootstrap/dist/css/bootstrap.css  
+2017-04-12 13:59:42.445 -04:00 [Information] The file "/lib/bootstrap/dist/css/bootstrap.css" was not modified
+2017-04-12 13:59:42.445 -04:00 [Information] Request finished in 0.8248ms 304 text/css
+2017-04-12 13:59:42.465 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/font-awesome/css/font-awesome.css  
+2017-04-12 13:59:42.465 -04:00 [Information] The file "/lib/font-awesome/css/font-awesome.css" was not modified
+2017-04-12 13:59:42.465 -04:00 [Information] Request finished in 0.4808ms 304 text/css
+2017-04-12 13:59:42.471 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/css/site.css?v=WYnjj1Nq8jVvPXKJG7DD0QjKpGOnmjPSqWSKfqFYahU  
+2017-04-12 13:59:42.471 -04:00 [Information] Sending file. Request path: '"/css/site.css"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\css\site.css"'
+2017-04-12 13:59:42.472 -04:00 [Information] Request finished in 1.6061ms 200 text/css
+2017-04-12 13:59:42.484 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/jquery/dist/jquery.min.js  
+2017-04-12 13:59:42.484 -04:00 [Information] The file "/lib/jquery/dist/jquery.min.js" was not modified
+2017-04-12 13:59:42.484 -04:00 [Information] Request finished in 0.594ms 304 application/javascript
+2017-04-12 13:59:42.502 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/bootstrap/dist/js/bootstrap.min.js  
+2017-04-12 13:59:42.503 -04:00 [Information] The file "/lib/bootstrap/dist/js/bootstrap.min.js" was not modified
+2017-04-12 13:59:42.503 -04:00 [Information] Request finished in 0.5396ms 304 application/javascript
+2017-04-12 13:59:42.520 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/angular2/angular.min.js  
+2017-04-12 13:59:42.521 -04:00 [Information] The file "/lib/angular2/angular.min.js" was not modified
+2017-04-12 13:59:42.521 -04:00 [Information] Request finished in 0.599ms 304 application/javascript
+2017-04-12 13:59:42.526 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0  
+2017-04-12 13:59:42.526 -04:00 [Information] The file "/lib/font-awesome/fonts/fontawesome-webfont.woff2" was not modified
+2017-04-12 13:59:42.526 -04:00 [Information] Request finished in 0.6257ms 304 application/font-woff2
+2017-04-12 13:59:42.564 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/js/site.min.js?v=NpMUj71zExRQni6K27BChnEFiXr3zPwMp_IYP45LeJE  
+2017-04-12 13:59:42.564 -04:00 [Information] The file "/js/site.min.js" was not modified
+2017-04-12 13:59:42.565 -04:00 [Information] Request finished in 0.5321ms 304 application/javascript
+2017-04-12 13:59:42.581 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/js/jsmodules/ScrollPositionModule.js?v=nMtTymepNGTcJY1TyjArpj4eAyNo6Vtrk2PhD6EGS8g  
+2017-04-12 13:59:42.581 -04:00 [Information] The file "/js/jsmodules/ScrollPositionModule.js" was not modified
+2017-04-12 13:59:42.581 -04:00 [Information] Request finished in 0.7473ms 304 application/javascript
+2017-04-12 13:59:42.586 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/css/serverModal.styles.css  
+2017-04-12 13:59:42.588 -04:00 [Information] The file "/css/serverModal.styles.css" was not modified
+2017-04-12 13:59:42.588 -04:00 [Information] Request finished in 1.9715ms 304 text/css
+2017-04-12 13:59:42.593 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/js/serverModal.Controller.js  
+2017-04-12 13:59:42.593 -04:00 [Information] The file "/js/serverModal.Controller.js" was not modified
+2017-04-12 13:59:42.594 -04:00 [Information] Request finished in 1.5019ms 304 application/javascript
+2017-04-12 14:03:00.499 -04:00 [Information] Executed DbCommand (80ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Products] AS [p])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2017-04-12 14:03:00.575 -04:00 [Information] Executed DbCommand (11ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Servers] AS [s])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2017-04-12 14:03:00.632 -04:00 [Information] User profile is available. Using '"C:\Users\djackson\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2017-04-12 14:03:01.095 -04:00 [Information] Request starting HTTP/1.1 DEBUG http://localhost:12170/  0
+2017-04-12 14:03:01.095 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/  
+2017-04-12 14:03:01.236 -04:00 [Information] Request finished in 148.6349ms 200 
+2017-04-12 14:03:01.539 -04:00 [Information] Executed DbCommand (22ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-12 14:03:01.578 -04:00 [Information] Executed DbCommand (36ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-12 14:03:01.614 -04:00 [Information] Executed DbCommand (17ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2017-04-12 14:03:01.681 -04:00 [Information] Executing action method "NOC_PL_WebApplication.Controllers.TableDataVMsController.Index (NOC-PL-WebApplication)" with arguments (null) - ModelState is Valid
+2017-04-12 14:03:01.856 -04:00 [Information] Executed DbCommand (87ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[PrimaryProductServerId], [p].[ProductGroup], [p].[ProductName], [p].[SecondaryProductServerId], [p].[TableDataVMId], [p].[TableNumber]
+FROM [Products] AS [p]
+2017-04-12 14:03:01.964 -04:00 [Information] Executed DbCommand (34ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[ServerGroup], [s].[ServerName], [s].[TableDataVMId]
+FROM [Servers] AS [s]
+2017-04-12 14:03:02.008 -04:00 [Information] Database queries successful
+2017-04-12 14:03:04.013 -04:00 [Information] Executing ViewResult, running view at path "/Views/TableDataVMs/Index.cshtml".
+2017-04-12 14:03:04.624 -04:00 [Information] Executed action "NOC_PL_WebApplication.Controllers.TableDataVMsController.Index (NOC-PL-WebApplication)" in 3123.2149ms
+2017-04-12 14:03:04.639 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/css/site.css?v=WYnjj1Nq8jVvPXKJG7DD0QjKpGOnmjPSqWSKfqFYahU  
+2017-04-12 14:03:04.639 -04:00 [Information] Request finished in 3568.4962ms 200 text/html; charset=utf-8
+2017-04-12 14:03:04.672 -04:00 [Information] The file "/css/site.css" was not modified
+2017-04-12 14:03:04.677 -04:00 [Information] Request finished in 38.2692ms 304 text/css
+2017-04-12 14:03:04.766 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2  
+2017-04-12 14:03:04.769 -04:00 [Information] Sending file. Request path: '"/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\lib\bootstrap\dist\fonts\glyphicons-halflings-regular.woff2"'
+2017-04-12 14:03:04.787 -04:00 [Information] Request finished in 20.2667ms 200 application/font-woff2
+2017-04-12 14:03:08.392 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/Account/Login  
+2017-04-12 14:03:08.440 -04:00 [Information] Executed DbCommand (34ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-12 14:03:08.458 -04:00 [Information] Executed DbCommand (16ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-12 14:03:08.472 -04:00 [Information] Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2017-04-12 14:03:08.492 -04:00 [Information] Executing action method "NOC_PL_WebApplication.Controllers.AccountController.Login (NOC-PL-WebApplication)" with arguments (null) - ModelState is Valid
+2017-04-12 14:03:08.644 -04:00 [Information] Executing ViewResult, running view at path "/Views/Account/Login.cshtml".
+2017-04-12 14:03:08.866 -04:00 [Information] Executed action "NOC_PL_WebApplication.Controllers.AccountController.Login (NOC-PL-WebApplication)" in 461.971ms
+2017-04-12 14:03:08.869 -04:00 [Information] Request finished in 477.0433ms 200 text/html; charset=utf-8
+2017-04-12 14:03:15.321 -04:00 [Information] Request starting HTTP/1.1 POST http://localhost:12170/Account/Login application/x-www-form-urlencoded 228
+2017-04-12 14:03:15.392 -04:00 [Information] Executed DbCommand (16ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-12 14:03:15.423 -04:00 [Information] Executed DbCommand (30ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-12 14:03:15.438 -04:00 [Information] Executed DbCommand (14ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2017-04-12 14:03:15.567 -04:00 [Information] Executing action method "NOC_PL_WebApplication.Controllers.AccountController.Login (NOC-PL-WebApplication)" with arguments (["NOCPLWebApplication.Models.ViewModels.LoginViewModel"]) - ModelState is Valid
+2017-04-12 14:03:15.762 -04:00 [Information] Executed DbCommand (74ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0
+2017-04-12 14:03:15.802 -04:00 [Information] Executing ViewResult, running view at path "/Views/Account/Login.cshtml".
+2017-04-12 14:03:15.819 -04:00 [Information] Executed action "NOC_PL_WebApplication.Controllers.AccountController.Login (NOC-PL-WebApplication)" in 495.29ms
+2017-04-12 14:03:15.822 -04:00 [Error] An unhandled exception has occurred while executing the request
+System.InvalidOperationException: The model item passed into the ViewDataDictionary is of type 'NOCPLWebApplication.Models.ViewModels.LoginViewModel', but this ViewDataDictionary instance requires a model item of type 'NOCPLWebApplication.Models.TableDataVM'.
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewDataDictionary.EnsureCompatible(Object value)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewDataDictionary..ctor(ViewDataDictionary source, Object model, Type declaredModelType)
+   at lambda_method(Closure , ViewDataDictionary )
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPageActivator.Activate(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.<RenderPageAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.<RenderLayoutAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.<RenderAsync>d__13.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.<ExecuteAsync>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.ViewResult.<ExecuteResultAsync>d__26.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeResultAsync>d__30.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextResultFilterAsync>d__28.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ResultExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeAsync>d__20.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware`1.<Invoke>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware`1.<Invoke>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware`1.<Invoke>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware`1.<Invoke>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware`1.<Invoke>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware`1.<Invoke>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware`1.<Invoke>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware`1.<Invoke>d__18.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
+2017-04-12 14:03:16.049 -04:00 [Information] Request finished in 728.1373ms 500 text/html; charset=utf-8
+2017-04-12 14:03:59.784 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/  
+2017-04-12 14:03:59.808 -04:00 [Information] Executed DbCommand (15ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-12 14:03:59.825 -04:00 [Information] Executed DbCommand (16ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-12 14:03:59.844 -04:00 [Information] Executed DbCommand (18ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2017-04-12 14:03:59.860 -04:00 [Information] Executing action method "NOC_PL_WebApplication.Controllers.TableDataVMsController.Index (NOC-PL-WebApplication)" with arguments (null) - ModelState is Valid
+2017-04-12 14:03:59.908 -04:00 [Information] Executed DbCommand (27ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[PrimaryProductServerId], [p].[ProductGroup], [p].[ProductName], [p].[SecondaryProductServerId], [p].[TableDataVMId], [p].[TableNumber]
+FROM [Products] AS [p]
+2017-04-12 14:03:59.944 -04:00 [Information] Executed DbCommand (34ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[ServerGroup], [s].[ServerName], [s].[TableDataVMId]
+FROM [Servers] AS [s]
+2017-04-12 14:03:59.946 -04:00 [Information] Database queries successful
+2017-04-12 14:03:59.947 -04:00 [Information] Executing ViewResult, running view at path "/Views/TableDataVMs/Index.cshtml".
+2017-04-12 14:03:59.949 -04:00 [Information] Executed action "NOC_PL_WebApplication.Controllers.TableDataVMsController.Index (NOC-PL-WebApplication)" in 158.1167ms
+2017-04-12 14:03:59.950 -04:00 [Information] Request finished in 165.658ms 200 text/html; charset=utf-8
+2017-04-12 14:03:59.964 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/css/site.css?v=WYnjj1Nq8jVvPXKJG7DD0QjKpGOnmjPSqWSKfqFYahU  
+2017-04-12 14:03:59.965 -04:00 [Information] The file "/css/site.css" was not modified
+2017-04-12 14:03:59.965 -04:00 [Information] Request finished in 1.0198ms 304 text/css
