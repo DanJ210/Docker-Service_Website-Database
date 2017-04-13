@@ -42,15 +42,19 @@
         var ajaxRequest = $.ajax({
             type: 'POST',
             url: 'products/SaveSelectedServer',
-            data: [productId = productId, serverColumn = serverColumn, serverId = serverId],
+            data: {
+                'productId': "test",
+                'serverColumn': serverColumn,
+                'serverId' : serverId},
             success: function () {
-                alert("success");
+                $('#serverModal').modal('hide');
             },
             error: function (status) {
                 alert(status.statusText + ", only Admin can change.");
+                $('#serverModal').modal('hide');
             }
         });
-        ajaxRequest.send();
+        //ajaxRequest.send();
         //var ajaxSaveSelectedServer = $.post("products/SaveSelectedServer",
         //    {
         //        productId: productId,

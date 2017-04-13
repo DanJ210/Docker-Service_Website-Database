@@ -23,9 +23,8 @@
 
         return false;
     };
-    // Adds the jQuery function to modal save button
+    // Adds the jQuery function to modal window button
     $(document).ready(function () {
-        //$('#saveButton').scrollPosReaload();
         $('#serverModal').scrollPosReaload();
     });
 

@@ -33,13 +33,13 @@ namespace NOC_PL_WebApplication.Controllers {
 
         
         /// <summary>
-        /// Task is activated from an ajax post in the serverModal.Controller.js file.
+        /// Takes in three values from a post to find a single product, a single server, and
+        /// attatch that server to the product, saves to database.
         /// </summary>
-        /// <param name="productName">Name of the product to have a server saved to</param>
+        /// <param name="productId">Database Id of the product</param>
         /// <param name="serverColumn">The column of which the server belongs</param>
-        /// <param name="serverId">The database id of the server to be applied to the product</param>
+        /// <param name="serverId">Database Id of the server</param>
         /// <returns></returns>
-        //[Authorize]
         [HttpPost]
         public async Task<IActionResult> SaveSelectedServer(int productId, string serverColumn, int serverId) {
             
@@ -59,12 +59,12 @@ namespace NOC_PL_WebApplication.Controllers {
                     product.SecondaryProductServer = servers.Single(s => s.Id == serverId);
                 }
                 await _context.SaveChangesAsync();
-                _logger.LogInformation("Testing Logging Debug");
-                _logger.LogError("Erro");
-                _logger.LogDebug("Debug");
 
             } catch(Exception ex) {
-                return Redirect("/Error");
+                _logger.LogTrace("Trace " + ex.Message);
+                _logger.LogError("Error " + ex.Message);
+                _logger.LogDebug("Debug " + ex.Message);
+                return Redirect("Account/Login");
             }
             return Ok();
         }
