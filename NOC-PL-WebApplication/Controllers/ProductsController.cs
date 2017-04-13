@@ -61,9 +61,7 @@ namespace NOC_PL_WebApplication.Controllers {
                 await _context.SaveChangesAsync();
 
             } catch(Exception ex) {
-                _logger.LogTrace("Trace " + ex.Message);
-                _logger.LogError("Error " + ex.Message);
-                _logger.LogDebug("Debug " + ex.Message);
+                _logger.LogError("PRODUCTS CONTROLLER ------- SaveSelectedServer Action:  " + ex.Message);
                 return Redirect("Account/Login");
             }
             return Ok();

@@ -11,7 +11,7 @@ namespace NOCPLWebApplication.Models {
     public class ProductLocationContext : IdentityDbContext<NocUser> {
         public ProductLocationContext(DbContextOptions options) : base(options) {
 
-            Database.Migrate();
+            //Database.Migrate();
             //Database.EnsureCreated();
         }
         public DbSet<Product> Products { get; set; }

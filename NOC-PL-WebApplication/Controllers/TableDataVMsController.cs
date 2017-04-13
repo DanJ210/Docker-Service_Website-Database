@@ -38,7 +38,7 @@ namespace NOC_PL_WebApplication.Controllers {
                 SelectList serverList = new SelectList(tableDataVM.TableServers, "Id", "ServerName");
 
                 ViewBag.serverList = serverList;
-                _logger.LogInformation("Database queries successful");
+                _logger.LogDebug("Database queries successful");
             } catch(Exception ex) {
                 _logger.LogDebug($"Error generating view from product and server entities in database: {ex.Message}");
             }

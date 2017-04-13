@@ -28,7 +28,7 @@
             });
             // Keeping this seperate makes it work faster.
             $('#serverModal').on('hide.bs.modal', function () {
-                location.reload(true);
+                
             });
         });
     });
@@ -43,15 +43,17 @@
             type: 'POST',
             url: 'products/SaveSelectedServer',
             data: {
-                'productId': "test",
+                'productId': productId,
                 'serverColumn': serverColumn,
                 'serverId' : serverId},
             success: function () {
                 $('#serverModal').modal('hide');
+                location.reload();
             },
             error: function (status) {
                 alert(status.statusText + ", only Admin can change.");
                 $('#serverModal').modal('hide');
+                
             }
         });
         //ajaxRequest.send();

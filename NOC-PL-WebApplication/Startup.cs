@@ -28,8 +28,8 @@ namespace NOC_PL_WebApplication {
             Configuration = builder.Build();
 
             Log.Logger = new LoggerConfiguration()
-            //.MinimumLevel.Debug()
-            //.Enrich.FromLogContext()
+            .MinimumLevel.Debug()
+            .Enrich.FromLogContext()
             .WriteTo.LiterateConsole()
             .WriteTo.RollingFile("logs\\myapp-{Date}.txt")
             .CreateLogger();
