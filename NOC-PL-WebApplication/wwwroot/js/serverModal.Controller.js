@@ -39,24 +39,44 @@
          * @param {int} serverId
          */
         var serverId = $('#ServerSelectList').val();
-        $.post("products/SaveSelectedServer",
-            {
-                productId: productId,
-                serverColumn: serverColumn,
-                serverId: serverId
+        var ajaxRequest = $.ajax({
+            type: 'POST',
+            url: 'products/SaveSelectedServer',
+            data: [productId = productId, serverColumn = serverColumn, serverId = serverId],
+            success: function () {
+                alert("success");
+            },
+            error: function (status) {
+                alert(status.statusText + ", only Admin can change.");
             }
-            , function (data, status) {
-                //alert("Success: " + status);
-                //alert("test");
-                $('#serverModal').modal('hide');
-            }
-            //, function (data, status) {
-            //    alert("Failure: " + status);
-            //}
-        );
-        // function (data, status) {
-        //     alert(data + "status" + status);
-        // });
+        });
+        ajaxRequest.send();
+        //var ajaxSaveSelectedServer = $.post("products/SaveSelectedServer",
+        //    {
+        //        productId: productId,
+        //        serverColumn: serverColumn,
+        //        serverId: serverId
+        //    }, function (data, status) {
+        //        //alert("Success: " + status);
+        //        //alert("test");
+        //        //alert(theObject);
+        //        $('#serverModal').modal('hide');
+        //    }
+        //);
+        //ajaxSaveSelectedServer.fail(function () {
+        //    alert("Must be logged in");
+        //    $('#serverModal').modal('hide');
+        //});
+        //alert("Before Fuck");
+        //var errorHandling = ajaxPost.error(ajaxPost);
+        //alert(typeof (errorHandling));
+        //alert("Fuck");
+        //alert(ajaxPostError);
+        //ajaxPost.onerror(function (error) {
+        //    alert("error");
+        //});
+        //ajaxPost.send();
+        
     };
 }(jQuery));
 
