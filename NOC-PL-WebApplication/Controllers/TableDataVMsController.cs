@@ -27,7 +27,7 @@ namespace NOC_PL_WebApplication.Controllers {
         /// </summary>
         /// <returns>{TableDataVM} Products, Servers and a SelectList of servers</returns>
         // GET: TableDataVMs
-        public async Task<IActionResult> TablesPage1() {
+        public async Task<IActionResult> TablesView() {
 
             var tableDataVM = new TableDataVM();
 

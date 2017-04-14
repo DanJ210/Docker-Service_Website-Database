@@ -60,7 +60,7 @@ namespace NOC_PL_WebApplication {
 
             if (env.IsDevelopment()) {
                 app.UseDeveloperExceptionPage();
-                //loggerFactory.AddDebug(LogLevel.Information);
+                //loggerFactory.AddDebug(LogLevel.Information)
                 loggerFactory.AddSerilog();
             } else {
                 //loggerFactory.AddDebug(LogLevel.Error);
@@ -74,16 +74,20 @@ namespace NOC_PL_WebApplication {
 
             app.UseMvc(config => {
 
-
                 config.MapRoute(
                     name: "TableDataVM",
+                    template: "/",
+                    defaults: new { controller = "TableDataVMs", action = "TablesView"}
+                );
+                config.MapRoute(
+                    name: "SaveServerToProduct",
                     template: "SaveSelectedServer",
                     defaults: new { controller = "TableDataVMs", action = "SaveSelectedServer" }
                     );
                 config.MapRoute(
                     name: "Default",
                     template: "{Controller}/{Action}/{id?}",
-                    defaults: new { controller = "TableDataVMs", action = "TablesPage1" }
+                    defaults: new { controller = "TableDataVMs", action = "TablesView" }
                     );
                 //config.MapRoute(
                 //    name: "Login",
