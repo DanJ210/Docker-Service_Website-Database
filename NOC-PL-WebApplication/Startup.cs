@@ -74,11 +74,11 @@ namespace NOC_PL_WebApplication {
 
             app.UseMvc(config => {
 
-                config.MapRoute(
-                    name: "TableDataVM",
-                    template: "/",
-                    defaults: new { controller = "TableDataVMs", action = "TablesView"}
-                );
+                //config.MapRoute(
+                //    name: "TableDataVM",
+                //    template: "",
+                //    defaults: new { controller = "TableDataVMs", action = "TablesView"}
+                //);
                 config.MapRoute(
                     name: "SaveServerToProduct",
                     template: "SaveSelectedServer",
