@@ -29,8 +29,8 @@ namespace NOC_PL_WebApplication.Controllers {
         /// <returns>A ViewModel of Products and Servers and a SelectList</returns>
         // GET: TableDataVMs
         //[Authorize]
-        public async Task<IActionResult> Index() {
-            
+        public async Task<IActionResult> TablesPage1() {
+
             var tableDataVM = new TableDataVM();
             try {
                 tableDataVM.TableProducts = await _context.Products.ToListAsync();
@@ -39,11 +39,67 @@ namespace NOC_PL_WebApplication.Controllers {
 
                 ViewBag.serverList = serverList;
                 _logger.LogDebug("Database queries successful");
-            } catch(Exception ex) {
+            }
+            catch (Exception ex) {
                 _logger.LogDebug($"Error generating view from product and server entities in database: {ex.Message}");
             }
-            
+
             return View(tableDataVM);
+        }
+
+        public async Task<IActionResult> TablesPage2() {
+
+            var tableDataVM = new TableDataVM();
+            try {
+                tableDataVM.TableProducts = await _context.Products.ToListAsync();
+                tableDataVM.TableServers = await _context.Servers.ToListAsync();
+                SelectList serverList = new SelectList(tableDataVM.TableServers, "Id", "ServerName");
+
+                ViewBag.serverList = serverList;
+                _logger.LogDebug("Database queries successful");
+            }
+            catch (Exception ex) {
+                _logger.LogDebug($"Error generating view from product and server entities in database: {ex.Message}");
+            }
+
+            return View(tableDataVM);
+        }
+
+        /// <summary>
+        /// Takes in three values from a post to find a single product, a single server, and
+        /// attatch that server to the product, saves to database.
+        /// </summary>
+        /// <param name="productId">Database Id of the product</param>
+        /// <param name="serverColumn">The column of which the server belongs</param>
+        /// <param name="serverId">Database Id of the server</param>
+        /// <returns></returns>
+        [Authorize]
+        [HttpPost]
+        public async Task<IActionResult> SaveSelectedServer(int productId, string serverColumn, int serverId) {
+
+            try {
+
+                var products = await _context.Products.ToListAsync();
+
+                var servers = await _context.Servers.ToListAsync();
+
+                var product = await _context.Products.SingleAsync(p => p.Id == productId);
+                //var product = products.Find(p => p.ProductName == productName);
+
+                if (serverColumn.Contains("primary")) {
+                    product.PrimaryProductServer = servers.Single(s => s.Id == serverId);
+                }
+                else {
+                    product.SecondaryProductServer = servers.Single(s => s.Id == serverId);
+                }
+                await _context.SaveChangesAsync();
+
+            }
+            catch (Exception ex) {
+                _logger.LogError("PRODUCTS CONTROLLER ------- SaveSelectedServer Action:  " + ex.Message);
+                return Redirect("Account/Login");
+            }
+            return Ok();
         }
 
 

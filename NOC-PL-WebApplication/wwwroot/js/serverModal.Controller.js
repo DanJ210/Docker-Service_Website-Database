@@ -4,12 +4,11 @@
     var serverGroup;
     
     /**
-         * @desc Sets up logic for modal window. Creates jquery method to listen
-         *       for a change on the server select list in the modal window.
-         * @param  {int} productId
-         * @param  {string} serverColumn
-         * @param  {string} serverGroup
-         */
+    * @desc Logic for Modal Window. Gets parameters for server call. 
+    * @param  {int} productId
+    * @param  {string} serverColumn
+    * @param  {string} serverGroup
+    */
 
     $(document).ready(function () { 
         
@@ -32,13 +31,15 @@
 
     $.fn.serverListChangeFunction = function serverListChange() {
         /**
-         * @desc jquery function to save selected server to database
+         * @desc POSt
          * @param {int} serverId
+         * @param {Controller} TableDataVMs
+         * @param {ACtion} SaveSelectedServer
          */
         var serverId = $('#ServerSelectList').val();
         var ajaxRequest = $.ajax({
             type: 'POST',
-            url: 'products/SaveSelectedServer',
+            url: 'SaveSelectedServer',
             data: {
                 'productId': productId,
                 'serverColumn': serverColumn,
@@ -48,42 +49,15 @@
                 location.reload();
             },
             error: function (status) {
-                if (status.status === '401') {
+                if (status.status === 401) {
                     alert("Data can only be changed by admin");
                 }
                 else {
-                    alert(status.statusText);
+                    alert(status.statusText + ". Please contact admin");
                 }
                 $('#serverModal').modal('hide');
             }
         });
-        //ajaxRequest.send();
-        //var ajaxSaveSelectedServer = $.post("products/SaveSelectedServer",
-        //    {
-        //        productId: productId,
-        //        serverColumn: serverColumn,
-        //        serverId: serverId
-        //    }, function (data, status) {
-        //        //alert("Success: " + status);
-        //        //alert("test");
-        //        //alert(theObject);
-        //        $('#serverModal').modal('hide');
-        //    }
-        //);
-        //ajaxSaveSelectedServer.fail(function () {
-        //    alert("Must be logged in");
-        //    $('#serverModal').modal('hide');
-        //});
-        //alert("Before Fuck");
-        //var errorHandling = ajaxPost.error(ajaxPost);
-        //alert(typeof (errorHandling));
-        //alert("Fuck");
-        //alert(ajaxPostError);
-        //ajaxPost.onerror(function (error) {
-        //    alert("error");
-        //});
-        //ajaxPost.send();
-        
     };
 }(jQuery));
 

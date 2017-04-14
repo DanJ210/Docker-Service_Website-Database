@@ -74,25 +74,26 @@ namespace NOC_PL_WebApplication {
 
             app.UseMvc(config => {
 
-                
+
                 config.MapRoute(
                     name: "TableDataVM",
-                    template: "{Controller}/{Action}/{id?}/{serverId?}"
+                    template: "SaveSelectedServer",
+                    defaults: new { controller = "TableDataVMs", action = "SaveSelectedServer" }
                     );
                 config.MapRoute(
                     name: "Default",
                     template: "{Controller}/{Action}/{id?}",
-                    defaults: new { controller = "TableDataVMs", action = "Index" }
+                    defaults: new { controller = "TableDataVMs", action = "TablesPage1" }
                     );
-                config.MapRoute(
-                    name: "Login",
-                    template: "{Controller}/{Action}",
-                    defaults: new { controller = "Account", action = "Login" }
-                    );
-                config.MapRoute(
-                    name: "Home/Error",
-                    template: "Home/Error"
-                    );
+                //config.MapRoute(
+                //    name: "Login",
+                //    template: "{Controller}/{Action}",
+                //    defaults: new { controller = "Account", action = "Login" }
+                //    );
+                //config.MapRoute(
+                //    name: "Error",
+                //    template: "Home/Error"
+                //    );
             });
 
             // The call to seed data, .Wait() trick to fake async

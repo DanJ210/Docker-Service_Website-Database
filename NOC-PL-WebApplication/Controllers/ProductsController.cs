@@ -40,32 +40,32 @@ namespace NOC_PL_WebApplication.Controllers {
         /// <param name="serverColumn">The column of which the server belongs</param>
         /// <param name="serverId">Database Id of the server</param>
         /// <returns></returns>
-        [HttpPost]
-        public async Task<IActionResult> SaveSelectedServer(int productId, string serverColumn, int serverId) {
+        //[HttpPost]
+        //public async Task<IActionResult> SaveSelectedServer(int productId, string serverColumn, int serverId) {
             
-            try {
+        //    try {
 
-                var products = await _context.Products.ToListAsync();
+        //        var products = await _context.Products.ToListAsync();
 
-                var servers = await _context.Servers.ToListAsync();
+        //        var servers = await _context.Servers.ToListAsync();
 
-                var product = await _context.Products.SingleAsync(p => p.Id == productId);
-                //var product = products.Find(p => p.ProductName == productName);
+        //        var product = await _context.Products.SingleAsync(p => p.Id == productId);
+        //        //var product = products.Find(p => p.ProductName == productName);
                 
-                if (serverColumn.Contains("primary")) {
-                    product.PrimaryProductServer = servers.Single(s => s.Id == serverId);
-                }
-                else {
-                    product.SecondaryProductServer = servers.Single(s => s.Id == serverId);
-                }
-                await _context.SaveChangesAsync();
+        //        if (serverColumn.Contains("primary")) {
+        //            product.PrimaryProductServer = servers.Single(s => s.Id == serverId);
+        //        }
+        //        else {
+        //            product.SecondaryProductServer = servers.Single(s => s.Id == serverId);
+        //        }
+        //        await _context.SaveChangesAsync();
 
-            } catch(Exception ex) {
-                _logger.LogError("PRODUCTS CONTROLLER ------- SaveSelectedServer Action:  " + ex.Message);
-                return Redirect("Account/Login");
-            }
-            return Ok();
-        }
+        //    } catch(Exception ex) {
+        //        _logger.LogError("PRODUCTS CONTROLLER ------- SaveSelectedServer Action:  " + ex.Message);
+        //        return Redirect("Account/Login");
+        //    }
+        //    return Ok();
+        //}
 
 
 
