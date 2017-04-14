@@ -3,6 +3,8 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp1.1</TargetFramework>
     <PackageTargetFallback>portable-net45+win8</PackageTargetFallback>
+    <ApplicationInsightsResourceId>/subscriptions/68e56254-cb3d-4ad3-a866-02063958df30/resourcegroups/Default-ApplicationInsights-EastUS/providers/microsoft.insights/components/NOC-PL-WebApplication</ApplicationInsightsResourceId>
+    <ApplicationInsightsAnnotationResourceId>/subscriptions/68e56254-cb3d-4ad3-a866-02063958df30/resourcegroups/Default-ApplicationInsights-EastUS/providers/microsoft.insights/components/NOC-PL-WebApplication</ApplicationInsightsAnnotationResourceId>
   </PropertyGroup>
 
   <!--Below was commented out to get bitbucket pipeline builds to work, not sure what affect this will have in the future.-->
@@ -26,11 +28,20 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="1.1.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer.Design" Version="1.1.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="1.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="1.1.1" />
     <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="1.1.1" />
     <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink" Version="1.1.0" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="1.1.0" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGenerators.Mvc" Version="1.1.0" />
+    <PackageReference Include="Serilog" Version="2.4.0" />
+    <PackageReference Include="Serilog.Extensions.Logging" Version="1.4.0" />
+    <PackageReference Include="Serilog.Sinks.File" Version="3.2.0" />
+    <PackageReference Include="Serilog.Sinks.Literate" Version="2.1.0" />
+    <PackageReference Include="Serilog.Sinks.RollingFile" Version="3.3.0" />
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="1.0.0-msbuild3-final" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services" />
   </ItemGroup>
 
 </Project>

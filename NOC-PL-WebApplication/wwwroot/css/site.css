@@ -2,3 +2,14 @@
 body {
     padding-top: 70px;
 }
+
+/*Needed to keep the section from off screen*/
+#loginComponent {
+    padding-right: 25px;
+    color: white;
+    font-size: larger;
+    text-align: center;
+}
+#loginLabel {
+    text-align: center;
+}

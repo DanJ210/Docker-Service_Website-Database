@@ -10,54 +10,62 @@ using Microsoft.AspNetCore.Http;
 using System.Data.SqlClient;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Authorization;
+using Serilog;
 
 namespace NOC_PL_WebApplication.Controllers {
+    [Authorize]
     public class ProductsController : Controller {
         private readonly ProductLocationContext _context;
-        private ILogger _loggerFactory;
+        private ILogger<ProductsController> _logger;
 
-        public ProductsController(ProductLocationContext context, ILogger<ProductsController> loggerFactory) {
+        public ProductsController(ProductLocationContext context, ILogger<ProductsController> logger) {
             _context = context;
-            _loggerFactory = loggerFactory;
+            _logger = logger;
+
+            // Create a new logger for each class.
+            //Log.Logger = new LoggerConfiguration()
+            ////.MinimumLevel.Debug()
+            ////.Enrich.FromLogContext()
+            //.WriteTo.File("myfile.txt")
+            ////.WriteTo.RollingFile("logs\\myapp-{Date}.txt");
+            //.CreateLogger();
         }
 
         
         /// <summary>
-        /// Task is activated from an ajax post in the serverModal.Controller.js file.
+        /// Takes in three values from a post to find a single product, a single server, and
+        /// attatch that server to the product, saves to database.
         /// </summary>
-        /// <param name="productName">Name of the product to have a server saved to</param>
+        /// <param name="productId">Database Id of the product</param>
         /// <param name="serverColumn">The column of which the server belongs</param>
-        /// <param name="serverId">The database id of the server to be applied to the product</param>
+        /// <param name="serverId">Database Id of the server</param>
         /// <returns></returns>
-        [Authorize]
-        [HttpPost]
-        public async Task<IActionResult> SaveSelectedServer(int productId, string serverColumn, int serverId) {
+        //[HttpPost]
+        //public async Task<IActionResult> SaveSelectedServer(int productId, string serverColumn, int serverId) {
+            
+        //    try {
 
-            try {
+        //        var products = await _context.Products.ToListAsync();
 
-                var products = await _context.Products.ToListAsync();
+        //        var servers = await _context.Servers.ToListAsync();
 
-                var servers = await _context.Servers.ToListAsync();
-
-                var product = await _context.Products.SingleAsync(p => p.Id == productId);
-                //var product = products.Find(p => p.ProductName == productName);
+        //        var product = await _context.Products.SingleAsync(p => p.Id == productId);
+        //        //var product = products.Find(p => p.ProductName == productName);
                 
-                if (serverColumn.Contains("primary")) {
-                    product.PrimaryProductServer = servers.Single(s => s.Id == serverId);
-                }
-                else {
-                    product.SecondaryProductServer = servers.Single(s => s.Id == serverId);
-                }
-                await _context.SaveChangesAsync();
+        //        if (serverColumn.Contains("primary")) {
+        //            product.PrimaryProductServer = servers.Single(s => s.Id == serverId);
+        //        }
+        //        else {
+        //            product.SecondaryProductServer = servers.Single(s => s.Id == serverId);
+        //        }
+        //        await _context.SaveChangesAsync();
 
-            } catch(Exception ex) {
-
-                _loggerFactory.LogError($"Failed to save to database: {ex.Message}");
-                _loggerFactory.LogDebug("Failed to save to database");
-                return Redirect("/Error");
-            }
-            return Ok();
-        }
+        //    } catch(Exception ex) {
+        //        _logger.LogError("PRODUCTS CONTROLLER ------- SaveSelectedServer Action:  " + ex.Message);
+        //        return Redirect("Account/Login");
+        //    }
+        //    return Ok();
+        //}
 
 
 
