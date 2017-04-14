@@ -9,7 +9,7 @@
     * @param  {string} serverColumn
     * @param  {string} serverGroup
     */
-
+debugger;
     $(document).ready(function () { 
         
         $('[serverColumn]').click(function () {

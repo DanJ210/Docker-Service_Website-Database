@@ -9,10 +9,8 @@ using NOCPLWebApplication.Models;
 using System.Collections;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Authorization;
-
+// Controller meant for table data display and manipulation
 namespace NOC_PL_WebApplication.Controllers {
-
-    
     public class TableDataVMsController : Controller {
         private readonly ProductLocationContext _context;
         private ILogger<TableDataVMsController> _logger;
@@ -25,52 +23,57 @@ namespace NOC_PL_WebApplication.Controllers {
         /// <summary>
         /// Generates a list of products and servers mapped to a VM.
         /// Creates a select list of servers and sets to ViewBag.
+        /// For Page 1
         /// </summary>
-        /// <returns>A ViewModel of Products and Servers and a SelectList</returns>
+        /// <returns>{TableDataVM} Products, Servers and a SelectList of servers</returns>
         // GET: TableDataVMs
-        //[Authorize]
         public async Task<IActionResult> TablesPage1() {
 
             var tableDataVM = new TableDataVM();
+
             try {
                 tableDataVM.TableProducts = await _context.Products.ToListAsync();
                 tableDataVM.TableServers = await _context.Servers.ToListAsync();
                 SelectList serverList = new SelectList(tableDataVM.TableServers, "Id", "ServerName");
 
                 ViewBag.serverList = serverList;
-                _logger.LogDebug("Database queries successful");
             }
             catch (Exception ex) {
-                _logger.LogDebug($"Error generating view from product and server entities in database: {ex.Message}");
+                _logger.LogDebug($"------------Error generating view from product and server entities in database: {ex.Message}");
             }
-
             return View(tableDataVM);
         }
-
+        /// <summary>
+        /// Generates a list of products and servers mapped to a VM.
+        /// Creates a select list of servers and sets to ViewBag.
+        /// For Page 2
+        /// </summary>
+        /// <returns>{TableDataVM} Products, Servers and a SelectList of servers</returns>
+        // GET: TableDataVMs
         public async Task<IActionResult> TablesPage2() {
 
             var tableDataVM = new TableDataVM();
+
             try {
                 tableDataVM.TableProducts = await _context.Products.ToListAsync();
                 tableDataVM.TableServers = await _context.Servers.ToListAsync();
                 SelectList serverList = new SelectList(tableDataVM.TableServers, "Id", "ServerName");
 
                 ViewBag.serverList = serverList;
-                _logger.LogDebug("Database queries successful");
             }
             catch (Exception ex) {
-                _logger.LogDebug($"Error generating view from product and server entities in database: {ex.Message}");
+                _logger.LogDebug($"------------Error generating view from product and server entities in database: {ex.Message}");
             }
 
             return View(tableDataVM);
         }
 
         /// <summary>
-        /// Takes in three values from a post to find a single product, a single server, and
-        /// attatch that server to the product, saves to database.
+        /// Takes in three values from a $.ajax post to find a single product, a single server, and
+        /// attach that server to the product, then saves to database. User must be authorized.
         /// </summary>
         /// <param name="productId">Database Id of the product</param>
-        /// <param name="serverColumn">The column of which the server belongs</param>
+        /// <param name="serverColumn">The column the server belongs</param>
         /// <param name="serverId">Database Id of the server</param>
         /// <returns></returns>
         [Authorize]
@@ -84,7 +87,6 @@ namespace NOC_PL_WebApplication.Controllers {
                 var servers = await _context.Servers.ToListAsync();
 
                 var product = await _context.Products.SingleAsync(p => p.Id == productId);
-                //var product = products.Find(p => p.ProductName == productName);
 
                 if (serverColumn.Contains("primary")) {
                     product.PrimaryProductServer = servers.Single(s => s.Id == serverId);

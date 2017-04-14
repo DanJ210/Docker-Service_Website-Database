@@ -14103,3 +14103,1173 @@ FROM [Servers] AS [s]
 2017-04-14 13:38:33.852 -04:00 [Debug] Connection id ""0HL43BC9K3NH3"" sending FIN.
 2017-04-14 13:38:33.866 -04:00 [Debug] Connection id ""0HL43BC9K3NH3"" sent FIN with status "0".
 2017-04-14 13:38:33.866 -04:00 [Debug] Connection id ""0HL43BC9K3NH3"" stopped.
+2017-04-14 16:24:43.240 -04:00 [Debug] Compiling query model: 
+'(from NocUser <generated>_1 in DbSet<NocUser>
+select <generated>_1)
+.Any()'
+2017-04-14 16:24:43.295 -04:00 [Debug] Optimized query model: 
+'(from NocUser <generated>_1 in DbSet<NocUser>
+select <generated>_1)
+.Any()'
+2017-04-14 16:24:43.605 -04:00 [Debug] TRACKED: False
+(QueryContext queryContext) => IEnumerable<bool> _ToSequence(
+    element: bool GetResult(
+        valueBuffers: IEnumerable<ValueBuffer> _Query(
+            queryContext: queryContext, 
+            shaperCommandContext: SelectExpression: 
+                SELECT CASE
+                    WHEN EXISTS (
+                        SELECT 1
+                        FROM [AspNetUsers] AS [a])
+                    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+                END
+            , 
+            queryIndex: default(System.Nullable`1[System.Int32])
+        )
+    )
+)
+
+2017-04-14 16:24:43.780 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-14 16:24:49.227 -04:00 [Information] Executed DbCommand (364ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AspNetUsers] AS [a])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2017-04-14 16:24:49.270 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-14 16:24:49.282 -04:00 [Debug] Compiling query model: 
+'(from Product <generated>_1 in DbSet<Product>
+select <generated>_1)
+.Any()'
+2017-04-14 16:24:49.282 -04:00 [Debug] Optimized query model: 
+'(from Product <generated>_1 in DbSet<Product>
+select <generated>_1)
+.Any()'
+2017-04-14 16:24:49.286 -04:00 [Debug] TRACKED: False
+(QueryContext queryContext) => IEnumerable<bool> _ToSequence(
+    element: bool GetResult(
+        valueBuffers: IEnumerable<ValueBuffer> _Query(
+            queryContext: queryContext, 
+            shaperCommandContext: SelectExpression: 
+                SELECT CASE
+                    WHEN EXISTS (
+                        SELECT 1
+                        FROM [Products] AS [p])
+                    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+                END
+            , 
+            queryIndex: default(System.Nullable`1[System.Int32])
+        )
+    )
+)
+
+2017-04-14 16:24:49.287 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-14 16:24:49.299 -04:00 [Information] Executed DbCommand (10ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Products] AS [p])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2017-04-14 16:24:49.300 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-14 16:24:49.300 -04:00 [Debug] Compiling query model: 
+'(from Server <generated>_1 in DbSet<Server>
+select <generated>_1)
+.Any()'
+2017-04-14 16:24:49.300 -04:00 [Debug] Optimized query model: 
+'(from Server <generated>_1 in DbSet<Server>
+select <generated>_1)
+.Any()'
+2017-04-14 16:24:49.302 -04:00 [Debug] TRACKED: False
+(QueryContext queryContext) => IEnumerable<bool> _ToSequence(
+    element: bool GetResult(
+        valueBuffers: IEnumerable<ValueBuffer> _Query(
+            queryContext: queryContext, 
+            shaperCommandContext: SelectExpression: 
+                SELECT CASE
+                    WHEN EXISTS (
+                        SELECT 1
+                        FROM [Servers] AS [s])
+                    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+                END
+            , 
+            queryIndex: default(System.Nullable`1[System.Int32])
+        )
+    )
+)
+
+2017-04-14 16:24:49.303 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-14 16:24:49.305 -04:00 [Information] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Servers] AS [s])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2017-04-14 16:24:49.305 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-14 16:24:49.359 -04:00 [Information] User profile is available. Using '"C:\Users\djackson\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2017-04-14 16:24:49.397 -04:00 [Debug] Hosting starting
+2017-04-14 16:24:49.551 -04:00 [Debug] Hosting started
+2017-04-14 16:24:50.003 -04:00 [Debug] Connection id ""0HL43EH6IETLB"" started.
+2017-04-14 16:24:50.003 -04:00 [Debug] Connection id ""0HL43EH6IETLC"" started.
+2017-04-14 16:24:50.130 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/  
+2017-04-14 16:24:50.218 -04:00 [Debug] Reading data from file '"C:\Users\djackson\AppData\Local\ASP.NET\DataProtection-Keys\key-ea34fd48-7318-409d-a55d-2de09c5c2de1.xml"'.
+2017-04-14 16:24:50.226 -04:00 [Debug] Found key {ea34fd48-7318-409d-a55d-2de09c5c2de1}.
+2017-04-14 16:24:50.238 -04:00 [Debug] Considering key {ea34fd48-7318-409d-a55d-2de09c5c2de1} with expiration date 2017-05-29 17:16:36Z as default key.
+2017-04-14 16:24:50.246 -04:00 [Debug] Decrypting secret element using Windows DPAPI.
+2017-04-14 16:24:50.258 -04:00 [Debug] Opening CNG algorithm '"AES"' from provider 'null' with chaining mode CBC.
+2017-04-14 16:24:50.265 -04:00 [Debug] Opening CNG algorithm '"SHA256"' from provider 'null' with HMAC.
+2017-04-14 16:24:50.275 -04:00 [Debug] Using key {ea34fd48-7318-409d-a55d-2de09c5c2de1} as the default key.
+2017-04-14 16:24:50.283 -04:00 [Information] "Identity.Application" was not authenticated. Failure message: "Unprotect ticket failed"
+2017-04-14 16:24:50.289 -04:00 [Debug] The request path "/" does not match a supported file type
+2017-04-14 16:24:50.729 -04:00 [Debug] Request successfully matched the route with name '"Default"' and template '"{Controller}/{Action}/{id?}"'.
+2017-04-14 16:24:50.818 -04:00 [Debug] Executing action "NOC_PL_WebApplication.Controllers.TableDataVMsController.TablesPage1 (NOC-PL-WebApplication)"
+2017-04-14 16:24:50.867 -04:00 [Information] Executing action method "NOC_PL_WebApplication.Controllers.TableDataVMsController.TablesPage1 (NOC-PL-WebApplication)" with arguments (null) - ModelState is Valid
+2017-04-14 16:24:50.881 -04:00 [Debug] Compiling query model: 
+'from Product <generated>_0 in DbSet<Product>
+select <generated>_0'
+2017-04-14 16:24:50.882 -04:00 [Debug] Optimized query model: 
+'from Product <generated>_0 in DbSet<Product>
+select <generated>_0'
+2017-04-14 16:24:50.910 -04:00 [Debug] TRACKED: True
+(QueryContext queryContext) => IAsyncEnumerable<Product> _ShapedQuery(
+    queryContext: queryContext, 
+    shaperCommandContext: SelectExpression: 
+        SELECT [p].[Id], [p].[PrimaryProductServerId], [p].[ProductGroup], [p].[ProductName], [p].[SecondaryProductServerId], [p].[TableDataVMId], [p].[TableNumber]
+        FROM [Products] AS [p]
+    , 
+    shaper: BufferedEntityShaper<Product>
+)
+
+2017-04-14 16:24:50.944 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-14 16:24:51.016 -04:00 [Information] Executed DbCommand (61ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[PrimaryProductServerId], [p].[ProductGroup], [p].[ProductName], [p].[SecondaryProductServerId], [p].[TableDataVMId], [p].[TableNumber]
+FROM [Products] AS [p]
+2017-04-14 16:24:51.102 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-14 16:24:51.103 -04:00 [Debug] Compiling query model: 
+'from Server <generated>_0 in DbSet<Server>
+select <generated>_0'
+2017-04-14 16:24:51.103 -04:00 [Debug] Optimized query model: 
+'from Server <generated>_0 in DbSet<Server>
+select <generated>_0'
+2017-04-14 16:24:51.107 -04:00 [Debug] TRACKED: True
+(QueryContext queryContext) => IAsyncEnumerable<Server> _ShapedQuery(
+    queryContext: queryContext, 
+    shaperCommandContext: SelectExpression: 
+        SELECT [s].[Id], [s].[ServerGroup], [s].[ServerName], [s].[TableDataVMId]
+        FROM [Servers] AS [s]
+    , 
+    shaper: BufferedEntityShaper<Server>
+)
+
+2017-04-14 16:24:51.107 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-14 16:24:51.109 -04:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[ServerGroup], [s].[ServerName], [s].[TableDataVMId]
+FROM [Servers] AS [s]
+2017-04-14 16:24:51.145 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-14 16:24:51.155 -04:00 [Debug] Database queries successful
+2017-04-14 16:24:51.163 -04:00 [Debug] Executed action method "NOC_PL_WebApplication.Controllers.TableDataVMsController.TablesPage1 (NOC-PL-WebApplication)", returned result "Microsoft.AspNetCore.Mvc.ViewResult".
+2017-04-14 16:24:51.260 -04:00 [Debug] View lookup cache miss for view '"TablesPage1"' in controller '"TableDataVMs"'.
+2017-04-14 16:24:51.273 -04:00 [Debug] Code generation for the Razor file at '"/Views/TableDataVMs/TablesPage1.cshtml"' started.
+2017-04-14 16:24:51.777 -04:00 [Debug] Code generation for the Razor file at '"/Views/TableDataVMs/TablesPage1.cshtml"' completed in 501.5216ms.
+2017-04-14 16:24:51.965 -04:00 [Debug] Compilation of the generated code for the Razor file at '"/Views/TableDataVMs/TablesPage1.cshtml"' started.
+2017-04-14 16:24:53.239 -04:00 [Debug] Compilation of the generated code for the Razor file at '"/Views/TableDataVMs/TablesPage1.cshtml"' completed in 1272.5724ms.
+2017-04-14 16:24:53.244 -04:00 [Debug] Code generation for the Razor file at '"/Views/_ViewStart.cshtml"' started.
+2017-04-14 16:24:53.248 -04:00 [Debug] Code generation for the Razor file at '"/Views/_ViewStart.cshtml"' completed in 4.6556ms.
+2017-04-14 16:24:53.249 -04:00 [Debug] Compilation of the generated code for the Razor file at '"/Views/_ViewStart.cshtml"' started.
+2017-04-14 16:24:53.290 -04:00 [Debug] Compilation of the generated code for the Razor file at '"/Views/_ViewStart.cshtml"' completed in 41.0236ms.
+2017-04-14 16:24:53.297 -04:00 [Debug] The view '"TablesPage1"' was found.
+2017-04-14 16:24:53.299 -04:00 [Information] Executing ViewResult, running view at path "/Views/TableDataVMs/TablesPage1.cshtml".
+2017-04-14 16:24:53.471 -04:00 [Debug] View lookup cache miss for view '"_Layout"' in controller '"TableDataVMs"'.
+2017-04-14 16:24:53.494 -04:00 [Debug] Code generation for the Razor file at '"/Views/Shared/_Layout.cshtml"' started.
+2017-04-14 16:24:53.525 -04:00 [Debug] Code generation for the Razor file at '"/Views/Shared/_Layout.cshtml"' completed in 29.4371ms.
+2017-04-14 16:24:53.525 -04:00 [Debug] Compilation of the generated code for the Razor file at '"/Views/Shared/_Layout.cshtml"' started.
+2017-04-14 16:24:53.695 -04:00 [Debug] Compilation of the generated code for the Razor file at '"/Views/Shared/_Layout.cshtml"' completed in 169.6646ms.
+2017-04-14 16:24:53.836 -04:00 [Debug] Executing view component "NOCPLWebApplication.Views.ViewComponents.LoginLogoutViewComponent" with arguments ([]).
+2017-04-14 16:24:53.846 -04:00 [Debug] Executed view component "NOCPLWebApplication.Views.ViewComponents.LoginLogoutViewComponent" in 3.3835ms and returned "Microsoft.AspNetCore.Mvc.ViewComponents.ViewViewComponentResult"
+2017-04-14 16:24:53.850 -04:00 [Debug] View lookup cache miss for view '"Components/LoginLogout/Default"' in controller '"TableDataVMs"'.
+2017-04-14 16:24:53.850 -04:00 [Debug] Code generation for the Razor file at '"/Views/Shared/Components/LoginLogout/Default.cshtml"' started.
+2017-04-14 16:24:53.859 -04:00 [Debug] Code generation for the Razor file at '"/Views/Shared/Components/LoginLogout/Default.cshtml"' completed in 8.0734ms.
+2017-04-14 16:24:53.859 -04:00 [Debug] Compilation of the generated code for the Razor file at '"/Views/Shared/Components/LoginLogout/Default.cshtml"' started.
+2017-04-14 16:24:53.899 -04:00 [Debug] Compilation of the generated code for the Razor file at '"/Views/Shared/Components/LoginLogout/Default.cshtml"' completed in 40.2308ms.
+2017-04-14 16:24:54.013 -04:00 [Information] Executed action "NOC_PL_WebApplication.Controllers.TableDataVMsController.TablesPage1 (NOC-PL-WebApplication)" in 3194.6259ms
+2017-04-14 16:24:54.015 -04:00 [Debug] Connection id ""0HL43EH6IETLD"" started.
+2017-04-14 16:24:54.015 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css  
+2017-04-14 16:24:54.017 -04:00 [Debug] Connection id ""0HL43EH6IETLE"" started.
+2017-04-14 16:24:54.017 -04:00 [Debug] Connection id ""0HL43EH6IETLF"" started.
+2017-04-14 16:24:54.017 -04:00 [Information] "Identity.Application" was not authenticated. Failure message: "Unprotect ticket failed"
+2017-04-14 16:24:54.017 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/font-awesome/css/font-awesome.css  
+2017-04-14 16:24:54.017 -04:00 [Debug] Connection id ""0HL43EH6IETLG"" started.
+2017-04-14 16:24:54.018 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.min.js  
+2017-04-14 16:24:54.019 -04:00 [Information] "Identity.Application" was not authenticated. Failure message: "Unprotect ticket failed"
+2017-04-14 16:24:54.020 -04:00 [Information] "Identity.Application" was not authenticated. Failure message: "Unprotect ticket failed"
+2017-04-14 16:24:54.021 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.min.js  
+2017-04-14 16:24:54.022 -04:00 [Information] "Identity.Application" was not authenticated. Failure message: "Unprotect ticket failed"
+2017-04-14 16:24:54.030 -04:00 [Information] Sending file. Request path: '"/lib/bootstrap/dist/css/bootstrap.css"'. Physical path: '"c:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\lib\bootstrap\dist\css\bootstrap.css"'
+2017-04-14 16:24:54.030 -04:00 [Information] Sending file. Request path: '"/lib/bootstrap/dist/js/bootstrap.min.js"'. Physical path: '"c:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js"'
+2017-04-14 16:24:54.030 -04:00 [Information] Sending file. Request path: '"/lib/jquery/dist/jquery.min.js"'. Physical path: '"c:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\lib\jquery\dist\jquery.min.js"'
+2017-04-14 16:24:54.030 -04:00 [Information] Sending file. Request path: '"/lib/font-awesome/css/font-awesome.css"'. Physical path: '"c:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\lib\font-awesome\css\font-awesome.css"'
+2017-04-14 16:24:54.046 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/css/site.css?v=nrPtuqixDnqnLwSrcojNA7Y0zvaH-JgkmW59rjwShaE  
+2017-04-14 16:24:54.046 -04:00 [Debug] Connection id ""0HL43EH6IETLD"" completed keep alive response.
+2017-04-14 16:24:54.048 -04:00 [Debug] Connection id ""0HL43EH6IETLF"" completed keep alive response.
+2017-04-14 16:24:54.049 -04:00 [Information] "Identity.Application" was not authenticated. Failure message: "Unprotect ticket failed"
+2017-04-14 16:24:54.050 -04:00 [Information] Sending file. Request path: '"/css/site.css"'. Physical path: '"c:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\css\site.css"'
+2017-04-14 16:24:54.055 -04:00 [Debug] Connection id ""0HL43EH6IETLE"" completed keep alive response.
+2017-04-14 16:24:54.055 -04:00 [Information] Request finished in 31.7396ms 200 text/css
+2017-04-14 16:24:54.056 -04:00 [Information] Request finished in 9.0964ms 200 text/css
+2017-04-14 16:24:54.056 -04:00 [Information] Request finished in 30.8339ms 200 application/javascript
+2017-04-14 16:24:54.065 -04:00 [Debug] Connection id ""0HL43EH6IETLG"" completed keep alive response.
+2017-04-14 16:24:54.065 -04:00 [Information] Request finished in 44.6205ms 200 application/javascript
+2017-04-14 16:24:54.067 -04:00 [Debug] Connection id ""0HL43EH6IETLC"" completed keep alive response.
+2017-04-14 16:24:54.069 -04:00 [Information] Request finished in 3973.6235ms 200 text/html; charset=utf-8
+2017-04-14 16:24:54.200 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/js/site.min.js?v=NpMUj71zExRQni6K27BChnEFiXr3zPwMp_IYP45LeJE  
+2017-04-14 16:24:54.200 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/js/serverModal.Controller.js  
+2017-04-14 16:24:54.200 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/angular2/angular.min.js  
+2017-04-14 16:24:54.200 -04:00 [Information] "Identity.Application" was not authenticated. Failure message: "Unprotect ticket failed"
+2017-04-14 16:24:54.200 -04:00 [Information] "Identity.Application" was not authenticated. Failure message: "Unprotect ticket failed"
+2017-04-14 16:24:54.200 -04:00 [Information] "Identity.Application" was not authenticated. Failure message: "Unprotect ticket failed"
+2017-04-14 16:24:54.201 -04:00 [Information] Sending file. Request path: '"/js/site.min.js"'. Physical path: '"c:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\js\site.min.js"'
+2017-04-14 16:24:54.201 -04:00 [Information] Sending file. Request path: '"/lib/angular2/angular.min.js"'. Physical path: '"c:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\lib\angular2\angular.min.js"'
+2017-04-14 16:24:54.201 -04:00 [Information] Sending file. Request path: '"/js/serverModal.Controller.js"'. Physical path: '"c:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\js\serverModal.Controller.js"'
+2017-04-14 16:24:54.201 -04:00 [Debug] Connection id ""0HL43EH6IETLB"" completed keep alive response.
+2017-04-14 16:24:54.201 -04:00 [Information] Request finished in 186.4607ms 200 text/css
+2017-04-14 16:24:54.200 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/css/serverModal.styles.css  
+2017-04-14 16:24:54.203 -04:00 [Debug] Connection id ""0HL43EH6IETLE"" completed keep alive response.
+2017-04-14 16:24:54.204 -04:00 [Information] Request finished in 4.3147ms 200 application/javascript
+2017-04-14 16:24:54.207 -04:00 [Information] "Identity.Application" was not authenticated. Failure message: "Unprotect ticket failed"
+2017-04-14 16:24:54.207 -04:00 [Information] Sending file. Request path: '"/css/serverModal.styles.css"'. Physical path: '"c:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\css\serverModal.styles.css"'
+2017-04-14 16:24:54.211 -04:00 [Debug] Connection id ""0HL43EH6IETLD"" completed keep alive response.
+2017-04-14 16:24:54.211 -04:00 [Information] Request finished in 11.3516ms 200 text/css
+2017-04-14 16:24:54.219 -04:00 [Debug] Connection id ""0HL43EH6IETLF"" completed keep alive response.
+2017-04-14 16:24:54.219 -04:00 [Information] Request finished in 19.5915ms 200 application/javascript
+2017-04-14 16:24:54.223 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/js/jsmodules/ScrollPositionModule.js?v=iZ5RzaVm8uozLlF1_545KjsP6eigu8rH8pV54cogdwc  
+2017-04-14 16:24:54.227 -04:00 [Information] "Identity.Application" was not authenticated. Failure message: "Unprotect ticket failed"
+2017-04-14 16:24:54.227 -04:00 [Information] Sending file. Request path: '"/js/jsmodules/ScrollPositionModule.js"'. Physical path: '"c:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\js\jsmodules\ScrollPositionModule.js"'
+2017-04-14 16:24:54.242 -04:00 [Debug] Connection id ""0HL43EH6IETLG"" completed keep alive response.
+2017-04-14 16:24:54.242 -04:00 [Information] Request finished in 18.7343ms 200 application/javascript
+2017-04-14 16:24:54.244 -04:00 [Debug] Connection id ""0HL43EH6IETLC"" completed keep alive response.
+2017-04-14 16:24:54.245 -04:00 [Information] Request finished in 45.2385ms 200 application/javascript
+2017-04-14 16:24:54.299 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2  
+2017-04-14 16:24:54.302 -04:00 [Information] "Identity.Application" was not authenticated. Failure message: "Unprotect ticket failed"
+2017-04-14 16:24:54.302 -04:00 [Information] Sending file. Request path: '"/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2"'. Physical path: '"c:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\lib\bootstrap\dist\fonts\glyphicons-halflings-regular.woff2"'
+2017-04-14 16:24:54.305 -04:00 [Debug] Connection id ""0HL43EH6IETLB"" completed keep alive response.
+2017-04-14 16:24:54.305 -04:00 [Information] Request finished in 6.0166ms 200 application/font-woff2
+2017-04-14 16:24:54.305 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0  
+2017-04-14 16:24:54.309 -04:00 [Information] "Identity.Application" was not authenticated. Failure message: "Unprotect ticket failed"
+2017-04-14 16:24:54.309 -04:00 [Information] Sending file. Request path: '"/lib/font-awesome/fonts/fontawesome-webfont.woff2"'. Physical path: '"c:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\lib\font-awesome\fonts\fontawesome-webfont.woff2"'
+2017-04-14 16:24:54.310 -04:00 [Debug] Connection id ""0HL43EH6IETLE"" completed keep alive response.
+2017-04-14 16:24:54.311 -04:00 [Information] Request finished in 5.8002ms 200 application/font-woff2
+2017-04-14 16:25:01.297 -04:00 [Debug] Connection id ""0HL43EH6IETLH"" started.
+2017-04-14 16:25:01.298 -04:00 [Debug] Connection id ""0HL43EH6IETLI"" started.
+2017-04-14 16:25:01.304 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/favicon.ico  
+2017-04-14 16:25:01.304 -04:00 [Debug] The request path "/favicon.ico" does not match an existing file
+2017-04-14 16:25:01.305 -04:00 [Debug] Request successfully matched the route with name '"Default"' and template '"{Controller}/{Action}/{id?}"'.
+2017-04-14 16:25:01.305 -04:00 [Debug] No actions matched the current request
+2017-04-14 16:25:01.306 -04:00 [Debug] Request did not match any routes.
+2017-04-14 16:25:01.310 -04:00 [Debug] Connection id ""0HL43EH6IETLH"" completed keep alive response.
+2017-04-14 16:25:01.311 -04:00 [Information] Request finished in 7.3994ms 404 
+2017-04-14 16:25:52.815 -04:00 [Debug] Connection id ""0HL43EH6IETLI"" received FIN.
+2017-04-14 16:25:52.827 -04:00 [Debug] Connection id ""0HL43EH6IETLI"" disconnecting.
+2017-04-14 16:25:52.835 -04:00 [Debug] Connection id ""0HL43EH6IETLI"" sending FIN.
+2017-04-14 16:25:52.853 -04:00 [Debug] Connection id ""0HL43EH6IETLI"" sent FIN with status "0".
+2017-04-14 16:25:52.858 -04:00 [Debug] Connection id ""0HL43EH6IETLI"" stopped.
+2017-04-14 16:26:21.333 -04:00 [Debug] Connection id ""0HL43EH6IETLE"" received FIN.
+2017-04-14 16:26:21.333 -04:00 [Debug] Connection id ""0HL43EH6IETLC"" received FIN.
+2017-04-14 16:26:21.334 -04:00 [Debug] Connection id ""0HL43EH6IETLB"" received FIN.
+2017-04-14 16:26:21.334 -04:00 [Debug] Connection id ""0HL43EH6IETLG"" received FIN.
+2017-04-14 16:26:21.334 -04:00 [Debug] Connection id ""0HL43EH6IETLF"" received FIN.
+2017-04-14 16:26:21.334 -04:00 [Debug] Connection id ""0HL43EH6IETLD"" received FIN.
+2017-04-14 16:26:21.342 -04:00 [Debug] Connection id ""0HL43EH6IETLE"" disconnecting.
+2017-04-14 16:26:21.344 -04:00 [Debug] Connection id ""0HL43EH6IETLC"" disconnecting.
+2017-04-14 16:26:21.344 -04:00 [Debug] Connection id ""0HL43EH6IETLB"" disconnecting.
+2017-04-14 16:26:21.344 -04:00 [Debug] Connection id ""0HL43EH6IETLG"" disconnecting.
+2017-04-14 16:26:21.344 -04:00 [Debug] Connection id ""0HL43EH6IETLC"" sending FIN.
+2017-04-14 16:26:21.345 -04:00 [Debug] Connection id ""0HL43EH6IETLD"" disconnecting.
+2017-04-14 16:26:21.345 -04:00 [Debug] Connection id ""0HL43EH6IETLG"" sending FIN.
+2017-04-14 16:26:21.344 -04:00 [Debug] Connection id ""0HL43EH6IETLF"" disconnecting.
+2017-04-14 16:26:21.346 -04:00 [Debug] Connection id ""0HL43EH6IETLD"" sending FIN.
+2017-04-14 16:26:21.346 -04:00 [Debug] Connection id ""0HL43EH6IETLE"" sending FIN.
+2017-04-14 16:26:21.346 -04:00 [Debug] Connection id ""0HL43EH6IETLB"" sending FIN.
+2017-04-14 16:26:21.346 -04:00 [Debug] Connection id ""0HL43EH6IETLD"" sent FIN with status "0".
+2017-04-14 16:26:21.346 -04:00 [Debug] Connection id ""0HL43EH6IETLF"" sending FIN.
+2017-04-14 16:26:21.346 -04:00 [Debug] Connection id ""0HL43EH6IETLD"" stopped.
+2017-04-14 16:26:21.346 -04:00 [Debug] Connection id ""0HL43EH6IETLF"" sent FIN with status "0".
+2017-04-14 16:26:21.346 -04:00 [Debug] Connection id ""0HL43EH6IETLG"" sent FIN with status "0".
+2017-04-14 16:26:21.347 -04:00 [Debug] Connection id ""0HL43EH6IETLF"" stopped.
+2017-04-14 16:26:21.347 -04:00 [Debug] Connection id ""0HL43EH6IETLG"" stopped.
+2017-04-14 16:26:21.347 -04:00 [Debug] Connection id ""0HL43EH6IETLB"" sent FIN with status "0".
+2017-04-14 16:26:21.347 -04:00 [Debug] Connection id ""0HL43EH6IETLC"" sent FIN with status "0".
+2017-04-14 16:26:21.347 -04:00 [Debug] Connection id ""0HL43EH6IETLB"" stopped.
+2017-04-14 16:26:21.347 -04:00 [Debug] Connection id ""0HL43EH6IETLC"" stopped.
+2017-04-14 16:26:21.347 -04:00 [Debug] Connection id ""0HL43EH6IETLE"" sent FIN with status "0".
+2017-04-14 16:26:21.347 -04:00 [Debug] Connection id ""0HL43EH6IETLE"" stopped.
+2017-04-14 16:30:15.846 -04:00 [Debug] Compiling query model: 
+'(from NocUser <generated>_1 in DbSet<NocUser>
+select <generated>_1)
+.Any()'
+2017-04-14 16:30:15.900 -04:00 [Debug] Optimized query model: 
+'(from NocUser <generated>_1 in DbSet<NocUser>
+select <generated>_1)
+.Any()'
+2017-04-14 16:30:16.085 -04:00 [Debug] TRACKED: False
+(QueryContext queryContext) => IEnumerable<bool> _ToSequence(
+    element: bool GetResult(
+        valueBuffers: IEnumerable<ValueBuffer> _Query(
+            queryContext: queryContext, 
+            shaperCommandContext: SelectExpression: 
+                SELECT CASE
+                    WHEN EXISTS (
+                        SELECT 1
+                        FROM [AspNetUsers] AS [a])
+                    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+                END
+            , 
+            queryIndex: default(System.Nullable`1[System.Int32])
+        )
+    )
+)
+
+2017-04-14 16:30:16.132 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-14 16:30:16.791 -04:00 [Information] Executed DbCommand (124ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AspNetUsers] AS [a])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2017-04-14 16:30:16.846 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-14 16:30:16.867 -04:00 [Debug] Compiling query model: 
+'(from Product <generated>_1 in DbSet<Product>
+select <generated>_1)
+.Any()'
+2017-04-14 16:30:16.867 -04:00 [Debug] Optimized query model: 
+'(from Product <generated>_1 in DbSet<Product>
+select <generated>_1)
+.Any()'
+2017-04-14 16:30:16.874 -04:00 [Debug] TRACKED: False
+(QueryContext queryContext) => IEnumerable<bool> _ToSequence(
+    element: bool GetResult(
+        valueBuffers: IEnumerable<ValueBuffer> _Query(
+            queryContext: queryContext, 
+            shaperCommandContext: SelectExpression: 
+                SELECT CASE
+                    WHEN EXISTS (
+                        SELECT 1
+                        FROM [Products] AS [p])
+                    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+                END
+            , 
+            queryIndex: default(System.Nullable`1[System.Int32])
+        )
+    )
+)
+
+2017-04-14 16:30:16.874 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-14 16:30:16.887 -04:00 [Information] Executed DbCommand (10ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Products] AS [p])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2017-04-14 16:30:16.888 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-14 16:30:16.888 -04:00 [Debug] Compiling query model: 
+'(from Server <generated>_1 in DbSet<Server>
+select <generated>_1)
+.Any()'
+2017-04-14 16:30:16.888 -04:00 [Debug] Optimized query model: 
+'(from Server <generated>_1 in DbSet<Server>
+select <generated>_1)
+.Any()'
+2017-04-14 16:30:16.891 -04:00 [Debug] TRACKED: False
+(QueryContext queryContext) => IEnumerable<bool> _ToSequence(
+    element: bool GetResult(
+        valueBuffers: IEnumerable<ValueBuffer> _Query(
+            queryContext: queryContext, 
+            shaperCommandContext: SelectExpression: 
+                SELECT CASE
+                    WHEN EXISTS (
+                        SELECT 1
+                        FROM [Servers] AS [s])
+                    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+                END
+            , 
+            queryIndex: default(System.Nullable`1[System.Int32])
+        )
+    )
+)
+
+2017-04-14 16:30:16.891 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-14 16:30:16.893 -04:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Servers] AS [s])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2017-04-14 16:30:16.893 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-14 16:30:16.942 -04:00 [Information] User profile is available. Using '"C:\Users\djackson\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2017-04-14 16:30:16.975 -04:00 [Debug] Hosting starting
+2017-04-14 16:30:17.097 -04:00 [Debug] Hosting started
+2017-04-14 16:30:17.273 -04:00 [Debug] Connection id ""0HL43EK83IH1B"" started.
+2017-04-14 16:30:17.397 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/  
+2017-04-14 16:30:17.486 -04:00 [Debug] Reading data from file '"C:\Users\djackson\AppData\Local\ASP.NET\DataProtection-Keys\key-ea34fd48-7318-409d-a55d-2de09c5c2de1.xml"'.
+2017-04-14 16:30:17.494 -04:00 [Debug] Found key {ea34fd48-7318-409d-a55d-2de09c5c2de1}.
+2017-04-14 16:30:17.506 -04:00 [Debug] Considering key {ea34fd48-7318-409d-a55d-2de09c5c2de1} with expiration date 2017-05-29 17:16:36Z as default key.
+2017-04-14 16:30:17.516 -04:00 [Debug] Decrypting secret element using Windows DPAPI.
+2017-04-14 16:30:17.526 -04:00 [Debug] Opening CNG algorithm '"AES"' from provider 'null' with chaining mode CBC.
+2017-04-14 16:30:17.532 -04:00 [Debug] Opening CNG algorithm '"SHA256"' from provider 'null' with HMAC.
+2017-04-14 16:30:17.542 -04:00 [Debug] Using key {ea34fd48-7318-409d-a55d-2de09c5c2de1} as the default key.
+2017-04-14 16:30:17.549 -04:00 [Information] "Identity.Application" was not authenticated. Failure message: "Unprotect ticket failed"
+2017-04-14 16:30:17.555 -04:00 [Debug] The request path "/" does not match a supported file type
+2017-04-14 16:30:17.687 -04:00 [Debug] Request successfully matched the route with name '"Default"' and template '"{Controller}/{Action}/{id?}"'.
+2017-04-14 16:30:17.780 -04:00 [Debug] Executing action "NOC_PL_WebApplication.Controllers.TableDataVMsController.TablesPage1 (NOC-PL-WebApplication)"
+2017-04-14 16:30:17.832 -04:00 [Information] Executing action method "NOC_PL_WebApplication.Controllers.TableDataVMsController.TablesPage1 (NOC-PL-WebApplication)" with arguments (null) - ModelState is Valid
+2017-04-14 16:30:30.954 -04:00 [Debug] Compiling query model: 
+'from Product <generated>_0 in DbSet<Product>
+select <generated>_0'
+2017-04-14 16:30:30.955 -04:00 [Debug] Optimized query model: 
+'from Product <generated>_0 in DbSet<Product>
+select <generated>_0'
+2017-04-14 16:30:30.991 -04:00 [Debug] TRACKED: True
+(QueryContext queryContext) => IAsyncEnumerable<Product> _ShapedQuery(
+    queryContext: queryContext, 
+    shaperCommandContext: SelectExpression: 
+        SELECT [p].[Id], [p].[PrimaryProductServerId], [p].[ProductGroup], [p].[ProductName], [p].[SecondaryProductServerId], [p].[TableDataVMId], [p].[TableNumber]
+        FROM [Products] AS [p]
+    , 
+    shaper: BufferedEntityShaper<Product>
+)
+
+2017-04-14 16:30:31.024 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-14 16:30:31.077 -04:00 [Information] Executed DbCommand (44ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[PrimaryProductServerId], [p].[ProductGroup], [p].[ProductName], [p].[SecondaryProductServerId], [p].[TableDataVMId], [p].[TableNumber]
+FROM [Products] AS [p]
+2017-04-14 16:30:31.147 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-14 16:34:06.812 -04:00 [Debug] Compiling query model: 
+'from Server <generated>_0 in DbSet<Server>
+select <generated>_0'
+2017-04-14 16:34:06.815 -04:00 [Debug] Optimized query model: 
+'from Server <generated>_0 in DbSet<Server>
+select <generated>_0'
+2017-04-14 16:34:06.818 -04:00 [Debug] TRACKED: True
+(QueryContext queryContext) => IAsyncEnumerable<Server> _ShapedQuery(
+    queryContext: queryContext, 
+    shaperCommandContext: SelectExpression: 
+        SELECT [s].[Id], [s].[ServerGroup], [s].[ServerName], [s].[TableDataVMId]
+        FROM [Servers] AS [s]
+    , 
+    shaper: BufferedEntityShaper<Server>
+)
+
+2017-04-14 16:34:06.818 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-14 16:34:06.842 -04:00 [Information] Executed DbCommand (23ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[ServerGroup], [s].[ServerName], [s].[TableDataVMId]
+FROM [Servers] AS [s]
+2017-04-14 16:34:06.878 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-14 16:34:11.430 -04:00 [Debug] Database queries successful
+2017-04-14 16:34:46.189 -04:00 [Debug] Executed action method "NOC_PL_WebApplication.Controllers.TableDataVMsController.TablesPage1 (NOC-PL-WebApplication)", returned result "Microsoft.AspNetCore.Mvc.ViewResult".
+2017-04-14 16:34:46.291 -04:00 [Debug] View lookup cache miss for view '"TablesPage1"' in controller '"TableDataVMs"'.
+2017-04-14 16:34:46.304 -04:00 [Debug] Code generation for the Razor file at '"/Views/TableDataVMs/TablesPage1.cshtml"' started.
+2017-04-14 16:34:46.779 -04:00 [Debug] Code generation for the Razor file at '"/Views/TableDataVMs/TablesPage1.cshtml"' completed in 472.7621ms.
+2017-04-14 16:34:46.792 -04:00 [Debug] Compilation of the generated code for the Razor file at '"/Views/TableDataVMs/TablesPage1.cshtml"' started.
+2017-04-14 16:34:47.987 -04:00 [Debug] Compilation of the generated code for the Razor file at '"/Views/TableDataVMs/TablesPage1.cshtml"' completed in 1194.6103ms.
+2017-04-14 16:34:47.993 -04:00 [Debug] Code generation for the Razor file at '"/Views/_ViewStart.cshtml"' started.
+2017-04-14 16:34:47.998 -04:00 [Debug] Code generation for the Razor file at '"/Views/_ViewStart.cshtml"' completed in 5.1103ms.
+2017-04-14 16:34:47.998 -04:00 [Debug] Compilation of the generated code for the Razor file at '"/Views/_ViewStart.cshtml"' started.
+2017-04-14 16:34:48.045 -04:00 [Debug] Compilation of the generated code for the Razor file at '"/Views/_ViewStart.cshtml"' completed in 46.3576ms.
+2017-04-14 16:34:48.105 -04:00 [Debug] The view '"TablesPage1"' was found.
+2017-04-14 16:34:48.107 -04:00 [Information] Executing ViewResult, running view at path "/Views/TableDataVMs/TablesPage1.cshtml".
+2017-04-14 16:34:48.306 -04:00 [Debug] View lookup cache miss for view '"_Layout"' in controller '"TableDataVMs"'.
+2017-04-14 16:34:48.308 -04:00 [Debug] Code generation for the Razor file at '"/Views/Shared/_Layout.cshtml"' started.
+2017-04-14 16:34:48.337 -04:00 [Debug] Code generation for the Razor file at '"/Views/Shared/_Layout.cshtml"' completed in 29.0689ms.
+2017-04-14 16:34:48.337 -04:00 [Debug] Compilation of the generated code for the Razor file at '"/Views/Shared/_Layout.cshtml"' started.
+2017-04-14 16:34:48.429 -04:00 [Debug] Compilation of the generated code for the Razor file at '"/Views/Shared/_Layout.cshtml"' completed in 91.1978ms.
+2017-04-14 16:34:48.585 -04:00 [Debug] Executing view component "NOCPLWebApplication.Views.ViewComponents.LoginLogoutViewComponent" with arguments ([]).
+2017-04-14 16:34:48.595 -04:00 [Debug] Executed view component "NOCPLWebApplication.Views.ViewComponents.LoginLogoutViewComponent" in 4.0183ms and returned "Microsoft.AspNetCore.Mvc.ViewComponents.ViewViewComponentResult"
+2017-04-14 16:34:48.598 -04:00 [Debug] View lookup cache miss for view '"Components/LoginLogout/Default"' in controller '"TableDataVMs"'.
+2017-04-14 16:34:48.601 -04:00 [Debug] Code generation for the Razor file at '"/Views/Shared/Components/LoginLogout/Default.cshtml"' started.
+2017-04-14 16:34:48.609 -04:00 [Debug] Code generation for the Razor file at '"/Views/Shared/Components/LoginLogout/Default.cshtml"' completed in 8.7664ms.
+2017-04-14 16:34:48.610 -04:00 [Debug] Compilation of the generated code for the Razor file at '"/Views/Shared/Components/LoginLogout/Default.cshtml"' started.
+2017-04-14 16:34:48.658 -04:00 [Debug] Compilation of the generated code for the Razor file at '"/Views/Shared/Components/LoginLogout/Default.cshtml"' completed in 47.3389ms.
+2017-04-14 16:34:48.769 -04:00 [Information] Executed action "NOC_PL_WebApplication.Controllers.TableDataVMsController.TablesPage1 (NOC-PL-WebApplication)" in 270995.394ms
+2017-04-14 16:34:48.772 -04:00 [Debug] Connection id ""0HL43EK83IH1C"" started.
+2017-04-14 16:34:48.778 -04:00 [Debug] Connection id ""0HL43EK83IH1D"" started.
+2017-04-14 16:34:48.778 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/js/site.min.js?v=NpMUj71zExRQni6K27BChnEFiXr3zPwMp_IYP45LeJE  
+2017-04-14 16:34:48.779 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/css/site.css?v=nrPtuqixDnqnLwSrcojNA7Y0zvaH-JgkmW59rjwShaE  
+2017-04-14 16:34:48.780 -04:00 [Information] "Identity.Application" was not authenticated. Failure message: "Unprotect ticket failed"
+2017-04-14 16:34:48.780 -04:00 [Information] "Identity.Application" was not authenticated. Failure message: "Unprotect ticket failed"
+2017-04-14 16:34:48.780 -04:00 [Debug] Connection id ""0HL43EK83IH1E"" started.
+2017-04-14 16:34:48.780 -04:00 [Debug] Connection id ""0HL43EK83IH1F"" started.
+2017-04-14 16:34:48.781 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/js/jsmodules/ScrollPositionModule.js?v=iZ5RzaVm8uozLlF1_545KjsP6eigu8rH8pV54cogdwc  
+2017-04-14 16:34:48.782 -04:00 [Information] "Identity.Application" was not authenticated. Failure message: "Unprotect ticket failed"
+2017-04-14 16:34:48.782 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/js/serverModal.Controller.js  
+2017-04-14 16:34:48.783 -04:00 [Information] "Identity.Application" was not authenticated. Failure message: "Unprotect ticket failed"
+2017-04-14 16:34:48.792 -04:00 [Debug] Connection id ""0HL43EK83IH1B"" completed keep alive response.
+2017-04-14 16:34:48.795 -04:00 [Information] The file "/js/serverModal.Controller.js" was not modified
+2017-04-14 16:34:48.795 -04:00 [Information] The file "/js/jsmodules/ScrollPositionModule.js" was not modified
+2017-04-14 16:34:48.795 -04:00 [Information] The file "/js/site.min.js" was not modified
+2017-04-14 16:34:48.796 -04:00 [Information] The file "/css/site.css" was not modified
+2017-04-14 16:34:48.797 -04:00 [Information] Request finished in 271427.8797ms 200 text/html; charset=utf-8
+2017-04-14 16:34:48.802 -04:00 [Debug] Handled. Status code: 304 File: "/js/serverModal.Controller.js"
+2017-04-14 16:34:48.802 -04:00 [Debug] Handled. Status code: 304 File: "/js/jsmodules/ScrollPositionModule.js"
+2017-04-14 16:34:48.802 -04:00 [Debug] Handled. Status code: 304 File: "/js/site.min.js"
+2017-04-14 16:34:48.803 -04:00 [Debug] Handled. Status code: 304 File: "/css/site.css"
+2017-04-14 16:34:48.805 -04:00 [Debug] Connection id ""0HL43EK83IH1E"" completed keep alive response.
+2017-04-14 16:34:48.805 -04:00 [Debug] Connection id ""0HL43EK83IH1F"" completed keep alive response.
+2017-04-14 16:34:48.805 -04:00 [Information] Request finished in 24.1977ms 304 application/javascript
+2017-04-14 16:34:48.805 -04:00 [Information] Request finished in 23.4217ms 304 application/javascript
+2017-04-14 16:34:48.805 -04:00 [Debug] Connection id ""0HL43EK83IH1C"" completed keep alive response.
+2017-04-14 16:34:48.805 -04:00 [Information] Request finished in 26.5695ms 304 text/css
+2017-04-14 16:34:48.806 -04:00 [Debug] Connection id ""0HL43EK83IH1D"" completed keep alive response.
+2017-04-14 16:34:48.806 -04:00 [Information] Request finished in 27.409ms 304 application/javascript
+2017-04-14 16:34:55.918 -04:00 [Debug] Connection id ""0HL43EK83IH1G"" started.
+2017-04-14 16:34:55.921 -04:00 [Debug] Connection id ""0HL43EK83IH1H"" started.
+2017-04-14 16:34:55.929 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/favicon.ico  
+2017-04-14 16:34:55.930 -04:00 [Debug] The request path "/favicon.ico" does not match an existing file
+2017-04-14 16:34:55.930 -04:00 [Debug] Request successfully matched the route with name '"Default"' and template '"{Controller}/{Action}/{id?}"'.
+2017-04-14 16:34:55.931 -04:00 [Debug] No actions matched the current request
+2017-04-14 16:34:55.931 -04:00 [Debug] Request did not match any routes.
+2017-04-14 16:34:55.932 -04:00 [Debug] Connection id ""0HL43EK83IH1G"" completed keep alive response.
+2017-04-14 16:34:55.933 -04:00 [Information] Request finished in 3.7745ms 404 
+2017-04-14 16:35:16.786 -04:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/SaveSelectedServer application/x-www-form-urlencoded; charset=UTF-8 52
+2017-04-14 16:35:16.787 -04:00 [Information] "Identity.Application" was not authenticated. Failure message: "Unprotect ticket failed"
+2017-04-14 16:35:16.787 -04:00 [Debug] "POST" requests are not supported
+2017-04-14 16:35:16.787 -04:00 [Debug] Request successfully matched the route with name '"TableDataVM"' and template '"SaveSelectedServer"'.
+2017-04-14 16:35:16.797 -04:00 [Debug] Executing action "NOC_PL_WebApplication.Controllers.TableDataVMsController.SaveSelectedServer (NOC-PL-WebApplication)"
+2017-04-14 16:35:16.813 -04:00 [Information] Authorization failed for user: null.
+2017-04-14 16:35:16.814 -04:00 [Information] Authorization failed for the request at filter '"Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter"'.
+2017-04-14 16:35:16.817 -04:00 [Information] Executing ChallengeResult with authentication schemes ([]).
+2017-04-14 16:35:16.837 -04:00 [Information] AuthenticationScheme: "Identity.Application" was challenged.
+2017-04-14 16:35:16.837 -04:00 [Information] Executed action "NOC_PL_WebApplication.Controllers.TableDataVMsController.SaveSelectedServer (NOC-PL-WebApplication)" in 39.7465ms
+2017-04-14 16:35:16.839 -04:00 [Debug] Connection id ""0HL43EK83IH1F"" completed keep alive response.
+2017-04-14 16:35:16.840 -04:00 [Information] Request finished in 53.8638ms 401 
+2017-04-14 16:36:37.212 -04:00 [Debug] Connection id ""0HL43EK83IH1F"" received FIN.
+2017-04-14 16:36:37.212 -04:00 [Debug] Connection id ""0HL43EK83IH1D"" received FIN.
+2017-04-14 16:36:37.213 -04:00 [Debug] Connection id ""0HL43EK83IH1E"" received FIN.
+2017-04-14 16:36:37.213 -04:00 [Debug] Connection id ""0HL43EK83IH1C"" received FIN.
+2017-04-14 16:36:37.213 -04:00 [Debug] Connection id ""0HL43EK83IH1B"" received FIN.
+2017-04-14 16:36:37.232 -04:00 [Debug] Connection id ""0HL43EK83IH1F"" disconnecting.
+2017-04-14 16:36:37.232 -04:00 [Debug] Connection id ""0HL43EK83IH1C"" disconnecting.
+2017-04-14 16:36:37.232 -04:00 [Debug] Connection id ""0HL43EK83IH1D"" disconnecting.
+2017-04-14 16:36:37.232 -04:00 [Debug] Connection id ""0HL43EK83IH1E"" disconnecting.
+2017-04-14 16:36:37.234 -04:00 [Debug] Connection id ""0HL43EK83IH1D"" sending FIN.
+2017-04-14 16:36:37.234 -04:00 [Debug] Connection id ""0HL43EK83IH1F"" sending FIN.
+2017-04-14 16:36:37.236 -04:00 [Debug] Connection id ""0HL43EK83IH1C"" sending FIN.
+2017-04-14 16:36:37.236 -04:00 [Debug] Connection id ""0HL43EK83IH1E"" sending FIN.
+2017-04-14 16:36:37.237 -04:00 [Debug] Connection id ""0HL43EK83IH1B"" disconnecting.
+2017-04-14 16:36:37.241 -04:00 [Debug] Connection id ""0HL43EK83IH1C"" sent FIN with status "0".
+2017-04-14 16:36:37.241 -04:00 [Debug] Connection id ""0HL43EK83IH1E"" sent FIN with status "0".
+2017-04-14 16:36:37.243 -04:00 [Debug] Connection id ""0HL43EK83IH1C"" stopped.
+2017-04-14 16:36:37.243 -04:00 [Debug] Connection id ""0HL43EK83IH1E"" stopped.
+2017-04-14 16:36:37.244 -04:00 [Debug] Connection id ""0HL43EK83IH1D"" sent FIN with status "0".
+2017-04-14 16:36:37.244 -04:00 [Debug] Connection id ""0HL43EK83IH1F"" sent FIN with status "0".
+2017-04-14 16:36:37.244 -04:00 [Debug] Connection id ""0HL43EK83IH1D"" stopped.
+2017-04-14 16:36:37.244 -04:00 [Debug] Connection id ""0HL43EK83IH1F"" stopped.
+2017-04-14 16:36:37.244 -04:00 [Debug] Connection id ""0HL43EK83IH1B"" sending FIN.
+2017-04-14 16:36:37.244 -04:00 [Debug] Connection id ""0HL43EK83IH1B"" sent FIN with status "0".
+2017-04-14 16:36:37.244 -04:00 [Debug] Connection id ""0HL43EK83IH1B"" stopped.
+2017-04-14 16:36:38.917 -04:00 [Debug] Connection id ""0HL43EK83IH1G"" received FIN.
+2017-04-14 16:36:38.917 -04:00 [Debug] Connection id ""0HL43EK83IH1H"" received FIN.
+2017-04-14 16:36:38.918 -04:00 [Debug] Connection id ""0HL43EK83IH1G"" disconnecting.
+2017-04-14 16:36:38.918 -04:00 [Debug] Connection id ""0HL43EK83IH1H"" disconnecting.
+2017-04-14 16:36:38.919 -04:00 [Debug] Connection id ""0HL43EK83IH1G"" sending FIN.
+2017-04-14 16:36:38.919 -04:00 [Debug] Connection id ""0HL43EK83IH1H"" sending FIN.
+2017-04-14 16:36:38.920 -04:00 [Debug] Connection id ""0HL43EK83IH1G"" sent FIN with status "0".
+2017-04-14 16:36:38.920 -04:00 [Debug] Connection id ""0HL43EK83IH1H"" sent FIN with status "0".
+2017-04-14 16:36:38.920 -04:00 [Debug] Connection id ""0HL43EK83IH1G"" stopped.
+2017-04-14 16:36:38.921 -04:00 [Debug] Connection id ""0HL43EK83IH1H"" stopped.
+2017-04-14 16:37:21.491 -04:00 [Debug] Connection id ""0HL43EK83IH1I"" started.
+2017-04-14 16:37:21.495 -04:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/SaveSelectedServer application/x-www-form-urlencoded; charset=UTF-8 53
+2017-04-14 16:37:21.496 -04:00 [Debug] Connection id ""0HL43EK83IH1J"" started.
+2017-04-14 16:37:21.498 -04:00 [Information] "Identity.Application" was not authenticated. Failure message: "Unprotect ticket failed"
+2017-04-14 16:37:21.498 -04:00 [Debug] "POST" requests are not supported
+2017-04-14 16:37:21.498 -04:00 [Debug] Request successfully matched the route with name '"TableDataVM"' and template '"SaveSelectedServer"'.
+2017-04-14 16:37:21.500 -04:00 [Debug] Executing action "NOC_PL_WebApplication.Controllers.TableDataVMsController.SaveSelectedServer (NOC-PL-WebApplication)"
+2017-04-14 16:37:21.500 -04:00 [Information] Authorization failed for user: null.
+2017-04-14 16:37:21.500 -04:00 [Information] Authorization failed for the request at filter '"Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter"'.
+2017-04-14 16:37:21.500 -04:00 [Information] Executing ChallengeResult with authentication schemes ([]).
+2017-04-14 16:37:21.500 -04:00 [Information] AuthenticationScheme: "Identity.Application" was challenged.
+2017-04-14 16:37:21.500 -04:00 [Information] Executed action "NOC_PL_WebApplication.Controllers.TableDataVMsController.SaveSelectedServer (NOC-PL-WebApplication)" in 0.8602ms
+2017-04-14 16:37:21.501 -04:00 [Debug] Connection id ""0HL43EK83IH1I"" completed keep alive response.
+2017-04-14 16:37:21.501 -04:00 [Information] Request finished in 7.6741ms 401 
+2017-04-14 16:37:44.596 -04:00 [Debug] Connection id ""0HL43EK83IH1J"" received FIN.
+2017-04-14 16:37:44.596 -04:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/SaveSelectedServer application/x-www-form-urlencoded; charset=UTF-8 51
+2017-04-14 16:37:44.596 -04:00 [Debug] Connection id ""0HL43EK83IH1J"" disconnecting.
+2017-04-14 16:37:44.597 -04:00 [Debug] Connection id ""0HL43EK83IH1J"" sending FIN.
+2017-04-14 16:37:44.597 -04:00 [Debug] Connection id ""0HL43EK83IH1J"" sent FIN with status "0".
+2017-04-14 16:37:44.597 -04:00 [Debug] Connection id ""0HL43EK83IH1J"" stopped.
+2017-04-14 16:37:44.597 -04:00 [Information] "Identity.Application" was not authenticated. Failure message: "Unprotect ticket failed"
+2017-04-14 16:37:44.598 -04:00 [Debug] "POST" requests are not supported
+2017-04-14 16:37:44.598 -04:00 [Debug] Request successfully matched the route with name '"TableDataVM"' and template '"SaveSelectedServer"'.
+2017-04-14 16:37:44.598 -04:00 [Debug] Executing action "NOC_PL_WebApplication.Controllers.TableDataVMsController.SaveSelectedServer (NOC-PL-WebApplication)"
+2017-04-14 16:37:44.598 -04:00 [Information] Authorization failed for user: null.
+2017-04-14 16:37:44.598 -04:00 [Information] Authorization failed for the request at filter '"Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter"'.
+2017-04-14 16:37:44.598 -04:00 [Information] Executing ChallengeResult with authentication schemes ([]).
+2017-04-14 16:37:44.598 -04:00 [Information] AuthenticationScheme: "Identity.Application" was challenged.
+2017-04-14 16:37:44.598 -04:00 [Information] Executed action "NOC_PL_WebApplication.Controllers.TableDataVMsController.SaveSelectedServer (NOC-PL-WebApplication)" in 0.4911ms
+2017-04-14 16:37:44.602 -04:00 [Debug] Connection id ""0HL43EK83IH1I"" completed keep alive response.
+2017-04-14 16:37:44.602 -04:00 [Information] Request finished in 5.8531ms 401 
+2017-04-14 16:37:47.325 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/Account/Login  
+2017-04-14 16:37:47.326 -04:00 [Information] "Identity.Application" was not authenticated. Failure message: "Unprotect ticket failed"
+2017-04-14 16:37:47.326 -04:00 [Debug] The request path "/Account/Login" does not match a supported file type
+2017-04-14 16:37:47.326 -04:00 [Debug] Request successfully matched the route with name '"Default"' and template '"{Controller}/{Action}/{id?}"'.
+2017-04-14 16:37:47.329 -04:00 [Debug] Action '"NOC_PL_WebApplication.Controllers.AccountController.Login (NOC-PL-WebApplication)"' with id '"a7cc94be-c411-407d-8839-5437abaa8c66"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+2017-04-14 16:37:47.330 -04:00 [Debug] Executing action "NOC_PL_WebApplication.Controllers.AccountController.Login (NOC-PL-WebApplication)"
+2017-04-14 16:37:47.335 -04:00 [Information] Executing action method "NOC_PL_WebApplication.Controllers.AccountController.Login (NOC-PL-WebApplication)" with arguments (null) - ModelState is Valid
+2017-04-14 16:37:47.335 -04:00 [Debug] Executed action method "NOC_PL_WebApplication.Controllers.AccountController.Login (NOC-PL-WebApplication)", returned result "Microsoft.AspNetCore.Mvc.ViewResult".
+2017-04-14 16:37:47.336 -04:00 [Debug] View lookup cache miss for view '"Login"' in controller '"Account"'.
+2017-04-14 16:37:47.336 -04:00 [Debug] Code generation for the Razor file at '"/Views/Account/Login.cshtml"' started.
+2017-04-14 16:37:47.350 -04:00 [Debug] Code generation for the Razor file at '"/Views/Account/Login.cshtml"' completed in 13.9651ms.
+2017-04-14 16:37:47.350 -04:00 [Debug] Compilation of the generated code for the Razor file at '"/Views/Account/Login.cshtml"' started.
+2017-04-14 16:37:47.487 -04:00 [Debug] Compilation of the generated code for the Razor file at '"/Views/Account/Login.cshtml"' completed in 136.3207ms.
+2017-04-14 16:37:47.488 -04:00 [Debug] The view '"Login"' was found.
+2017-04-14 16:37:47.488 -04:00 [Information] Executing ViewResult, running view at path "/Views/Account/Login.cshtml".
+2017-04-14 16:37:47.525 -04:00 [Debug] A new antiforgery cookie token was created.
+2017-04-14 16:37:47.603 -04:00 [Debug] View lookup cache miss for view '"_Layout"' in controller '"Account"'.
+2017-04-14 16:37:47.604 -04:00 [Debug] Executing view component "NOCPLWebApplication.Views.ViewComponents.LoginLogoutViewComponent" with arguments ([]).
+2017-04-14 16:37:47.604 -04:00 [Debug] Executed view component "NOCPLWebApplication.Views.ViewComponents.LoginLogoutViewComponent" in 0.0195ms and returned "Microsoft.AspNetCore.Mvc.ViewComponents.ViewViewComponentResult"
+2017-04-14 16:37:47.604 -04:00 [Debug] View lookup cache miss for view '"Components/LoginLogout/Default"' in controller '"Account"'.
+2017-04-14 16:37:47.607 -04:00 [Information] Executed action "NOC_PL_WebApplication.Controllers.AccountController.Login (NOC-PL-WebApplication)" in 277.0452ms
+2017-04-14 16:37:47.609 -04:00 [Debug] Connection id ""0HL43EK83IH1I"" completed keep alive response.
+2017-04-14 16:37:47.609 -04:00 [Information] Request finished in 284.3342ms 200 text/html; charset=utf-8
+2017-04-14 16:37:47.624 -04:00 [Debug] Connection id ""0HL43EK83IH1K"" started.
+2017-04-14 16:37:47.624 -04:00 [Debug] Connection id ""0HL43EK83IH1L"" started.
+2017-04-14 16:37:47.625 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/js/jsmodules/ScrollPositionModule.js?v=iZ5RzaVm8uozLlF1_545KjsP6eigu8rH8pV54cogdwc  
+2017-04-14 16:37:47.625 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/js/site.min.js?v=NpMUj71zExRQni6K27BChnEFiXr3zPwMp_IYP45LeJE  
+2017-04-14 16:37:47.626 -04:00 [Information] "Identity.Application" was not authenticated. Failure message: "Unprotect ticket failed"
+2017-04-14 16:37:47.628 -04:00 [Information] The file "/js/jsmodules/ScrollPositionModule.js" was not modified
+2017-04-14 16:37:47.628 -04:00 [Debug] Handled. Status code: 304 File: "/js/jsmodules/ScrollPositionModule.js"
+2017-04-14 16:37:47.627 -04:00 [Information] "Identity.Application" was not authenticated. Failure message: "Unprotect ticket failed"
+2017-04-14 16:37:47.627 -04:00 [Debug] Connection id ""0HL43EK83IH1M"" started.
+2017-04-14 16:37:47.631 -04:00 [Information] The file "/js/site.min.js" was not modified
+2017-04-14 16:37:47.631 -04:00 [Debug] Handled. Status code: 304 File: "/js/site.min.js"
+2017-04-14 16:37:47.632 -04:00 [Debug] Connection id ""0HL43EK83IH1K"" completed keep alive response.
+2017-04-14 16:37:47.632 -04:00 [Information] Request finished in 7.1077ms 304 application/javascript
+2017-04-14 16:37:47.629 -04:00 [Debug] Connection id ""0HL43EK83IH1L"" completed keep alive response.
+2017-04-14 16:37:47.635 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/css/site.css?v=nrPtuqixDnqnLwSrcojNA7Y0zvaH-JgkmW59rjwShaE  
+2017-04-14 16:37:47.637 -04:00 [Information] Request finished in 11.3028ms 304 application/javascript
+2017-04-14 16:37:47.663 -04:00 [Information] "Identity.Application" was not authenticated. Failure message: "Unprotect ticket failed"
+2017-04-14 16:37:47.663 -04:00 [Information] The file "/css/site.css" was not modified
+2017-04-14 16:37:47.663 -04:00 [Debug] Handled. Status code: 304 File: "/css/site.css"
+2017-04-14 16:37:47.663 -04:00 [Debug] Connection id ""0HL43EK83IH1M"" completed keep alive response.
+2017-04-14 16:37:47.663 -04:00 [Information] Request finished in 27.8948ms 304 text/css
+2017-04-14 16:37:59.085 -04:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/Account/Login application/x-www-form-urlencoded 237
+2017-04-14 16:37:59.086 -04:00 [Information] "Identity.Application" was not authenticated. Failure message: "Unprotect ticket failed"
+2017-04-14 16:37:59.086 -04:00 [Debug] "POST" requests are not supported
+2017-04-14 16:37:59.086 -04:00 [Debug] Request successfully matched the route with name '"Default"' and template '"{Controller}/{Action}/{id?}"'.
+2017-04-14 16:37:59.086 -04:00 [Debug] Action '"NOC_PL_WebApplication.Controllers.AccountController.Login (NOC-PL-WebApplication)"' with id '"d79407af-e685-4504-973a-f81b6721665d"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+2017-04-14 16:37:59.087 -04:00 [Debug] Executing action "NOC_PL_WebApplication.Controllers.AccountController.Login (NOC-PL-WebApplication)"
+2017-04-14 16:37:59.127 -04:00 [Debug] Antiforgery successfully validated a request.
+2017-04-14 16:37:59.225 -04:00 [Information] Executing action method "NOC_PL_WebApplication.Controllers.AccountController.Login (NOC-PL-WebApplication)" with arguments (["NOCPLWebApplication.Models.ViewModels.LoginViewModel"]) - ModelState is Valid
+2017-04-14 16:43:01.461 -04:00 [Debug] Compiling query model: 
+'(from NocUser u in DbSet<NocUser>
+where u.NormalizedUserName == __normalizedUserName_0
+select u)
+.FirstOrDefault()'
+2017-04-14 16:43:01.469 -04:00 [Debug] Optimized query model: 
+'(from NocUser u in DbSet<NocUser>
+where u.NormalizedUserName == __normalizedUserName_0
+select u)
+.FirstOrDefault()'
+2017-04-14 16:43:01.517 -04:00 [Debug] TRACKED: True
+(QueryContext queryContext) => IAsyncEnumerable<NocUser> _ToSequence(
+    task: Task<NocUser> _FirstOrDefault(
+        source: IAsyncEnumerable<NocUser> _ShapedQuery(
+            queryContext: queryContext, 
+            shaperCommandContext: SelectExpression: 
+                SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+                FROM [AspNetUsers] AS [u]
+                WHERE [u].[NormalizedUserName] = @__normalizedUserName_0
+            , 
+            shaper: UnbufferedEntityShaper<NocUser>
+        )
+        , 
+        cancellationToken: queryContext.CancellationToken
+    )
+)
+
+2017-04-14 16:43:01.520 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-14 16:43:02.026 -04:00 [Information] Executed DbCommand (130ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0
+2017-04-14 16:43:02.048 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-14 16:43:02.169 -04:00 [Debug] Compiling query model: 
+'from IdentityUserRole<string> userRole in DbSet<IdentityUserRole<string>>
+join IdentityRole role in DbSet<IdentityRole>
+on userRole.RoleId equals role.Id
+where bool userRole.UserId.Equals(
+    other: __userId_0
+)
+
+select role.Name'
+2017-04-14 16:43:02.176 -04:00 [Debug] Optimized query model: 
+'from IdentityUserRole<string> userRole in DbSet<IdentityUserRole<string>>
+join IdentityRole role in DbSet<IdentityRole>
+on userRole.RoleId equals role.Id
+where bool userRole.UserId.Equals(
+    other: __userId_0
+)
+
+select role.Name'
+2017-04-14 16:43:02.232 -04:00 [Debug] TRACKED: True
+(QueryContext queryContext) => IAsyncEnumerable<string> _Select(
+    source: IAsyncEnumerable<TransparentIdentifier<ValueBuffer, ValueBuffer>> _ShapedQuery(
+        queryContext: queryContext, 
+        shaperCommandContext: SelectExpression: 
+            SELECT [role].[Name]
+            FROM [AspNetUserRoles] AS [userRole]
+            INNER JOIN [AspNetRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+            WHERE [userRole].[UserId] = @__userId_0
+        , 
+        shaper: CompositeShaper`3
+    )
+    , 
+    selector: (TransparentIdentifier<ValueBuffer, ValueBuffer> t0) => string TryReadValue(
+        valueBuffer: t0.Inner, 
+        index: 0, 
+        property: null
+    )
+)
+
+2017-04-14 16:43:02.237 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-14 16:43:02.241 -04:00 [Information] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [role].[Name]
+FROM [AspNetUserRoles] AS [userRole]
+INNER JOIN [AspNetRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0
+2017-04-14 16:43:02.241 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-14 16:43:02.252 -04:00 [Debug] Compiling query model: 
+'from IdentityUserClaim<string> uc in DbSet<IdentityUserClaim<string>>
+where bool uc.UserId.Equals(
+    other: __user_Id_0
+)
+
+select Claim uc.ToClaim()
+'
+2017-04-14 16:43:02.252 -04:00 [Debug] Optimized query model: 
+'from IdentityUserClaim<string> uc in DbSet<IdentityUserClaim<string>>
+where bool uc.UserId.Equals(
+    other: __user_Id_0
+)
+
+select Claim uc.ToClaim()
+'
+2017-04-14 16:43:02.261 -04:00 [Debug] TRACKED: True
+(QueryContext queryContext) => IAsyncEnumerable<Claim> _Select(
+    source: IAsyncEnumerable<IdentityUserClaim<string>> _ShapedQuery(
+        queryContext: queryContext, 
+        shaperCommandContext: SelectExpression: 
+            SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+            FROM [AspNetUserClaims] AS [uc]
+            WHERE [uc].[UserId] = @__user_Id_0
+        , 
+        shaper: UnbufferedEntityShaper<IdentityUserClaim`1>
+    )
+    , 
+    selector: (IdentityUserClaim<string> uc) => Claim uc.ToClaim()
+)
+
+2017-04-14 16:43:02.261 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-14 16:43:02.263 -04:00 [Information] Executed DbCommand (1ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AspNetUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0
+2017-04-14 16:43:02.264 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-14 16:43:02.287 -04:00 [Information] AuthenticationScheme: "Identity.Application" signed in.
+2017-04-14 16:43:02.289 -04:00 [Debug] Executed action method "NOC_PL_WebApplication.Controllers.AccountController.Login (NOC-PL-WebApplication)", returned result "Microsoft.AspNetCore.Mvc.RedirectToActionResult".
+2017-04-14 16:43:02.291 -04:00 [Information] Executing RedirectResult, redirecting to "/".
+2017-04-14 16:43:02.293 -04:00 [Information] Executed action "NOC_PL_WebApplication.Controllers.AccountController.Login (NOC-PL-WebApplication)" in 303206.4932ms
+2017-04-14 16:43:02.293 -04:00 [Debug] Connection id ""0HL43EK83IH1M"" completed keep alive response.
+2017-04-14 16:43:02.296 -04:00 [Information] Request finished in 303210.3001ms 302 
+2017-04-14 16:43:02.299 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/  
+2017-04-14 16:43:02.300 -04:00 [Debug] Connection id ""0HL43EK83IH1K"" disconnecting.
+2017-04-14 16:43:02.300 -04:00 [Debug] Connection id ""0HL43EK83IH1I"" disconnecting.
+2017-04-14 16:43:02.300 -04:00 [Debug] Connection id ""0HL43EK83IH1L"" disconnecting.
+2017-04-14 16:43:02.300 -04:00 [Debug] Connection id ""0HL43EK83IH1K"" received FIN.
+2017-04-14 16:43:02.301 -04:00 [Debug] Connection id ""0HL43EK83IH1L"" received FIN.
+2017-04-14 16:43:02.301 -04:00 [Debug] Connection id ""0HL43EK83IH1I"" received FIN.
+2017-04-14 16:43:02.301 -04:00 [Debug] Connection id ""0HL43EK83IH1K"" sending FIN.
+2017-04-14 16:43:02.301 -04:00 [Debug] Connection id ""0HL43EK83IH1I"" sending FIN.
+2017-04-14 16:43:02.301 -04:00 [Debug] Connection id ""0HL43EK83IH1L"" sending FIN.
+2017-04-14 16:43:02.301 -04:00 [Debug] Connection id ""0HL43EK83IH1L"" sent FIN with status "0".
+2017-04-14 16:43:02.301 -04:00 [Debug] Connection id ""0HL43EK83IH1L"" stopped.
+2017-04-14 16:43:02.301 -04:00 [Debug] Connection id ""0HL43EK83IH1I"" sent FIN with status "0".
+2017-04-14 16:43:02.301 -04:00 [Debug] Connection id ""0HL43EK83IH1I"" stopped.
+2017-04-14 16:43:02.301 -04:00 [Debug] Connection id ""0HL43EK83IH1K"" sent FIN with status "0".
+2017-04-14 16:43:02.302 -04:00 [Debug] Connection id ""0HL43EK83IH1K"" stopped.
+2017-04-14 16:43:02.312 -04:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-04-14 16:43:02.312 -04:00 [Debug] The request path "/" does not match a supported file type
+2017-04-14 16:43:02.313 -04:00 [Debug] Request successfully matched the route with name '"Default"' and template '"{Controller}/{Action}/{id?}"'.
+2017-04-14 16:43:02.313 -04:00 [Debug] Executing action "NOC_PL_WebApplication.Controllers.TableDataVMsController.TablesPage1 (NOC-PL-WebApplication)"
+2017-04-14 16:43:02.313 -04:00 [Information] Executing action method "NOC_PL_WebApplication.Controllers.TableDataVMsController.TablesPage1 (NOC-PL-WebApplication)" with arguments (null) - ModelState is Valid
+2017-04-14 16:43:05.051 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-14 16:43:05.063 -04:00 [Information] Executed DbCommand (10ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[PrimaryProductServerId], [p].[ProductGroup], [p].[ProductName], [p].[SecondaryProductServerId], [p].[TableDataVMId], [p].[TableNumber]
+FROM [Products] AS [p]
+2017-04-14 16:43:05.065 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-14 16:43:05.065 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-14 16:43:05.068 -04:00 [Information] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[ServerGroup], [s].[ServerName], [s].[TableDataVMId]
+FROM [Servers] AS [s]
+2017-04-14 16:43:05.071 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-14 16:43:05.071 -04:00 [Debug] Database queries successful
+2017-04-14 16:43:05.071 -04:00 [Debug] Executed action method "NOC_PL_WebApplication.Controllers.TableDataVMsController.TablesPage1 (NOC-PL-WebApplication)", returned result "Microsoft.AspNetCore.Mvc.ViewResult".
+2017-04-14 16:43:05.073 -04:00 [Debug] View lookup cache hit for view '"TablesPage1"' in controller '"TableDataVMs"'.
+2017-04-14 16:43:05.073 -04:00 [Debug] The view '"TablesPage1"' was found.
+2017-04-14 16:43:05.073 -04:00 [Information] Executing ViewResult, running view at path "/Views/TableDataVMs/TablesPage1.cshtml".
+2017-04-14 16:43:05.077 -04:00 [Debug] View lookup cache hit for view '"_Layout"' in controller '"TableDataVMs"'.
+2017-04-14 16:43:05.078 -04:00 [Debug] Executing view component "NOCPLWebApplication.Views.ViewComponents.LoginLogoutViewComponent" with arguments ([]).
+2017-04-14 16:43:05.078 -04:00 [Debug] Executed view component "NOCPLWebApplication.Views.ViewComponents.LoginLogoutViewComponent" in 0.0146ms and returned "Microsoft.AspNetCore.Mvc.ViewComponents.ViewViewComponentResult"
+2017-04-14 16:43:05.079 -04:00 [Debug] View lookup cache hit for view '"Components/LoginLogout/Default"' in controller '"TableDataVMs"'.
+2017-04-14 16:43:05.084 -04:00 [Debug] An antiforgery cookie token was reused.
+2017-04-14 16:43:05.085 -04:00 [Information] Executed action "NOC_PL_WebApplication.Controllers.TableDataVMsController.TablesPage1 (NOC-PL-WebApplication)" in 2772.0606ms
+2017-04-14 16:43:05.086 -04:00 [Debug] Connection id ""0HL43EK83IH1M"" completed keep alive response.
+2017-04-14 16:43:05.086 -04:00 [Information] Request finished in 2786.6462ms 200 text/html; charset=utf-8
+2017-04-14 16:43:05.104 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/css/site.css?v=nrPtuqixDnqnLwSrcojNA7Y0zvaH-JgkmW59rjwShaE  
+2017-04-14 16:43:05.105 -04:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-04-14 16:43:05.105 -04:00 [Information] The file "/css/site.css" was not modified
+2017-04-14 16:43:05.105 -04:00 [Debug] Handled. Status code: 304 File: "/css/site.css"
+2017-04-14 16:43:05.105 -04:00 [Debug] Connection id ""0HL43EK83IH1M"" completed keep alive response.
+2017-04-14 16:43:05.105 -04:00 [Information] Request finished in 1.2863ms 304 text/css
+2017-04-14 16:43:05.106 -04:00 [Debug] Connection id ""0HL43EK83IH1N"" started.
+2017-04-14 16:43:05.107 -04:00 [Debug] Connection id ""0HL43EK83IH1O"" started.
+2017-04-14 16:43:05.107 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/js/jsmodules/ScrollPositionModule.js?v=iZ5RzaVm8uozLlF1_545KjsP6eigu8rH8pV54cogdwc  
+2017-04-14 16:43:05.108 -04:00 [Debug] Connection id ""0HL43EK83IH1P"" started.
+2017-04-14 16:43:05.108 -04:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-04-14 16:43:05.108 -04:00 [Information] The file "/js/jsmodules/ScrollPositionModule.js" was not modified
+2017-04-14 16:43:05.108 -04:00 [Debug] Handled. Status code: 304 File: "/js/jsmodules/ScrollPositionModule.js"
+2017-04-14 16:43:05.108 -04:00 [Debug] Connection id ""0HL43EK83IH1N"" completed keep alive response.
+2017-04-14 16:43:05.108 -04:00 [Information] Request finished in 1.0807ms 304 application/javascript
+2017-04-14 16:43:05.109 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/js/serverModal.Controller.js  
+2017-04-14 16:43:05.110 -04:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-04-14 16:43:05.110 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/js/site.min.js?v=NpMUj71zExRQni6K27BChnEFiXr3zPwMp_IYP45LeJE  
+2017-04-14 16:43:05.111 -04:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-04-14 16:43:05.111 -04:00 [Information] Sending file. Request path: '"/js/serverModal.Controller.js"'. Physical path: '"c:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\js\serverModal.Controller.js"'
+2017-04-14 16:43:05.113 -04:00 [Information] The file "/js/site.min.js" was not modified
+2017-04-14 16:43:05.113 -04:00 [Debug] Handled. Status code: 304 File: "/js/site.min.js"
+2017-04-14 16:43:05.113 -04:00 [Debug] Connection id ""0HL43EK83IH1P"" completed keep alive response.
+2017-04-14 16:43:05.113 -04:00 [Information] Request finished in 2.6107ms 304 application/javascript
+2017-04-14 16:43:05.125 -04:00 [Debug] Connection id ""0HL43EK83IH1O"" completed keep alive response.
+2017-04-14 16:43:05.125 -04:00 [Information] Request finished in 16.1755ms 200 application/javascript
+2017-04-14 16:43:12.212 -04:00 [Debug] Connection id ""0HL43EK83IH1Q"" started.
+2017-04-14 16:43:12.217 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/favicon.ico  
+2017-04-14 16:43:12.218 -04:00 [Debug] Connection id ""0HL43EK83IH1R"" started.
+2017-04-14 16:43:12.220 -04:00 [Debug] The request path "/favicon.ico" does not match an existing file
+2017-04-14 16:43:12.220 -04:00 [Debug] Request successfully matched the route with name '"Default"' and template '"{Controller}/{Action}/{id?}"'.
+2017-04-14 16:43:12.221 -04:00 [Debug] No actions matched the current request
+2017-04-14 16:43:12.222 -04:00 [Debug] Request did not match any routes.
+2017-04-14 16:43:12.222 -04:00 [Debug] Connection id ""0HL43EK83IH1Q"" completed keep alive response.
+2017-04-14 16:43:12.223 -04:00 [Information] Request finished in 5.8033ms 404 
+2017-04-14 16:43:17.906 -04:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/SaveSelectedServer application/x-www-form-urlencoded; charset=UTF-8 51
+2017-04-14 16:43:17.906 -04:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-04-14 16:43:17.906 -04:00 [Debug] "POST" requests are not supported
+2017-04-14 16:43:17.906 -04:00 [Debug] Request successfully matched the route with name '"TableDataVM"' and template '"SaveSelectedServer"'.
+2017-04-14 16:43:17.907 -04:00 [Debug] Executing action "NOC_PL_WebApplication.Controllers.TableDataVMsController.SaveSelectedServer (NOC-PL-WebApplication)"
+2017-04-14 16:43:17.908 -04:00 [Information] Authorization was successful for user: "admin".
+2017-04-14 16:43:17.916 -04:00 [Information] Executing action method "NOC_PL_WebApplication.Controllers.TableDataVMsController.SaveSelectedServer (NOC-PL-WebApplication)" with arguments (["46", "primaryColumn", "10"]) - ModelState is Valid
+2017-04-14 16:43:20.624 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-14 16:43:20.626 -04:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[PrimaryProductServerId], [p].[ProductGroup], [p].[ProductName], [p].[SecondaryProductServerId], [p].[TableDataVMId], [p].[TableNumber]
+FROM [Products] AS [p]
+2017-04-14 16:43:20.628 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-14 16:43:20.628 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-14 16:43:20.630 -04:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[ServerGroup], [s].[ServerName], [s].[TableDataVMId]
+FROM [Servers] AS [s]
+2017-04-14 16:43:20.632 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-14 16:43:20.634 -04:00 [Debug] Compiling query model: 
+'(from Product p in DbSet<Product>
+where p.Id == __productId_0
+select p)
+.Single()'
+2017-04-14 16:43:20.635 -04:00 [Debug] Optimized query model: 
+'(from Product p in DbSet<Product>
+where p.Id == __productId_0
+select p)
+.Single()'
+2017-04-14 16:43:20.639 -04:00 [Debug] TRACKED: True
+(QueryContext queryContext) => IAsyncEnumerable<Product> _ToSequence(
+    task: Task<Product> _Single(
+        source: IAsyncEnumerable<Product> _ShapedQuery(
+            queryContext: queryContext, 
+            shaperCommandContext: SelectExpression: 
+                SELECT TOP(2) [p].[Id], [p].[PrimaryProductServerId], [p].[ProductGroup], [p].[ProductName], [p].[SecondaryProductServerId], [p].[TableDataVMId], [p].[TableNumber]
+                FROM [Products] AS [p]
+                WHERE [p].[Id] = @__productId_0
+            , 
+            shaper: BufferedEntityShaper<Product>
+        )
+        , 
+        cancellationToken: queryContext.CancellationToken
+    )
+)
+
+2017-04-14 16:43:20.643 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-14 16:43:20.647 -04:00 [Information] Executed DbCommand (2ms) [Parameters=[@__productId_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [p].[Id], [p].[PrimaryProductServerId], [p].[ProductGroup], [p].[ProductName], [p].[SecondaryProductServerId], [p].[TableDataVMId], [p].[TableNumber]
+FROM [Products] AS [p]
+WHERE [p].[Id] = @__productId_0
+2017-04-14 16:43:20.647 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-14 16:43:20.693 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-14 16:43:20.699 -04:00 [Debug] Beginning transaction with isolation level 'Unspecified'.
+2017-04-14 16:43:20.791 -04:00 [Information] Executed DbCommand (28ms) [Parameters=[@p1='?', @p0='?'], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Products] SET [PrimaryProductServerId] = @p0
+WHERE [Id] = @p1;
+SELECT @@ROWCOUNT;
+2017-04-14 16:43:20.798 -04:00 [Debug] Committing transaction.
+2017-04-14 16:43:20.801 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-14 16:43:20.807 -04:00 [Debug] Executed action method "NOC_PL_WebApplication.Controllers.TableDataVMsController.SaveSelectedServer (NOC-PL-WebApplication)", returned result "Microsoft.AspNetCore.Mvc.OkResult".
+2017-04-14 16:43:20.810 -04:00 [Information] Executing HttpStatusCodeResult, setting HTTP status code 200
+2017-04-14 16:43:20.810 -04:00 [Information] Executed action "NOC_PL_WebApplication.Controllers.TableDataVMsController.SaveSelectedServer (NOC-PL-WebApplication)" in 2903.7294ms
+2017-04-14 16:43:20.811 -04:00 [Debug] Connection id ""0HL43EK83IH1O"" completed keep alive response.
+2017-04-14 16:43:20.811 -04:00 [Information] Request finished in 2905.514ms 200 
+2017-04-14 16:43:20.858 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/  
+2017-04-14 16:43:20.859 -04:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-04-14 16:43:20.859 -04:00 [Debug] The request path "/" does not match a supported file type
+2017-04-14 16:43:20.859 -04:00 [Debug] Request successfully matched the route with name '"Default"' and template '"{Controller}/{Action}/{id?}"'.
+2017-04-14 16:43:20.859 -04:00 [Debug] Executing action "NOC_PL_WebApplication.Controllers.TableDataVMsController.TablesPage1 (NOC-PL-WebApplication)"
+2017-04-14 16:43:20.859 -04:00 [Information] Executing action method "NOC_PL_WebApplication.Controllers.TableDataVMsController.TablesPage1 (NOC-PL-WebApplication)" with arguments (null) - ModelState is Valid
+2017-04-14 16:43:21.976 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-14 16:43:21.978 -04:00 [Information] Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[PrimaryProductServerId], [p].[ProductGroup], [p].[ProductName], [p].[SecondaryProductServerId], [p].[TableDataVMId], [p].[TableNumber]
+FROM [Products] AS [p]
+2017-04-14 16:43:21.980 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-14 16:43:21.980 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-14 16:43:21.982 -04:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[ServerGroup], [s].[ServerName], [s].[TableDataVMId]
+FROM [Servers] AS [s]
+2017-04-14 16:43:21.984 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-14 16:43:21.984 -04:00 [Debug] Database queries successful
+2017-04-14 16:43:21.984 -04:00 [Debug] Executed action method "NOC_PL_WebApplication.Controllers.TableDataVMsController.TablesPage1 (NOC-PL-WebApplication)", returned result "Microsoft.AspNetCore.Mvc.ViewResult".
+2017-04-14 16:43:21.984 -04:00 [Debug] View lookup cache hit for view '"TablesPage1"' in controller '"TableDataVMs"'.
+2017-04-14 16:43:21.984 -04:00 [Debug] The view '"TablesPage1"' was found.
+2017-04-14 16:43:21.985 -04:00 [Information] Executing ViewResult, running view at path "/Views/TableDataVMs/TablesPage1.cshtml".
+2017-04-14 16:43:21.987 -04:00 [Debug] View lookup cache hit for view '"_Layout"' in controller '"TableDataVMs"'.
+2017-04-14 16:43:21.988 -04:00 [Debug] Executing view component "NOCPLWebApplication.Views.ViewComponents.LoginLogoutViewComponent" with arguments ([]).
+2017-04-14 16:43:21.988 -04:00 [Debug] Executed view component "NOCPLWebApplication.Views.ViewComponents.LoginLogoutViewComponent" in 0.0096ms and returned "Microsoft.AspNetCore.Mvc.ViewComponents.ViewViewComponentResult"
+2017-04-14 16:43:21.988 -04:00 [Debug] View lookup cache hit for view '"Components/LoginLogout/Default"' in controller '"TableDataVMs"'.
+2017-04-14 16:43:21.989 -04:00 [Debug] An antiforgery cookie token was reused.
+2017-04-14 16:43:21.992 -04:00 [Information] Executed action "NOC_PL_WebApplication.Controllers.TableDataVMsController.TablesPage1 (NOC-PL-WebApplication)" in 1129.7628ms
+2017-04-14 16:43:21.993 -04:00 [Debug] Connection id ""0HL43EK83IH1O"" completed keep alive response.
+2017-04-14 16:43:21.993 -04:00 [Information] Request finished in 1134.8324ms 200 text/html; charset=utf-8
+2017-04-14 16:43:22.029 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css  
+2017-04-14 16:43:22.030 -04:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-04-14 16:43:22.030 -04:00 [Information] The file "/lib/bootstrap/dist/css/bootstrap.css" was not modified
+2017-04-14 16:43:22.030 -04:00 [Debug] Handled. Status code: 304 File: "/lib/bootstrap/dist/css/bootstrap.css"
+2017-04-14 16:43:22.030 -04:00 [Debug] Connection id ""0HL43EK83IH1M"" completed keep alive response.
+2017-04-14 16:43:22.030 -04:00 [Information] Request finished in 1.2272ms 304 text/css
+2017-04-14 16:43:22.042 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/font-awesome/css/font-awesome.css  
+2017-04-14 16:43:22.042 -04:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-04-14 16:43:22.042 -04:00 [Information] The file "/lib/font-awesome/css/font-awesome.css" was not modified
+2017-04-14 16:43:22.042 -04:00 [Debug] Handled. Status code: 304 File: "/lib/font-awesome/css/font-awesome.css"
+2017-04-14 16:43:22.042 -04:00 [Debug] Connection id ""0HL43EK83IH1N"" completed keep alive response.
+2017-04-14 16:43:22.043 -04:00 [Information] Request finished in 1.0683ms 304 text/css
+2017-04-14 16:43:22.047 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/css/site.css?v=nrPtuqixDnqnLwSrcojNA7Y0zvaH-JgkmW59rjwShaE  
+2017-04-14 16:43:22.047 -04:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-04-14 16:43:22.048 -04:00 [Information] The file "/css/site.css" was not modified
+2017-04-14 16:43:22.048 -04:00 [Debug] Handled. Status code: 304 File: "/css/site.css"
+2017-04-14 16:43:22.048 -04:00 [Debug] Connection id ""0HL43EK83IH1P"" completed keep alive response.
+2017-04-14 16:43:22.048 -04:00 [Information] Request finished in 1.0288ms 304 text/css
+2017-04-14 16:43:22.055 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.min.js  
+2017-04-14 16:43:22.055 -04:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-04-14 16:43:22.056 -04:00 [Information] The file "/lib/jquery/dist/jquery.min.js" was not modified
+2017-04-14 16:43:22.056 -04:00 [Debug] Handled. Status code: 304 File: "/lib/jquery/dist/jquery.min.js"
+2017-04-14 16:43:22.056 -04:00 [Debug] Connection id ""0HL43EK83IH1O"" completed keep alive response.
+2017-04-14 16:43:22.056 -04:00 [Information] Request finished in 1.1464ms 304 application/javascript
+2017-04-14 16:43:22.059 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0  
+2017-04-14 16:43:22.060 -04:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-04-14 16:43:22.061 -04:00 [Information] The file "/lib/font-awesome/fonts/fontawesome-webfont.woff2" was not modified
+2017-04-14 16:43:22.061 -04:00 [Debug] Handled. Status code: 304 File: "/lib/font-awesome/fonts/fontawesome-webfont.woff2"
+2017-04-14 16:43:22.061 -04:00 [Debug] Connection id ""0HL43EK83IH1M"" completed keep alive response.
+2017-04-14 16:43:22.061 -04:00 [Information] Request finished in 2.3572ms 304 application/font-woff2
+2017-04-14 16:43:22.122 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.min.js  
+2017-04-14 16:43:22.122 -04:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-04-14 16:43:22.123 -04:00 [Information] The file "/lib/bootstrap/dist/js/bootstrap.min.js" was not modified
+2017-04-14 16:43:22.123 -04:00 [Debug] Handled. Status code: 304 File: "/lib/bootstrap/dist/js/bootstrap.min.js"
+2017-04-14 16:43:22.123 -04:00 [Debug] Connection id ""0HL43EK83IH1N"" completed keep alive response.
+2017-04-14 16:43:22.123 -04:00 [Information] Request finished in 1.727ms 304 application/javascript
+2017-04-14 16:43:22.139 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/angular2/angular.min.js  
+2017-04-14 16:43:22.140 -04:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-04-14 16:43:22.140 -04:00 [Information] The file "/lib/angular2/angular.min.js" was not modified
+2017-04-14 16:43:22.140 -04:00 [Debug] Handled. Status code: 304 File: "/lib/angular2/angular.min.js"
+2017-04-14 16:43:22.140 -04:00 [Debug] Connection id ""0HL43EK83IH1P"" completed keep alive response.
+2017-04-14 16:43:22.140 -04:00 [Information] Request finished in 1.2101ms 304 application/javascript
+2017-04-14 16:43:22.157 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/js/site.min.js?v=NpMUj71zExRQni6K27BChnEFiXr3zPwMp_IYP45LeJE  
+2017-04-14 16:43:22.157 -04:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-04-14 16:43:22.157 -04:00 [Information] The file "/js/site.min.js" was not modified
+2017-04-14 16:43:22.157 -04:00 [Debug] Handled. Status code: 304 File: "/js/site.min.js"
+2017-04-14 16:43:22.157 -04:00 [Debug] Connection id ""0HL43EK83IH1O"" completed keep alive response.
+2017-04-14 16:43:22.158 -04:00 [Information] Request finished in 1.0257ms 304 application/javascript
+2017-04-14 16:43:22.161 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/js/jsmodules/ScrollPositionModule.js?v=iZ5RzaVm8uozLlF1_545KjsP6eigu8rH8pV54cogdwc  
+2017-04-14 16:43:22.162 -04:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-04-14 16:43:22.162 -04:00 [Information] The file "/js/jsmodules/ScrollPositionModule.js" was not modified
+2017-04-14 16:43:22.162 -04:00 [Debug] Handled. Status code: 304 File: "/js/jsmodules/ScrollPositionModule.js"
+2017-04-14 16:43:22.163 -04:00 [Debug] Connection id ""0HL43EK83IH1M"" completed keep alive response.
+2017-04-14 16:43:22.163 -04:00 [Information] Request finished in 2.0337ms 304 application/javascript
+2017-04-14 16:43:22.166 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/css/serverModal.styles.css  
+2017-04-14 16:43:22.166 -04:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-04-14 16:43:22.167 -04:00 [Information] The file "/css/serverModal.styles.css" was not modified
+2017-04-14 16:43:22.167 -04:00 [Debug] Handled. Status code: 304 File: "/css/serverModal.styles.css"
+2017-04-14 16:43:22.167 -04:00 [Debug] Connection id ""0HL43EK83IH1N"" completed keep alive response.
+2017-04-14 16:43:22.167 -04:00 [Information] Request finished in 1.9927ms 304 text/css
+2017-04-14 16:43:22.174 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/js/serverModal.Controller.js  
+2017-04-14 16:43:22.175 -04:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-04-14 16:43:22.176 -04:00 [Information] The file "/js/serverModal.Controller.js" was not modified
+2017-04-14 16:43:22.176 -04:00 [Debug] Handled. Status code: 304 File: "/js/serverModal.Controller.js"
+2017-04-14 16:43:22.177 -04:00 [Debug] Connection id ""0HL43EK83IH1P"" completed keep alive response.
+2017-04-14 16:43:22.177 -04:00 [Information] Request finished in 2.564ms 304 application/javascript
+2017-04-14 16:43:22.192 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/favicon.ico  
+2017-04-14 16:43:22.193 -04:00 [Debug] The request path "/favicon.ico" does not match an existing file
+2017-04-14 16:43:22.193 -04:00 [Debug] Request successfully matched the route with name '"Default"' and template '"{Controller}/{Action}/{id?}"'.
+2017-04-14 16:43:22.193 -04:00 [Debug] No actions matched the current request
+2017-04-14 16:43:22.193 -04:00 [Debug] Request did not match any routes.
+2017-04-14 16:43:22.194 -04:00 [Debug] Connection id ""0HL43EK83IH1Q"" completed keep alive response.
+2017-04-14 16:43:22.194 -04:00 [Information] Request finished in 2.2695ms 404 
+2017-04-14 16:43:25.858 -04:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/SaveSelectedServer application/x-www-form-urlencoded; charset=UTF-8 50
+2017-04-14 16:43:25.859 -04:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-04-14 16:43:25.859 -04:00 [Debug] "POST" requests are not supported
+2017-04-14 16:43:25.859 -04:00 [Debug] Request successfully matched the route with name '"TableDataVM"' and template '"SaveSelectedServer"'.
+2017-04-14 16:43:25.859 -04:00 [Debug] Executing action "NOC_PL_WebApplication.Controllers.TableDataVMsController.SaveSelectedServer (NOC-PL-WebApplication)"
+2017-04-14 16:43:25.859 -04:00 [Information] Authorization was successful for user: "admin".
+2017-04-14 16:43:25.866 -04:00 [Information] Executing action method "NOC_PL_WebApplication.Controllers.TableDataVMsController.SaveSelectedServer (NOC-PL-WebApplication)" with arguments (["47", "primaryColumn", "5"]) - ModelState is Valid
+2017-04-14 16:43:27.817 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-14 16:43:27.817 -04:00 [Information] Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[PrimaryProductServerId], [p].[ProductGroup], [p].[ProductName], [p].[SecondaryProductServerId], [p].[TableDataVMId], [p].[TableNumber]
+FROM [Products] AS [p]
+2017-04-14 16:43:27.822 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-14 16:43:27.822 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-14 16:43:27.824 -04:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[ServerGroup], [s].[ServerName], [s].[TableDataVMId]
+FROM [Servers] AS [s]
+2017-04-14 16:43:27.825 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-14 16:43:27.830 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-14 16:43:27.831 -04:00 [Information] Executed DbCommand (1ms) [Parameters=[@__productId_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [p].[Id], [p].[PrimaryProductServerId], [p].[ProductGroup], [p].[ProductName], [p].[SecondaryProductServerId], [p].[TableDataVMId], [p].[TableNumber]
+FROM [Products] AS [p]
+WHERE [p].[Id] = @__productId_0
+2017-04-14 16:43:27.831 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-14 16:43:27.833 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-14 16:43:27.834 -04:00 [Debug] Beginning transaction with isolation level 'Unspecified'.
+2017-04-14 16:43:27.835 -04:00 [Information] Executed DbCommand (0ms) [Parameters=[@p1='?', @p0='?'], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Products] SET [PrimaryProductServerId] = @p0
+WHERE [Id] = @p1;
+SELECT @@ROWCOUNT;
+2017-04-14 16:43:27.835 -04:00 [Debug] Committing transaction.
+2017-04-14 16:43:27.836 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-14 16:43:27.836 -04:00 [Debug] Executed action method "NOC_PL_WebApplication.Controllers.TableDataVMsController.SaveSelectedServer (NOC-PL-WebApplication)", returned result "Microsoft.AspNetCore.Mvc.OkResult".
+2017-04-14 16:43:27.836 -04:00 [Information] Executing HttpStatusCodeResult, setting HTTP status code 200
+2017-04-14 16:43:27.837 -04:00 [Information] Executed action "NOC_PL_WebApplication.Controllers.TableDataVMsController.SaveSelectedServer (NOC-PL-WebApplication)" in 1976.9614ms
+2017-04-14 16:43:27.837 -04:00 [Debug] Connection id ""0HL43EK83IH1P"" completed keep alive response.
+2017-04-14 16:43:27.837 -04:00 [Information] Request finished in 1978.389ms 200 
+2017-04-14 16:43:27.888 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/  
+2017-04-14 16:43:27.888 -04:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-04-14 16:43:27.888 -04:00 [Debug] The request path "/" does not match a supported file type
+2017-04-14 16:43:27.889 -04:00 [Debug] Request successfully matched the route with name '"Default"' and template '"{Controller}/{Action}/{id?}"'.
+2017-04-14 16:43:27.889 -04:00 [Debug] Executing action "NOC_PL_WebApplication.Controllers.TableDataVMsController.TablesPage1 (NOC-PL-WebApplication)"
+2017-04-14 16:43:27.889 -04:00 [Information] Executing action method "NOC_PL_WebApplication.Controllers.TableDataVMsController.TablesPage1 (NOC-PL-WebApplication)" with arguments (null) - ModelState is Valid
+2017-04-14 16:43:28.768 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-14 16:43:28.770 -04:00 [Information] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[PrimaryProductServerId], [p].[ProductGroup], [p].[ProductName], [p].[SecondaryProductServerId], [p].[TableDataVMId], [p].[TableNumber]
+FROM [Products] AS [p]
+2017-04-14 16:43:28.772 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-14 16:43:28.772 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-14 16:43:28.773 -04:00 [Information] Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[ServerGroup], [s].[ServerName], [s].[TableDataVMId]
+FROM [Servers] AS [s]
+2017-04-14 16:43:28.774 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-14 16:43:28.775 -04:00 [Debug] Database queries successful
+2017-04-14 16:43:28.775 -04:00 [Debug] Executed action method "NOC_PL_WebApplication.Controllers.TableDataVMsController.TablesPage1 (NOC-PL-WebApplication)", returned result "Microsoft.AspNetCore.Mvc.ViewResult".
+2017-04-14 16:43:28.775 -04:00 [Debug] View lookup cache hit for view '"TablesPage1"' in controller '"TableDataVMs"'.
+2017-04-14 16:43:28.775 -04:00 [Debug] The view '"TablesPage1"' was found.
+2017-04-14 16:43:28.775 -04:00 [Information] Executing ViewResult, running view at path "/Views/TableDataVMs/TablesPage1.cshtml".
+2017-04-14 16:43:28.778 -04:00 [Debug] View lookup cache hit for view '"_Layout"' in controller '"TableDataVMs"'.
+2017-04-14 16:43:28.778 -04:00 [Debug] Executing view component "NOCPLWebApplication.Views.ViewComponents.LoginLogoutViewComponent" with arguments ([]).
+2017-04-14 16:43:28.779 -04:00 [Debug] Executed view component "NOCPLWebApplication.Views.ViewComponents.LoginLogoutViewComponent" in 0.0177ms and returned "Microsoft.AspNetCore.Mvc.ViewComponents.ViewViewComponentResult"
+2017-04-14 16:43:28.779 -04:00 [Debug] View lookup cache hit for view '"Components/LoginLogout/Default"' in controller '"TableDataVMs"'.
+2017-04-14 16:43:28.779 -04:00 [Debug] An antiforgery cookie token was reused.
+2017-04-14 16:43:28.780 -04:00 [Information] Executed action "NOC_PL_WebApplication.Controllers.TableDataVMsController.TablesPage1 (NOC-PL-WebApplication)" in 891.2808ms
+2017-04-14 16:43:28.780 -04:00 [Debug] Connection id ""0HL43EK83IH1P"" completed keep alive response.
+2017-04-14 16:43:28.780 -04:00 [Information] Request finished in 892.8041ms 200 text/html; charset=utf-8
+2017-04-14 16:43:28.815 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css  
+2017-04-14 16:43:28.815 -04:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-04-14 16:43:28.816 -04:00 [Information] The file "/lib/bootstrap/dist/css/bootstrap.css" was not modified
+2017-04-14 16:43:28.816 -04:00 [Debug] Handled. Status code: 304 File: "/lib/bootstrap/dist/css/bootstrap.css"
+2017-04-14 16:43:28.816 -04:00 [Debug] Connection id ""0HL43EK83IH1O"" completed keep alive response.
+2017-04-14 16:43:28.816 -04:00 [Information] Request finished in 1.1619ms 304 text/css
+2017-04-14 16:43:28.827 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/font-awesome/css/font-awesome.css  
+2017-04-14 16:43:28.827 -04:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-04-14 16:43:28.827 -04:00 [Information] The file "/lib/font-awesome/css/font-awesome.css" was not modified
+2017-04-14 16:43:28.827 -04:00 [Debug] Handled. Status code: 304 File: "/lib/font-awesome/css/font-awesome.css"
+2017-04-14 16:43:28.828 -04:00 [Debug] Connection id ""0HL43EK83IH1M"" completed keep alive response.
+2017-04-14 16:43:28.828 -04:00 [Information] Request finished in 1.0332ms 304 text/css
+2017-04-14 16:43:28.832 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/css/site.css?v=nrPtuqixDnqnLwSrcojNA7Y0zvaH-JgkmW59rjwShaE  
+2017-04-14 16:43:28.833 -04:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-04-14 16:43:28.833 -04:00 [Information] The file "/css/site.css" was not modified
+2017-04-14 16:43:28.833 -04:00 [Debug] Handled. Status code: 304 File: "/css/site.css"
+2017-04-14 16:43:28.833 -04:00 [Debug] Connection id ""0HL43EK83IH1N"" completed keep alive response.
+2017-04-14 16:43:28.833 -04:00 [Information] Request finished in 0.9937ms 304 text/css
+2017-04-14 16:43:28.840 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.min.js  
+2017-04-14 16:43:28.841 -04:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-04-14 16:43:28.841 -04:00 [Information] The file "/lib/jquery/dist/jquery.min.js" was not modified
+2017-04-14 16:43:28.841 -04:00 [Debug] Handled. Status code: 304 File: "/lib/jquery/dist/jquery.min.js"
+2017-04-14 16:43:28.841 -04:00 [Debug] Connection id ""0HL43EK83IH1P"" completed keep alive response.
+2017-04-14 16:43:28.841 -04:00 [Information] Request finished in 1.2192ms 304 application/javascript
+2017-04-14 16:43:28.843 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0  
+2017-04-14 16:43:28.844 -04:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-04-14 16:43:28.844 -04:00 [Information] The file "/lib/font-awesome/fonts/fontawesome-webfont.woff2" was not modified
+2017-04-14 16:43:28.844 -04:00 [Debug] Handled. Status code: 304 File: "/lib/font-awesome/fonts/fontawesome-webfont.woff2"
+2017-04-14 16:43:28.844 -04:00 [Debug] Connection id ""0HL43EK83IH1O"" completed keep alive response.
+2017-04-14 16:43:28.845 -04:00 [Information] Request finished in 2.0235ms 304 application/font-woff2
+2017-04-14 16:43:28.897 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.min.js  
+2017-04-14 16:43:28.898 -04:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-04-14 16:43:28.898 -04:00 [Information] The file "/lib/bootstrap/dist/js/bootstrap.min.js" was not modified
+2017-04-14 16:43:28.898 -04:00 [Debug] Handled. Status code: 304 File: "/lib/bootstrap/dist/js/bootstrap.min.js"
+2017-04-14 16:43:28.898 -04:00 [Debug] Connection id ""0HL43EK83IH1M"" completed keep alive response.
+2017-04-14 16:43:28.898 -04:00 [Information] Request finished in 1.2039ms 304 application/javascript
+2017-04-14 16:43:28.916 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/angular2/angular.min.js  
+2017-04-14 16:43:28.917 -04:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-04-14 16:43:28.917 -04:00 [Information] The file "/lib/angular2/angular.min.js" was not modified
+2017-04-14 16:43:28.917 -04:00 [Debug] Handled. Status code: 304 File: "/lib/angular2/angular.min.js"
+2017-04-14 16:43:28.917 -04:00 [Debug] Connection id ""0HL43EK83IH1N"" completed keep alive response.
+2017-04-14 16:43:28.917 -04:00 [Information] Request finished in 1.1274ms 304 application/javascript
+2017-04-14 16:43:28.937 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/js/site.min.js?v=NpMUj71zExRQni6K27BChnEFiXr3zPwMp_IYP45LeJE  
+2017-04-14 16:43:28.938 -04:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-04-14 16:43:28.938 -04:00 [Information] The file "/js/site.min.js" was not modified
+2017-04-14 16:43:28.938 -04:00 [Debug] Handled. Status code: 304 File: "/js/site.min.js"
+2017-04-14 16:43:28.938 -04:00 [Debug] Connection id ""0HL43EK83IH1P"" completed keep alive response.
+2017-04-14 16:43:28.939 -04:00 [Information] Request finished in 1.8645ms 304 application/javascript
+2017-04-14 16:43:28.942 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/js/jsmodules/ScrollPositionModule.js?v=iZ5RzaVm8uozLlF1_545KjsP6eigu8rH8pV54cogdwc  
+2017-04-14 16:43:28.943 -04:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-04-14 16:43:28.943 -04:00 [Information] The file "/js/jsmodules/ScrollPositionModule.js" was not modified
+2017-04-14 16:43:28.944 -04:00 [Debug] Handled. Status code: 304 File: "/js/jsmodules/ScrollPositionModule.js"
+2017-04-14 16:43:28.944 -04:00 [Debug] Connection id ""0HL43EK83IH1O"" completed keep alive response.
+2017-04-14 16:43:28.944 -04:00 [Information] Request finished in 1.7569ms 304 application/javascript
+2017-04-14 16:43:28.946 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/css/serverModal.styles.css  
+2017-04-14 16:43:28.947 -04:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-04-14 16:43:28.947 -04:00 [Information] The file "/css/serverModal.styles.css" was not modified
+2017-04-14 16:43:28.947 -04:00 [Debug] Handled. Status code: 304 File: "/css/serverModal.styles.css"
+2017-04-14 16:43:28.947 -04:00 [Debug] Connection id ""0HL43EK83IH1M"" completed keep alive response.
+2017-04-14 16:43:28.947 -04:00 [Information] Request finished in 1.1168ms 304 text/css
+2017-04-14 16:43:28.949 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/js/serverModal.Controller.js  
+2017-04-14 16:43:28.950 -04:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-04-14 16:43:28.950 -04:00 [Information] The file "/js/serverModal.Controller.js" was not modified
+2017-04-14 16:43:28.950 -04:00 [Debug] Handled. Status code: 304 File: "/js/serverModal.Controller.js"
+2017-04-14 16:43:28.950 -04:00 [Debug] Connection id ""0HL43EK83IH1N"" completed keep alive response.
+2017-04-14 16:43:28.950 -04:00 [Information] Request finished in 1.0335ms 304 application/javascript
+2017-04-14 16:43:28.973 -04:00 [Debug] Connection id ""0HL43EK83IH1R"" received FIN.
+2017-04-14 16:43:28.974 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/favicon.ico  
+2017-04-14 16:43:28.975 -04:00 [Debug] Connection id ""0HL43EK83IH1R"" disconnecting.
+2017-04-14 16:43:28.975 -04:00 [Debug] The request path "/favicon.ico" does not match an existing file
+2017-04-14 16:43:28.975 -04:00 [Debug] Request successfully matched the route with name '"Default"' and template '"{Controller}/{Action}/{id?}"'.
+2017-04-14 16:43:28.975 -04:00 [Debug] Connection id ""0HL43EK83IH1R"" sending FIN.
+2017-04-14 16:43:28.975 -04:00 [Debug] No actions matched the current request
+2017-04-14 16:43:28.975 -04:00 [Debug] Request did not match any routes.
+2017-04-14 16:43:28.975 -04:00 [Debug] Connection id ""0HL43EK83IH1R"" sent FIN with status "0".
+2017-04-14 16:43:28.975 -04:00 [Debug] Connection id ""0HL43EK83IH1Q"" completed keep alive response.
+2017-04-14 16:43:28.975 -04:00 [Debug] Connection id ""0HL43EK83IH1R"" stopped.
+2017-04-14 16:43:28.975 -04:00 [Information] Request finished in 1.2254ms 404 

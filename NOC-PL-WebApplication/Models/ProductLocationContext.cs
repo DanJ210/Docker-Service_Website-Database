@@ -10,8 +10,8 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 namespace NOCPLWebApplication.Models {
     public class ProductLocationContext : IdentityDbContext<NocUser> {
         public ProductLocationContext(DbContextOptions options) : base(options) {
-
-            //Database.Migrate();
+            // Turn off auto migration when done
+            Database.Migrate();
             //Database.EnsureCreated();
         }
         public DbSet<Product> Products { get; set; }

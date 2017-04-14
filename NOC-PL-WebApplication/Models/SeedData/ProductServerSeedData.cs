@@ -25,7 +25,6 @@ namespace NOCPLWebApplication.Models.SeedData {
                 var user = new NocUser() {
                     UserName = "admin"
                 };
-
                 await _userManager.CreateAsync(user, "P@ssw0rd!");
             }
 
