@@ -74,11 +74,7 @@ namespace NOC_PL_WebApplication {
 
             app.UseMvc(config => {
 
-                //config.MapRoute(
-                //    name: "Login",
-                //    template: "{Controller}/{Action}",
-                //    defaults: new { controller = "Account", action = "Login" }
-                //    );
+                
                 config.MapRoute(
                     name: "TableDataVM",
                     template: "{Controller}/{Action}/{id?}/{serverId?}"
@@ -88,7 +84,11 @@ namespace NOC_PL_WebApplication {
                     template: "{Controller}/{Action}/{id?}",
                     defaults: new { controller = "TableDataVMs", action = "Index" }
                     );
-                
+                config.MapRoute(
+                    name: "Login",
+                    template: "{Controller}/{Action}",
+                    defaults: new { controller = "Account", action = "Login" }
+                    );
                 config.MapRoute(
                     name: "Home/Error",
                     template: "Home/Error"

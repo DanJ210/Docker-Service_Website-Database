@@ -1,5 +1,4 @@
 ﻿; (function ($) {
-    var productName;
     var productId;
     var serverColumn;
     var serverGroup;
@@ -7,7 +6,6 @@
     /**
          * @desc Sets up logic for modal window. Creates jquery method to listen
          *       for a change on the server select list in the modal window.
-         * @param  {string} productName
          * @param  {int} productId
          * @param  {string} serverColumn
          * @param  {string} serverGroup
@@ -16,7 +14,6 @@
     $(document).ready(function () { 
         
         $('[serverColumn]').click(function () {
-            productName = $(this).attr('productName');
             serverColumn = $(this).attr('serverColumn');
             serverGroup = $(this).attr('serverGroup'); // Used in future iteration for color grouping of servers
             productId = $(this).attr('productId');
@@ -51,9 +48,13 @@
                 location.reload();
             },
             error: function (status) {
-                alert(status.statusText + ", only Admin can change.");
+                if (status.status === '401') {
+                    alert("Data can only be changed by admin");
+                }
+                else {
+                    alert(status.statusText);
+                }
                 $('#serverModal').modal('hide');
-                
             }
         });
         //ajaxRequest.send();
