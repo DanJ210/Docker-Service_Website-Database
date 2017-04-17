@@ -25,9 +25,12 @@
 <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="navbar-header">
-                <a class="navbar-brand">ECN - NOC Site</a>
+                <a class="navbar-brand">
+                    </a>
+                <img class="navbar-brand" src="~/assets/img/onsolve-sm.png" alt="ONSOLVE Logo" />
+                @*<img class="navbar-brand" src="~/assets/img/onsolve-lg.png" />*@
             </div>
-            <ul class="nav navbar-nav">
+            <ul id="navbarMenu" class="nav navbar-nav">
                 @*<li><a asp-area="" asp-controller="App" asp-action="Index">News</a></li>*@
                 <li><a asp-area="" asp-controller="TableDataVMs" asp-action="TablesPage1">Tables P1</a></li>
                 <li><a asp-area="" asp-controller="TableDataVMs" asp-action="TablesPage2">Tables P2</a></li>

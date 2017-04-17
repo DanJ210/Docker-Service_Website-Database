@@ -3,13 +3,35 @@ body {
     padding-top: 70px;
 }
 
-/*Needed to keep the section from off screen*/
-#loginComponent {
-    padding-right: 25px;
-    color: white;
-    font-size: larger;
-    text-align: center;
+/* Nav Bar */
+.navbar {
+    background-color: #407CCA;
 }
+    .navbar a { /* For Login Link at top right corner*/
+        color: #111820;
+    }
+    #navbarMenu a:link {
+        color: #111820;
+    }
+    #navbarMenu a:visited {
+        color: #111820;
+    }
+    #navbarMenu a:hover {
+        color: white;
+    }
+    /* Nav Bar Login Component */
+    #loginComponent {
+        padding-right: 25px;
+        color: white;
+        font-size: larger;
+        text-align: center;
+    }
+
+/* Login Screen Label */
 #loginLabel {
     text-align: center;
+}
+#loginLabel.label {
+    color: red;
+    background-color: green;
 }

@@ -7,6 +7,11 @@
     <ApplicationInsightsAnnotationResourceId>/subscriptions/68e56254-cb3d-4ad3-a866-02063958df30/resourcegroups/Default-ApplicationInsights-EastUS/providers/microsoft.insights/components/NOC-PL-WebApplication</ApplicationInsightsAnnotationResourceId>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Content Include="wwwroot\assets\img\onsolve-lg.png" />
+    <Content Include="wwwroot\assets\img\onsolve-sm.png" />
+  </ItemGroup>
+
   <!--Below was commented out to get bitbucket pipeline builds to work, not sure what affect this will have in the future.-->
   <!--<ItemGroup>
     <Content Include="wwwroot\css\serverModal.styles.css" />
