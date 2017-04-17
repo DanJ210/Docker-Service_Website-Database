@@ -87,7 +87,7 @@ namespace NOC_PL_WebApplication {
                 config.MapRoute(
                     name: "Default",
                     template: "{Controller}/{Action}/{id?}",
-                    defaults: new { controller = "TableDataVMs", action = "TablesView" }
+                    defaults: new { controller = "TableDataVMs", action = "TablesPage1" }
                     );
                 //config.MapRoute(
                 //    name: "Login",
