@@ -1,6 +1,7 @@
 ﻿/* Settings for the top navbar overlapping the body content */
 body {
     padding-top: 70px;
+    color: #111820;
 }
 
 /* Nav Bar */
@@ -31,7 +32,16 @@ body {
 #loginLabel {
     text-align: center;
 }
-#loginLabel.label {
-    color: red;
-    background-color: green;
+#loginLabel span {
+    color: #111820;
+    background-color: #40B4E5;
+}
+
+/* Table Cell Colors */
+.productSelected {
+    background-color: #40B4E5;
+}
+
+.btn {
+    background-color: #FFC627;
 }

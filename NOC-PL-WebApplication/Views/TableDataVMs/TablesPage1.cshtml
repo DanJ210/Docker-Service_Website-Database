@@ -26,7 +26,7 @@
                     <tbody>
                         @foreach (var item in Model.TableProducts.Where(product => product.TableNumber == 1)) {
                             <tr>
-                                <td id="@item.Id" class="">@item.ProductName</td>
+                                <td id="@item.Id" class="productSelected">@item.ProductName</td>
                                 <td class="" productId="@item.Id" productName="@item.ProductName" serverColumn="primaryColumn" 
                                     serverGroup="@(item.PrimaryProductServer != null ? item.PrimaryProductServer.ServerGroup : "Empty")">
                                     <i class="fa fa-server"></i>
@@ -111,7 +111,11 @@
     </div>
 </div>
 
-<div class="modal fade" id="serverModal" role="dialog" >
+
+<div>
+    @await Component.InvokeAsync("ModalWindow")
+</div>
+@*<div class="modal fade" id="serverModal" role="dialog" >
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -130,4 +134,4 @@
             </div>
         </div>
     </div>
-</div>
+</div>*@
