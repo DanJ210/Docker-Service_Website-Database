@@ -13,6 +13,8 @@ using NOCPLWebApplication.Models.SeedData;
 using Microsoft.Extensions.Configuration;
 using Serilog;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Serilog.Core;
+using Serilog.Events;
 
 namespace NOC_PL_WebApplication {
     public class Startup {
@@ -20,6 +22,9 @@ namespace NOC_PL_WebApplication {
         // This method gets called by the runtime. Use this method to add services to the container.
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public Startup(IHostingEnvironment env) {
+            var levelSwitch = new LoggingLevelSwitch();
+            levelSwitch.MinimumLevel = LogEventLevel.Debug;
+
             var builder = new ConfigurationBuilder()
                 .SetBasePath(env.ContentRootPath)
                 .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
@@ -28,7 +33,7 @@ namespace NOC_PL_WebApplication {
             Configuration = builder.Build();
 
             Log.Logger = new LoggerConfiguration()
-            .MinimumLevel.Debug()
+            .MinimumLevel.ControlledBy(levelSwitch)
             .Enrich.FromLogContext()
             .WriteTo.LiterateConsole()
             .WriteTo.RollingFile("logs\\myapp-{Date}.txt")
@@ -61,10 +66,12 @@ namespace NOC_PL_WebApplication {
             if (env.IsDevelopment()) {
                 app.UseDeveloperExceptionPage();
                 //loggerFactory.AddDebug(LogLevel.Information)
-                loggerFactory.AddSerilog();
+                
             } else {
+                app.UseExceptionHandler("/TableDataVMs/Error");
                 //loggerFactory.AddDebug(LogLevel.Error);
             }
+            loggerFactory.AddSerilog();
 
             app.UseIdentity();
             // Ensures that any logs are written to file before app completely stops.
@@ -96,7 +103,8 @@ namespace NOC_PL_WebApplication {
                 //    );
                 //config.MapRoute(
                 //    name: "Error",
-                //    template: "Home/Error"
+                //    template: "TableDataVMs/Error",
+                //    defaults: new { controller = "TableDataVMs", action = "Error" }
                 //    );
             });
 

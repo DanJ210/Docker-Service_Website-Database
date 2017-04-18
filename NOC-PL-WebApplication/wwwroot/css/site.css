@@ -12,14 +12,15 @@ body {
         color: #111820;
     }
     #navbarMenu a:link {
+        font-size: smaller;
         color: #111820;
     }
     #navbarMenu a:visited {
         color: #111820;
     }
-    #navbarMenu a:hover {
+    /*#navbarMenu a:hover {
         color: white;
-    }
+    }*/
     /* Nav Bar Login Component */
     #loginComponent {
         padding-right: 25px;
@@ -44,4 +45,9 @@ body {
 
 .btn {
     background-color: #FFC627;
+}
+
+/* Error Page */
+#errorPage {
+    text-align: center;
 }
