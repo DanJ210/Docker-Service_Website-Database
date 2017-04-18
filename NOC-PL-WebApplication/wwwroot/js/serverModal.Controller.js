@@ -34,9 +34,11 @@ debugger;
          * @desc POSt
          * @param {int} serverId
          * @param {Controller} TableDataVMs
-         * @param {ACtion} SaveSelectedServer
+         * @param {Action} SaveSelectedServer
          */
         var serverId = $('#ServerSelectList').val();
+        //var selectedProductIds = $('#ProductSelectList').val();
+        //alert(selectedProductIds);
         var ajaxRequest = $.ajax({
             type: 'POST',
             url: 'SaveSelectedServer',

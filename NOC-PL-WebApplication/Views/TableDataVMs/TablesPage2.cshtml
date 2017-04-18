@@ -129,7 +129,11 @@
     </div>
 </div>
 
-<div class="modal fade" id="serverModal" role="dialog">
+<div>
+    @await Component.InvokeAsync("ModalWindow")
+</div>
+
+@*<div class="modal fade" id="serverModal" role="dialog">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -141,12 +145,12 @@
                         @Html.DropDownList("ServerSelectList",
                                     ViewBag.serverList as SelectList, "Select Server",
                                     new { onchange = "$.fn.serverListChangeFunction()" })
-                </li>
-            </ul>
-        </div>
-        <div class="modal-footer">
-            <button id="cancelButton" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                    </li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button id="cancelButton" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+            </div>
         </div>
     </div>
-</div>
-</div>
+</div>*@

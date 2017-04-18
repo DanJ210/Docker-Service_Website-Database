@@ -34,8 +34,11 @@ namespace NOC_PL_WebApplication.Controllers {
             try {
                 tableDataVM.TableProducts = await _context.Products.ToListAsync();
                 tableDataVM.TableServers = await _context.Servers.ToListAsync();
+
+                //MultiSelectList productList = new MultiSelectList(tableDataVM.TableProducts, "Id", "ProductName");
                 SelectList serverList = new SelectList(tableDataVM.TableServers, "Id", "ServerName");
 
+                //ViewBag.productList = productList;
                 ViewBag.serverList = serverList;
             }
             catch (Exception ex) {
@@ -57,8 +60,11 @@ namespace NOC_PL_WebApplication.Controllers {
             try {
                 tableDataVM.TableProducts = await _context.Products.ToListAsync();
                 tableDataVM.TableServers = await _context.Servers.ToListAsync();
+
+                //MultiSelectList productList = new MultiSelectList(tableDataVM.TableProducts, "Id", "ProductName");
                 SelectList serverList = new SelectList(tableDataVM.TableServers, "Id", "ServerName");
 
+                //ViewBag.productList = productList;
                 ViewBag.serverList = serverList;
             }
             catch (Exception ex) {
