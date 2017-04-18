@@ -11,13 +11,13 @@
             </div>
             <div class="modal-body">
                 <ul>
-                    @*<li>
+                    <li>
 
                     </li>
                     <li>
                         @Html.ListBox("ProductSelectList",
                             ViewBag.productList as MultiSelectList, "Select Products")
-                    </li>*@
+                    </li>
                     <li id="modalTd">
                         @Html.DropDownList("ServerSelectList",
                             ViewBag.serverList as SelectList, "Select Server",
