@@ -15,7 +15,7 @@ END
 2017-04-10 17:05:37.615 -04:00 [Information] Request starting HTTP/1.1 DEBUG http://localhost:12170/  0
 2017-04-10 17:05:37.615 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/  
 2017-04-10 17:05:37.768 -04:00 [Information] Request finished in 158.6824ms 200 
-2017-04-10 17:05:38.168 -04:00 [Information] Executing action method "NOC_PL_WebApplication.Controllers.TableDataVMsController.Index (NOC-PL-WebApplication)" with arguments (null) - ModelState is Valid
+2017-04-10 17:05:38.168 -04:00 [Information] Executing action method "NocWebUtilityApp.Controllers.TableDataVMsController.Index (NocWebUtilityApp)" with arguments (null) - ModelState is Valid
 2017-04-10 17:05:38.360 -04:00 [Information] Executed DbCommand (60ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
 SELECT [p].[Id], [p].[PrimaryProductServerId], [p].[ProductGroup], [p].[ProductName], [p].[SecondaryProductServerId], [p].[TableDataVMId], [p].[TableNumber]
 FROM [Products] AS [p]
@@ -25,10 +25,10 @@ FROM [Servers] AS [s]
 2017-04-10 17:05:38.541 -04:00 [Information] Database queries successful
 2017-04-10 17:05:40.594 -04:00 [Information] Executing ViewResult, running view at path "/Views/TableDataVMs/Index.cshtml".
 2017-04-10 17:05:40.668 -04:00 [Information] User profile is available. Using '"C:\Users\djackson\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
-2017-04-10 17:05:41.146 -04:00 [Information] Executed action "NOC_PL_WebApplication.Controllers.TableDataVMsController.Index (NOC-PL-WebApplication)" in 3078.2172ms
+2017-04-10 17:05:41.146 -04:00 [Information] Executed action "NocWebUtilityApp.Controllers.TableDataVMsController.Index (NocWebUtilityApp)" in 3078.2172ms
 2017-04-10 17:05:41.156 -04:00 [Information] Request finished in 3566.9891ms 200 text/html; charset=utf-8
 2017-04-10 17:05:47.884 -04:00 [Information] Request starting HTTP/1.1 POST http://localhost:12170/products/SaveSelectedServer application/x-www-form-urlencoded; charset=UTF-8 50
-2017-04-10 17:05:48.030 -04:00 [Information] Executing action method "NOC_PL_WebApplication.Controllers.ProductsController.SaveSelectedServer (NOC-PL-WebApplication)" with arguments (["53", "primaryColumn", "3"]) - ModelState is Valid
+2017-04-10 17:05:48.030 -04:00 [Information] Executing action method "NocWebUtilityApp.Controllers.ProductsController.SaveSelectedServer (NocWebUtilityApp)" with arguments (["53", "primaryColumn", "3"]) - ModelState is Valid
 2017-04-10 17:05:48.062 -04:00 [Information] Executed DbCommand (24ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
 SELECT [p].[Id], [p].[PrimaryProductServerId], [p].[ProductGroup], [p].[ProductName], [p].[SecondaryProductServerId], [p].[TableDataVMId], [p].[TableNumber]
 FROM [Products] AS [p]
@@ -46,52 +46,52 @@ WHERE [Id] = @p1;
 SELECT @@ROWCOUNT;
 2017-04-10 17:05:50.763 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/  
 2017-04-10 17:05:50.763 -04:00 [Information] Testing Logging Debug
-2017-04-10 17:05:51.555 -04:00 [Information] Executing action method "NOC_PL_WebApplication.Controllers.TableDataVMsController.Index (NOC-PL-WebApplication)" with arguments (null) - ModelState is Valid
+2017-04-10 17:05:51.555 -04:00 [Information] Executing action method "NocWebUtilityApp.Controllers.TableDataVMsController.Index (NocWebUtilityApp)" with arguments (null) - ModelState is Valid
 2017-04-10 17:05:51.578 -04:00 [Information] Executed DbCommand (21ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
 SELECT [p].[Id], [p].[PrimaryProductServerId], [p].[ProductGroup], [p].[ProductName], [p].[SecondaryProductServerId], [p].[TableDataVMId], [p].[TableNumber]
 FROM [Products] AS [p]
 2017-04-10 17:05:51.581 -04:00 [Information] Executing HttpStatusCodeResult, setting HTTP status code 200
-2017-04-10 17:05:51.583 -04:00 [Information] Executed action "NOC_PL_WebApplication.Controllers.ProductsController.SaveSelectedServer (NOC-PL-WebApplication)" in 3690.3094ms
+2017-04-10 17:05:51.583 -04:00 [Information] Executed action "NocWebUtilityApp.Controllers.ProductsController.SaveSelectedServer (NocWebUtilityApp)" in 3690.3094ms
 2017-04-10 17:05:51.584 -04:00 [Information] Request finished in 3700.1296ms 200 
 2017-04-10 17:05:51.613 -04:00 [Information] Executed DbCommand (33ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
 SELECT [s].[Id], [s].[ServerGroup], [s].[ServerName], [s].[TableDataVMId]
 FROM [Servers] AS [s]
 2017-04-10 17:05:51.614 -04:00 [Information] Database queries successful
 2017-04-10 17:05:51.626 -04:00 [Information] Executing ViewResult, running view at path "/Views/TableDataVMs/Index.cshtml".
-2017-04-10 17:05:51.630 -04:00 [Information] Executed action "NOC_PL_WebApplication.Controllers.TableDataVMsController.Index (NOC-PL-WebApplication)" in 112.3334ms
+2017-04-10 17:05:51.630 -04:00 [Information] Executed action "NocWebUtilityApp.Controllers.TableDataVMsController.Index (NocWebUtilityApp)" in 112.3334ms
 2017-04-10 17:05:51.630 -04:00 [Information] Request finished in 867.0495ms 200 text/html; charset=utf-8
 2017-04-10 17:05:51.666 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/bootstrap/dist/css/bootstrap.css  
-2017-04-10 17:05:51.678 -04:00 [Information] Sending file. Request path: '"/lib/bootstrap/dist/css/bootstrap.css"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\lib\bootstrap\dist\css\bootstrap.css"'
+2017-04-10 17:05:51.678 -04:00 [Information] Sending file. Request path: '"/lib/bootstrap/dist/css/bootstrap.css"'. Physical path: '"C:\Users\djackson\Source\Repos\NocWebUtilityApp\NocWebUtilityApp\wwwroot\lib\bootstrap\dist\css\bootstrap.css"'
 2017-04-10 17:05:51.693 -04:00 [Information] Request finished in 26.9621ms 200 text/css
 2017-04-10 17:05:51.708 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/font-awesome/css/font-awesome.css  
-2017-04-10 17:05:51.708 -04:00 [Information] Sending file. Request path: '"/lib/font-awesome/css/font-awesome.css"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\lib\font-awesome\css\font-awesome.css"'
+2017-04-10 17:05:51.708 -04:00 [Information] Sending file. Request path: '"/lib/font-awesome/css/font-awesome.css"'. Physical path: '"C:\Users\djackson\Source\Repos\NocWebUtilityApp\NocWebUtilityApp\wwwroot\lib\font-awesome\css\font-awesome.css"'
 2017-04-10 17:05:51.709 -04:00 [Information] Request finished in 1.2403ms 200 text/css
 2017-04-10 17:05:51.716 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/css/site.css?v=SzNlSGmfY0Gj7vZhCGVU9VTI0h4xWhyELf6nIN6Eghc  
-2017-04-10 17:05:51.717 -04:00 [Information] Sending file. Request path: '"/css/site.css"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\css\site.css"'
+2017-04-10 17:05:51.717 -04:00 [Information] Sending file. Request path: '"/css/site.css"'. Physical path: '"C:\Users\djackson\Source\Repos\NocWebUtilityApp\NocWebUtilityApp\wwwroot\css\site.css"'
 2017-04-10 17:05:51.717 -04:00 [Information] Request finished in 1.0344ms 200 text/css
 2017-04-10 17:05:51.726 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/jquery/dist/jquery.min.js  
-2017-04-10 17:05:51.727 -04:00 [Information] Sending file. Request path: '"/lib/jquery/dist/jquery.min.js"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\lib\jquery\dist\jquery.min.js"'
+2017-04-10 17:05:51.727 -04:00 [Information] Sending file. Request path: '"/lib/jquery/dist/jquery.min.js"'. Physical path: '"C:\Users\djackson\Source\Repos\NocWebUtilityApp\NocWebUtilityApp\wwwroot\lib\jquery\dist\jquery.min.js"'
 2017-04-10 17:05:51.730 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0  
-2017-04-10 17:05:51.730 -04:00 [Information] Sending file. Request path: '"/lib/font-awesome/fonts/fontawesome-webfont.woff2"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\lib\font-awesome\fonts\fontawesome-webfont.woff2"'
+2017-04-10 17:05:51.730 -04:00 [Information] Sending file. Request path: '"/lib/font-awesome/fonts/fontawesome-webfont.woff2"'. Physical path: '"C:\Users\djackson\Source\Repos\NocWebUtilityApp\NocWebUtilityApp\wwwroot\lib\font-awesome\fonts\fontawesome-webfont.woff2"'
 2017-04-10 17:05:51.736 -04:00 [Information] Request finished in 9.9312ms 200 application/javascript
 2017-04-10 17:05:51.759 -04:00 [Information] Request finished in 28.8643ms 200 application/font-woff2
 2017-04-10 17:05:51.820 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/bootstrap/dist/js/bootstrap.min.js  
-2017-04-10 17:05:51.821 -04:00 [Information] Sending file. Request path: '"/lib/bootstrap/dist/js/bootstrap.min.js"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js"'
+2017-04-10 17:05:51.821 -04:00 [Information] Sending file. Request path: '"/lib/bootstrap/dist/js/bootstrap.min.js"'. Physical path: '"C:\Users\djackson\Source\Repos\NocWebUtilityApp\NocWebUtilityApp\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js"'
 2017-04-10 17:05:51.822 -04:00 [Information] Request finished in 1.203ms 200 application/javascript
 2017-04-10 17:05:51.846 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/angular2/angular.min.js  
-2017-04-10 17:05:51.846 -04:00 [Information] Sending file. Request path: '"/lib/angular2/angular.min.js"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\lib\angular2\angular.min.js"'
+2017-04-10 17:05:51.846 -04:00 [Information] Sending file. Request path: '"/lib/angular2/angular.min.js"'. Physical path: '"C:\Users\djackson\Source\Repos\NocWebUtilityApp\NocWebUtilityApp\wwwroot\lib\angular2\angular.min.js"'
 2017-04-10 17:05:51.850 -04:00 [Information] Request finished in 4.055ms 200 application/javascript
 2017-04-10 17:05:51.884 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/js/site.min.js?v=dU_YKb8K79rGQvmq_jrZQajPKL5t4_ymf1FNDJEC_EY  
-2017-04-10 17:05:51.884 -04:00 [Information] Sending file. Request path: '"/js/site.min.js"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\js\site.min.js"'
+2017-04-10 17:05:51.884 -04:00 [Information] Sending file. Request path: '"/js/site.min.js"'. Physical path: '"C:\Users\djackson\Source\Repos\NocWebUtilityApp\NocWebUtilityApp\wwwroot\js\site.min.js"'
 2017-04-10 17:05:51.885 -04:00 [Information] Request finished in 1.1206ms 200 application/javascript
 2017-04-10 17:05:51.893 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/js/jsmodules/ScrollPositionModule.js?v=nMtTymepNGTcJY1TyjArpj4eAyNo6Vtrk2PhD6EGS8g  
-2017-04-10 17:05:51.894 -04:00 [Information] Sending file. Request path: '"/js/jsmodules/ScrollPositionModule.js"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\js\jsmodules\ScrollPositionModule.js"'
+2017-04-10 17:05:51.894 -04:00 [Information] Sending file. Request path: '"/js/jsmodules/ScrollPositionModule.js"'. Physical path: '"C:\Users\djackson\Source\Repos\NocWebUtilityApp\NocWebUtilityApp\wwwroot\js\jsmodules\ScrollPositionModule.js"'
 2017-04-10 17:05:51.895 -04:00 [Information] Request finished in 1.0963ms 200 application/javascript
 2017-04-10 17:05:51.902 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/css/serverModal.styles.css  
-2017-04-10 17:05:51.902 -04:00 [Information] Sending file. Request path: '"/css/serverModal.styles.css"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\css\serverModal.styles.css"'
+2017-04-10 17:05:51.902 -04:00 [Information] Sending file. Request path: '"/css/serverModal.styles.css"'. Physical path: '"C:\Users\djackson\Source\Repos\NocWebUtilityApp\NocWebUtilityApp\wwwroot\css\serverModal.styles.css"'
 2017-04-10 17:05:51.903 -04:00 [Information] Request finished in 1.0129ms 200 text/css
 2017-04-10 17:05:51.910 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/js/serverModal.Controller.js  
-2017-04-10 17:05:51.911 -04:00 [Information] Sending file. Request path: '"/js/serverModal.Controller.js"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\js\serverModal.Controller.js"'
+2017-04-10 17:05:51.911 -04:00 [Information] Sending file. Request path: '"/js/serverModal.Controller.js"'. Physical path: '"C:\Users\djackson\Source\Repos\NocWebUtilityApp\NocWebUtilityApp\wwwroot\js\serverModal.Controller.js"'
 2017-04-10 17:05:51.913 -04:00 [Information] Request finished in 2.8256ms 200 application/javascript
 2017-04-10 17:11:38.295 -04:00 [Information] Executed DbCommand (110ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
 SELECT CASE
@@ -110,7 +110,7 @@ END
 2017-04-10 17:11:38.819 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/  
 2017-04-10 17:11:38.819 -04:00 [Information] Request starting HTTP/1.1 DEBUG http://localhost:12170/  0
 2017-04-10 17:11:38.987 -04:00 [Information] Request finished in 179.8552ms 200 
-2017-04-10 17:11:39.339 -04:00 [Information] Executing action method "NOC_PL_WebApplication.Controllers.TableDataVMsController.Index (NOC-PL-WebApplication)" with arguments (null) - ModelState is Valid
+2017-04-10 17:11:39.339 -04:00 [Information] Executing action method "NocWebUtilityApp.Controllers.TableDataVMsController.Index (NocWebUtilityApp)" with arguments (null) - ModelState is Valid
 2017-04-10 17:11:39.494 -04:00 [Information] Executed DbCommand (45ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
 SELECT [p].[Id], [p].[PrimaryProductServerId], [p].[ProductGroup], [p].[ProductName], [p].[SecondaryProductServerId], [p].[TableDataVMId], [p].[TableNumber]
 FROM [Products] AS [p]
@@ -120,10 +120,10 @@ FROM [Servers] AS [s]
 2017-04-10 17:11:39.682 -04:00 [Information] Database queries successful
 2017-04-10 17:11:41.966 -04:00 [Information] Executing ViewResult, running view at path "/Views/TableDataVMs/Index.cshtml".
 2017-04-10 17:11:42.042 -04:00 [Information] User profile is available. Using '"C:\Users\djackson\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
-2017-04-10 17:11:42.526 -04:00 [Information] Executed action "NOC_PL_WebApplication.Controllers.TableDataVMsController.Index (NOC-PL-WebApplication)" in 3294.8103ms
+2017-04-10 17:11:42.526 -04:00 [Information] Executed action "NocWebUtilityApp.Controllers.TableDataVMsController.Index (NocWebUtilityApp)" in 3294.8103ms
 2017-04-10 17:11:42.538 -04:00 [Information] Request finished in 3750.9486ms 200 text/html; charset=utf-8
 2017-04-10 17:11:55.326 -04:00 [Information] Request starting HTTP/1.1 POST http://localhost:12170/products/SaveSelectedServer application/x-www-form-urlencoded; charset=UTF-8 52
-2017-04-10 17:11:55.473 -04:00 [Information] Executing action method "NOC_PL_WebApplication.Controllers.ProductsController.SaveSelectedServer (NOC-PL-WebApplication)" with arguments (["54", "secondaryColumn", "7"]) - ModelState is Valid
+2017-04-10 17:11:55.473 -04:00 [Information] Executing action method "NocWebUtilityApp.Controllers.ProductsController.SaveSelectedServer (NocWebUtilityApp)" with arguments (["54", "secondaryColumn", "7"]) - ModelState is Valid
 2017-04-10 17:11:55.505 -04:00 [Information] Executed DbCommand (25ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
 SELECT [p].[Id], [p].[PrimaryProductServerId], [p].[ProductGroup], [p].[ProductName], [p].[SecondaryProductServerId], [p].[TableDataVMId], [p].[TableNumber]
 FROM [Products] AS [p]
@@ -141,7 +141,7 @@ WHERE [Id] = @p1;
 SELECT @@ROWCOUNT;
 2017-04-10 17:11:58.505 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/  
 2017-04-10 17:11:58.505 -04:00 [Information] Testing Logging Debug
-2017-04-10 17:11:59.397 -04:00 [Information] Executing action method "NOC_PL_WebApplication.Controllers.TableDataVMsController.Index (NOC-PL-WebApplication)" with arguments (null) - ModelState is Valid
+2017-04-10 17:11:59.397 -04:00 [Information] Executing action method "NocWebUtilityApp.Controllers.TableDataVMsController.Index (NocWebUtilityApp)" with arguments (null) - ModelState is Valid
 2017-04-10 17:11:59.420 -04:00 [Information] Executed DbCommand (22ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
 SELECT [p].[Id], [p].[PrimaryProductServerId], [p].[ProductGroup], [p].[ProductName], [p].[SecondaryProductServerId], [p].[TableDataVMId], [p].[TableNumber]
 FROM [Products] AS [p]
@@ -149,47 +149,47 @@ FROM [Products] AS [p]
 2017-04-10 17:11:59.447 -04:00 [Information] Executed DbCommand (24ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
 SELECT [s].[Id], [s].[ServerGroup], [s].[ServerName], [s].[TableDataVMId]
 FROM [Servers] AS [s]
-2017-04-10 17:11:59.448 -04:00 [Information] Executed action "NOC_PL_WebApplication.Controllers.ProductsController.SaveSelectedServer (NOC-PL-WebApplication)" in 4113.4291ms
+2017-04-10 17:11:59.448 -04:00 [Information] Executed action "NocWebUtilityApp.Controllers.ProductsController.SaveSelectedServer (NocWebUtilityApp)" in 4113.4291ms
 2017-04-10 17:11:59.448 -04:00 [Information] Request finished in 4122.2982ms 200 
 2017-04-10 17:11:59.451 -04:00 [Information] Database queries successful
 2017-04-10 17:11:59.464 -04:00 [Information] Executing ViewResult, running view at path "/Views/TableDataVMs/Index.cshtml".
-2017-04-10 17:11:59.468 -04:00 [Information] Executed action "NOC_PL_WebApplication.Controllers.TableDataVMsController.Index (NOC-PL-WebApplication)" in 962.7716ms
+2017-04-10 17:11:59.468 -04:00 [Information] Executed action "NocWebUtilityApp.Controllers.TableDataVMsController.Index (NocWebUtilityApp)" in 962.7716ms
 2017-04-10 17:11:59.468 -04:00 [Information] Request finished in 972.2861ms 200 text/html; charset=utf-8
 2017-04-10 17:11:59.512 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/bootstrap/dist/css/bootstrap.css  
-2017-04-10 17:11:59.523 -04:00 [Information] Sending file. Request path: '"/lib/bootstrap/dist/css/bootstrap.css"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\lib\bootstrap\dist\css\bootstrap.css"'
+2017-04-10 17:11:59.523 -04:00 [Information] Sending file. Request path: '"/lib/bootstrap/dist/css/bootstrap.css"'. Physical path: '"C:\Users\djackson\Source\Repos\NocWebUtilityApp\NocWebUtilityApp\wwwroot\lib\bootstrap\dist\css\bootstrap.css"'
 2017-04-10 17:11:59.545 -04:00 [Information] Request finished in 33.8574ms 200 text/css
 2017-04-10 17:11:59.559 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/font-awesome/css/font-awesome.css  
-2017-04-10 17:11:59.560 -04:00 [Information] Sending file. Request path: '"/lib/font-awesome/css/font-awesome.css"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\lib\font-awesome\css\font-awesome.css"'
+2017-04-10 17:11:59.560 -04:00 [Information] Sending file. Request path: '"/lib/font-awesome/css/font-awesome.css"'. Physical path: '"C:\Users\djackson\Source\Repos\NocWebUtilityApp\NocWebUtilityApp\wwwroot\lib\font-awesome\css\font-awesome.css"'
 2017-04-10 17:11:59.561 -04:00 [Information] Request finished in 1.2534ms 200 text/css
 2017-04-10 17:11:59.569 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/css/site.css?v=SzNlSGmfY0Gj7vZhCGVU9VTI0h4xWhyELf6nIN6Eghc  
-2017-04-10 17:11:59.569 -04:00 [Information] Sending file. Request path: '"/css/site.css"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\css\site.css"'
+2017-04-10 17:11:59.569 -04:00 [Information] Sending file. Request path: '"/css/site.css"'. Physical path: '"C:\Users\djackson\Source\Repos\NocWebUtilityApp\NocWebUtilityApp\wwwroot\css\site.css"'
 2017-04-10 17:11:59.570 -04:00 [Information] Request finished in 1.2782ms 200 text/css
 2017-04-10 17:11:59.580 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/jquery/dist/jquery.min.js  
-2017-04-10 17:11:59.581 -04:00 [Information] Sending file. Request path: '"/lib/jquery/dist/jquery.min.js"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\lib\jquery\dist\jquery.min.js"'
+2017-04-10 17:11:59.581 -04:00 [Information] Sending file. Request path: '"/lib/jquery/dist/jquery.min.js"'. Physical path: '"C:\Users\djackson\Source\Repos\NocWebUtilityApp\NocWebUtilityApp\wwwroot\lib\jquery\dist\jquery.min.js"'
 2017-04-10 17:11:59.582 -04:00 [Information] Request finished in 1.4366ms 200 application/javascript
 2017-04-10 17:11:59.587 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0  
-2017-04-10 17:11:59.588 -04:00 [Information] Sending file. Request path: '"/lib/font-awesome/fonts/fontawesome-webfont.woff2"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\lib\font-awesome\fonts\fontawesome-webfont.woff2"'
+2017-04-10 17:11:59.588 -04:00 [Information] Sending file. Request path: '"/lib/font-awesome/fonts/fontawesome-webfont.woff2"'. Physical path: '"C:\Users\djackson\Source\Repos\NocWebUtilityApp\NocWebUtilityApp\wwwroot\lib\font-awesome\fonts\fontawesome-webfont.woff2"'
 2017-04-10 17:11:59.591 -04:00 [Information] Request finished in 3.3388ms 200 application/font-woff2
 2017-04-10 17:11:59.651 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/bootstrap/dist/js/bootstrap.min.js  
-2017-04-10 17:11:59.652 -04:00 [Information] Sending file. Request path: '"/lib/bootstrap/dist/js/bootstrap.min.js"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js"'
+2017-04-10 17:11:59.652 -04:00 [Information] Sending file. Request path: '"/lib/bootstrap/dist/js/bootstrap.min.js"'. Physical path: '"C:\Users\djackson\Source\Repos\NocWebUtilityApp\NocWebUtilityApp\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js"'
 2017-04-10 17:11:59.653 -04:00 [Information] Request finished in 1.1638ms 200 application/javascript
 2017-04-10 17:11:59.673 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/angular2/angular.min.js  
-2017-04-10 17:11:59.673 -04:00 [Information] Sending file. Request path: '"/lib/angular2/angular.min.js"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\lib\angular2\angular.min.js"'
+2017-04-10 17:11:59.673 -04:00 [Information] Sending file. Request path: '"/lib/angular2/angular.min.js"'. Physical path: '"C:\Users\djackson\Source\Repos\NocWebUtilityApp\NocWebUtilityApp\wwwroot\lib\angular2\angular.min.js"'
 2017-04-10 17:11:59.679 -04:00 [Information] Request finished in 6.3109ms 200 application/javascript
 2017-04-10 17:11:59.716 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/js/site.min.js?v=dU_YKb8K79rGQvmq_jrZQajPKL5t4_ymf1FNDJEC_EY  
-2017-04-10 17:11:59.717 -04:00 [Information] Sending file. Request path: '"/js/site.min.js"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\js\site.min.js"'
+2017-04-10 17:11:59.717 -04:00 [Information] Sending file. Request path: '"/js/site.min.js"'. Physical path: '"C:\Users\djackson\Source\Repos\NocWebUtilityApp\NocWebUtilityApp\wwwroot\js\site.min.js"'
 2017-04-10 17:11:59.718 -04:00 [Information] Request finished in 1.8238ms 200 application/javascript
 2017-04-10 17:11:59.726 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/js/jsmodules/ScrollPositionModule.js?v=nMtTymepNGTcJY1TyjArpj4eAyNo6Vtrk2PhD6EGS8g  
-2017-04-10 17:11:59.726 -04:00 [Information] Sending file. Request path: '"/js/jsmodules/ScrollPositionModule.js"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\js\jsmodules\ScrollPositionModule.js"'
+2017-04-10 17:11:59.726 -04:00 [Information] Sending file. Request path: '"/js/jsmodules/ScrollPositionModule.js"'. Physical path: '"C:\Users\djackson\Source\Repos\NocWebUtilityApp\NocWebUtilityApp\wwwroot\js\jsmodules\ScrollPositionModule.js"'
 2017-04-10 17:11:59.727 -04:00 [Information] Request finished in 1.0512ms 200 application/javascript
 2017-04-10 17:11:59.734 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/css/serverModal.styles.css  
-2017-04-10 17:11:59.734 -04:00 [Information] Sending file. Request path: '"/css/serverModal.styles.css"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\css\serverModal.styles.css"'
+2017-04-10 17:11:59.734 -04:00 [Information] Sending file. Request path: '"/css/serverModal.styles.css"'. Physical path: '"C:\Users\djackson\Source\Repos\NocWebUtilityApp\NocWebUtilityApp\wwwroot\css\serverModal.styles.css"'
 2017-04-10 17:11:59.735 -04:00 [Information] Request finished in 1.1439ms 200 text/css
 2017-04-10 17:11:59.740 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/js/serverModal.Controller.js  
-2017-04-10 17:11:59.740 -04:00 [Information] Sending file. Request path: '"/js/serverModal.Controller.js"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\js\serverModal.Controller.js"'
+2017-04-10 17:11:59.740 -04:00 [Information] Sending file. Request path: '"/js/serverModal.Controller.js"'. Physical path: '"C:\Users\djackson\Source\Repos\NocWebUtilityApp\NocWebUtilityApp\wwwroot\js\serverModal.Controller.js"'
 2017-04-10 17:11:59.741 -04:00 [Information] Request finished in 1.6484ms 200 application/javascript
 2017-04-10 17:12:04.382 -04:00 [Information] Request starting HTTP/1.1 POST http://localhost:12170/products/SaveSelectedServer application/x-www-form-urlencoded; charset=UTF-8 52
-2017-04-10 17:12:04.407 -04:00 [Information] Executing action method "NOC_PL_WebApplication.Controllers.ProductsController.SaveSelectedServer (NOC-PL-WebApplication)" with arguments (["16", "secondaryColumn", "6"]) - ModelState is Valid
+2017-04-10 17:12:04.407 -04:00 [Information] Executing action method "NocWebUtilityApp.Controllers.ProductsController.SaveSelectedServer (NocWebUtilityApp)" with arguments (["16", "secondaryColumn", "6"]) - ModelState is Valid
 2017-04-10 17:12:04.449 -04:00 [Information] Executed DbCommand (41ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
 SELECT [p].[Id], [p].[PrimaryProductServerId], [p].[ProductGroup], [p].[ProductName], [p].[SecondaryProductServerId], [p].[TableDataVMId], [p].[TableNumber]
 FROM [Products] AS [p]
@@ -208,8 +208,8 @@ SELECT @@ROWCOUNT;
 2017-04-10 17:12:06.604 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/  
 2017-04-10 17:12:06.604 -04:00 [Information] Testing Logging Debug
 2017-04-10 17:12:07.382 -04:00 [Information] Executing HttpStatusCodeResult, setting HTTP status code 200
-2017-04-10 17:12:07.396 -04:00 [Information] Executing action method "NOC_PL_WebApplication.Controllers.TableDataVMsController.Index (NOC-PL-WebApplication)" with arguments (null) - ModelState is Valid
-2017-04-10 17:12:07.397 -04:00 [Information] Executed action "NOC_PL_WebApplication.Controllers.ProductsController.SaveSelectedServer (NOC-PL-WebApplication)" in 3013.4043ms
+2017-04-10 17:12:07.396 -04:00 [Information] Executing action method "NocWebUtilityApp.Controllers.TableDataVMsController.Index (NocWebUtilityApp)" with arguments (null) - ModelState is Valid
+2017-04-10 17:12:07.397 -04:00 [Information] Executed action "NocWebUtilityApp.Controllers.ProductsController.SaveSelectedServer (NocWebUtilityApp)" in 3013.4043ms
 2017-04-10 17:12:07.397 -04:00 [Information] Request finished in 3015.0064ms 200 
 2017-04-10 17:12:07.432 -04:00 [Information] Executed DbCommand (34ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
 SELECT [p].[Id], [p].[PrimaryProductServerId], [p].[ProductGroup], [p].[ProductName], [p].[SecondaryProductServerId], [p].[TableDataVMId], [p].[TableNumber]
@@ -219,43 +219,43 @@ SELECT [s].[Id], [s].[ServerGroup], [s].[ServerName], [s].[TableDataVMId]
 FROM [Servers] AS [s]
 2017-04-10 17:12:07.474 -04:00 [Information] Database queries successful
 2017-04-10 17:12:07.474 -04:00 [Information] Executing ViewResult, running view at path "/Views/TableDataVMs/Index.cshtml".
-2017-04-10 17:12:07.476 -04:00 [Information] Executed action "NOC_PL_WebApplication.Controllers.TableDataVMsController.Index (NOC-PL-WebApplication)" in 871.7285ms
+2017-04-10 17:12:07.476 -04:00 [Information] Executed action "NocWebUtilityApp.Controllers.TableDataVMsController.Index (NocWebUtilityApp)" in 871.7285ms
 2017-04-10 17:12:07.476 -04:00 [Information] Request finished in 872.5602ms 200 text/html; charset=utf-8
 2017-04-10 17:12:07.511 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/bootstrap/dist/css/bootstrap.css  
-2017-04-10 17:12:07.512 -04:00 [Information] Sending file. Request path: '"/lib/bootstrap/dist/css/bootstrap.css"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\lib\bootstrap\dist\css\bootstrap.css"'
+2017-04-10 17:12:07.512 -04:00 [Information] Sending file. Request path: '"/lib/bootstrap/dist/css/bootstrap.css"'. Physical path: '"C:\Users\djackson\Source\Repos\NocWebUtilityApp\NocWebUtilityApp\wwwroot\lib\bootstrap\dist\css\bootstrap.css"'
 2017-04-10 17:12:07.514 -04:00 [Information] Request finished in 2.6931ms 200 text/css
 2017-04-10 17:12:07.536 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/font-awesome/css/font-awesome.css  
-2017-04-10 17:12:07.536 -04:00 [Information] Sending file. Request path: '"/lib/font-awesome/css/font-awesome.css"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\lib\font-awesome\css\font-awesome.css"'
+2017-04-10 17:12:07.536 -04:00 [Information] Sending file. Request path: '"/lib/font-awesome/css/font-awesome.css"'. Physical path: '"C:\Users\djackson\Source\Repos\NocWebUtilityApp\NocWebUtilityApp\wwwroot\lib\font-awesome\css\font-awesome.css"'
 2017-04-10 17:12:07.537 -04:00 [Information] Request finished in 1.0198ms 200 text/css
 2017-04-10 17:12:07.545 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/css/site.css?v=SzNlSGmfY0Gj7vZhCGVU9VTI0h4xWhyELf6nIN6Eghc  
-2017-04-10 17:12:07.545 -04:00 [Information] Sending file. Request path: '"/css/site.css"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\css\site.css"'
+2017-04-10 17:12:07.545 -04:00 [Information] Sending file. Request path: '"/css/site.css"'. Physical path: '"C:\Users\djackson\Source\Repos\NocWebUtilityApp\NocWebUtilityApp\wwwroot\css\site.css"'
 2017-04-10 17:12:07.546 -04:00 [Information] Request finished in 0.9965ms 200 text/css
 2017-04-10 17:12:07.557 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/jquery/dist/jquery.min.js  
-2017-04-10 17:12:07.557 -04:00 [Information] Sending file. Request path: '"/lib/jquery/dist/jquery.min.js"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\lib\jquery\dist\jquery.min.js"'
+2017-04-10 17:12:07.557 -04:00 [Information] Sending file. Request path: '"/lib/jquery/dist/jquery.min.js"'. Physical path: '"C:\Users\djackson\Source\Repos\NocWebUtilityApp\NocWebUtilityApp\wwwroot\lib\jquery\dist\jquery.min.js"'
 2017-04-10 17:12:07.558 -04:00 [Information] Request finished in 1.6017ms 200 application/javascript
 2017-04-10 17:12:07.559 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0  
-2017-04-10 17:12:07.566 -04:00 [Information] Sending file. Request path: '"/lib/font-awesome/fonts/fontawesome-webfont.woff2"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\lib\font-awesome\fonts\fontawesome-webfont.woff2"'
+2017-04-10 17:12:07.566 -04:00 [Information] Sending file. Request path: '"/lib/font-awesome/fonts/fontawesome-webfont.woff2"'. Physical path: '"C:\Users\djackson\Source\Repos\NocWebUtilityApp\NocWebUtilityApp\wwwroot\lib\font-awesome\fonts\fontawesome-webfont.woff2"'
 2017-04-10 17:12:07.581 -04:00 [Information] Request finished in 22.7045ms 200 application/font-woff2
 2017-04-10 17:12:07.637 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/bootstrap/dist/js/bootstrap.min.js  
-2017-04-10 17:12:07.638 -04:00 [Information] Sending file. Request path: '"/lib/bootstrap/dist/js/bootstrap.min.js"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js"'
+2017-04-10 17:12:07.638 -04:00 [Information] Sending file. Request path: '"/lib/bootstrap/dist/js/bootstrap.min.js"'. Physical path: '"C:\Users\djackson\Source\Repos\NocWebUtilityApp\NocWebUtilityApp\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js"'
 2017-04-10 17:12:07.638 -04:00 [Information] Request finished in 0.9996ms 200 application/javascript
 2017-04-10 17:12:07.659 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/angular2/angular.min.js  
-2017-04-10 17:12:07.659 -04:00 [Information] Sending file. Request path: '"/lib/angular2/angular.min.js"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\lib\angular2\angular.min.js"'
+2017-04-10 17:12:07.659 -04:00 [Information] Sending file. Request path: '"/lib/angular2/angular.min.js"'. Physical path: '"C:\Users\djackson\Source\Repos\NocWebUtilityApp\NocWebUtilityApp\wwwroot\lib\angular2\angular.min.js"'
 2017-04-10 17:12:07.663 -04:00 [Information] Request finished in 3.9767ms 200 application/javascript
 2017-04-10 17:12:07.697 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/js/site.min.js?v=dU_YKb8K79rGQvmq_jrZQajPKL5t4_ymf1FNDJEC_EY  
-2017-04-10 17:12:07.697 -04:00 [Information] Sending file. Request path: '"/js/site.min.js"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\js\site.min.js"'
+2017-04-10 17:12:07.697 -04:00 [Information] Sending file. Request path: '"/js/site.min.js"'. Physical path: '"C:\Users\djackson\Source\Repos\NocWebUtilityApp\NocWebUtilityApp\wwwroot\js\site.min.js"'
 2017-04-10 17:12:07.698 -04:00 [Information] Request finished in 1.0176ms 200 application/javascript
 2017-04-10 17:12:07.706 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/js/jsmodules/ScrollPositionModule.js?v=nMtTymepNGTcJY1TyjArpj4eAyNo6Vtrk2PhD6EGS8g  
-2017-04-10 17:12:07.706 -04:00 [Information] Sending file. Request path: '"/js/jsmodules/ScrollPositionModule.js"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\js\jsmodules\ScrollPositionModule.js"'
+2017-04-10 17:12:07.706 -04:00 [Information] Sending file. Request path: '"/js/jsmodules/ScrollPositionModule.js"'. Physical path: '"C:\Users\djackson\Source\Repos\NocWebUtilityApp\NocWebUtilityApp\wwwroot\js\jsmodules\ScrollPositionModule.js"'
 2017-04-10 17:12:07.707 -04:00 [Information] Request finished in 0.993ms 200 application/javascript
 2017-04-10 17:12:07.713 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/css/serverModal.styles.css  
-2017-04-10 17:12:07.714 -04:00 [Information] Sending file. Request path: '"/css/serverModal.styles.css"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\css\serverModal.styles.css"'
+2017-04-10 17:12:07.714 -04:00 [Information] Sending file. Request path: '"/css/serverModal.styles.css"'. Physical path: '"C:\Users\djackson\Source\Repos\NocWebUtilityApp\NocWebUtilityApp\wwwroot\css\serverModal.styles.css"'
 2017-04-10 17:12:07.714 -04:00 [Information] Request finished in 0.9694ms 200 text/css
 2017-04-10 17:12:07.719 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/js/serverModal.Controller.js  
-2017-04-10 17:12:07.719 -04:00 [Information] Sending file. Request path: '"/js/serverModal.Controller.js"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\js\serverModal.Controller.js"'
+2017-04-10 17:12:07.719 -04:00 [Information] Sending file. Request path: '"/js/serverModal.Controller.js"'. Physical path: '"C:\Users\djackson\Source\Repos\NocWebUtilityApp\NocWebUtilityApp\wwwroot\js\serverModal.Controller.js"'
 2017-04-10 17:12:07.720 -04:00 [Information] Request finished in 0.9815ms 200 application/javascript
 2017-04-10 17:12:25.143 -04:00 [Information] Request starting HTTP/1.1 POST http://localhost:12170/products/SaveSelectedServer application/x-www-form-urlencoded; charset=UTF-8 51
-2017-04-10 17:12:25.170 -04:00 [Information] Executing action method "NOC_PL_WebApplication.Controllers.ProductsController.SaveSelectedServer (NOC-PL-WebApplication)" with arguments (["8", "secondaryColumn", "5"]) - ModelState is Valid
+2017-04-10 17:12:25.170 -04:00 [Information] Executing action method "NocWebUtilityApp.Controllers.ProductsController.SaveSelectedServer (NocWebUtilityApp)" with arguments (["8", "secondaryColumn", "5"]) - ModelState is Valid
 2017-04-10 17:12:25.193 -04:00 [Information] Executed DbCommand (22ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
 SELECT [p].[Id], [p].[PrimaryProductServerId], [p].[ProductGroup], [p].[ProductName], [p].[SecondaryProductServerId], [p].[TableDataVMId], [p].[TableNumber]
 FROM [Products] AS [p]
@@ -274,10 +274,10 @@ SELECT @@ROWCOUNT;
 2017-04-10 17:16:31.205 -04:00 [Information] Testing Logging Debug
 2017-04-10 17:16:31.207 -04:00 [Error] Erro
 2017-04-10 17:16:33.242 -04:00 [Information] Executing HttpStatusCodeResult, setting HTTP status code 200
-2017-04-10 17:16:33.242 -04:00 [Information] Executed action "NOC_PL_WebApplication.Controllers.ProductsController.SaveSelectedServer (NOC-PL-WebApplication)" in 248095.6916ms
+2017-04-10 17:16:33.242 -04:00 [Information] Executed action "NocWebUtilityApp.Controllers.ProductsController.SaveSelectedServer (NocWebUtilityApp)" in 248095.6916ms
 2017-04-10 17:16:33.243 -04:00 [Information] Request finished in 248097.0047ms 0 
 2017-04-10 17:16:38.006 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/  
-2017-04-10 17:16:38.022 -04:00 [Information] Executing action method "NOC_PL_WebApplication.Controllers.TableDataVMsController.Index (NOC-PL-WebApplication)" with arguments (null) - ModelState is Valid
+2017-04-10 17:16:38.022 -04:00 [Information] Executing action method "NocWebUtilityApp.Controllers.TableDataVMsController.Index (NocWebUtilityApp)" with arguments (null) - ModelState is Valid
 2017-04-10 17:16:38.049 -04:00 [Information] Executed DbCommand (24ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
 SELECT [p].[Id], [p].[PrimaryProductServerId], [p].[ProductGroup], [p].[ProductName], [p].[SecondaryProductServerId], [p].[TableDataVMId], [p].[TableNumber]
 FROM [Products] AS [p]
@@ -286,7 +286,7 @@ SELECT [s].[Id], [s].[ServerGroup], [s].[ServerName], [s].[TableDataVMId]
 FROM [Servers] AS [s]
 2017-04-10 17:16:38.079 -04:00 [Information] Database queries successful
 2017-04-10 17:16:38.079 -04:00 [Information] Executing ViewResult, running view at path "/Views/TableDataVMs/Index.cshtml".
-2017-04-10 17:16:38.081 -04:00 [Information] Executed action "NOC_PL_WebApplication.Controllers.TableDataVMsController.Index (NOC-PL-WebApplication)" in 74.2115ms
+2017-04-10 17:16:38.081 -04:00 [Information] Executed action "NocWebUtilityApp.Controllers.TableDataVMsController.Index (NocWebUtilityApp)" in 74.2115ms
 2017-04-10 17:16:38.081 -04:00 [Information] Request finished in 74.925ms 200 text/html; charset=utf-8
 2017-04-10 17:16:38.114 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/bootstrap/dist/css/bootstrap.css  
 2017-04-10 17:16:38.119 -04:00 [Information] The file "/lib/bootstrap/dist/css/bootstrap.css" was not modified
@@ -322,7 +322,7 @@ FROM [Servers] AS [s]
 2017-04-10 17:16:38.285 -04:00 [Information] The file "/js/serverModal.Controller.js" was not modified
 2017-04-10 17:16:38.285 -04:00 [Information] Request finished in 0.5253ms 304 application/javascript
 2017-04-10 17:16:44.370 -04:00 [Information] Request starting HTTP/1.1 POST http://localhost:12170/products/SaveSelectedServer application/x-www-form-urlencoded; charset=UTF-8 50
-2017-04-10 17:16:44.415 -04:00 [Information] Executing action method "NOC_PL_WebApplication.Controllers.ProductsController.SaveSelectedServer (NOC-PL-WebApplication)" with arguments (["59", "primaryColumn", "2"]) - ModelState is Valid
+2017-04-10 17:16:44.415 -04:00 [Information] Executing action method "NocWebUtilityApp.Controllers.ProductsController.SaveSelectedServer (NocWebUtilityApp)" with arguments (["59", "primaryColumn", "2"]) - ModelState is Valid
 2017-04-10 17:16:44.458 -04:00 [Information] Executed DbCommand (42ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
 SELECT [p].[Id], [p].[PrimaryProductServerId], [p].[ProductGroup], [p].[ProductName], [p].[SecondaryProductServerId], [p].[TableDataVMId], [p].[TableNumber]
 FROM [Products] AS [p]
@@ -341,9 +341,9 @@ SELECT @@ROWCOUNT;
 2017-04-10 17:16:50.976 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/  
 2017-04-10 17:16:50.977 -04:00 [Information] Testing Logging Debug
 2017-04-10 17:16:50.977 -04:00 [Error] Erro
-2017-04-10 17:16:51.906 -04:00 [Information] Executing action method "NOC_PL_WebApplication.Controllers.TableDataVMsController.Index (NOC-PL-WebApplication)" with arguments (null) - ModelState is Valid
+2017-04-10 17:16:51.906 -04:00 [Information] Executing action method "NocWebUtilityApp.Controllers.TableDataVMsController.Index (NocWebUtilityApp)" with arguments (null) - ModelState is Valid
 2017-04-10 17:16:51.906 -04:00 [Information] Executing HttpStatusCodeResult, setting HTTP status code 200
-2017-04-10 17:16:51.906 -04:00 [Information] Executed action "NOC_PL_WebApplication.Controllers.ProductsController.SaveSelectedServer (NOC-PL-WebApplication)" in 7533.8831ms
+2017-04-10 17:16:51.906 -04:00 [Information] Executed action "NocWebUtilityApp.Controllers.ProductsController.SaveSelectedServer (NocWebUtilityApp)" in 7533.8831ms
 2017-04-10 17:16:51.906 -04:00 [Information] Request finished in 7535.966ms 200 
 2017-04-10 17:16:51.939 -04:00 [Information] Executed DbCommand (32ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
 SELECT [p].[Id], [p].[PrimaryProductServerId], [p].[ProductGroup], [p].[ProductName], [p].[SecondaryProductServerId], [p].[TableDataVMId], [p].[TableNumber]
@@ -353,43 +353,43 @@ SELECT [s].[Id], [s].[ServerGroup], [s].[ServerName], [s].[TableDataVMId]
 FROM [Servers] AS [s]
 2017-04-10 17:16:52.000 -04:00 [Information] Database queries successful
 2017-04-10 17:16:52.000 -04:00 [Information] Executing ViewResult, running view at path "/Views/TableDataVMs/Index.cshtml".
-2017-04-10 17:16:52.002 -04:00 [Information] Executed action "NOC_PL_WebApplication.Controllers.TableDataVMsController.Index (NOC-PL-WebApplication)" in 1024.7075ms
+2017-04-10 17:16:52.002 -04:00 [Information] Executed action "NocWebUtilityApp.Controllers.TableDataVMsController.Index (NocWebUtilityApp)" in 1024.7075ms
 2017-04-10 17:16:52.002 -04:00 [Information] Request finished in 1027.6498ms 200 text/html; charset=utf-8
 2017-04-10 17:16:52.036 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/bootstrap/dist/css/bootstrap.css  
-2017-04-10 17:16:52.037 -04:00 [Information] Sending file. Request path: '"/lib/bootstrap/dist/css/bootstrap.css"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\lib\bootstrap\dist\css\bootstrap.css"'
+2017-04-10 17:16:52.037 -04:00 [Information] Sending file. Request path: '"/lib/bootstrap/dist/css/bootstrap.css"'. Physical path: '"C:\Users\djackson\Source\Repos\NocWebUtilityApp\NocWebUtilityApp\wwwroot\lib\bootstrap\dist\css\bootstrap.css"'
 2017-04-10 17:16:52.049 -04:00 [Information] Request finished in 12.3746ms 200 text/css
 2017-04-10 17:16:52.062 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/font-awesome/css/font-awesome.css  
-2017-04-10 17:16:52.063 -04:00 [Information] Sending file. Request path: '"/lib/font-awesome/css/font-awesome.css"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\lib\font-awesome\css\font-awesome.css"'
+2017-04-10 17:16:52.063 -04:00 [Information] Sending file. Request path: '"/lib/font-awesome/css/font-awesome.css"'. Physical path: '"C:\Users\djackson\Source\Repos\NocWebUtilityApp\NocWebUtilityApp\wwwroot\lib\font-awesome\css\font-awesome.css"'
 2017-04-10 17:16:52.064 -04:00 [Information] Request finished in 1.082ms 200 text/css
 2017-04-10 17:16:52.071 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/css/site.css?v=SzNlSGmfY0Gj7vZhCGVU9VTI0h4xWhyELf6nIN6Eghc  
-2017-04-10 17:16:52.071 -04:00 [Information] Sending file. Request path: '"/css/site.css"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\css\site.css"'
+2017-04-10 17:16:52.071 -04:00 [Information] Sending file. Request path: '"/css/site.css"'. Physical path: '"C:\Users\djackson\Source\Repos\NocWebUtilityApp\NocWebUtilityApp\wwwroot\css\site.css"'
 2017-04-10 17:16:52.072 -04:00 [Information] Request finished in 1.5152ms 200 text/css
 2017-04-10 17:16:52.081 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/jquery/dist/jquery.min.js  
-2017-04-10 17:16:52.082 -04:00 [Information] Sending file. Request path: '"/lib/jquery/dist/jquery.min.js"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\lib\jquery\dist\jquery.min.js"'
+2017-04-10 17:16:52.082 -04:00 [Information] Sending file. Request path: '"/lib/jquery/dist/jquery.min.js"'. Physical path: '"C:\Users\djackson\Source\Repos\NocWebUtilityApp\NocWebUtilityApp\wwwroot\lib\jquery\dist\jquery.min.js"'
 2017-04-10 17:16:52.083 -04:00 [Information] Request finished in 1.5131ms 200 application/javascript
 2017-04-10 17:16:52.090 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0  
-2017-04-10 17:16:52.091 -04:00 [Information] Sending file. Request path: '"/lib/font-awesome/fonts/fontawesome-webfont.woff2"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\lib\font-awesome\fonts\fontawesome-webfont.woff2"'
+2017-04-10 17:16:52.091 -04:00 [Information] Sending file. Request path: '"/lib/font-awesome/fonts/fontawesome-webfont.woff2"'. Physical path: '"C:\Users\djackson\Source\Repos\NocWebUtilityApp\NocWebUtilityApp\wwwroot\lib\font-awesome\fonts\fontawesome-webfont.woff2"'
 2017-04-10 17:16:52.093 -04:00 [Information] Request finished in 2.2947ms 200 application/font-woff2
 2017-04-10 17:16:52.161 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/bootstrap/dist/js/bootstrap.min.js  
-2017-04-10 17:16:52.161 -04:00 [Information] Sending file. Request path: '"/lib/bootstrap/dist/js/bootstrap.min.js"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js"'
+2017-04-10 17:16:52.161 -04:00 [Information] Sending file. Request path: '"/lib/bootstrap/dist/js/bootstrap.min.js"'. Physical path: '"C:\Users\djackson\Source\Repos\NocWebUtilityApp\NocWebUtilityApp\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js"'
 2017-04-10 17:16:52.162 -04:00 [Information] Request finished in 1.1078ms 200 application/javascript
 2017-04-10 17:16:52.191 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/angular2/angular.min.js  
-2017-04-10 17:16:52.192 -04:00 [Information] Sending file. Request path: '"/lib/angular2/angular.min.js"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\lib\angular2\angular.min.js"'
+2017-04-10 17:16:52.192 -04:00 [Information] Sending file. Request path: '"/lib/angular2/angular.min.js"'. Physical path: '"C:\Users\djackson\Source\Repos\NocWebUtilityApp\NocWebUtilityApp\wwwroot\lib\angular2\angular.min.js"'
 2017-04-10 17:16:52.196 -04:00 [Information] Request finished in 4.451ms 200 application/javascript
 2017-04-10 17:16:52.234 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/js/site.min.js?v=dU_YKb8K79rGQvmq_jrZQajPKL5t4_ymf1FNDJEC_EY  
-2017-04-10 17:16:52.234 -04:00 [Information] Sending file. Request path: '"/js/site.min.js"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\js\site.min.js"'
+2017-04-10 17:16:52.234 -04:00 [Information] Sending file. Request path: '"/js/site.min.js"'. Physical path: '"C:\Users\djackson\Source\Repos\NocWebUtilityApp\NocWebUtilityApp\wwwroot\js\site.min.js"'
 2017-04-10 17:16:52.235 -04:00 [Information] Request finished in 1.0727ms 200 application/javascript
 2017-04-10 17:16:52.244 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/js/jsmodules/ScrollPositionModule.js?v=nMtTymepNGTcJY1TyjArpj4eAyNo6Vtrk2PhD6EGS8g  
-2017-04-10 17:16:52.245 -04:00 [Information] Sending file. Request path: '"/js/jsmodules/ScrollPositionModule.js"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\js\jsmodules\ScrollPositionModule.js"'
+2017-04-10 17:16:52.245 -04:00 [Information] Sending file. Request path: '"/js/jsmodules/ScrollPositionModule.js"'. Physical path: '"C:\Users\djackson\Source\Repos\NocWebUtilityApp\NocWebUtilityApp\wwwroot\js\jsmodules\ScrollPositionModule.js"'
 2017-04-10 17:16:52.245 -04:00 [Information] Request finished in 1.0437ms 200 application/javascript
 2017-04-10 17:16:52.252 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/css/serverModal.styles.css  
-2017-04-10 17:16:52.253 -04:00 [Information] Sending file. Request path: '"/css/serverModal.styles.css"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\css\serverModal.styles.css"'
+2017-04-10 17:16:52.253 -04:00 [Information] Sending file. Request path: '"/css/serverModal.styles.css"'. Physical path: '"C:\Users\djackson\Source\Repos\NocWebUtilityApp\NocWebUtilityApp\wwwroot\css\serverModal.styles.css"'
 2017-04-10 17:16:52.253 -04:00 [Information] Request finished in 1.0316ms 200 text/css
 2017-04-10 17:16:52.258 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/js/serverModal.Controller.js  
-2017-04-10 17:16:52.258 -04:00 [Information] Sending file. Request path: '"/js/serverModal.Controller.js"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\js\serverModal.Controller.js"'
+2017-04-10 17:16:52.258 -04:00 [Information] Sending file. Request path: '"/js/serverModal.Controller.js"'. Physical path: '"C:\Users\djackson\Source\Repos\NocWebUtilityApp\NocWebUtilityApp\wwwroot\js\serverModal.Controller.js"'
 2017-04-10 17:16:52.259 -04:00 [Information] Request finished in 1.3149ms 200 application/javascript
 2017-04-10 17:16:56.998 -04:00 [Information] Request starting HTTP/1.1 POST http://localhost:12170/products/SaveSelectedServer application/x-www-form-urlencoded; charset=UTF-8 49
-2017-04-10 17:16:57.037 -04:00 [Information] Executing action method "NOC_PL_WebApplication.Controllers.ProductsController.SaveSelectedServer (NOC-PL-WebApplication)" with arguments (["5", "primaryColumn", "4"]) - ModelState is Valid
+2017-04-10 17:16:57.037 -04:00 [Information] Executing action method "NocWebUtilityApp.Controllers.ProductsController.SaveSelectedServer (NocWebUtilityApp)" with arguments (["5", "primaryColumn", "4"]) - ModelState is Valid
 2017-04-10 17:16:57.077 -04:00 [Information] Executed DbCommand (38ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
 SELECT [p].[Id], [p].[PrimaryProductServerId], [p].[ProductGroup], [p].[ProductName], [p].[SecondaryProductServerId], [p].[TableDataVMId], [p].[TableNumber]
 FROM [Products] AS [p]
@@ -408,9 +408,9 @@ SELECT @@ROWCOUNT;
 2017-04-10 17:16:59.377 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/  
 2017-04-10 17:16:59.377 -04:00 [Information] Testing Logging Debug
 2017-04-10 17:16:59.377 -04:00 [Error] Erro
-2017-04-10 17:16:59.928 -04:00 [Information] Executing action method "NOC_PL_WebApplication.Controllers.TableDataVMsController.Index (NOC-PL-WebApplication)" with arguments (null) - ModelState is Valid
+2017-04-10 17:16:59.928 -04:00 [Information] Executing action method "NocWebUtilityApp.Controllers.TableDataVMsController.Index (NocWebUtilityApp)" with arguments (null) - ModelState is Valid
 2017-04-10 17:16:59.929 -04:00 [Information] Executing HttpStatusCodeResult, setting HTTP status code 200
-2017-04-10 17:16:59.929 -04:00 [Information] Executed action "NOC_PL_WebApplication.Controllers.ProductsController.SaveSelectedServer (NOC-PL-WebApplication)" in 2930.7066ms
+2017-04-10 17:16:59.929 -04:00 [Information] Executed action "NocWebUtilityApp.Controllers.ProductsController.SaveSelectedServer (NocWebUtilityApp)" in 2930.7066ms
 2017-04-10 17:16:59.959 -04:00 [Information] Request finished in 2960.6234ms 200 
 2017-04-10 17:16:59.987 -04:00 [Information] Executed DbCommand (56ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
 SELECT [p].[Id], [p].[PrimaryProductServerId], [p].[ProductGroup], [p].[ProductName], [p].[SecondaryProductServerId], [p].[TableDataVMId], [p].[TableNumber]
@@ -420,40 +420,40 @@ SELECT [s].[Id], [s].[ServerGroup], [s].[ServerName], [s].[TableDataVMId]
 FROM [Servers] AS [s]
 2017-04-10 17:17:00.035 -04:00 [Information] Database queries successful
 2017-04-10 17:17:00.035 -04:00 [Information] Executing ViewResult, running view at path "/Views/TableDataVMs/Index.cshtml".
-2017-04-10 17:17:00.037 -04:00 [Information] Executed action "NOC_PL_WebApplication.Controllers.TableDataVMsController.Index (NOC-PL-WebApplication)" in 659.6057ms
+2017-04-10 17:17:00.037 -04:00 [Information] Executed action "NocWebUtilityApp.Controllers.TableDataVMsController.Index (NocWebUtilityApp)" in 659.6057ms
 2017-04-10 17:17:00.037 -04:00 [Information] Request finished in 660.2741ms 200 text/html; charset=utf-8
 2017-04-10 17:17:00.073 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/bootstrap/dist/css/bootstrap.css  
-2017-04-10 17:17:00.073 -04:00 [Information] Sending file. Request path: '"/lib/bootstrap/dist/css/bootstrap.css"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\lib\bootstrap\dist\css\bootstrap.css"'
+2017-04-10 17:17:00.073 -04:00 [Information] Sending file. Request path: '"/lib/bootstrap/dist/css/bootstrap.css"'. Physical path: '"C:\Users\djackson\Source\Repos\NocWebUtilityApp\NocWebUtilityApp\wwwroot\lib\bootstrap\dist\css\bootstrap.css"'
 2017-04-10 17:17:00.074 -04:00 [Information] Request finished in 1.8085ms 200 text/css
 2017-04-10 17:17:00.092 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/font-awesome/css/font-awesome.css  
-2017-04-10 17:17:00.093 -04:00 [Information] Sending file. Request path: '"/lib/font-awesome/css/font-awesome.css"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\lib\font-awesome\css\font-awesome.css"'
+2017-04-10 17:17:00.093 -04:00 [Information] Sending file. Request path: '"/lib/font-awesome/css/font-awesome.css"'. Physical path: '"C:\Users\djackson\Source\Repos\NocWebUtilityApp\NocWebUtilityApp\wwwroot\lib\font-awesome\css\font-awesome.css"'
 2017-04-10 17:17:00.093 -04:00 [Information] Request finished in 1.0901ms 200 text/css
 2017-04-10 17:17:00.101 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/css/site.css?v=SzNlSGmfY0Gj7vZhCGVU9VTI0h4xWhyELf6nIN6Eghc  
-2017-04-10 17:17:00.101 -04:00 [Information] Sending file. Request path: '"/css/site.css"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\css\site.css"'
+2017-04-10 17:17:00.101 -04:00 [Information] Sending file. Request path: '"/css/site.css"'. Physical path: '"C:\Users\djackson\Source\Repos\NocWebUtilityApp\NocWebUtilityApp\wwwroot\css\site.css"'
 2017-04-10 17:17:00.102 -04:00 [Information] Request finished in 1.3737ms 200 text/css
 2017-04-10 17:17:00.112 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/jquery/dist/jquery.min.js  
-2017-04-10 17:17:00.113 -04:00 [Information] Sending file. Request path: '"/lib/jquery/dist/jquery.min.js"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\lib\jquery\dist\jquery.min.js"'
+2017-04-10 17:17:00.113 -04:00 [Information] Sending file. Request path: '"/lib/jquery/dist/jquery.min.js"'. Physical path: '"C:\Users\djackson\Source\Repos\NocWebUtilityApp\NocWebUtilityApp\wwwroot\lib\jquery\dist\jquery.min.js"'
 2017-04-10 17:17:00.114 -04:00 [Information] Request finished in 1.468ms 200 application/javascript
 2017-04-10 17:17:00.124 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0  
-2017-04-10 17:17:00.124 -04:00 [Information] Sending file. Request path: '"/lib/font-awesome/fonts/fontawesome-webfont.woff2"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\lib\font-awesome\fonts\fontawesome-webfont.woff2"'
+2017-04-10 17:17:00.124 -04:00 [Information] Sending file. Request path: '"/lib/font-awesome/fonts/fontawesome-webfont.woff2"'. Physical path: '"C:\Users\djackson\Source\Repos\NocWebUtilityApp\NocWebUtilityApp\wwwroot\lib\font-awesome\fonts\fontawesome-webfont.woff2"'
 2017-04-10 17:17:00.126 -04:00 [Information] Request finished in 1.8412ms 200 application/font-woff2
 2017-04-10 17:17:00.206 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/bootstrap/dist/js/bootstrap.min.js  
-2017-04-10 17:17:00.206 -04:00 [Information] Sending file. Request path: '"/lib/bootstrap/dist/js/bootstrap.min.js"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js"'
+2017-04-10 17:17:00.206 -04:00 [Information] Sending file. Request path: '"/lib/bootstrap/dist/js/bootstrap.min.js"'. Physical path: '"C:\Users\djackson\Source\Repos\NocWebUtilityApp\NocWebUtilityApp\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js"'
 2017-04-10 17:17:00.207 -04:00 [Information] Request finished in 1.1725ms 200 application/javascript
 2017-04-10 17:17:00.229 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/angular2/angular.min.js  
-2017-04-10 17:17:00.229 -04:00 [Information] Sending file. Request path: '"/lib/angular2/angular.min.js"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\lib\angular2\angular.min.js"'
+2017-04-10 17:17:00.229 -04:00 [Information] Sending file. Request path: '"/lib/angular2/angular.min.js"'. Physical path: '"C:\Users\djackson\Source\Repos\NocWebUtilityApp\NocWebUtilityApp\wwwroot\lib\angular2\angular.min.js"'
 2017-04-10 17:17:00.232 -04:00 [Information] Request finished in 3.8622ms 200 application/javascript
 2017-04-10 17:17:00.266 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/js/site.min.js?v=dU_YKb8K79rGQvmq_jrZQajPKL5t4_ymf1FNDJEC_EY  
-2017-04-10 17:17:00.267 -04:00 [Information] Sending file. Request path: '"/js/site.min.js"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\js\site.min.js"'
+2017-04-10 17:17:00.267 -04:00 [Information] Sending file. Request path: '"/js/site.min.js"'. Physical path: '"C:\Users\djackson\Source\Repos\NocWebUtilityApp\NocWebUtilityApp\wwwroot\js\site.min.js"'
 2017-04-10 17:17:00.268 -04:00 [Information] Request finished in 1.0969ms 200 application/javascript
 2017-04-10 17:17:00.275 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/js/jsmodules/ScrollPositionModule.js?v=nMtTymepNGTcJY1TyjArpj4eAyNo6Vtrk2PhD6EGS8g  
-2017-04-10 17:17:00.276 -04:00 [Information] Sending file. Request path: '"/js/jsmodules/ScrollPositionModule.js"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\js\jsmodules\ScrollPositionModule.js"'
+2017-04-10 17:17:00.276 -04:00 [Information] Sending file. Request path: '"/js/jsmodules/ScrollPositionModule.js"'. Physical path: '"C:\Users\djackson\Source\Repos\NocWebUtilityApp\NocWebUtilityApp\wwwroot\js\jsmodules\ScrollPositionModule.js"'
 2017-04-10 17:17:00.276 -04:00 [Information] Request finished in 1.1025ms 200 application/javascript
 2017-04-10 17:17:00.284 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/css/serverModal.styles.css  
-2017-04-10 17:17:00.284 -04:00 [Information] Sending file. Request path: '"/css/serverModal.styles.css"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\css\serverModal.styles.css"'
+2017-04-10 17:17:00.284 -04:00 [Information] Sending file. Request path: '"/css/serverModal.styles.css"'. Physical path: '"C:\Users\djackson\Source\Repos\NocWebUtilityApp\NocWebUtilityApp\wwwroot\css\serverModal.styles.css"'
 2017-04-10 17:17:00.285 -04:00 [Information] Request finished in 1.0241ms 200 text/css
 2017-04-10 17:17:00.290 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/js/serverModal.Controller.js  
-2017-04-10 17:17:00.290 -04:00 [Information] Sending file. Request path: '"/js/serverModal.Controller.js"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\js\serverModal.Controller.js"'
+2017-04-10 17:17:00.290 -04:00 [Information] Sending file. Request path: '"/js/serverModal.Controller.js"'. Physical path: '"C:\Users\djackson\Source\Repos\NocWebUtilityApp\NocWebUtilityApp\wwwroot\js\serverModal.Controller.js"'
 2017-04-10 17:17:00.291 -04:00 [Information] Request finished in 1.0969ms 200 application/javascript
 2017-04-10 18:53:23.552 -04:00 [Information] Executed DbCommand (70ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
 SELECT CASE
@@ -472,7 +472,7 @@ END
 2017-04-10 18:53:24.171 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/  
 2017-04-10 18:53:24.171 -04:00 [Information] Request starting HTTP/1.1 DEBUG http://localhost:12170/  0
 2017-04-10 18:53:24.393 -04:00 [Information] Request finished in 223.9399ms 200 
-2017-04-10 18:53:24.837 -04:00 [Information] Executing action method "NOC_PL_WebApplication.Controllers.TableDataVMsController.Index (NOC-PL-WebApplication)" with arguments (null) - ModelState is Valid
+2017-04-10 18:53:24.837 -04:00 [Information] Executing action method "NocWebUtilityApp.Controllers.TableDataVMsController.Index (NocWebUtilityApp)" with arguments (null) - ModelState is Valid
 2017-04-10 18:53:25.055 -04:00 [Information] Executed DbCommand (47ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
 SELECT [p].[Id], [p].[PrimaryProductServerId], [p].[ProductGroup], [p].[ProductName], [p].[SecondaryProductServerId], [p].[TableDataVMId], [p].[TableNumber]
 FROM [Products] AS [p]
@@ -482,7 +482,7 @@ FROM [Servers] AS [s]
 2017-04-10 18:53:25.315 -04:00 [Information] Database queries successful
 2017-04-10 18:53:29.305 -04:00 [Information] Executing ViewResult, running view at path "/Views/TableDataVMs/Index.cshtml".
 2017-04-10 18:53:29.445 -04:00 [Information] User profile is available. Using '"C:\Users\DanJ2\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
-2017-04-10 18:53:30.137 -04:00 [Information] Executed action "NOC_PL_WebApplication.Controllers.TableDataVMsController.Index (NOC-PL-WebApplication)" in 5368.491ms
+2017-04-10 18:53:30.137 -04:00 [Information] Executed action "NocWebUtilityApp.Controllers.TableDataVMsController.Index (NocWebUtilityApp)" in 5368.491ms
 2017-04-10 18:53:30.156 -04:00 [Information] Request finished in 6018.201ms 200 text/html; charset=utf-8
 2017-04-10 18:53:30.359 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/js/jsmodules/ScrollPositionModule.js?v=nMtTymepNGTcJY1TyjArpj4eAyNo6Vtrk2PhD6EGS8g  
 2017-04-10 18:53:30.364 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/js/site.min.js?v=NpMUj71zExRQni6K27BChnEFiXr3zPwMp_IYP45LeJE  

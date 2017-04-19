@@ -1,0 +1,1968 @@
+2017-04-19 16:34:09.937 -04:00 [Debug] Compiling query model: 
+'(from NocUser <generated>_1 in DbSet<NocUser>
+select <generated>_1)
+.Any()'
+2017-04-19 16:34:10.006 -04:00 [Debug] Optimized query model: 
+'(from NocUser <generated>_1 in DbSet<NocUser>
+select <generated>_1)
+.Any()'
+2017-04-19 16:34:10.186 -04:00 [Debug] TRACKED: False
+(QueryContext queryContext) => IEnumerable<bool> _ToSequence(
+    element: bool GetResult(
+        valueBuffers: IEnumerable<ValueBuffer> _Query(
+            queryContext: queryContext, 
+            shaperCommandContext: SelectExpression: 
+                SELECT CASE
+                    WHEN EXISTS (
+                        SELECT 1
+                        FROM [AspNetUsers] AS [a])
+                    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+                END
+            , 
+            queryIndex: default(System.Nullable`1[System.Int32])
+        )
+    )
+)
+
+2017-04-19 16:34:10.199 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:10.237 -04:00 [Information] Executed DbCommand (29ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AspNetUsers] AS [a])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2017-04-19 16:34:10.248 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:10.252 -04:00 [Debug] Compiling query model: 
+'(from Product <generated>_1 in DbSet<Product>
+select <generated>_1)
+.Any()'
+2017-04-19 16:34:10.252 -04:00 [Debug] Optimized query model: 
+'(from Product <generated>_1 in DbSet<Product>
+select <generated>_1)
+.Any()'
+2017-04-19 16:34:10.256 -04:00 [Debug] TRACKED: False
+(QueryContext queryContext) => IEnumerable<bool> _ToSequence(
+    element: bool GetResult(
+        valueBuffers: IEnumerable<ValueBuffer> _Query(
+            queryContext: queryContext, 
+            shaperCommandContext: SelectExpression: 
+                SELECT CASE
+                    WHEN EXISTS (
+                        SELECT 1
+                        FROM [Products] AS [p])
+                    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+                END
+            , 
+            queryIndex: default(System.Nullable`1[System.Int32])
+        )
+    )
+)
+
+2017-04-19 16:34:10.257 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:10.359 -04:00 [Information] Executed DbCommand (102ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Products] AS [p])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2017-04-19 16:34:10.361 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:10.363 -04:00 [Debug] Compiling query model: 
+'(from Server <generated>_1 in DbSet<Server>
+select <generated>_1)
+.Any()'
+2017-04-19 16:34:10.363 -04:00 [Debug] Optimized query model: 
+'(from Server <generated>_1 in DbSet<Server>
+select <generated>_1)
+.Any()'
+2017-04-19 16:34:10.369 -04:00 [Debug] TRACKED: False
+(QueryContext queryContext) => IEnumerable<bool> _ToSequence(
+    element: bool GetResult(
+        valueBuffers: IEnumerable<ValueBuffer> _Query(
+            queryContext: queryContext, 
+            shaperCommandContext: SelectExpression: 
+                SELECT CASE
+                    WHEN EXISTS (
+                        SELECT 1
+                        FROM [Servers] AS [s])
+                    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+                END
+            , 
+            queryIndex: default(System.Nullable`1[System.Int32])
+        )
+    )
+)
+
+2017-04-19 16:34:10.369 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:10.399 -04:00 [Information] Executed DbCommand (29ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Servers] AS [s])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2017-04-19 16:34:10.400 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:10.487 -04:00 [Information] User profile is available. Using '"C:\Users\djackson\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2017-04-19 16:34:10.528 -04:00 [Debug] Hosting starting
+2017-04-19 16:34:10.607 -04:00 [Debug] Hosting started
+2017-04-19 16:34:10.722 -04:00 [Debug] Connection id ""0HL47CDNMU34B"" started.
+2017-04-19 16:34:10.722 -04:00 [Debug] Connection id ""0HL47CDNMU34C"" started.
+2017-04-19 16:34:10.818 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/  
+2017-04-19 16:34:10.818 -04:00 [Information] Request starting HTTP/1.1 DEBUG http://localhost:12170/  0
+2017-04-19 16:34:10.925 -04:00 [Debug] The request path "/" does not match a supported file type
+2017-04-19 16:34:10.926 -04:00 [Debug] Connection id ""0HL47CDNMU34B"" completed keep alive response.
+2017-04-19 16:34:10.934 -04:00 [Information] Request finished in 132.542ms 200 
+2017-04-19 16:34:11.107 -04:00 [Debug] Request successfully matched the route with name '"Default"' and template '"{Controller}/{Action}/{id?}"'.
+2017-04-19 16:34:11.204 -04:00 [Debug] Executing action "NocWebUtilityApp.Controllers.TableDataVMsController.TablesPage1 (NocWebUtilityApp)"
+2017-04-19 16:34:11.224 -04:00 [Debug] Using database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:11.224 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:11.225 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:11.225 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:11.245 -04:00 [Information] Executed DbCommand (20ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:34:11.245 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:11.246 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:11.246 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:11.246 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:11.265 -04:00 [Information] Executed DbCommand (19ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:34:11.265 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:11.266 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:11.281 -04:00 [Information] Executed DbCommand (15ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2017-04-19 16:34:11.281 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:11.346 -04:00 [Information] Executing action method "NocWebUtilityApp.Controllers.TableDataVMsController.TablesPage1 (NocWebUtilityApp)" with arguments (null) - ModelState is Valid
+2017-04-19 16:34:11.368 -04:00 [Debug] Compiling query model: 
+'from Product <generated>_0 in DbSet<Product>
+select <generated>_0'
+2017-04-19 16:34:11.368 -04:00 [Debug] Optimized query model: 
+'from Product <generated>_0 in DbSet<Product>
+select <generated>_0'
+2017-04-19 16:34:11.393 -04:00 [Debug] TRACKED: True
+(QueryContext queryContext) => IAsyncEnumerable<Product> _ShapedQuery(
+    queryContext: queryContext, 
+    shaperCommandContext: SelectExpression: 
+        SELECT [p].[Id], [p].[PrimaryProductServerId], [p].[ProductGroup], [p].[ProductName], [p].[SecondaryProductServerId], [p].[TableDataVMId], [p].[TableNumber]
+        FROM [Products] AS [p]
+    , 
+    shaper: BufferedEntityShaper<Product>
+)
+
+2017-04-19 16:34:11.422 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:11.489 -04:00 [Information] Executed DbCommand (59ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[PrimaryProductServerId], [p].[ProductGroup], [p].[ProductName], [p].[SecondaryProductServerId], [p].[TableDataVMId], [p].[TableNumber]
+FROM [Products] AS [p]
+2017-04-19 16:34:11.559 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:11.561 -04:00 [Debug] Compiling query model: 
+'from Server <generated>_0 in DbSet<Server>
+select <generated>_0'
+2017-04-19 16:34:11.561 -04:00 [Debug] Optimized query model: 
+'from Server <generated>_0 in DbSet<Server>
+select <generated>_0'
+2017-04-19 16:34:11.564 -04:00 [Debug] TRACKED: True
+(QueryContext queryContext) => IAsyncEnumerable<Server> _ShapedQuery(
+    queryContext: queryContext, 
+    shaperCommandContext: SelectExpression: 
+        SELECT [s].[Id], [s].[ServerGroup], [s].[ServerName], [s].[TableDataVMId]
+        FROM [Servers] AS [s]
+    , 
+    shaper: BufferedEntityShaper<Server>
+)
+
+2017-04-19 16:34:11.564 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:11.626 -04:00 [Information] Executed DbCommand (61ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[ServerGroup], [s].[ServerName], [s].[TableDataVMId]
+FROM [Servers] AS [s]
+2017-04-19 16:34:11.657 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:11.672 -04:00 [Debug] _____________________________Testing LOGS Before minimum level set
+2017-04-19 16:34:11.672 -04:00 [Debug] -----------------------------TESTING LOGS
+2017-04-19 16:34:11.679 -04:00 [Debug] Executed action method "NocWebUtilityApp.Controllers.TableDataVMsController.TablesPage1 (NocWebUtilityApp)", returned result "Microsoft.AspNetCore.Mvc.ViewResult".
+2017-04-19 16:34:11.774 -04:00 [Debug] View lookup cache miss for view '"TablesPage1"' in controller '"TableDataVMs"'.
+2017-04-19 16:34:11.786 -04:00 [Debug] Code generation for the Razor file at '"/Views/TableDataVMs/TablesPage1.cshtml"' started.
+2017-04-19 16:34:12.250 -04:00 [Debug] Code generation for the Razor file at '"/Views/TableDataVMs/TablesPage1.cshtml"' completed in 460.4492ms.
+2017-04-19 16:34:12.260 -04:00 [Debug] Compilation of the generated code for the Razor file at '"/Views/TableDataVMs/TablesPage1.cshtml"' started.
+2017-04-19 16:34:13.574 -04:00 [Debug] Compilation of the generated code for the Razor file at '"/Views/TableDataVMs/TablesPage1.cshtml"' completed in 1314.3339ms.
+2017-04-19 16:34:13.578 -04:00 [Debug] Code generation for the Razor file at '"/Views/_ViewStart.cshtml"' started.
+2017-04-19 16:34:13.584 -04:00 [Debug] Code generation for the Razor file at '"/Views/_ViewStart.cshtml"' completed in 5.2397ms.
+2017-04-19 16:34:13.584 -04:00 [Debug] Compilation of the generated code for the Razor file at '"/Views/_ViewStart.cshtml"' started.
+2017-04-19 16:34:13.630 -04:00 [Debug] Compilation of the generated code for the Razor file at '"/Views/_ViewStart.cshtml"' completed in 46.2195ms.
+2017-04-19 16:34:13.637 -04:00 [Debug] The view '"TablesPage1"' was found.
+2017-04-19 16:34:13.638 -04:00 [Information] Executing ViewResult, running view at path "/Views/TableDataVMs/TablesPage1.cshtml".
+2017-04-19 16:34:13.757 -04:00 [Debug] Executing view component "NocWebUtilityApp.ViewComponents.ModalWindowViewComponent" with arguments ([]).
+2017-04-19 16:34:13.766 -04:00 [Debug] Executed view component "NocWebUtilityApp.ViewComponents.ModalWindowViewComponent" in 3.1033ms and returned "Microsoft.AspNetCore.Mvc.ViewComponents.ViewViewComponentResult"
+2017-04-19 16:34:13.769 -04:00 [Debug] View lookup cache miss for view '"Components/ModalWindow/Default"' in controller '"TableDataVMs"'.
+2017-04-19 16:34:13.769 -04:00 [Debug] Code generation for the Razor file at '"/Views/Shared/Components/ModalWindow/Default.cshtml"' started.
+2017-04-19 16:34:13.776 -04:00 [Debug] Code generation for the Razor file at '"/Views/Shared/Components/ModalWindow/Default.cshtml"' completed in 6.0418ms.
+2017-04-19 16:34:13.776 -04:00 [Debug] Compilation of the generated code for the Razor file at '"/Views/Shared/Components/ModalWindow/Default.cshtml"' started.
+2017-04-19 16:34:13.849 -04:00 [Debug] Compilation of the generated code for the Razor file at '"/Views/Shared/Components/ModalWindow/Default.cshtml"' completed in 72.2591ms.
+2017-04-19 16:34:13.941 -04:00 [Debug] View lookup cache miss for view '"_Layout"' in controller '"TableDataVMs"'.
+2017-04-19 16:34:13.941 -04:00 [Debug] Code generation for the Razor file at '"/Views/Shared/_Layout.cshtml"' started.
+2017-04-19 16:34:13.977 -04:00 [Debug] Code generation for the Razor file at '"/Views/Shared/_Layout.cshtml"' completed in 35.8317ms.
+2017-04-19 16:34:13.978 -04:00 [Debug] Compilation of the generated code for the Razor file at '"/Views/Shared/_Layout.cshtml"' started.
+2017-04-19 16:34:14.074 -04:00 [Debug] Compilation of the generated code for the Razor file at '"/Views/Shared/_Layout.cshtml"' completed in 96.319ms.
+2017-04-19 16:34:14.182 -04:00 [Debug] Executing view component "NocWebUtilityApp.Views.ViewComponents.LoginLogoutViewComponent" with arguments ([]).
+2017-04-19 16:34:14.182 -04:00 [Debug] Executed view component "NocWebUtilityApp.Views.ViewComponents.LoginLogoutViewComponent" in 0.1791ms and returned "Microsoft.AspNetCore.Mvc.ViewComponents.ViewViewComponentResult"
+2017-04-19 16:34:14.183 -04:00 [Debug] View lookup cache miss for view '"Components/LoginLogout/Default"' in controller '"TableDataVMs"'.
+2017-04-19 16:34:14.183 -04:00 [Debug] Code generation for the Razor file at '"/Views/Shared/Components/LoginLogout/Default.cshtml"' started.
+2017-04-19 16:34:14.190 -04:00 [Debug] Code generation for the Razor file at '"/Views/Shared/Components/LoginLogout/Default.cshtml"' completed in 7.1161ms.
+2017-04-19 16:34:14.190 -04:00 [Debug] Compilation of the generated code for the Razor file at '"/Views/Shared/Components/LoginLogout/Default.cshtml"' started.
+2017-04-19 16:34:14.230 -04:00 [Debug] Compilation of the generated code for the Razor file at '"/Views/Shared/Components/LoginLogout/Default.cshtml"' completed in 40.2323ms.
+2017-04-19 16:34:14.308 -04:00 [Information] Executed action "NocWebUtilityApp.Controllers.TableDataVMsController.TablesPage1 (NocWebUtilityApp)" in 3102.5873ms
+2017-04-19 16:34:14.319 -04:00 [Debug] Connection id ""0HL47CDNMU34C"" completed keep alive response.
+2017-04-19 16:34:14.319 -04:00 [Information] Request finished in 3524.2432ms 200 text/html; charset=utf-8
+2017-04-19 16:34:16.407 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/Account/Login  
+2017-04-19 16:34:16.407 -04:00 [Debug] The request path "/Account/Login" does not match a supported file type
+2017-04-19 16:34:16.408 -04:00 [Debug] Request successfully matched the route with name '"Default"' and template '"{Controller}/{Action}/{id?}"'.
+2017-04-19 16:34:16.418 -04:00 [Debug] Action '"NocWebUtilityApp.Controllers.AccountController.Login (NocWebUtilityApp)"' with id '"ec1aca8b-ecd5-4657-bbda-fb664b68247c"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+2017-04-19 16:34:16.418 -04:00 [Debug] Executing action "NocWebUtilityApp.Controllers.AccountController.Login (NocWebUtilityApp)"
+2017-04-19 16:34:16.419 -04:00 [Debug] Using database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:16.419 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:16.420 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:16.420 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:16.455 -04:00 [Information] Executed DbCommand (35ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:34:16.455 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:16.455 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:16.455 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:16.455 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:16.470 -04:00 [Information] Executed DbCommand (14ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:34:16.470 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:16.471 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:16.485 -04:00 [Information] Executed DbCommand (14ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2017-04-19 16:34:16.485 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:16.505 -04:00 [Information] Executing action method "NocWebUtilityApp.Controllers.AccountController.Login (NocWebUtilityApp)" with arguments (null) - ModelState is Valid
+2017-04-19 16:34:16.506 -04:00 [Debug] Executed action method "NocWebUtilityApp.Controllers.AccountController.Login (NocWebUtilityApp)", returned result "Microsoft.AspNetCore.Mvc.ViewResult".
+2017-04-19 16:34:16.506 -04:00 [Debug] View lookup cache miss for view '"Login"' in controller '"Account"'.
+2017-04-19 16:34:16.507 -04:00 [Debug] Code generation for the Razor file at '"/Views/Account/Login.cshtml"' started.
+2017-04-19 16:34:16.514 -04:00 [Debug] Code generation for the Razor file at '"/Views/Account/Login.cshtml"' completed in 6.0907ms.
+2017-04-19 16:34:16.514 -04:00 [Debug] Compilation of the generated code for the Razor file at '"/Views/Account/Login.cshtml"' started.
+2017-04-19 16:34:16.657 -04:00 [Debug] Compilation of the generated code for the Razor file at '"/Views/Account/Login.cshtml"' completed in 143.9947ms.
+2017-04-19 16:34:16.658 -04:00 [Debug] The view '"Login"' was found.
+2017-04-19 16:34:16.659 -04:00 [Information] Executing ViewResult, running view at path "/Views/Account/Login.cshtml".
+2017-04-19 16:34:16.692 -04:00 [Debug] Reading data from file '"C:\Users\djackson\AppData\Local\ASP.NET\DataProtection-Keys\key-ea34fd48-7318-409d-a55d-2de09c5c2de1.xml"'.
+2017-04-19 16:34:16.701 -04:00 [Debug] Found key {ea34fd48-7318-409d-a55d-2de09c5c2de1}.
+2017-04-19 16:34:16.715 -04:00 [Debug] Considering key {ea34fd48-7318-409d-a55d-2de09c5c2de1} with expiration date 2017-05-29 17:16:36Z as default key.
+2017-04-19 16:34:16.725 -04:00 [Debug] Decrypting secret element using Windows DPAPI.
+2017-04-19 16:34:16.734 -04:00 [Debug] Opening CNG algorithm '"AES"' from provider 'null' with chaining mode CBC.
+2017-04-19 16:34:16.740 -04:00 [Debug] Opening CNG algorithm '"SHA256"' from provider 'null' with HMAC.
+2017-04-19 16:34:16.750 -04:00 [Debug] Using key {ea34fd48-7318-409d-a55d-2de09c5c2de1} as the default key.
+2017-04-19 16:34:16.768 -04:00 [Debug] An antiforgery cookie token was reused.
+2017-04-19 16:34:16.849 -04:00 [Debug] View lookup cache miss for view '"_Layout"' in controller '"Account"'.
+2017-04-19 16:34:16.850 -04:00 [Debug] Executing view component "NocWebUtilityApp.Views.ViewComponents.LoginLogoutViewComponent" with arguments ([]).
+2017-04-19 16:34:16.850 -04:00 [Debug] Executed view component "NocWebUtilityApp.Views.ViewComponents.LoginLogoutViewComponent" in 0.0055ms and returned "Microsoft.AspNetCore.Mvc.ViewComponents.ViewViewComponentResult"
+2017-04-19 16:34:16.850 -04:00 [Debug] View lookup cache miss for view '"Components/LoginLogout/Default"' in controller '"Account"'.
+2017-04-19 16:34:16.851 -04:00 [Information] Executed action "NocWebUtilityApp.Controllers.AccountController.Login (NocWebUtilityApp)" in 432.7089ms
+2017-04-19 16:34:16.852 -04:00 [Debug] Connection id ""0HL47CDNMU34B"" completed keep alive response.
+2017-04-19 16:34:16.852 -04:00 [Information] Request finished in 445.2144ms 200 text/html; charset=utf-8
+2017-04-19 16:34:30.998 -04:00 [Information] Request starting HTTP/1.1 POST http://localhost:12170/Account/Login application/x-www-form-urlencoded 237
+2017-04-19 16:34:30.999 -04:00 [Debug] "POST" requests are not supported
+2017-04-19 16:34:30.999 -04:00 [Debug] Request successfully matched the route with name '"Default"' and template '"{Controller}/{Action}/{id?}"'.
+2017-04-19 16:34:31.000 -04:00 [Debug] Action '"NocWebUtilityApp.Controllers.AccountController.Login (NocWebUtilityApp)"' with id '"4bbd61c9-8d2e-4a4a-aa57-bba9757cdea0"' did not match the constraint '"Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint"'
+2017-04-19 16:34:31.001 -04:00 [Debug] Executing action "NocWebUtilityApp.Controllers.AccountController.Login (NocWebUtilityApp)"
+2017-04-19 16:34:31.036 -04:00 [Debug] Antiforgery successfully validated a request.
+2017-04-19 16:34:31.037 -04:00 [Debug] Using database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:31.037 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:31.038 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:31.038 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:31.065 -04:00 [Information] Executed DbCommand (27ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:34:31.066 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:31.066 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:31.066 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:31.066 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:31.094 -04:00 [Information] Executed DbCommand (27ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:34:31.095 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:31.095 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:31.109 -04:00 [Information] Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2017-04-19 16:34:31.109 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:31.230 -04:00 [Information] Executing action method "NocWebUtilityApp.Controllers.AccountController.Login (NocWebUtilityApp)" with arguments (["NocWebUtilityApp.Models.ViewModels.LoginViewModel"]) - ModelState is Valid
+2017-04-19 16:34:31.267 -04:00 [Debug] Compiling query model: 
+'(from NocUser u in DbSet<NocUser>
+where u.NormalizedUserName == __normalizedUserName_0
+select u)
+.FirstOrDefault()'
+2017-04-19 16:34:31.275 -04:00 [Debug] Optimized query model: 
+'(from NocUser u in DbSet<NocUser>
+where u.NormalizedUserName == __normalizedUserName_0
+select u)
+.FirstOrDefault()'
+2017-04-19 16:34:31.325 -04:00 [Debug] TRACKED: True
+(QueryContext queryContext) => IAsyncEnumerable<NocUser> _ToSequence(
+    task: Task<NocUser> _FirstOrDefault(
+        source: IAsyncEnumerable<NocUser> _ShapedQuery(
+            queryContext: queryContext, 
+            shaperCommandContext: SelectExpression: 
+                SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+                FROM [AspNetUsers] AS [u]
+                WHERE [u].[NormalizedUserName] = @__normalizedUserName_0
+            , 
+            shaper: UnbufferedEntityShaper<NocUser>
+        )
+        , 
+        cancellationToken: queryContext.CancellationToken
+    )
+)
+
+2017-04-19 16:34:31.327 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:31.427 -04:00 [Information] Executed DbCommand (82ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0
+2017-04-19 16:34:31.449 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:31.561 -04:00 [Debug] Compiling query model: 
+'from IdentityUserRole<string> userRole in DbSet<IdentityUserRole<string>>
+join IdentityRole role in DbSet<IdentityRole>
+on userRole.RoleId equals role.Id
+where bool userRole.UserId.Equals(
+    other: __userId_0
+)
+
+select role.Name'
+2017-04-19 16:34:31.567 -04:00 [Debug] Optimized query model: 
+'from IdentityUserRole<string> userRole in DbSet<IdentityUserRole<string>>
+join IdentityRole role in DbSet<IdentityRole>
+on userRole.RoleId equals role.Id
+where bool userRole.UserId.Equals(
+    other: __userId_0
+)
+
+select role.Name'
+2017-04-19 16:34:31.628 -04:00 [Debug] TRACKED: True
+(QueryContext queryContext) => IAsyncEnumerable<string> _Select(
+    source: IAsyncEnumerable<TransparentIdentifier<ValueBuffer, ValueBuffer>> _ShapedQuery(
+        queryContext: queryContext, 
+        shaperCommandContext: SelectExpression: 
+            SELECT [role].[Name]
+            FROM [AspNetUserRoles] AS [userRole]
+            INNER JOIN [AspNetRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+            WHERE [userRole].[UserId] = @__userId_0
+        , 
+        shaper: CompositeShaper`3
+    )
+    , 
+    selector: (TransparentIdentifier<ValueBuffer, ValueBuffer> t0) => string TryReadValue(
+        valueBuffer: t0.Inner, 
+        index: 0, 
+        property: null
+    )
+)
+
+2017-04-19 16:34:31.635 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:31.695 -04:00 [Information] Executed DbCommand (58ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [role].[Name]
+FROM [AspNetUserRoles] AS [userRole]
+INNER JOIN [AspNetRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0
+2017-04-19 16:34:31.701 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:31.710 -04:00 [Debug] Compiling query model: 
+'from IdentityUserClaim<string> uc in DbSet<IdentityUserClaim<string>>
+where bool uc.UserId.Equals(
+    other: __user_Id_0
+)
+
+select Claim uc.ToClaim()
+'
+2017-04-19 16:34:31.711 -04:00 [Debug] Optimized query model: 
+'from IdentityUserClaim<string> uc in DbSet<IdentityUserClaim<string>>
+where bool uc.UserId.Equals(
+    other: __user_Id_0
+)
+
+select Claim uc.ToClaim()
+'
+2017-04-19 16:34:31.718 -04:00 [Debug] TRACKED: True
+(QueryContext queryContext) => IAsyncEnumerable<Claim> _Select(
+    source: IAsyncEnumerable<IdentityUserClaim<string>> _ShapedQuery(
+        queryContext: queryContext, 
+        shaperCommandContext: SelectExpression: 
+            SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+            FROM [AspNetUserClaims] AS [uc]
+            WHERE [uc].[UserId] = @__user_Id_0
+        , 
+        shaper: UnbufferedEntityShaper<IdentityUserClaim`1>
+    )
+    , 
+    selector: (IdentityUserClaim<string> uc) => Claim uc.ToClaim()
+)
+
+2017-04-19 16:34:31.719 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:31.749 -04:00 [Information] Executed DbCommand (30ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AspNetUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0
+2017-04-19 16:34:31.750 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:31.780 -04:00 [Information] AuthenticationScheme: "Identity.Application" signed in.
+2017-04-19 16:34:31.782 -04:00 [Debug] Executed action method "NocWebUtilityApp.Controllers.AccountController.Login (NocWebUtilityApp)", returned result "Microsoft.AspNetCore.Mvc.RedirectToActionResult".
+2017-04-19 16:34:31.784 -04:00 [Information] Executing RedirectResult, redirecting to "/".
+2017-04-19 16:34:31.786 -04:00 [Information] Executed action "NocWebUtilityApp.Controllers.AccountController.Login (NocWebUtilityApp)" in 784.5967ms
+2017-04-19 16:34:31.786 -04:00 [Debug] Connection id ""0HL47CDNMU34C"" completed keep alive response.
+2017-04-19 16:34:31.786 -04:00 [Information] Request finished in 788.3657ms 302 
+2017-04-19 16:34:31.809 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/  
+2017-04-19 16:34:31.824 -04:00 [Debug] Using database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:31.824 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:31.825 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:31.825 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:31.852 -04:00 [Information] Executed DbCommand (27ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:34:31.853 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:31.853 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:31.853 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:31.853 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:31.871 -04:00 [Information] Executed DbCommand (17ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:34:31.871 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:31.872 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:31.894 -04:00 [Information] Executed DbCommand (22ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2017-04-19 16:34:31.895 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:31.901 -04:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-04-19 16:34:31.901 -04:00 [Debug] The request path "/" does not match a supported file type
+2017-04-19 16:34:31.902 -04:00 [Debug] Request successfully matched the route with name '"Default"' and template '"{Controller}/{Action}/{id?}"'.
+2017-04-19 16:34:31.902 -04:00 [Debug] Executing action "NocWebUtilityApp.Controllers.TableDataVMsController.TablesPage1 (NocWebUtilityApp)"
+2017-04-19 16:34:31.917 -04:00 [Information] Executing action method "NocWebUtilityApp.Controllers.TableDataVMsController.TablesPage1 (NocWebUtilityApp)" with arguments (null) - ModelState is Valid
+2017-04-19 16:34:31.918 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:31.942 -04:00 [Information] Executed DbCommand (21ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[PrimaryProductServerId], [p].[ProductGroup], [p].[ProductName], [p].[SecondaryProductServerId], [p].[TableDataVMId], [p].[TableNumber]
+FROM [Products] AS [p]
+2017-04-19 16:34:31.943 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:31.943 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:32.004 -04:00 [Information] Executed DbCommand (61ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[ServerGroup], [s].[ServerName], [s].[TableDataVMId]
+FROM [Servers] AS [s]
+2017-04-19 16:34:32.005 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:32.006 -04:00 [Debug] _____________________________Testing LOGS Before minimum level set
+2017-04-19 16:34:32.006 -04:00 [Debug] -----------------------------TESTING LOGS
+2017-04-19 16:34:32.006 -04:00 [Debug] Executed action method "NocWebUtilityApp.Controllers.TableDataVMsController.TablesPage1 (NocWebUtilityApp)", returned result "Microsoft.AspNetCore.Mvc.ViewResult".
+2017-04-19 16:34:32.008 -04:00 [Debug] View lookup cache hit for view '"TablesPage1"' in controller '"TableDataVMs"'.
+2017-04-19 16:34:32.009 -04:00 [Debug] The view '"TablesPage1"' was found.
+2017-04-19 16:34:32.009 -04:00 [Information] Executing ViewResult, running view at path "/Views/TableDataVMs/TablesPage1.cshtml".
+2017-04-19 16:34:32.010 -04:00 [Debug] Executing view component "NocWebUtilityApp.ViewComponents.ModalWindowViewComponent" with arguments ([]).
+2017-04-19 16:34:32.010 -04:00 [Debug] Executed view component "NocWebUtilityApp.ViewComponents.ModalWindowViewComponent" in 0.0105ms and returned "Microsoft.AspNetCore.Mvc.ViewComponents.ViewViewComponentResult"
+2017-04-19 16:34:32.010 -04:00 [Debug] View lookup cache hit for view '"Components/ModalWindow/Default"' in controller '"TableDataVMs"'.
+2017-04-19 16:34:32.011 -04:00 [Debug] View lookup cache hit for view '"_Layout"' in controller '"TableDataVMs"'.
+2017-04-19 16:34:32.011 -04:00 [Debug] Executing view component "NocWebUtilityApp.Views.ViewComponents.LoginLogoutViewComponent" with arguments ([]).
+2017-04-19 16:34:32.011 -04:00 [Debug] Executed view component "NocWebUtilityApp.Views.ViewComponents.LoginLogoutViewComponent" in 0.0046ms and returned "Microsoft.AspNetCore.Mvc.ViewComponents.ViewViewComponentResult"
+2017-04-19 16:34:32.011 -04:00 [Debug] View lookup cache hit for view '"Components/LoginLogout/Default"' in controller '"TableDataVMs"'.
+2017-04-19 16:34:32.016 -04:00 [Debug] An antiforgery cookie token was reused.
+2017-04-19 16:34:32.018 -04:00 [Information] Executed action "NocWebUtilityApp.Controllers.TableDataVMsController.TablesPage1 (NocWebUtilityApp)" in 115.5696ms
+2017-04-19 16:34:32.018 -04:00 [Debug] Connection id ""0HL47CDNMU34B"" completed keep alive response.
+2017-04-19 16:34:32.018 -04:00 [Information] Request finished in 209.0534ms 200 text/html; charset=utf-8
+2017-04-19 16:34:37.359 -04:00 [Information] Request starting HTTP/1.1 POST http://localhost:12170/SaveSelectedServer application/x-www-form-urlencoded; charset=UTF-8 50
+2017-04-19 16:34:37.360 -04:00 [Debug] Using database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:37.360 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:37.360 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:37.360 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:37.382 -04:00 [Information] Executed DbCommand (21ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:34:37.382 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:37.382 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:37.383 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:37.383 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:37.397 -04:00 [Information] Executed DbCommand (14ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:34:37.398 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:37.398 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:37.417 -04:00 [Information] Executed DbCommand (19ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2017-04-19 16:34:37.417 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:37.418 -04:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-04-19 16:34:37.418 -04:00 [Debug] "POST" requests are not supported
+2017-04-19 16:34:37.418 -04:00 [Debug] Request successfully matched the route with name '"SaveServerToProduct"' and template '"SaveSelectedServer"'.
+2017-04-19 16:34:37.420 -04:00 [Debug] Executing action "NocWebUtilityApp.Controllers.TableDataVMsController.SaveSelectedServer (NocWebUtilityApp)"
+2017-04-19 16:34:37.434 -04:00 [Information] Authorization was successful for user: "admin".
+2017-04-19 16:34:37.455 -04:00 [Information] Executing action method "NocWebUtilityApp.Controllers.TableDataVMsController.SaveSelectedServer (NocWebUtilityApp)" with arguments (["55", "primaryColumn", "7"]) - ModelState is Valid
+2017-04-19 16:34:37.457 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:37.486 -04:00 [Information] Executed DbCommand (28ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[PrimaryProductServerId], [p].[ProductGroup], [p].[ProductName], [p].[SecondaryProductServerId], [p].[TableDataVMId], [p].[TableNumber]
+FROM [Products] AS [p]
+2017-04-19 16:34:37.487 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:37.488 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:37.513 -04:00 [Information] Executed DbCommand (24ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[ServerGroup], [s].[ServerName], [s].[TableDataVMId]
+FROM [Servers] AS [s]
+2017-04-19 16:34:37.514 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:37.516 -04:00 [Debug] Compiling query model: 
+'(from Product p in DbSet<Product>
+where p.Id == __productId_0
+select p)
+.Single()'
+2017-04-19 16:34:37.516 -04:00 [Debug] Optimized query model: 
+'(from Product p in DbSet<Product>
+where p.Id == __productId_0
+select p)
+.Single()'
+2017-04-19 16:34:37.520 -04:00 [Debug] TRACKED: True
+(QueryContext queryContext) => IAsyncEnumerable<Product> _ToSequence(
+    task: Task<Product> _Single(
+        source: IAsyncEnumerable<Product> _ShapedQuery(
+            queryContext: queryContext, 
+            shaperCommandContext: SelectExpression: 
+                SELECT TOP(2) [p].[Id], [p].[PrimaryProductServerId], [p].[ProductGroup], [p].[ProductName], [p].[SecondaryProductServerId], [p].[TableDataVMId], [p].[TableNumber]
+                FROM [Products] AS [p]
+                WHERE [p].[Id] = @__productId_0
+            , 
+            shaper: BufferedEntityShaper<Product>
+        )
+        , 
+        cancellationToken: queryContext.CancellationToken
+    )
+)
+
+2017-04-19 16:34:37.523 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:37.561 -04:00 [Information] Executed DbCommand (36ms) [Parameters=[@__productId_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [p].[Id], [p].[PrimaryProductServerId], [p].[ProductGroup], [p].[ProductName], [p].[SecondaryProductServerId], [p].[TableDataVMId], [p].[TableNumber]
+FROM [Products] AS [p]
+WHERE [p].[Id] = @__productId_0
+2017-04-19 16:34:37.562 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:37.601 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:37.606 -04:00 [Debug] Beginning transaction with isolation level 'Unspecified'.
+2017-04-19 16:34:37.697 -04:00 [Information] Executed DbCommand (26ms) [Parameters=[@p1='?', @p0='?'], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Products] SET [PrimaryProductServerId] = @p0
+WHERE [Id] = @p1;
+SELECT @@ROWCOUNT;
+2017-04-19 16:34:37.704 -04:00 [Debug] Committing transaction.
+2017-04-19 16:34:37.708 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:37.714 -04:00 [Debug] Executed action method "NocWebUtilityApp.Controllers.TableDataVMsController.SaveSelectedServer (NocWebUtilityApp)", returned result "Microsoft.AspNetCore.Mvc.OkResult".
+2017-04-19 16:34:37.717 -04:00 [Information] Executing HttpStatusCodeResult, setting HTTP status code 200
+2017-04-19 16:34:37.717 -04:00 [Information] Executed action "NocWebUtilityApp.Controllers.TableDataVMsController.SaveSelectedServer (NocWebUtilityApp)" in 297.6756ms
+2017-04-19 16:34:37.718 -04:00 [Debug] Connection id ""0HL47CDNMU34C"" completed keep alive response.
+2017-04-19 16:34:37.718 -04:00 [Information] Request finished in 359.2076ms 200 
+2017-04-19 16:34:37.766 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/  
+2017-04-19 16:34:37.767 -04:00 [Debug] Using database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:37.767 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:37.767 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:37.767 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:37.799 -04:00 [Information] Executed DbCommand (31ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:34:37.799 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:37.799 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:37.799 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:37.799 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:37.814 -04:00 [Information] Executed DbCommand (14ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:34:37.814 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:37.814 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:37.834 -04:00 [Information] Executed DbCommand (18ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2017-04-19 16:34:37.834 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:37.834 -04:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-04-19 16:34:37.834 -04:00 [Debug] The request path "/" does not match a supported file type
+2017-04-19 16:34:37.835 -04:00 [Debug] Request successfully matched the route with name '"Default"' and template '"{Controller}/{Action}/{id?}"'.
+2017-04-19 16:34:37.835 -04:00 [Debug] Executing action "NocWebUtilityApp.Controllers.TableDataVMsController.TablesPage1 (NocWebUtilityApp)"
+2017-04-19 16:34:37.852 -04:00 [Information] Executing action method "NocWebUtilityApp.Controllers.TableDataVMsController.TablesPage1 (NocWebUtilityApp)" with arguments (null) - ModelState is Valid
+2017-04-19 16:34:37.853 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:37.877 -04:00 [Information] Executed DbCommand (24ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[PrimaryProductServerId], [p].[ProductGroup], [p].[ProductName], [p].[SecondaryProductServerId], [p].[TableDataVMId], [p].[TableNumber]
+FROM [Products] AS [p]
+2017-04-19 16:34:37.878 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:37.879 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:37.903 -04:00 [Information] Executed DbCommand (24ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[ServerGroup], [s].[ServerName], [s].[TableDataVMId]
+FROM [Servers] AS [s]
+2017-04-19 16:34:37.904 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:37.905 -04:00 [Debug] _____________________________Testing LOGS Before minimum level set
+2017-04-19 16:34:37.905 -04:00 [Debug] -----------------------------TESTING LOGS
+2017-04-19 16:34:37.905 -04:00 [Debug] Executed action method "NocWebUtilityApp.Controllers.TableDataVMsController.TablesPage1 (NocWebUtilityApp)", returned result "Microsoft.AspNetCore.Mvc.ViewResult".
+2017-04-19 16:34:37.905 -04:00 [Debug] View lookup cache hit for view '"TablesPage1"' in controller '"TableDataVMs"'.
+2017-04-19 16:34:37.905 -04:00 [Debug] The view '"TablesPage1"' was found.
+2017-04-19 16:34:37.905 -04:00 [Information] Executing ViewResult, running view at path "/Views/TableDataVMs/TablesPage1.cshtml".
+2017-04-19 16:34:37.906 -04:00 [Debug] Executing view component "NocWebUtilityApp.ViewComponents.ModalWindowViewComponent" with arguments ([]).
+2017-04-19 16:34:37.906 -04:00 [Debug] Executed view component "NocWebUtilityApp.ViewComponents.ModalWindowViewComponent" in 0.0052ms and returned "Microsoft.AspNetCore.Mvc.ViewComponents.ViewViewComponentResult"
+2017-04-19 16:34:37.906 -04:00 [Debug] View lookup cache hit for view '"Components/ModalWindow/Default"' in controller '"TableDataVMs"'.
+2017-04-19 16:34:37.907 -04:00 [Debug] View lookup cache hit for view '"_Layout"' in controller '"TableDataVMs"'.
+2017-04-19 16:34:37.907 -04:00 [Debug] Executing view component "NocWebUtilityApp.Views.ViewComponents.LoginLogoutViewComponent" with arguments ([]).
+2017-04-19 16:34:37.907 -04:00 [Debug] Executed view component "NocWebUtilityApp.Views.ViewComponents.LoginLogoutViewComponent" in 0.0037ms and returned "Microsoft.AspNetCore.Mvc.ViewComponents.ViewViewComponentResult"
+2017-04-19 16:34:37.907 -04:00 [Debug] View lookup cache hit for view '"Components/LoginLogout/Default"' in controller '"TableDataVMs"'.
+2017-04-19 16:34:37.907 -04:00 [Debug] An antiforgery cookie token was reused.
+2017-04-19 16:34:37.908 -04:00 [Information] Executed action "NocWebUtilityApp.Controllers.TableDataVMsController.TablesPage1 (NocWebUtilityApp)" in 73.1759ms
+2017-04-19 16:34:37.908 -04:00 [Debug] Connection id ""0HL47CDNMU34B"" completed keep alive response.
+2017-04-19 16:34:37.909 -04:00 [Information] Request finished in 142.2051ms 200 text/html; charset=utf-8
+2017-04-19 16:34:37.947 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/bootstrap/dist/css/bootstrap.css  
+2017-04-19 16:34:37.948 -04:00 [Debug] Using database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:37.948 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:37.948 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:37.948 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:37.966 -04:00 [Information] Executed DbCommand (18ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:34:37.966 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:37.967 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:37.967 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:37.967 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:37.981 -04:00 [Information] Executed DbCommand (14ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:34:37.981 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:37.982 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:37.995 -04:00 [Information] Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2017-04-19 16:34:37.996 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:37.996 -04:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-04-19 16:34:38.008 -04:00 [Information] The file "/lib/bootstrap/dist/css/bootstrap.css" was not modified
+2017-04-19 16:34:38.013 -04:00 [Debug] Handled. Status code: 304 File: "/lib/bootstrap/dist/css/bootstrap.css"
+2017-04-19 16:34:38.013 -04:00 [Debug] Connection id ""0HL47CDNMU34C"" completed keep alive response.
+2017-04-19 16:34:38.013 -04:00 [Information] Request finished in 65.9497ms 304 text/css
+2017-04-19 16:34:38.024 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/font-awesome/css/font-awesome.css  
+2017-04-19 16:34:38.025 -04:00 [Debug] Using database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.025 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.025 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.025 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.043 -04:00 [Information] Executed DbCommand (16ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:34:38.043 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.043 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.043 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.043 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.056 -04:00 [Information] Executed DbCommand (12ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:34:38.057 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.057 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.071 -04:00 [Information] Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2017-04-19 16:34:38.071 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.072 -04:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-04-19 16:34:38.072 -04:00 [Information] The file "/lib/font-awesome/css/font-awesome.css" was not modified
+2017-04-19 16:34:38.072 -04:00 [Debug] Handled. Status code: 304 File: "/lib/font-awesome/css/font-awesome.css"
+2017-04-19 16:34:38.072 -04:00 [Debug] Connection id ""0HL47CDNMU34B"" completed keep alive response.
+2017-04-19 16:34:38.073 -04:00 [Information] Request finished in 48.0579ms 304 text/css
+2017-04-19 16:34:38.078 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/css/site.css?v=anAVOY8veKfUR1UTB5PSHgnBHItZHaOs8lESbFsGaoE  
+2017-04-19 16:34:38.079 -04:00 [Debug] Using database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.079 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.079 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.079 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.092 -04:00 [Information] Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:34:38.093 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.093 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.093 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.093 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.111 -04:00 [Information] Executed DbCommand (17ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:34:38.111 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.112 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.125 -04:00 [Information] Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2017-04-19 16:34:38.125 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.126 -04:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-04-19 16:34:38.126 -04:00 [Information] Sending file. Request path: '"/css/site.css"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\css\site.css"'
+2017-04-19 16:34:38.135 -04:00 [Debug] Connection id ""0HL47CDNMU34C"" completed keep alive response.
+2017-04-19 16:34:38.135 -04:00 [Information] Request finished in 57.0878ms 200 text/css
+2017-04-19 16:34:38.142 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/assets/img/onsolve-sm.png  
+2017-04-19 16:34:38.143 -04:00 [Debug] Using database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.143 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.143 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.144 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.158 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/jquery/dist/jquery.min.js  
+2017-04-19 16:34:38.158 -04:00 [Debug] Connection id ""0HL47CDNMU34D"" started.
+2017-04-19 16:34:38.158 -04:00 [Debug] Using database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.158 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.159 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0  
+2017-04-19 16:34:38.160 -04:00 [Debug] Using database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.160 -04:00 [Information] Executed DbCommand (15ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:34:38.160 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.160 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.160 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.160 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.160 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.160 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.160 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.191 -04:00 [Information] Executed DbCommand (30ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:34:38.191 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.191 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.206 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.207 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.208 -04:00 [Information] Executed DbCommand (16ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:34:38.209 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.209 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.260 -04:00 [Information] Executed DbCommand (53ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:34:38.260 -04:00 [Information] Executed DbCommand (50ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2017-04-19 16:34:38.260 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.260 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.261 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.261 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.261 -04:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-04-19 16:34:38.261 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.262 -04:00 [Information] The file "/assets/img/onsolve-sm.png" was not modified
+2017-04-19 16:34:38.274 -04:00 [Debug] Handled. Status code: 304 File: "/assets/img/onsolve-sm.png"
+2017-04-19 16:34:38.274 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.274 -04:00 [Debug] Connection id ""0HL47CDNMU34B"" completed keep alive response.
+2017-04-19 16:34:38.274 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.274 -04:00 [Information] Request finished in 131.8752ms 304 image/png
+2017-04-19 16:34:38.303 -04:00 [Information] Executed DbCommand (41ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:34:38.303 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.303 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.303 -04:00 [Information] Executed DbCommand (29ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:34:38.304 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.320 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.333 -04:00 [Information] Executed DbCommand (29ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2017-04-19 16:34:38.334 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.334 -04:00 [Information] Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2017-04-19 16:34:38.334 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.334 -04:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-04-19 16:34:38.334 -04:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-04-19 16:34:38.334 -04:00 [Information] The file "/lib/jquery/dist/jquery.min.js" was not modified
+2017-04-19 16:34:38.334 -04:00 [Debug] Handled. Status code: 304 File: "/lib/jquery/dist/jquery.min.js"
+2017-04-19 16:34:38.334 -04:00 [Information] The file "/lib/font-awesome/fonts/fontawesome-webfont.woff2" was not modified
+2017-04-19 16:34:38.334 -04:00 [Debug] Connection id ""0HL47CDNMU34C"" completed keep alive response.
+2017-04-19 16:34:38.335 -04:00 [Debug] Handled. Status code: 304 File: "/lib/font-awesome/fonts/fontawesome-webfont.woff2"
+2017-04-19 16:34:38.335 -04:00 [Information] Request finished in 176.9949ms 304 application/javascript
+2017-04-19 16:34:38.335 -04:00 [Debug] Connection id ""0HL47CDNMU34D"" completed keep alive response.
+2017-04-19 16:34:38.335 -04:00 [Information] Request finished in 175.8099ms 304 application/font-woff2
+2017-04-19 16:34:38.355 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/bootstrap/dist/js/bootstrap.min.js  
+2017-04-19 16:34:38.355 -04:00 [Debug] Using database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.355 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.355 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.356 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.370 -04:00 [Information] Executed DbCommand (14ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:34:38.371 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.371 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.371 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.371 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.401 -04:00 [Information] Executed DbCommand (30ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:34:38.401 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.402 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.421 -04:00 [Information] Executed DbCommand (19ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2017-04-19 16:34:38.421 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.422 -04:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-04-19 16:34:38.422 -04:00 [Information] The file "/lib/bootstrap/dist/js/bootstrap.min.js" was not modified
+2017-04-19 16:34:38.422 -04:00 [Debug] Handled. Status code: 304 File: "/lib/bootstrap/dist/js/bootstrap.min.js"
+2017-04-19 16:34:38.422 -04:00 [Debug] Connection id ""0HL47CDNMU34B"" completed keep alive response.
+2017-04-19 16:34:38.422 -04:00 [Information] Request finished in 68.2767ms 304 application/javascript
+2017-04-19 16:34:38.429 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/angular2/angular.min.js  
+2017-04-19 16:34:38.429 -04:00 [Debug] Using database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.430 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.430 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.430 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.444 -04:00 [Information] Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:34:38.444 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.444 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.444 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.444 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.457 -04:00 [Information] Executed DbCommand (12ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:34:38.457 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.458 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.476 -04:00 [Information] Executed DbCommand (17ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2017-04-19 16:34:38.476 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.476 -04:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-04-19 16:34:38.476 -04:00 [Information] The file "/lib/angular2/angular.min.js" was not modified
+2017-04-19 16:34:38.476 -04:00 [Debug] Handled. Status code: 304 File: "/lib/angular2/angular.min.js"
+2017-04-19 16:34:38.477 -04:00 [Debug] Connection id ""0HL47CDNMU34D"" completed keep alive response.
+2017-04-19 16:34:38.477 -04:00 [Information] Request finished in 47.2583ms 304 application/javascript
+2017-04-19 16:34:38.491 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/js/site.min.js?v=NpMUj71zExRQni6K27BChnEFiXr3zPwMp_IYP45LeJE  
+2017-04-19 16:34:38.492 -04:00 [Debug] Using database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.492 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.492 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.492 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.505 -04:00 [Information] Executed DbCommand (12ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:34:38.506 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.506 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.506 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.506 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.519 -04:00 [Information] Executed DbCommand (12ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:34:38.519 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.520 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.544 -04:00 [Information] Executed DbCommand (18ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2017-04-19 16:34:38.544 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.545 -04:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-04-19 16:34:38.553 -04:00 [Information] The file "/js/site.min.js" was not modified
+2017-04-19 16:34:38.553 -04:00 [Debug] Handled. Status code: 304 File: "/js/site.min.js"
+2017-04-19 16:34:38.553 -04:00 [Debug] Connection id ""0HL47CDNMU34C"" completed keep alive response.
+2017-04-19 16:34:38.554 -04:00 [Information] Request finished in 62.2022ms 304 application/javascript
+2017-04-19 16:34:38.558 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/js/jsmodules/ScrollPositionModule.js?v=iZ5RzaVm8uozLlF1_545KjsP6eigu8rH8pV54cogdwc  
+2017-04-19 16:34:38.559 -04:00 [Debug] Using database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.559 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.559 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.559 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.573 -04:00 [Information] Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:34:38.573 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.573 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.573 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.573 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.587 -04:00 [Information] Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:34:38.588 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.588 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.606 -04:00 [Information] Executed DbCommand (17ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2017-04-19 16:34:38.606 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.606 -04:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-04-19 16:34:38.606 -04:00 [Information] The file "/js/jsmodules/ScrollPositionModule.js" was not modified
+2017-04-19 16:34:38.607 -04:00 [Debug] Handled. Status code: 304 File: "/js/jsmodules/ScrollPositionModule.js"
+2017-04-19 16:34:38.607 -04:00 [Debug] Connection id ""0HL47CDNMU34B"" completed keep alive response.
+2017-04-19 16:34:38.607 -04:00 [Information] Request finished in 48.5419ms 304 application/javascript
+2017-04-19 16:34:38.611 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/css/serverModal.styles.css  
+2017-04-19 16:34:38.612 -04:00 [Debug] Using database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.612 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.612 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.612 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.626 -04:00 [Information] Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:34:38.626 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.626 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.627 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.627 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.641 -04:00 [Information] Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:34:38.641 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.641 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.659 -04:00 [Information] Executed DbCommand (17ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2017-04-19 16:34:38.659 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.660 -04:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-04-19 16:34:38.660 -04:00 [Information] The file "/css/serverModal.styles.css" was not modified
+2017-04-19 16:34:38.660 -04:00 [Debug] Handled. Status code: 304 File: "/css/serverModal.styles.css"
+2017-04-19 16:34:38.660 -04:00 [Debug] Connection id ""0HL47CDNMU34D"" completed keep alive response.
+2017-04-19 16:34:38.660 -04:00 [Information] Request finished in 49.0037ms 304 text/css
+2017-04-19 16:34:38.663 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/js/serverModal.Controller.js  
+2017-04-19 16:34:38.664 -04:00 [Debug] Using database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.664 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.664 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.664 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.678 -04:00 [Information] Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:34:38.678 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.678 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.678 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.678 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.691 -04:00 [Information] Executed DbCommand (12ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:34:38.692 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.692 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.709 -04:00 [Information] Executed DbCommand (16ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2017-04-19 16:34:38.709 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:38.710 -04:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-04-19 16:34:38.710 -04:00 [Information] Sending file. Request path: '"/js/serverModal.Controller.js"'. Physical path: '"C:\Users\djackson\Source\Repos\noc-pl-webapplication\NOC-PL-WebApplication\wwwroot\js\serverModal.Controller.js"'
+2017-04-19 16:34:38.711 -04:00 [Debug] Connection id ""0HL47CDNMU34C"" completed keep alive response.
+2017-04-19 16:34:38.711 -04:00 [Information] Request finished in 47.6119ms 200 application/javascript
+2017-04-19 16:34:43.160 -04:00 [Information] Request starting HTTP/1.1 POST http://localhost:12170/SaveSelectedServer application/x-www-form-urlencoded; charset=UTF-8 50
+2017-04-19 16:34:43.160 -04:00 [Debug] Using database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.160 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.160 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.160 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.175 -04:00 [Information] Executed DbCommand (14ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:34:43.175 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.175 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.176 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.176 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.191 -04:00 [Information] Executed DbCommand (15ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:34:43.191 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.192 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.210 -04:00 [Information] Executed DbCommand (17ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2017-04-19 16:34:43.210 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.210 -04:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-04-19 16:34:43.210 -04:00 [Debug] "POST" requests are not supported
+2017-04-19 16:34:43.210 -04:00 [Debug] Request successfully matched the route with name '"SaveServerToProduct"' and template '"SaveSelectedServer"'.
+2017-04-19 16:34:43.211 -04:00 [Debug] Executing action "NocWebUtilityApp.Controllers.TableDataVMsController.SaveSelectedServer (NocWebUtilityApp)"
+2017-04-19 16:34:43.212 -04:00 [Information] Authorization was successful for user: "admin".
+2017-04-19 16:34:43.229 -04:00 [Information] Executing action method "NocWebUtilityApp.Controllers.TableDataVMsController.SaveSelectedServer (NocWebUtilityApp)" with arguments (["57", "primaryColumn", "9"]) - ModelState is Valid
+2017-04-19 16:34:43.229 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.257 -04:00 [Information] Executed DbCommand (26ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[PrimaryProductServerId], [p].[ProductGroup], [p].[ProductName], [p].[SecondaryProductServerId], [p].[TableDataVMId], [p].[TableNumber]
+FROM [Products] AS [p]
+2017-04-19 16:34:43.260 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.260 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.293 -04:00 [Information] Executed DbCommand (32ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[ServerGroup], [s].[ServerName], [s].[TableDataVMId]
+FROM [Servers] AS [s]
+2017-04-19 16:34:43.294 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.298 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.323 -04:00 [Information] Executed DbCommand (24ms) [Parameters=[@__productId_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [p].[Id], [p].[PrimaryProductServerId], [p].[ProductGroup], [p].[ProductName], [p].[SecondaryProductServerId], [p].[TableDataVMId], [p].[TableNumber]
+FROM [Products] AS [p]
+WHERE [p].[Id] = @__productId_0
+2017-04-19 16:34:43.323 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.326 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.326 -04:00 [Debug] Beginning transaction with isolation level 'Unspecified'.
+2017-04-19 16:34:43.352 -04:00 [Information] Executed DbCommand (24ms) [Parameters=[@p1='?', @p0='?'], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Products] SET [PrimaryProductServerId] = @p0
+WHERE [Id] = @p1;
+SELECT @@ROWCOUNT;
+2017-04-19 16:34:43.353 -04:00 [Debug] Committing transaction.
+2017-04-19 16:34:43.353 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.354 -04:00 [Debug] Executed action method "NocWebUtilityApp.Controllers.TableDataVMsController.SaveSelectedServer (NocWebUtilityApp)", returned result "Microsoft.AspNetCore.Mvc.OkResult".
+2017-04-19 16:34:43.354 -04:00 [Information] Executing HttpStatusCodeResult, setting HTTP status code 200
+2017-04-19 16:34:43.354 -04:00 [Information] Executed action "NocWebUtilityApp.Controllers.TableDataVMsController.SaveSelectedServer (NocWebUtilityApp)" in 141.8073ms
+2017-04-19 16:34:43.354 -04:00 [Debug] Connection id ""0HL47CDNMU34B"" completed keep alive response.
+2017-04-19 16:34:43.354 -04:00 [Information] Request finished in 193.9219ms 200 
+2017-04-19 16:34:43.410 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/  
+2017-04-19 16:34:43.410 -04:00 [Debug] Using database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.410 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.410 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.410 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.425 -04:00 [Information] Executed DbCommand (14ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:34:43.425 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.425 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.425 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.425 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.443 -04:00 [Information] Executed DbCommand (16ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:34:43.443 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.443 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.457 -04:00 [Information] Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2017-04-19 16:34:43.457 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.457 -04:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-04-19 16:34:43.457 -04:00 [Debug] The request path "/" does not match a supported file type
+2017-04-19 16:34:43.458 -04:00 [Debug] Request successfully matched the route with name '"Default"' and template '"{Controller}/{Action}/{id?}"'.
+2017-04-19 16:34:43.458 -04:00 [Debug] Executing action "NocWebUtilityApp.Controllers.TableDataVMsController.TablesPage1 (NocWebUtilityApp)"
+2017-04-19 16:34:43.474 -04:00 [Information] Executing action method "NocWebUtilityApp.Controllers.TableDataVMsController.TablesPage1 (NocWebUtilityApp)" with arguments (null) - ModelState is Valid
+2017-04-19 16:34:43.475 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.506 -04:00 [Information] Executed DbCommand (30ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[PrimaryProductServerId], [p].[ProductGroup], [p].[ProductName], [p].[SecondaryProductServerId], [p].[TableDataVMId], [p].[TableNumber]
+FROM [Products] AS [p]
+2017-04-19 16:34:43.507 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.508 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.539 -04:00 [Information] Executed DbCommand (30ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[ServerGroup], [s].[ServerName], [s].[TableDataVMId]
+FROM [Servers] AS [s]
+2017-04-19 16:34:43.540 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.540 -04:00 [Debug] _____________________________Testing LOGS Before minimum level set
+2017-04-19 16:34:43.540 -04:00 [Debug] -----------------------------TESTING LOGS
+2017-04-19 16:34:43.540 -04:00 [Debug] Executed action method "NocWebUtilityApp.Controllers.TableDataVMsController.TablesPage1 (NocWebUtilityApp)", returned result "Microsoft.AspNetCore.Mvc.ViewResult".
+2017-04-19 16:34:43.540 -04:00 [Debug] View lookup cache hit for view '"TablesPage1"' in controller '"TableDataVMs"'.
+2017-04-19 16:34:43.541 -04:00 [Debug] The view '"TablesPage1"' was found.
+2017-04-19 16:34:43.541 -04:00 [Information] Executing ViewResult, running view at path "/Views/TableDataVMs/TablesPage1.cshtml".
+2017-04-19 16:34:43.541 -04:00 [Debug] Executing view component "NocWebUtilityApp.ViewComponents.ModalWindowViewComponent" with arguments ([]).
+2017-04-19 16:34:43.542 -04:00 [Debug] Executed view component "NocWebUtilityApp.ViewComponents.ModalWindowViewComponent" in 0.0068ms and returned "Microsoft.AspNetCore.Mvc.ViewComponents.ViewViewComponentResult"
+2017-04-19 16:34:43.542 -04:00 [Debug] View lookup cache hit for view '"Components/ModalWindow/Default"' in controller '"TableDataVMs"'.
+2017-04-19 16:34:43.542 -04:00 [Debug] View lookup cache hit for view '"_Layout"' in controller '"TableDataVMs"'.
+2017-04-19 16:34:43.542 -04:00 [Debug] Executing view component "NocWebUtilityApp.Views.ViewComponents.LoginLogoutViewComponent" with arguments ([]).
+2017-04-19 16:34:43.542 -04:00 [Debug] Executed view component "NocWebUtilityApp.Views.ViewComponents.LoginLogoutViewComponent" in 0.0108ms and returned "Microsoft.AspNetCore.Mvc.ViewComponents.ViewViewComponentResult"
+2017-04-19 16:34:43.543 -04:00 [Debug] View lookup cache hit for view '"Components/LoginLogout/Default"' in controller '"TableDataVMs"'.
+2017-04-19 16:34:43.543 -04:00 [Debug] An antiforgery cookie token was reused.
+2017-04-19 16:34:43.544 -04:00 [Information] Executed action "NocWebUtilityApp.Controllers.TableDataVMsController.TablesPage1 (NocWebUtilityApp)" in 85.8264ms
+2017-04-19 16:34:43.544 -04:00 [Debug] Connection id ""0HL47CDNMU34D"" completed keep alive response.
+2017-04-19 16:34:43.544 -04:00 [Information] Request finished in 134.0436ms 200 text/html; charset=utf-8
+2017-04-19 16:34:43.578 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/bootstrap/dist/css/bootstrap.css  
+2017-04-19 16:34:43.578 -04:00 [Debug] Using database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.579 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.579 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.579 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.593 -04:00 [Information] Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:34:43.593 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.593 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.594 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.594 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.607 -04:00 [Information] Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:34:43.607 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.608 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.628 -04:00 [Information] Executed DbCommand (19ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2017-04-19 16:34:43.628 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.628 -04:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-04-19 16:34:43.629 -04:00 [Information] The file "/lib/bootstrap/dist/css/bootstrap.css" was not modified
+2017-04-19 16:34:43.629 -04:00 [Debug] Handled. Status code: 304 File: "/lib/bootstrap/dist/css/bootstrap.css"
+2017-04-19 16:34:43.629 -04:00 [Debug] Connection id ""0HL47CDNMU34C"" completed keep alive response.
+2017-04-19 16:34:43.629 -04:00 [Information] Request finished in 50.6126ms 304 text/css
+2017-04-19 16:34:43.640 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/font-awesome/css/font-awesome.css  
+2017-04-19 16:34:43.640 -04:00 [Debug] Using database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.640 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.640 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.641 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.655 -04:00 [Information] Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:34:43.655 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.655 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.655 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.655 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.669 -04:00 [Information] Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:34:43.669 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.670 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.686 -04:00 [Information] Executed DbCommand (16ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2017-04-19 16:34:43.686 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.687 -04:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-04-19 16:34:43.687 -04:00 [Information] The file "/lib/font-awesome/css/font-awesome.css" was not modified
+2017-04-19 16:34:43.687 -04:00 [Debug] Handled. Status code: 304 File: "/lib/font-awesome/css/font-awesome.css"
+2017-04-19 16:34:43.687 -04:00 [Debug] Connection id ""0HL47CDNMU34B"" completed keep alive response.
+2017-04-19 16:34:43.687 -04:00 [Information] Request finished in 47.7146ms 304 text/css
+2017-04-19 16:34:43.695 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/css/site.css?v=anAVOY8veKfUR1UTB5PSHgnBHItZHaOs8lESbFsGaoE  
+2017-04-19 16:34:43.696 -04:00 [Debug] Using database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.696 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.696 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.696 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.716 -04:00 [Information] Executed DbCommand (19ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:34:43.716 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.716 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.716 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.716 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.730 -04:00 [Information] Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:34:43.731 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.731 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.745 -04:00 [Information] Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2017-04-19 16:34:43.745 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.745 -04:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-04-19 16:34:43.745 -04:00 [Information] The file "/css/site.css" was not modified
+2017-04-19 16:34:43.745 -04:00 [Debug] Handled. Status code: 304 File: "/css/site.css"
+2017-04-19 16:34:43.746 -04:00 [Debug] Connection id ""0HL47CDNMU34D"" completed keep alive response.
+2017-04-19 16:34:43.746 -04:00 [Information] Request finished in 50.5119ms 304 text/css
+2017-04-19 16:34:43.751 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/assets/img/onsolve-sm.png  
+2017-04-19 16:34:43.751 -04:00 [Debug] Using database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.751 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.752 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.752 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.772 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0  
+2017-04-19 16:34:43.772 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/jquery/dist/jquery.min.js  
+2017-04-19 16:34:43.772 -04:00 [Debug] Using database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.772 -04:00 [Debug] Using database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.772 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.772 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.772 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.772 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.772 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.772 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.810 -04:00 [Information] Executed DbCommand (20ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:34:43.811 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.811 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.811 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.812 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.840 -04:00 [Information] Executed DbCommand (66ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:34:43.840 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.840 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.840 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.840 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.842 -04:00 [Information] Executed DbCommand (30ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:34:43.842 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.843 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.902 -04:00 [Information] Executed DbCommand (128ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:34:43.902 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.902 -04:00 [Information] Executed DbCommand (60ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:34:43.902 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.902 -04:00 [Information] Executed DbCommand (58ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2017-04-19 16:34:43.902 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.902 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.902 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.902 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.902 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.903 -04:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-04-19 16:34:43.932 -04:00 [Information] The file "/assets/img/onsolve-sm.png" was not modified
+2017-04-19 16:34:43.932 -04:00 [Information] Executed DbCommand (29ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:34:43.932 -04:00 [Debug] Handled. Status code: 304 File: "/assets/img/onsolve-sm.png"
+2017-04-19 16:34:43.932 -04:00 [Information] Executed DbCommand (27ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2017-04-19 16:34:43.932 -04:00 [Debug] Connection id ""0HL47CDNMU34C"" completed keep alive response.
+2017-04-19 16:34:43.932 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.932 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.932 -04:00 [Information] Request finished in 180.7437ms 304 image/png
+2017-04-19 16:34:43.932 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.932 -04:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-04-19 16:34:43.935 -04:00 [Information] The file "/lib/jquery/dist/jquery.min.js" was not modified
+2017-04-19 16:34:43.960 -04:00 [Debug] Handled. Status code: 304 File: "/lib/jquery/dist/jquery.min.js"
+2017-04-19 16:34:43.960 -04:00 [Debug] Connection id ""0HL47CDNMU34B"" completed keep alive response.
+2017-04-19 16:34:43.961 -04:00 [Information] Executed DbCommand (26ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2017-04-19 16:34:43.961 -04:00 [Information] Request finished in 188.6943ms 304 application/javascript
+2017-04-19 16:34:43.961 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.963 -04:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-04-19 16:34:43.963 -04:00 [Information] The file "/lib/font-awesome/fonts/fontawesome-webfont.woff2" was not modified
+2017-04-19 16:34:43.963 -04:00 [Debug] Handled. Status code: 304 File: "/lib/font-awesome/fonts/fontawesome-webfont.woff2"
+2017-04-19 16:34:43.963 -04:00 [Debug] Connection id ""0HL47CDNMU34D"" completed keep alive response.
+2017-04-19 16:34:43.963 -04:00 [Information] Request finished in 191.4823ms 304 application/font-woff2
+2017-04-19 16:34:43.977 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/bootstrap/dist/js/bootstrap.min.js  
+2017-04-19 16:34:43.978 -04:00 [Debug] Using database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.978 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.978 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.978 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.991 -04:00 [Information] Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:34:43.992 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.992 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.992 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:43.992 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:44.013 -04:00 [Information] Executed DbCommand (21ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:34:44.013 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:44.014 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:44.027 -04:00 [Information] Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2017-04-19 16:34:44.027 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:44.028 -04:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-04-19 16:34:44.028 -04:00 [Information] The file "/lib/bootstrap/dist/js/bootstrap.min.js" was not modified
+2017-04-19 16:34:44.028 -04:00 [Debug] Handled. Status code: 304 File: "/lib/bootstrap/dist/js/bootstrap.min.js"
+2017-04-19 16:34:44.028 -04:00 [Debug] Connection id ""0HL47CDNMU34C"" completed keep alive response.
+2017-04-19 16:34:44.028 -04:00 [Information] Request finished in 51.4732ms 304 application/javascript
+2017-04-19 16:34:44.035 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/angular2/angular.min.js  
+2017-04-19 16:34:44.035 -04:00 [Debug] Using database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:44.035 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:44.035 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:44.036 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:44.050 -04:00 [Information] Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:34:44.056 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:44.056 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:44.056 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:44.057 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:44.081 -04:00 [Information] Executed DbCommand (23ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:34:44.081 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:44.082 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:44.096 -04:00 [Information] Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2017-04-19 16:34:44.096 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:44.096 -04:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-04-19 16:34:44.096 -04:00 [Information] The file "/lib/angular2/angular.min.js" was not modified
+2017-04-19 16:34:44.096 -04:00 [Debug] Handled. Status code: 304 File: "/lib/angular2/angular.min.js"
+2017-04-19 16:34:44.097 -04:00 [Debug] Connection id ""0HL47CDNMU34B"" completed keep alive response.
+2017-04-19 16:34:44.097 -04:00 [Information] Request finished in 61.5883ms 304 application/javascript
+2017-04-19 16:34:44.113 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/js/site.min.js?v=NpMUj71zExRQni6K27BChnEFiXr3zPwMp_IYP45LeJE  
+2017-04-19 16:34:44.113 -04:00 [Debug] Using database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:44.113 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:44.113 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:44.114 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:44.127 -04:00 [Information] Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:34:44.127 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:44.127 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:44.128 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:44.128 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:44.144 -04:00 [Information] Executed DbCommand (16ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:34:44.145 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:44.145 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:44.157 -04:00 [Information] Executed DbCommand (12ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2017-04-19 16:34:44.158 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:44.158 -04:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-04-19 16:34:44.158 -04:00 [Information] The file "/js/site.min.js" was not modified
+2017-04-19 16:34:44.158 -04:00 [Debug] Handled. Status code: 304 File: "/js/site.min.js"
+2017-04-19 16:34:44.158 -04:00 [Debug] Connection id ""0HL47CDNMU34D"" completed keep alive response.
+2017-04-19 16:34:44.158 -04:00 [Information] Request finished in 45.72ms 304 application/javascript
+2017-04-19 16:34:44.178 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/js/jsmodules/ScrollPositionModule.js?v=iZ5RzaVm8uozLlF1_545KjsP6eigu8rH8pV54cogdwc  
+2017-04-19 16:34:44.178 -04:00 [Debug] Using database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:44.178 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:44.178 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:44.178 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:44.191 -04:00 [Information] Executed DbCommand (12ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:34:44.191 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:44.192 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:44.192 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:44.192 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:44.209 -04:00 [Information] Executed DbCommand (16ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:34:44.209 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:44.209 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:44.223 -04:00 [Information] Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2017-04-19 16:34:44.223 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:44.223 -04:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-04-19 16:34:44.223 -04:00 [Information] The file "/js/jsmodules/ScrollPositionModule.js" was not modified
+2017-04-19 16:34:44.224 -04:00 [Debug] Handled. Status code: 304 File: "/js/jsmodules/ScrollPositionModule.js"
+2017-04-19 16:34:44.224 -04:00 [Debug] Connection id ""0HL47CDNMU34C"" completed keep alive response.
+2017-04-19 16:34:44.224 -04:00 [Information] Request finished in 46.1874ms 304 application/javascript
+2017-04-19 16:34:44.228 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/css/serverModal.styles.css  
+2017-04-19 16:34:44.229 -04:00 [Debug] Using database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:44.229 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:44.229 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:44.229 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:44.245 -04:00 [Information] Executed DbCommand (15ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:34:44.245 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:44.245 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:44.246 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:44.246 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:44.265 -04:00 [Information] Executed DbCommand (18ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:34:44.265 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:44.265 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:44.294 -04:00 [Information] Executed DbCommand (28ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2017-04-19 16:34:44.294 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:44.294 -04:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-04-19 16:34:44.295 -04:00 [Information] The file "/css/serverModal.styles.css" was not modified
+2017-04-19 16:34:44.295 -04:00 [Debug] Handled. Status code: 304 File: "/css/serverModal.styles.css"
+2017-04-19 16:34:44.295 -04:00 [Debug] Connection id ""0HL47CDNMU34B"" completed keep alive response.
+2017-04-19 16:34:44.295 -04:00 [Information] Request finished in 66.9574ms 304 text/css
+2017-04-19 16:34:44.298 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/js/serverModal.Controller.js  
+2017-04-19 16:34:44.298 -04:00 [Debug] Using database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:44.298 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:44.298 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:44.299 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:44.313 -04:00 [Information] Executed DbCommand (14ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:34:44.313 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:44.313 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:44.313 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:44.313 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:44.331 -04:00 [Information] Executed DbCommand (17ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:34:44.331 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:44.331 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:44.344 -04:00 [Information] Executed DbCommand (12ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2017-04-19 16:34:44.344 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:34:44.344 -04:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-04-19 16:34:44.345 -04:00 [Information] The file "/js/serverModal.Controller.js" was not modified
+2017-04-19 16:34:44.345 -04:00 [Debug] Handled. Status code: 304 File: "/js/serverModal.Controller.js"
+2017-04-19 16:34:44.345 -04:00 [Debug] Connection id ""0HL47CDNMU34D"" completed keep alive response.
+2017-04-19 16:34:44.345 -04:00 [Information] Request finished in 47.4741ms 304 application/javascript
+2017-04-19 16:35:54.352 -04:00 [Debug] Compiling query model: 
+'(from NocUser <generated>_1 in DbSet<NocUser>
+select <generated>_1)
+.Any()'
+2017-04-19 16:35:54.408 -04:00 [Debug] Optimized query model: 
+'(from NocUser <generated>_1 in DbSet<NocUser>
+select <generated>_1)
+.Any()'
+2017-04-19 16:35:54.583 -04:00 [Debug] TRACKED: False
+(QueryContext queryContext) => IEnumerable<bool> _ToSequence(
+    element: bool GetResult(
+        valueBuffers: IEnumerable<ValueBuffer> _Query(
+            queryContext: queryContext, 
+            shaperCommandContext: SelectExpression: 
+                SELECT CASE
+                    WHEN EXISTS (
+                        SELECT 1
+                        FROM [AspNetUsers] AS [a])
+                    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+                END
+            , 
+            queryIndex: default(System.Nullable`1[System.Int32])
+        )
+    )
+)
+
+2017-04-19 16:35:54.596 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:35:54.643 -04:00 [Information] Executed DbCommand (38ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AspNetUsers] AS [a])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2017-04-19 16:35:54.652 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:35:54.655 -04:00 [Debug] Compiling query model: 
+'(from Product <generated>_1 in DbSet<Product>
+select <generated>_1)
+.Any()'
+2017-04-19 16:35:54.655 -04:00 [Debug] Optimized query model: 
+'(from Product <generated>_1 in DbSet<Product>
+select <generated>_1)
+.Any()'
+2017-04-19 16:35:54.659 -04:00 [Debug] TRACKED: False
+(QueryContext queryContext) => IEnumerable<bool> _ToSequence(
+    element: bool GetResult(
+        valueBuffers: IEnumerable<ValueBuffer> _Query(
+            queryContext: queryContext, 
+            shaperCommandContext: SelectExpression: 
+                SELECT CASE
+                    WHEN EXISTS (
+                        SELECT 1
+                        FROM [Products] AS [p])
+                    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+                END
+            , 
+            queryIndex: default(System.Nullable`1[System.Int32])
+        )
+    )
+)
+
+2017-04-19 16:35:54.659 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:35:54.715 -04:00 [Information] Executed DbCommand (55ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Products] AS [p])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2017-04-19 16:35:54.716 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:35:54.717 -04:00 [Debug] Compiling query model: 
+'(from Server <generated>_1 in DbSet<Server>
+select <generated>_1)
+.Any()'
+2017-04-19 16:35:54.718 -04:00 [Debug] Optimized query model: 
+'(from Server <generated>_1 in DbSet<Server>
+select <generated>_1)
+.Any()'
+2017-04-19 16:35:54.720 -04:00 [Debug] TRACKED: False
+(QueryContext queryContext) => IEnumerable<bool> _ToSequence(
+    element: bool GetResult(
+        valueBuffers: IEnumerable<ValueBuffer> _Query(
+            queryContext: queryContext, 
+            shaperCommandContext: SelectExpression: 
+                SELECT CASE
+                    WHEN EXISTS (
+                        SELECT 1
+                        FROM [Servers] AS [s])
+                    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+                END
+            , 
+            queryIndex: default(System.Nullable`1[System.Int32])
+        )
+    )
+)
+
+2017-04-19 16:35:54.720 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:35:54.743 -04:00 [Information] Executed DbCommand (22ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Servers] AS [s])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2017-04-19 16:35:54.743 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:35:54.791 -04:00 [Information] User profile is available. Using '"C:\Users\djackson\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2017-04-19 16:35:54.832 -04:00 [Debug] Hosting starting
+2017-04-19 16:35:54.918 -04:00 [Debug] Hosting started
+2017-04-19 16:35:55.016 -04:00 [Debug] Connection id ""0HL47CEMPI8IN"" started.
+2017-04-19 16:35:55.017 -04:00 [Debug] Connection id ""0HL47CEMPI8IO"" started.
+2017-04-19 16:35:55.040 -04:00 [Debug] Connection id ""0HL47CEMPI8IN"" reset.
+2017-04-19 16:35:55.042 -04:00 [Debug] Connection id ""0HL47CEMPI8IP"" started.
+2017-04-19 16:35:55.044 -04:00 [Debug] Connection id ""0HL47CEMPI8IN"" disconnecting.
+2017-04-19 16:35:55.052 -04:00 [Debug] Connection id ""0HL47CEMPI8IN"" stopped.
+2017-04-19 16:35:55.114 -04:00 [Information] Request starting HTTP/1.1 DEBUG http://localhost:12170/  0
+2017-04-19 16:35:55.114 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/  
+2017-04-19 16:35:55.226 -04:00 [Debug] Connection id ""0HL47CEMPI8IO"" completed keep alive response.
+2017-04-19 16:35:55.234 -04:00 [Information] Request finished in 136.7383ms 200 
+2017-04-19 16:35:55.240 -04:00 [Debug] Reading data from file '"C:\Users\djackson\AppData\Local\ASP.NET\DataProtection-Keys\key-ea34fd48-7318-409d-a55d-2de09c5c2de1.xml"'.
+2017-04-19 16:35:55.255 -04:00 [Debug] Found key {ea34fd48-7318-409d-a55d-2de09c5c2de1}.
+2017-04-19 16:35:55.267 -04:00 [Debug] Considering key {ea34fd48-7318-409d-a55d-2de09c5c2de1} with expiration date 2017-05-29 17:16:36Z as default key.
+2017-04-19 16:35:55.277 -04:00 [Debug] Decrypting secret element using Windows DPAPI.
+2017-04-19 16:35:55.288 -04:00 [Debug] Opening CNG algorithm '"AES"' from provider 'null' with chaining mode CBC.
+2017-04-19 16:35:55.302 -04:00 [Debug] Opening CNG algorithm '"SHA256"' from provider 'null' with HMAC.
+2017-04-19 16:35:55.319 -04:00 [Debug] Using key {ea34fd48-7318-409d-a55d-2de09c5c2de1} as the default key.
+2017-04-19 16:35:55.349 -04:00 [Debug] Using database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:35:55.349 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:35:55.349 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:35:55.349 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:35:55.377 -04:00 [Information] Executed DbCommand (26ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:35:55.377 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:35:55.377 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:35:55.377 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:35:55.377 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:35:55.393 -04:00 [Information] Executed DbCommand (15ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:35:55.393 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:35:55.393 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:35:55.408 -04:00 [Information] Executed DbCommand (14ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2017-04-19 16:35:55.408 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:35:55.430 -04:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-04-19 16:35:55.435 -04:00 [Debug] The request path "/" does not match a supported file type
+2017-04-19 16:35:55.556 -04:00 [Debug] Request successfully matched the route with name '"Default"' and template '"{Controller}/{Action}/{id?}"'.
+2017-04-19 16:35:55.657 -04:00 [Debug] Executing action "NocWebUtilityApp.Controllers.TableDataVMsController.TablesPage1 (NocWebUtilityApp)"
+2017-04-19 16:35:55.734 -04:00 [Information] Executing action method "NocWebUtilityApp.Controllers.TableDataVMsController.TablesPage1 (NocWebUtilityApp)" with arguments (null) - ModelState is Valid
+2017-04-19 16:35:55.755 -04:00 [Debug] Compiling query model: 
+'from Product <generated>_0 in DbSet<Product>
+select <generated>_0'
+2017-04-19 16:35:55.755 -04:00 [Debug] Optimized query model: 
+'from Product <generated>_0 in DbSet<Product>
+select <generated>_0'
+2017-04-19 16:35:55.783 -04:00 [Debug] TRACKED: True
+(QueryContext queryContext) => IAsyncEnumerable<Product> _ShapedQuery(
+    queryContext: queryContext, 
+    shaperCommandContext: SelectExpression: 
+        SELECT [p].[Id], [p].[PrimaryProductServerId], [p].[ProductGroup], [p].[ProductName], [p].[SecondaryProductServerId], [p].[TableDataVMId], [p].[TableNumber]
+        FROM [Products] AS [p]
+    , 
+    shaper: BufferedEntityShaper<Product>
+)
+
+2017-04-19 16:35:55.825 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:35:55.904 -04:00 [Information] Executed DbCommand (70ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[PrimaryProductServerId], [p].[ProductGroup], [p].[ProductName], [p].[SecondaryProductServerId], [p].[TableDataVMId], [p].[TableNumber]
+FROM [Products] AS [p]
+2017-04-19 16:35:55.982 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:35:55.983 -04:00 [Debug] Compiling query model: 
+'from Server <generated>_0 in DbSet<Server>
+select <generated>_0'
+2017-04-19 16:35:55.984 -04:00 [Debug] Optimized query model: 
+'from Server <generated>_0 in DbSet<Server>
+select <generated>_0'
+2017-04-19 16:35:55.989 -04:00 [Debug] TRACKED: True
+(QueryContext queryContext) => IAsyncEnumerable<Server> _ShapedQuery(
+    queryContext: queryContext, 
+    shaperCommandContext: SelectExpression: 
+        SELECT [s].[Id], [s].[ServerGroup], [s].[ServerName], [s].[TableDataVMId]
+        FROM [Servers] AS [s]
+    , 
+    shaper: BufferedEntityShaper<Server>
+)
+
+2017-04-19 16:35:55.989 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:35:56.041 -04:00 [Information] Executed DbCommand (50ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[ServerGroup], [s].[ServerName], [s].[TableDataVMId]
+FROM [Servers] AS [s]
+2017-04-19 16:35:56.078 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:35:56.101 -04:00 [Debug] _____________________________Testing LOGS Before minimum level set
+2017-04-19 16:35:56.101 -04:00 [Debug] -----------------------------TESTING LOGS
+2017-04-19 16:35:56.109 -04:00 [Debug] Executed action method "NocWebUtilityApp.Controllers.TableDataVMsController.TablesPage1 (NocWebUtilityApp)", returned result "Microsoft.AspNetCore.Mvc.ViewResult".
+2017-04-19 16:35:56.207 -04:00 [Debug] View lookup cache miss for view '"TablesPage1"' in controller '"TableDataVMs"'.
+2017-04-19 16:35:56.219 -04:00 [Debug] Code generation for the Razor file at '"/Views/TableDataVMs/TablesPage1.cshtml"' started.
+2017-04-19 16:35:56.672 -04:00 [Debug] Code generation for the Razor file at '"/Views/TableDataVMs/TablesPage1.cshtml"' completed in 449.8008ms.
+2017-04-19 16:35:56.683 -04:00 [Debug] Compilation of the generated code for the Razor file at '"/Views/TableDataVMs/TablesPage1.cshtml"' started.
+2017-04-19 16:35:57.972 -04:00 [Debug] Compilation of the generated code for the Razor file at '"/Views/TableDataVMs/TablesPage1.cshtml"' completed in 1289.2821ms.
+2017-04-19 16:35:57.978 -04:00 [Debug] Code generation for the Razor file at '"/Views/_ViewStart.cshtml"' started.
+2017-04-19 16:35:57.983 -04:00 [Debug] Code generation for the Razor file at '"/Views/_ViewStart.cshtml"' completed in 5.9289ms.
+2017-04-19 16:35:57.983 -04:00 [Debug] Compilation of the generated code for the Razor file at '"/Views/_ViewStart.cshtml"' started.
+2017-04-19 16:35:58.044 -04:00 [Debug] Compilation of the generated code for the Razor file at '"/Views/_ViewStart.cshtml"' completed in 60.0807ms.
+2017-04-19 16:35:58.051 -04:00 [Debug] The view '"TablesPage1"' was found.
+2017-04-19 16:35:58.053 -04:00 [Information] Executing ViewResult, running view at path "/Views/TableDataVMs/TablesPage1.cshtml".
+2017-04-19 16:35:58.162 -04:00 [Debug] Executing view component "NocWebUtilityApp.ViewComponents.ModalWindowViewComponent" with arguments ([]).
+2017-04-19 16:35:58.172 -04:00 [Debug] Executed view component "NocWebUtilityApp.ViewComponents.ModalWindowViewComponent" in 3.4653ms and returned "Microsoft.AspNetCore.Mvc.ViewComponents.ViewViewComponentResult"
+2017-04-19 16:35:58.176 -04:00 [Debug] View lookup cache miss for view '"Components/ModalWindow/Default"' in controller '"TableDataVMs"'.
+2017-04-19 16:35:58.176 -04:00 [Debug] Code generation for the Razor file at '"/Views/Shared/Components/ModalWindow/Default.cshtml"' started.
+2017-04-19 16:35:58.182 -04:00 [Debug] Code generation for the Razor file at '"/Views/Shared/Components/ModalWindow/Default.cshtml"' completed in 6.3861ms.
+2017-04-19 16:35:58.183 -04:00 [Debug] Compilation of the generated code for the Razor file at '"/Views/Shared/Components/ModalWindow/Default.cshtml"' started.
+2017-04-19 16:35:58.243 -04:00 [Debug] Compilation of the generated code for the Razor file at '"/Views/Shared/Components/ModalWindow/Default.cshtml"' completed in 60.3547ms.
+2017-04-19 16:35:58.337 -04:00 [Debug] View lookup cache miss for view '"_Layout"' in controller '"TableDataVMs"'.
+2017-04-19 16:35:58.338 -04:00 [Debug] Code generation for the Razor file at '"/Views/Shared/_Layout.cshtml"' started.
+2017-04-19 16:35:58.371 -04:00 [Debug] Code generation for the Razor file at '"/Views/Shared/_Layout.cshtml"' completed in 31.9495ms.
+2017-04-19 16:35:58.371 -04:00 [Debug] Compilation of the generated code for the Razor file at '"/Views/Shared/_Layout.cshtml"' started.
+2017-04-19 16:35:58.466 -04:00 [Debug] Compilation of the generated code for the Razor file at '"/Views/Shared/_Layout.cshtml"' completed in 95.1346ms.
+2017-04-19 16:35:58.576 -04:00 [Debug] Executing view component "NocWebUtilityApp.Views.ViewComponents.LoginLogoutViewComponent" with arguments ([]).
+2017-04-19 16:35:58.576 -04:00 [Debug] Executed view component "NocWebUtilityApp.Views.ViewComponents.LoginLogoutViewComponent" in 0.2497ms and returned "Microsoft.AspNetCore.Mvc.ViewComponents.ViewViewComponentResult"
+2017-04-19 16:35:58.577 -04:00 [Debug] View lookup cache miss for view '"Components/LoginLogout/Default"' in controller '"TableDataVMs"'.
+2017-04-19 16:35:58.580 -04:00 [Debug] Code generation for the Razor file at '"/Views/Shared/Components/LoginLogout/Default.cshtml"' started.
+2017-04-19 16:35:58.587 -04:00 [Debug] Code generation for the Razor file at '"/Views/Shared/Components/LoginLogout/Default.cshtml"' completed in 7.9761ms.
+2017-04-19 16:35:58.588 -04:00 [Debug] Compilation of the generated code for the Razor file at '"/Views/Shared/Components/LoginLogout/Default.cshtml"' started.
+2017-04-19 16:35:58.631 -04:00 [Debug] Compilation of the generated code for the Razor file at '"/Views/Shared/Components/LoginLogout/Default.cshtml"' completed in 43.2996ms.
+2017-04-19 16:35:58.671 -04:00 [Debug] An antiforgery cookie token was reused.
+2017-04-19 16:35:58.749 -04:00 [Information] Executed action "NocWebUtilityApp.Controllers.TableDataVMsController.TablesPage1 (NocWebUtilityApp)" in 3090.5726ms
+2017-04-19 16:35:58.769 -04:00 [Debug] Connection id ""0HL47CEMPI8IP"" completed keep alive response.
+2017-04-19 16:35:58.769 -04:00 [Information] Request finished in 3678.1698ms 200 text/html; charset=utf-8
+2017-04-19 16:36:39.058 -04:00 [Information] Request starting HTTP/1.1 POST http://localhost:12170/SaveSelectedServer application/x-www-form-urlencoded; charset=UTF-8 51
+2017-04-19 16:36:39.066 -04:00 [Debug] Using database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:39.073 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:39.074 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:39.074 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:39.091 -04:00 [Information] Executed DbCommand (17ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:36:39.091 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:39.091 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:39.091 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:39.091 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:39.117 -04:00 [Information] Executed DbCommand (25ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:36:39.117 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:39.117 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:39.131 -04:00 [Information] Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2017-04-19 16:36:39.131 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:39.132 -04:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-04-19 16:36:39.132 -04:00 [Debug] "POST" requests are not supported
+2017-04-19 16:36:39.132 -04:00 [Debug] Request successfully matched the route with name '"SaveServerToProduct"' and template '"SaveSelectedServer"'.
+2017-04-19 16:36:39.139 -04:00 [Debug] Executing action "NocWebUtilityApp.Controllers.TableDataVMsController.SaveSelectedServer (NocWebUtilityApp)"
+2017-04-19 16:36:39.154 -04:00 [Information] Authorization was successful for user: "admin".
+2017-04-19 16:36:39.274 -04:00 [Information] Executing action method "NocWebUtilityApp.Controllers.TableDataVMsController.SaveSelectedServer (NocWebUtilityApp)" with arguments (["58", "primaryColumn", "10"]) - ModelState is Valid
+2017-04-19 16:36:39.285 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:39.311 -04:00 [Information] Executed DbCommand (24ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[PrimaryProductServerId], [p].[ProductGroup], [p].[ProductName], [p].[SecondaryProductServerId], [p].[TableDataVMId], [p].[TableNumber]
+FROM [Products] AS [p]
+2017-04-19 16:36:39.314 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:39.314 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:39.350 -04:00 [Information] Executed DbCommand (35ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[ServerGroup], [s].[ServerName], [s].[TableDataVMId]
+FROM [Servers] AS [s]
+2017-04-19 16:36:39.351 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:39.373 -04:00 [Debug] Compiling query model: 
+'(from Product p in DbSet<Product>
+where p.Id == __productId_0
+select p)
+.Single()'
+2017-04-19 16:36:39.381 -04:00 [Debug] Optimized query model: 
+'(from Product p in DbSet<Product>
+where p.Id == __productId_0
+select p)
+.Single()'
+2017-04-19 16:36:39.420 -04:00 [Debug] TRACKED: True
+(QueryContext queryContext) => IAsyncEnumerable<Product> _ToSequence(
+    task: Task<Product> _Single(
+        source: IAsyncEnumerable<Product> _ShapedQuery(
+            queryContext: queryContext, 
+            shaperCommandContext: SelectExpression: 
+                SELECT TOP(2) [p].[Id], [p].[PrimaryProductServerId], [p].[ProductGroup], [p].[ProductName], [p].[SecondaryProductServerId], [p].[TableDataVMId], [p].[TableNumber]
+                FROM [Products] AS [p]
+                WHERE [p].[Id] = @__productId_0
+            , 
+            shaper: BufferedEntityShaper<Product>
+        )
+        , 
+        cancellationToken: queryContext.CancellationToken
+    )
+)
+
+2017-04-19 16:36:39.423 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:39.495 -04:00 [Information] Executed DbCommand (62ms) [Parameters=[@__productId_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [p].[Id], [p].[PrimaryProductServerId], [p].[ProductGroup], [p].[ProductName], [p].[SecondaryProductServerId], [p].[TableDataVMId], [p].[TableNumber]
+FROM [Products] AS [p]
+WHERE [p].[Id] = @__productId_0
+2017-04-19 16:36:39.496 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:39.540 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:39.545 -04:00 [Debug] Beginning transaction with isolation level 'Unspecified'.
+2017-04-19 16:36:39.626 -04:00 [Information] Executed DbCommand (22ms) [Parameters=[@p1='?', @p0='?'], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Products] SET [PrimaryProductServerId] = @p0
+WHERE [Id] = @p1;
+SELECT @@ROWCOUNT;
+2017-04-19 16:36:39.634 -04:00 [Debug] Committing transaction.
+2017-04-19 16:36:39.637 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:39.643 -04:00 [Debug] Executed action method "NocWebUtilityApp.Controllers.TableDataVMsController.SaveSelectedServer (NocWebUtilityApp)", returned result "Microsoft.AspNetCore.Mvc.OkResult".
+2017-04-19 16:36:39.646 -04:00 [Information] Executing HttpStatusCodeResult, setting HTTP status code 200
+2017-04-19 16:36:39.648 -04:00 [Information] Executed action "NocWebUtilityApp.Controllers.TableDataVMsController.SaveSelectedServer (NocWebUtilityApp)" in 507.7327ms
+2017-04-19 16:36:39.649 -04:00 [Debug] Connection id ""0HL47CEMPI8IO"" completed keep alive response.
+2017-04-19 16:36:39.649 -04:00 [Information] Request finished in 591.2878ms 200 
+2017-04-19 16:36:39.693 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/  
+2017-04-19 16:36:39.694 -04:00 [Debug] Using database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:39.694 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:39.694 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:39.694 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:39.708 -04:00 [Information] Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:36:39.708 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:39.708 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:39.708 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:39.709 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:39.722 -04:00 [Information] Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:36:39.722 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:39.723 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:39.741 -04:00 [Information] Executed DbCommand (17ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2017-04-19 16:36:39.741 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:39.741 -04:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-04-19 16:36:39.742 -04:00 [Debug] The request path "/" does not match a supported file type
+2017-04-19 16:36:39.742 -04:00 [Debug] Request successfully matched the route with name '"Default"' and template '"{Controller}/{Action}/{id?}"'.
+2017-04-19 16:36:39.742 -04:00 [Debug] Executing action "NocWebUtilityApp.Controllers.TableDataVMsController.TablesPage1 (NocWebUtilityApp)"
+2017-04-19 16:36:39.759 -04:00 [Information] Executing action method "NocWebUtilityApp.Controllers.TableDataVMsController.TablesPage1 (NocWebUtilityApp)" with arguments (null) - ModelState is Valid
+2017-04-19 16:36:39.759 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:39.779 -04:00 [Information] Executed DbCommand (19ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[PrimaryProductServerId], [p].[ProductGroup], [p].[ProductName], [p].[SecondaryProductServerId], [p].[TableDataVMId], [p].[TableNumber]
+FROM [Products] AS [p]
+2017-04-19 16:36:39.781 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:39.781 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:39.811 -04:00 [Information] Executed DbCommand (29ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[ServerGroup], [s].[ServerName], [s].[TableDataVMId]
+FROM [Servers] AS [s]
+2017-04-19 16:36:39.812 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:39.812 -04:00 [Debug] _____________________________Testing LOGS Before minimum level set
+2017-04-19 16:36:39.812 -04:00 [Debug] -----------------------------TESTING LOGS
+2017-04-19 16:36:39.812 -04:00 [Debug] Executed action method "NocWebUtilityApp.Controllers.TableDataVMsController.TablesPage1 (NocWebUtilityApp)", returned result "Microsoft.AspNetCore.Mvc.ViewResult".
+2017-04-19 16:36:39.820 -04:00 [Debug] View lookup cache hit for view '"TablesPage1"' in controller '"TableDataVMs"'.
+2017-04-19 16:36:39.821 -04:00 [Debug] The view '"TablesPage1"' was found.
+2017-04-19 16:36:39.821 -04:00 [Information] Executing ViewResult, running view at path "/Views/TableDataVMs/TablesPage1.cshtml".
+2017-04-19 16:36:39.822 -04:00 [Debug] Executing view component "NocWebUtilityApp.ViewComponents.ModalWindowViewComponent" with arguments ([]).
+2017-04-19 16:36:39.822 -04:00 [Debug] Executed view component "NocWebUtilityApp.ViewComponents.ModalWindowViewComponent" in 0.0062ms and returned "Microsoft.AspNetCore.Mvc.ViewComponents.ViewViewComponentResult"
+2017-04-19 16:36:39.822 -04:00 [Debug] View lookup cache hit for view '"Components/ModalWindow/Default"' in controller '"TableDataVMs"'.
+2017-04-19 16:36:39.823 -04:00 [Debug] View lookup cache hit for view '"_Layout"' in controller '"TableDataVMs"'.
+2017-04-19 16:36:39.824 -04:00 [Debug] Executing view component "NocWebUtilityApp.Views.ViewComponents.LoginLogoutViewComponent" with arguments ([]).
+2017-04-19 16:36:39.825 -04:00 [Debug] Executed view component "NocWebUtilityApp.Views.ViewComponents.LoginLogoutViewComponent" in 0.008ms and returned "Microsoft.AspNetCore.Mvc.ViewComponents.ViewViewComponentResult"
+2017-04-19 16:36:39.825 -04:00 [Debug] View lookup cache hit for view '"Components/LoginLogout/Default"' in controller '"TableDataVMs"'.
+2017-04-19 16:36:39.843 -04:00 [Debug] An antiforgery cookie token was reused.
+2017-04-19 16:36:39.843 -04:00 [Information] Executed action "NocWebUtilityApp.Controllers.TableDataVMsController.TablesPage1 (NocWebUtilityApp)" in 101.5ms
+2017-04-19 16:36:39.844 -04:00 [Debug] Connection id ""0HL47CEMPI8IP"" completed keep alive response.
+2017-04-19 16:36:39.844 -04:00 [Information] Request finished in 150.8932ms 200 text/html; charset=utf-8
+2017-04-19 16:36:39.877 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/bootstrap/dist/css/bootstrap.css  
+2017-04-19 16:36:39.877 -04:00 [Debug] Using database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:39.877 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:39.877 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:39.877 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:39.891 -04:00 [Information] Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:36:39.891 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:39.891 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:39.892 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:39.892 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:39.906 -04:00 [Information] Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:36:39.906 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:39.906 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:39.925 -04:00 [Information] Executed DbCommand (18ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2017-04-19 16:36:39.925 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:39.926 -04:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-04-19 16:36:39.939 -04:00 [Information] The file "/lib/bootstrap/dist/css/bootstrap.css" was not modified
+2017-04-19 16:36:39.944 -04:00 [Debug] Handled. Status code: 304 File: "/lib/bootstrap/dist/css/bootstrap.css"
+2017-04-19 16:36:39.945 -04:00 [Debug] Connection id ""0HL47CEMPI8IO"" completed keep alive response.
+2017-04-19 16:36:39.945 -04:00 [Information] Request finished in 68.3984ms 304 text/css
+2017-04-19 16:36:39.956 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/font-awesome/css/font-awesome.css  
+2017-04-19 16:36:39.957 -04:00 [Debug] Using database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:39.957 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:39.957 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:39.957 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:39.972 -04:00 [Information] Executed DbCommand (14ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:36:39.972 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:39.972 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:39.972 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:39.972 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.037 -04:00 [Information] Executed DbCommand (64ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:36:40.037 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.038 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.051 -04:00 [Information] Executed DbCommand (12ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2017-04-19 16:36:40.051 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.051 -04:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-04-19 16:36:40.052 -04:00 [Information] The file "/lib/font-awesome/css/font-awesome.css" was not modified
+2017-04-19 16:36:40.052 -04:00 [Debug] Handled. Status code: 304 File: "/lib/font-awesome/css/font-awesome.css"
+2017-04-19 16:36:40.052 -04:00 [Debug] Connection id ""0HL47CEMPI8IP"" completed keep alive response.
+2017-04-19 16:36:40.052 -04:00 [Information] Request finished in 95.7225ms 304 text/css
+2017-04-19 16:36:40.060 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/css/site.css?v=anAVOY8veKfUR1UTB5PSHgnBHItZHaOs8lESbFsGaoE  
+2017-04-19 16:36:40.061 -04:00 [Debug] Using database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.061 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.061 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.061 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.076 -04:00 [Information] Executed DbCommand (14ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:36:40.076 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.076 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.076 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.076 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.092 -04:00 [Information] Executed DbCommand (15ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:36:40.092 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.092 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.115 -04:00 [Information] Executed DbCommand (22ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2017-04-19 16:36:40.115 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.116 -04:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-04-19 16:36:40.116 -04:00 [Information] The file "/css/site.css" was not modified
+2017-04-19 16:36:40.116 -04:00 [Debug] Handled. Status code: 304 File: "/css/site.css"
+2017-04-19 16:36:40.116 -04:00 [Debug] Connection id ""0HL47CEMPI8IO"" completed keep alive response.
+2017-04-19 16:36:40.116 -04:00 [Information] Request finished in 55.9491ms 304 text/css
+2017-04-19 16:36:40.126 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/assets/img/onsolve-sm.png  
+2017-04-19 16:36:40.126 -04:00 [Debug] Using database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.126 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.127 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.127 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.131 -04:00 [Debug] Connection id ""0HL47CEMPI8IQ"" started.
+2017-04-19 16:36:40.131 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/jquery/dist/jquery.min.js  
+2017-04-19 16:36:40.132 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0  
+2017-04-19 16:36:40.132 -04:00 [Debug] Using database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.132 -04:00 [Debug] Using database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.132 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.132 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.144 -04:00 [Information] Executed DbCommand (16ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:36:40.145 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.145 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.145 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.145 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.145 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.145 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.160 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.160 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.163 -04:00 [Information] Executed DbCommand (17ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:36:40.163 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.164 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.164 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.164 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.192 -04:00 [Information] Executed DbCommand (27ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:36:40.192 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.192 -04:00 [Information] Executed DbCommand (31ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:36:40.192 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.193 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.193 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.193 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.193 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.248 -04:00 [Information] Executed DbCommand (54ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2017-04-19 16:36:40.261 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.261 -04:00 [Information] Executed DbCommand (66ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:36:40.261 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.262 -04:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-04-19 16:36:40.262 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.262 -04:00 [Information] The file "/lib/jquery/dist/jquery.min.js" was not modified
+2017-04-19 16:36:40.269 -04:00 [Debug] Handled. Status code: 304 File: "/lib/jquery/dist/jquery.min.js"
+2017-04-19 16:36:40.269 -04:00 [Information] Executed DbCommand (61ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:36:40.269 -04:00 [Debug] Connection id ""0HL47CEMPI8IO"" completed keep alive response.
+2017-04-19 16:36:40.269 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.269 -04:00 [Information] Request finished in 137.0866ms 304 application/javascript
+2017-04-19 16:36:40.282 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.284 -04:00 [Information] Executed DbCommand (21ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2017-04-19 16:36:40.284 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.295 -04:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-04-19 16:36:40.297 -04:00 [Information] The file "/lib/font-awesome/fonts/fontawesome-webfont.woff2" was not modified
+2017-04-19 16:36:40.297 -04:00 [Debug] Handled. Status code: 304 File: "/lib/font-awesome/fonts/fontawesome-webfont.woff2"
+2017-04-19 16:36:40.297 -04:00 [Debug] Connection id ""0HL47CEMPI8IQ"" completed keep alive response.
+2017-04-19 16:36:40.298 -04:00 [Information] Request finished in 165.4785ms 304 application/font-woff2
+2017-04-19 16:36:40.317 -04:00 [Information] Executed DbCommand (34ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2017-04-19 16:36:40.318 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.318 -04:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-04-19 16:36:40.318 -04:00 [Information] The file "/assets/img/onsolve-sm.png" was not modified
+2017-04-19 16:36:40.318 -04:00 [Debug] Handled. Status code: 304 File: "/assets/img/onsolve-sm.png"
+2017-04-19 16:36:40.318 -04:00 [Debug] Connection id ""0HL47CEMPI8IP"" completed keep alive response.
+2017-04-19 16:36:40.319 -04:00 [Information] Request finished in 192.606ms 304 image/png
+2017-04-19 16:36:40.319 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/bootstrap/dist/js/bootstrap.min.js  
+2017-04-19 16:36:40.323 -04:00 [Debug] Using database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.323 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.323 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.324 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.356 -04:00 [Information] Executed DbCommand (31ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:36:40.356 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.356 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.356 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.357 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.372 -04:00 [Information] Executed DbCommand (15ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:36:40.372 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.373 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.393 -04:00 [Information] Executed DbCommand (20ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2017-04-19 16:36:40.393 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.394 -04:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-04-19 16:36:40.394 -04:00 [Information] The file "/lib/bootstrap/dist/js/bootstrap.min.js" was not modified
+2017-04-19 16:36:40.394 -04:00 [Debug] Handled. Status code: 304 File: "/lib/bootstrap/dist/js/bootstrap.min.js"
+2017-04-19 16:36:40.394 -04:00 [Debug] Connection id ""0HL47CEMPI8IO"" completed keep alive response.
+2017-04-19 16:36:40.394 -04:00 [Information] Request finished in 76.2638ms 304 application/javascript
+2017-04-19 16:36:40.401 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/lib/angular2/angular.min.js  
+2017-04-19 16:36:40.401 -04:00 [Debug] Using database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.401 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.402 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.402 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.415 -04:00 [Information] Executed DbCommand (12ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:36:40.415 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.415 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.415 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.415 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.447 -04:00 [Information] Executed DbCommand (30ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:36:40.447 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.447 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.471 -04:00 [Information] Executed DbCommand (23ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2017-04-19 16:36:40.498 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.498 -04:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-04-19 16:36:40.499 -04:00 [Information] The file "/lib/angular2/angular.min.js" was not modified
+2017-04-19 16:36:40.499 -04:00 [Debug] Handled. Status code: 304 File: "/lib/angular2/angular.min.js"
+2017-04-19 16:36:40.499 -04:00 [Debug] Connection id ""0HL47CEMPI8IQ"" completed keep alive response.
+2017-04-19 16:36:40.499 -04:00 [Information] Request finished in 98.3145ms 304 application/javascript
+2017-04-19 16:36:40.515 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/js/site.min.js?v=NpMUj71zExRQni6K27BChnEFiXr3zPwMp_IYP45LeJE  
+2017-04-19 16:36:40.516 -04:00 [Debug] Using database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.516 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.516 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.516 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.530 -04:00 [Information] Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:36:40.530 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.530 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.530 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.530 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.543 -04:00 [Information] Executed DbCommand (12ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:36:40.543 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.544 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.561 -04:00 [Information] Executed DbCommand (17ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2017-04-19 16:36:40.562 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.562 -04:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-04-19 16:36:40.562 -04:00 [Information] The file "/js/site.min.js" was not modified
+2017-04-19 16:36:40.562 -04:00 [Debug] Handled. Status code: 304 File: "/js/site.min.js"
+2017-04-19 16:36:40.563 -04:00 [Debug] Connection id ""0HL47CEMPI8IP"" completed keep alive response.
+2017-04-19 16:36:40.563 -04:00 [Information] Request finished in 47.5911ms 304 application/javascript
+2017-04-19 16:36:40.568 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/js/jsmodules/ScrollPositionModule.js?v=iZ5RzaVm8uozLlF1_545KjsP6eigu8rH8pV54cogdwc  
+2017-04-19 16:36:40.568 -04:00 [Debug] Using database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.568 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.568 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.569 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.582 -04:00 [Information] Executed DbCommand (12ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:36:40.582 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.582 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.583 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.583 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.595 -04:00 [Information] Executed DbCommand (12ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:36:40.595 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.596 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.609 -04:00 [Information] Executed DbCommand (12ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2017-04-19 16:36:40.609 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.609 -04:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-04-19 16:36:40.610 -04:00 [Information] The file "/js/jsmodules/ScrollPositionModule.js" was not modified
+2017-04-19 16:36:40.610 -04:00 [Debug] Handled. Status code: 304 File: "/js/jsmodules/ScrollPositionModule.js"
+2017-04-19 16:36:40.610 -04:00 [Debug] Connection id ""0HL47CEMPI8IO"" completed keep alive response.
+2017-04-19 16:36:40.610 -04:00 [Information] Request finished in 42.565ms 304 application/javascript
+2017-04-19 16:36:40.614 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/css/serverModal.styles.css  
+2017-04-19 16:36:40.614 -04:00 [Debug] Using database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.614 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.614 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.614 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.659 -04:00 [Information] Executed DbCommand (43ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:36:40.659 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.659 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.659 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.659 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.674 -04:00 [Information] Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:36:40.674 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.674 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.688 -04:00 [Information] Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2017-04-19 16:36:40.688 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.689 -04:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-04-19 16:36:40.689 -04:00 [Information] The file "/css/serverModal.styles.css" was not modified
+2017-04-19 16:36:40.689 -04:00 [Debug] Handled. Status code: 304 File: "/css/serverModal.styles.css"
+2017-04-19 16:36:40.689 -04:00 [Debug] Connection id ""0HL47CEMPI8IQ"" completed keep alive response.
+2017-04-19 16:36:40.689 -04:00 [Information] Request finished in 75.5108ms 304 text/css
+2017-04-19 16:36:40.710 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/js/serverModal.Controller.js  
+2017-04-19 16:36:40.711 -04:00 [Debug] Using database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.711 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.711 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.711 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.732 -04:00 [Information] Executed DbCommand (20ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:36:40.732 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.733 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.733 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.733 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.747 -04:00 [Information] Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-19 16:36:40.754 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.763 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.777 -04:00 [Information] Executed DbCommand (12ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2017-04-19 16:36:40.777 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-19 16:36:40.777 -04:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-04-19 16:36:40.778 -04:00 [Information] The file "/js/serverModal.Controller.js" was not modified
+2017-04-19 16:36:40.778 -04:00 [Debug] Handled. Status code: 304 File: "/js/serverModal.Controller.js"
+2017-04-19 16:36:40.778 -04:00 [Debug] Connection id ""0HL47CEMPI8IP"" completed keep alive response.
+2017-04-19 16:36:40.778 -04:00 [Information] Request finished in 67.2809ms 304 application/javascript

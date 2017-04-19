@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
 
-namespace NOC_PL_WebApplication
+namespace NocWebUtilityApp
 {
     public class Program
     {

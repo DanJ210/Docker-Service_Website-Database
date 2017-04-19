@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace NOCPLWebApplication.Views.ViewComponents {
+namespace NocWebUtilityApp.Views.ViewComponents {
     public class LoginLogoutViewComponent : ViewComponent {
         public IViewComponentResult Invoke() {
             return View();

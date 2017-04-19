@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NOCPLWebApplication.Models.SeedData {
+namespace NocWebUtilityApp.Models.SeedData {
     /// <summary>
     /// Only seeds data for the Products and Servers if the data doesn't already exist.
     /// Meant for initial setup. Section labels below can be removed after future development.

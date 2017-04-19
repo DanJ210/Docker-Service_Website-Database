@@ -4,11 +4,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Identity;
-using NOCPLWebApplication.Models;
-using NOCPLWebApplication.Models.ViewModels;
+using NocWebUtilityApp.Models;
+using NocWebUtilityApp.Models.ViewModels;
 using Microsoft.Extensions.Logging;
 
-namespace NOC_PL_WebApplication.Controllers {
+namespace NocWebUtilityApp.Controllers {
     public class AccountController : Controller {
         private UserManager<NocUser> _userManager;
         private SignInManager<NocUser> _signInManager;

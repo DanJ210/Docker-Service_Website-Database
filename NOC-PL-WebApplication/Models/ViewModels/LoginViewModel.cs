@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace NOCPLWebApplication.Models.ViewModels {
+namespace NocWebUtilityApp.Models.ViewModels {
     public class LoginViewModel {
         [Required]
         public string Username { get; set; }

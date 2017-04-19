@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Metadata;
 
-namespace NOCPLWebApplication.Migrations
+namespace NocWebUtilityApp.Migrations
 {
     public partial class removingidentity : Migration
     {

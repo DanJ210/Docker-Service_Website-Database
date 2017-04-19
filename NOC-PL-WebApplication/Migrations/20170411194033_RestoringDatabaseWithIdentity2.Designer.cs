@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
-using NOCPLWebApplication.Models;
+using NocWebUtilityApp.Models;
 
-namespace NOCPLWebApplication.Migrations
+namespace NocWebUtilityApp.Migrations
 {
     [DbContext(typeof(ProductLocationContext))]
     [Migration("20170411194033_RestoringDatabaseWithIdentity2")]
@@ -174,7 +174,7 @@ namespace NOCPLWebApplication.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
-            modelBuilder.Entity("NOCPLWebApplication.Models.Product", b =>
+            modelBuilder.Entity("NocWebUtilityApp.Models.Product", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
@@ -202,7 +202,7 @@ namespace NOCPLWebApplication.Migrations
                     b.ToTable("Products");
                 });
 
-            modelBuilder.Entity("NOCPLWebApplication.Models.Server", b =>
+            modelBuilder.Entity("NocWebUtilityApp.Models.Server", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
@@ -220,7 +220,7 @@ namespace NOCPLWebApplication.Migrations
                     b.ToTable("Servers");
                 });
 
-            modelBuilder.Entity("NOCPLWebApplication.Models.TableDataVM", b =>
+            modelBuilder.Entity("NocWebUtilityApp.Models.TableDataVM", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
@@ -267,24 +267,24 @@ namespace NOCPLWebApplication.Migrations
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
-            modelBuilder.Entity("NOCPLWebApplication.Models.Product", b =>
+            modelBuilder.Entity("NocWebUtilityApp.Models.Product", b =>
                 {
-                    b.HasOne("NOCPLWebApplication.Models.Server", "PrimaryProductServer")
+                    b.HasOne("NocWebUtilityApp.Models.Server", "PrimaryProductServer")
                         .WithMany()
                         .HasForeignKey("PrimaryProductServerId");
 
-                    b.HasOne("NOCPLWebApplication.Models.Server", "SecondaryProductServer")
+                    b.HasOne("NocWebUtilityApp.Models.Server", "SecondaryProductServer")
                         .WithMany()
                         .HasForeignKey("SecondaryProductServerId");
 
-                    b.HasOne("NOCPLWebApplication.Models.TableDataVM")
+                    b.HasOne("NocWebUtilityApp.Models.TableDataVM")
                         .WithMany("TableProducts")
                         .HasForeignKey("TableDataVMId");
                 });
 
-            modelBuilder.Entity("NOCPLWebApplication.Models.Server", b =>
+            modelBuilder.Entity("NocWebUtilityApp.Models.Server", b =>
                 {
-                    b.HasOne("NOCPLWebApplication.Models.TableDataVM")
+                    b.HasOne("NocWebUtilityApp.Models.TableDataVM")
                         .WithMany("TableServers")
                         .HasForeignKey("TableDataVMId");
                 });

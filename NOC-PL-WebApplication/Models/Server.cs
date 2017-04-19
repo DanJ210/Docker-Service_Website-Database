@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NOCPLWebApplication.Models {
+namespace NocWebUtilityApp.Models {
     public class Server {
         public int Id { get; set; }
         public string ServerName { get; set; }

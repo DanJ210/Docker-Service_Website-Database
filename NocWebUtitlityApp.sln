@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26228.9
+VisualStudioVersion = 15.0.26403.7
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NOC-PL-WebApplication", "NOC-PL-WebApplication\NOC-PL-WebApplication.csproj", "{99A784AC-7FD1-4618-B752-B08287C78468}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NocWebUtilityApp", "NOC-PL-WebApplication\NocWebUtilityApp.csproj", "{99A784AC-7FD1-4618-B752-B08287C78468}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

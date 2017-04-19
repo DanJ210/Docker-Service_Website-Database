@@ -5,14 +5,14 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using NOCPLWebApplication.Models;
+using NocWebUtilityApp.Models;
 using System.Collections;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Authorization;
 using Serilog;
 using Serilog.Core;
 // Controller meant for table data display and manipulation
-namespace NOC_PL_WebApplication.Controllers {
+namespace NocWebUtilityApp.Controllers {
     public class TableDataVMsController : Controller {
         private readonly ProductLocationContext _context;
         private ILogger<TableDataVMsController> _logger;

@@ -16,7 +16,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "NOC_PL_WebApplication": {
+    "NocWebUtilityApp": {
       "commandName": "Project",
       "launchBrowser": true,
       "environmentVariables": {

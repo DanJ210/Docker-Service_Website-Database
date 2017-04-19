@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NOCPLWebApplication.Models {
+namespace NocWebUtilityApp.Models {
     public class Product {
         public int Id { get; set; }
         public int TableNumber { get; set; }

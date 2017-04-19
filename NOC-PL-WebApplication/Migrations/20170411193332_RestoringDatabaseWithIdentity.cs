@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace NOCPLWebApplication.Migrations
+namespace NocWebUtilityApp.Migrations
 {
     public partial class RestoringDatabaseWithIdentity : Migration
     {

@@ -8,15 +8,15 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using NOCPLWebApplication.Models;
-using NOCPLWebApplication.Models.SeedData;
+using NocWebUtilityApp.Models;
+using NocWebUtilityApp.Models.SeedData;
 using Microsoft.Extensions.Configuration;
 using Serilog;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Serilog.Core;
 using Serilog.Events;
 
-namespace NOC_PL_WebApplication {
+namespace NocWebUtilityApp {
     public class Startup {
         public static IConfigurationRoot Configuration;
         // This method gets called by the runtime. Use this method to add services to the container.
