@@ -42,7 +42,7 @@ namespace NOC_PL_WebApplication.Controllers {
                 SelectList serverList = new SelectList(tableDataVM.TableServers, "Id", "ServerName");
 
                 ViewBag.productList = productList;
-                ViewBag.serverList = serverList;
+                ViewBag.serverList = serverList;dasfasd
                 
                 _logger.LogDebug("_____________________________Testing LOGS Before minimum level set");
                 //var levelSwitch = new LoggingLevelSwitch();
