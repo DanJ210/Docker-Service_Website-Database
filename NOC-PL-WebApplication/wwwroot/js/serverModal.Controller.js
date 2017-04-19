@@ -32,12 +32,13 @@ debugger;
     $.fn.serverListChangeFunction = function serverListChange() {
         /**
          * @desc POSt
-         * @param {int} serverId
+         * @param {int} selectedServerId
+         * @param {int[]} selectedProductIds
          * @param {Controller} TableDataVMs
          * @param {Action} SaveSelectedServer
          */
-        var serverId = $('#ServerSelectList').val();
-        //var selectedProductIds = $('#ProductSelectList').val();
+        var selectedServerId = $('#ServerSelectList').val();
+        var selectedProductIds = $('#ProductSelectList').val();
         //alert(selectedProductIds);
         var ajaxRequest = $.ajax({
             type: 'POST',
@@ -45,7 +46,7 @@ debugger;
             data: {
                 'productId': productId,
                 'serverColumn': serverColumn,
-                'serverId' : serverId},
+                'serverId' : selectedServerId},
             success: function () {
                 $('#serverModal').modal('hide');
                 location.reload();

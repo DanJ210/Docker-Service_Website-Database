@@ -9,15 +9,19 @@ using NOCPLWebApplication.Models;
 using System.Collections;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Authorization;
+using Serilog;
+using Serilog.Core;
 // Controller meant for table data display and manipulation
 namespace NOC_PL_WebApplication.Controllers {
     public class TableDataVMsController : Controller {
         private readonly ProductLocationContext _context;
         private ILogger<TableDataVMsController> _logger;
+        //private LoggingLevelSwitch _levelSwitch;
 
         public TableDataVMsController(ProductLocationContext context, ILogger<TableDataVMsController> logger) {
             _context = context;
             _logger = logger;
+            //_levelSwitch = levelSwitch;
         }
 
         /// <summary>
@@ -30,16 +34,20 @@ namespace NOC_PL_WebApplication.Controllers {
         public async Task<IActionResult> TablesPage1() {
 
             var tableDataVM = new TableDataVM();
-
             try {
                 tableDataVM.TableProducts = await _context.Products.ToListAsync();
                 tableDataVM.TableServers = await _context.Servers.ToListAsync();
 
-                //MultiSelectList productList = new MultiSelectList(tableDataVM.TableProducts, "Id", "ProductName");
+                MultiSelectList productList = new MultiSelectList(tableDataVM.TableProducts, "Id", "ProductName");
                 SelectList serverList = new SelectList(tableDataVM.TableServers, "Id", "ServerName");
 
-                //ViewBag.productList = productList;
+                ViewBag.productList = productList;
                 ViewBag.serverList = serverList;
+                
+                _logger.LogDebug("_____________________________Testing LOGS Before minimum level set");
+                //var levelSwitch = new LoggingLevelSwitch();
+                //_levelSwitch.MinimumLevel = Serilog.Events.LogEventLevel.Debug;
+                _logger.LogDebug("-----------------------------TESTING LOGS");
             }
             catch (Exception ex) {
                 _logger.LogDebug($"------------Error generating view from product and server entities in database: {ex.Message}");
@@ -61,10 +69,10 @@ namespace NOC_PL_WebApplication.Controllers {
                 tableDataVM.TableProducts = await _context.Products.ToListAsync();
                 tableDataVM.TableServers = await _context.Servers.ToListAsync();
 
-                //MultiSelectList productList = new MultiSelectList(tableDataVM.TableProducts, "Id", "ProductName");
+                MultiSelectList productList = new MultiSelectList(tableDataVM.TableProducts, "Id", "ProductName");
                 SelectList serverList = new SelectList(tableDataVM.TableServers, "Id", "ServerName");
 
-                //ViewBag.productList = productList;
+                ViewBag.productList = productList;
                 ViewBag.serverList = serverList;
             }
             catch (Exception ex) {
@@ -95,7 +103,7 @@ namespace NOC_PL_WebApplication.Controllers {
                 var product = await _context.Products.SingleAsync(p => p.Id == productId);
 
                 if (serverColumn.Contains("primary")) {
-                    product.PrimaryProductServer = servers.Single(s => s.Id == serverId);
+                    product.PrimaryProductServer = servers.Single(s => s.Id == serverId); ;
                 }
                 else {
                     product.SecondaryProductServer = servers.Single(s => s.Id == serverId);
@@ -108,6 +116,10 @@ namespace NOC_PL_WebApplication.Controllers {
                 return Redirect("Account/Login");
             }
             return Ok();
+        }
+
+        public IActionResult Error() {
+            return View();
         }
 
 
