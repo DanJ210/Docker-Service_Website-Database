@@ -44,11 +44,15 @@ namespace NocWebUtilityApp {
 
             var connectionString = Configuration["connectionStrings:nocProductServerDBConnectionString"];
             services.AddDbContext<ProductLocationContext>(options => options.UseSqlServer(connectionString));
+
             services.AddIdentity<NocUser, IdentityRole>()
                 .AddEntityFrameworkStores<ProductLocationContext>();
+
             services.AddTransient<ProductServerSeedData>();
 
-            //services.AddLogging(); May not be needed
+            //services.AddScoped<IProductLocationRepository, ProductLocationRepository>();
+
+            //services.AddLogging(); May not be needed after introducing SeriLog.
             
 
             services.AddMvc();
