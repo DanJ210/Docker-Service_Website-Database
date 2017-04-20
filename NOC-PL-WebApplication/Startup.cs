@@ -15,6 +15,7 @@ using Serilog;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Serilog.Core;
 using Serilog.Events;
+using NocWebUtilityApp.Services;
 
 namespace NocWebUtilityApp {
     public class Startup {
@@ -50,7 +51,7 @@ namespace NocWebUtilityApp {
 
             services.AddTransient<ProductServerSeedData>();
 
-            //services.AddScoped<IProductLocationRepository, ProductLocationRepository>();
+            services.AddScoped<IProductLocationRepository, ProductLocationRepository>();
 
             //services.AddLogging(); May not be needed after introducing SeriLog.
             

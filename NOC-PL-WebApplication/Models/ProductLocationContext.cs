@@ -11,7 +11,7 @@ namespace NocWebUtilityApp.Models {
     public class ProductLocationContext : IdentityDbContext<NocUser> {
         public ProductLocationContext(DbContextOptions options) : base(options) {
             // Turn off auto migration when done
-            Database.Migrate();
+            //Database.Migrate();
             //Database.EnsureCreated();
         }
         public DbSet<Product> Products { get; set; }
