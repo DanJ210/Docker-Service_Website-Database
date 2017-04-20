@@ -11,16 +11,21 @@ using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Authorization;
 using Serilog;
 using Serilog.Core;
+using NocWebUtilityApp.Services;
 // Controller meant for table data display and manipulation
 namespace NocWebUtilityApp.Controllers {
     public class TableDataVMsController : Controller {
         private readonly ProductLocationContext _context;
-        private ILogger<TableDataVMsController> _logger;
+        private readonly IProductLocationRepository _productLocationRepository;
+        private readonly ILogger<TableDataVMsController> _logger;
         //private LoggingLevelSwitch _levelSwitch;
 
-        public TableDataVMsController(ProductLocationContext context, ILogger<TableDataVMsController> logger) {
+        public TableDataVMsController(ProductLocationContext context,
+            IProductLocationRepository productLocationRepository,
+            ILogger<TableDataVMsController> logger) {
             _context = context;
             _logger = logger;
+            _productLocationRepository = productLocationRepository;
             //_levelSwitch = levelSwitch;
         }
 
@@ -35,15 +40,17 @@ namespace NocWebUtilityApp.Controllers {
 
             var tableDataVM = new TableDataVM();
             try {
-                tableDataVM.TableProducts = await _context.Products.ToListAsync();
-                tableDataVM.TableServers = await _context.Servers.ToListAsync();
+                tableDataVM.TableProducts = await _productLocationRepository.GetProducts();
+                tableDataVM.TableServers = await _productLocationRepository.GetServers();
+                //tableDataVM.TableProducts = await _context.Products.ToListAsync();
+                //tableDataVM.TableServers = await _context.Servers.ToListAsync();
 
                 MultiSelectList productList = new MultiSelectList(tableDataVM.TableProducts, "Id", "ProductName");
                 SelectList serverList = new SelectList(tableDataVM.TableServers, "Id", "ServerName");
 
                 ViewBag.productList = productList;
                 ViewBag.serverList = serverList;
-                
+
                 _logger.LogDebug("_____________________________Testing LOGS Before minimum level set");
                 //var levelSwitch = new LoggingLevelSwitch();
                 //_levelSwitch.MinimumLevel = Serilog.Events.LogEventLevel.Debug;
@@ -66,8 +73,10 @@ namespace NocWebUtilityApp.Controllers {
             var tableDataVM = new TableDataVM();
 
             try {
-                tableDataVM.TableProducts = await _context.Products.ToListAsync();
-                tableDataVM.TableServers = await _context.Servers.ToListAsync();
+                tableDataVM.TableProducts = await _productLocationRepository.GetProducts();
+                tableDataVM.TableServers = await _productLocationRepository.GetServers();
+                //tableDataVM.TableProducts = await _context.Products.ToListAsync();
+                //tableDataVM.TableServers = await _context.Servers.ToListAsync();
 
                 MultiSelectList productList = new MultiSelectList(tableDataVM.TableProducts, "Id", "ProductName");
                 SelectList serverList = new SelectList(tableDataVM.TableServers, "Id", "ServerName");
@@ -193,28 +202,21 @@ namespace NocWebUtilityApp.Controllers {
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id")] TableDataVM tableDataVM)
-        {
-            if (id != tableDataVM.Id)
-            {
+        public async Task<IActionResult> Edit(int id, [Bind("Id")] TableDataVM tableDataVM) {
+            if (id != tableDataVM.Id) {
                 return NotFound();
             }
 
-            if (ModelState.IsValid)
-            {
-                try
-                {
+            if (ModelState.IsValid) {
+                try {
                     _context.Update(tableDataVM);
                     await _context.SaveChangesAsync();
                 }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!TableDataVMExists(tableDataVM.Id))
-                    {
+                catch (DbUpdateConcurrencyException) {
+                    if (!TableDataVMExists(tableDataVM.Id)) {
                         return NotFound();
                     }
-                    else
-                    {
+                    else {
                         throw;
                     }
                 }
@@ -252,8 +254,7 @@ namespace NocWebUtilityApp.Controllers {
         //    return RedirectToAction("Index");
         //}
 
-        private bool TableDataVMExists(int id)
-        {
+        private bool TableDataVMExists(int id) {
             return _context.TableDataVM.Any(e => e.Id == id);
         }
     }
