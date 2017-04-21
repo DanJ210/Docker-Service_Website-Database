@@ -7,16 +7,21 @@ using Microsoft.AspNetCore.Identity;
 using NocWebUtilityApp.Models;
 using NocWebUtilityApp.Models.ViewModels;
 using Microsoft.Extensions.Logging;
+using NocWebUtilityApp.Services;
 
 namespace NocWebUtilityApp.Controllers {
     public class AccountController : Controller {
         private UserManager<NocUser> _userManager;
         private SignInManager<NocUser> _signInManager;
-        private ProductLocationContext _context;
         private ILogger<AccountController> _logger;
+        private IProductLocationRepository _productLocationRepository;
 
-        public AccountController(ProductLocationContext context, UserManager<NocUser> userManager, SignInManager<NocUser> signInManager, ILogger<AccountController> logger) {
-            _context = context;
+        public AccountController(IProductLocationRepository productLocationRepository,
+            UserManager<NocUser> userManager,
+            SignInManager<NocUser> signInManager,
+            ILogger<AccountController> logger) {
+
+            _productLocationRepository = productLocationRepository;
             _userManager = userManager;
             _signInManager = signInManager;
             _logger = logger;

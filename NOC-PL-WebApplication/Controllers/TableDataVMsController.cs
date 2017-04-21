@@ -15,26 +15,23 @@ using NocWebUtilityApp.Services;
 // Controller meant for table data display and manipulation
 namespace NocWebUtilityApp.Controllers {
     public class TableDataVMsController : Controller {
-        private readonly ProductLocationContext _context;
         private readonly IProductLocationRepository _productLocationRepository;
         private readonly ILogger<TableDataVMsController> _logger;
-        //private LoggingLevelSwitch _levelSwitch;
 
-        public TableDataVMsController(ProductLocationContext context,
-            IProductLocationRepository productLocationRepository,
+        public TableDataVMsController(IProductLocationRepository productLocationRepository,
             ILogger<TableDataVMsController> logger) {
-            _context = context;
+
             _logger = logger;
             _productLocationRepository = productLocationRepository;
-            //_levelSwitch = levelSwitch;
         }
 
         /// <summary>
         /// Generates a list of products and servers mapped to a VM.
-        /// Creates a select list of servers and sets to ViewBag.
+        /// Generates SelectList and MultiSelectlist.
         /// For Page 1
         /// </summary>
-        /// <returns>{TableDataVM} Products, Servers and a SelectList of servers</returns>
+        /// <returns>{TableDataVM} Products, Servers. {ViewBag} SelectList and MultiSelectList</returns>
+        /// <exception cref="Exception">Standard Exception. Logs error message in serilogger</exception>
         // GET: TableDataVMs
         public async Task<IActionResult> TablesPage1() {
 
@@ -42,19 +39,12 @@ namespace NocWebUtilityApp.Controllers {
             try {
                 tableDataVM.TableProducts = await _productLocationRepository.GetProducts();
                 tableDataVM.TableServers = await _productLocationRepository.GetServers();
-                //tableDataVM.TableProducts = await _context.Products.ToListAsync();
-                //tableDataVM.TableServers = await _context.Servers.ToListAsync();
 
                 MultiSelectList productList = new MultiSelectList(tableDataVM.TableProducts, "Id", "ProductName");
                 SelectList serverList = new SelectList(tableDataVM.TableServers, "Id", "ServerName");
 
                 ViewBag.productList = productList;
                 ViewBag.serverList = serverList;
-
-                _logger.LogDebug("_____________________________Testing LOGS Before minimum level set");
-                //var levelSwitch = new LoggingLevelSwitch();
-                //_levelSwitch.MinimumLevel = Serilog.Events.LogEventLevel.Debug;
-                _logger.LogDebug("-----------------------------TESTING LOGS");
             }
             catch (Exception ex) {
                 _logger.LogDebug($"------------Error generating view from product and server entities in database: {ex.Message}");
@@ -63,10 +53,12 @@ namespace NocWebUtilityApp.Controllers {
         }
         /// <summary>
         /// Generates a list of products and servers mapped to a VM.
-        /// Creates a select list of servers and sets to ViewBag.
+        /// Generates SelectList and MultiSelectlist.
         /// For Page 2
         /// </summary>
-        /// <returns>{TableDataVM} Products, Servers and a SelectList of servers</returns>
+        /// <remarks>SelectList is of servers, MultiSelectList of Products</remarks>
+        /// <returns>{TableDataVM} Products, Servers. {ViewBag} SelectList and MultiSelectList</returns>
+        /// <exception cref="Exception">Standard Exception. Logs error message in serilogger</exception>
         // GET: TableDataVMs
         public async Task<IActionResult> TablesPage2() {
 
@@ -75,8 +67,7 @@ namespace NocWebUtilityApp.Controllers {
             try {
                 tableDataVM.TableProducts = await _productLocationRepository.GetProducts();
                 tableDataVM.TableServers = await _productLocationRepository.GetServers();
-                //tableDataVM.TableProducts = await _context.Products.ToListAsync();
-                //tableDataVM.TableServers = await _context.Servers.ToListAsync();
+
 
                 MultiSelectList productList = new MultiSelectList(tableDataVM.TableProducts, "Id", "ProductName");
                 SelectList serverList = new SelectList(tableDataVM.TableServers, "Id", "ServerName");
@@ -98,27 +89,20 @@ namespace NocWebUtilityApp.Controllers {
         /// <param name="productId">Database Id of the product</param>
         /// <param name="serverColumn">The column the server belongs</param>
         /// <param name="serverId">Database Id of the server</param>
-        /// <returns></returns>
+        /// <returns>Ok if the task resulted in an Ok completion</returns>
+        /// <exception cref="Exception"></exception>
         [Authorize]
         [HttpPost]
         public async Task<IActionResult> SaveSelectedServer(int productId, string serverColumn, int serverId) {
 
             try {
+                var product = await _productLocationRepository.GetProduct(productId);
+                var server = await _productLocationRepository.GetServer(serverId);
 
-                var products = await _context.Products.ToListAsync();
-
-                var servers = await _context.Servers.ToListAsync();
-
-                var product = await _context.Products.SingleAsync(p => p.Id == productId);
-
-                if (serverColumn.Contains("primary")) {
-                    product.PrimaryProductServer = servers.Single(s => s.Id == serverId); ;
-                }
-                else {
-                    product.SecondaryProductServer = servers.Single(s => s.Id == serverId);
-                }
-                await _context.SaveChangesAsync();
-
+                product.PrimaryProductServer = serverColumn.Contains("primary") ? server : null;
+                product.SecondaryProductServer = serverColumn.Contains("secondary") ? server : null;
+                
+                await _productLocationRepository.SaveChanges();
             }
             catch (Exception ex) {
                 _logger.LogError("PRODUCTS CONTROLLER ------- SaveSelectedServer Action:  " + ex.Message);
@@ -127,6 +111,10 @@ namespace NocWebUtilityApp.Controllers {
             return Ok();
         }
 
+        /// <summary>
+        /// Error page for non-development environment.
+        /// </summary>
+        /// <returns>A standard View of Error.cshtml</returns>
         public IActionResult Error() {
             return View();
         }
@@ -200,30 +188,30 @@ namespace NocWebUtilityApp.Controllers {
         // POST: TableDataVMs/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id")] TableDataVM tableDataVM) {
-            if (id != tableDataVM.Id) {
-                return NotFound();
-            }
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public async Task<IActionResult> Edit(int id, [Bind("Id")] TableDataVM tableDataVM) {
+        //    if (id != tableDataVM.Id) {
+        //        return NotFound();
+        //    }
 
-            if (ModelState.IsValid) {
-                try {
-                    _context.Update(tableDataVM);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException) {
-                    if (!TableDataVMExists(tableDataVM.Id)) {
-                        return NotFound();
-                    }
-                    else {
-                        throw;
-                    }
-                }
-                return RedirectToAction("Index");
-            }
-            return View(tableDataVM);
-        }
+        //    if (ModelState.IsValid) {
+        //        try {
+        //            _context.Update(tableDataVM);
+        //            await _context.SaveChangesAsync();
+        //        }
+        //        catch (DbUpdateConcurrencyException) {
+        //            if (!TableDataVMExists(tableDataVM.Id)) {
+        //                return NotFound();
+        //            }
+        //            else {
+        //                throw;
+        //            }
+        //        }
+        //        return RedirectToAction("Index");
+        //    }
+        //    return View(tableDataVM);
+        //}
 
         // GET: TableDataVMs/Delete/5
         //public async Task<IActionResult> Delete(int? id)
@@ -254,8 +242,8 @@ namespace NocWebUtilityApp.Controllers {
         //    return RedirectToAction("Index");
         //}
 
-        private bool TableDataVMExists(int id) {
-            return _context.TableDataVM.Any(e => e.Id == id);
-        }
+        //private bool TableDataVMExists(int id) {
+        //    return _context.TableDataVM.Any(e => e.Id == id);
+        //}
     }
 }
