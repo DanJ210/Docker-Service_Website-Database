@@ -1,0 +1,423 @@
+2017-04-21 17:04:03.674 -04:00 [Debug] Compiling query model: 
+'(from NocUser <generated>_1 in DbSet<NocUser>
+select <generated>_1)
+.Any()'
+2017-04-21 17:04:03.743 -04:00 [Debug] Optimized query model: 
+'(from NocUser <generated>_1 in DbSet<NocUser>
+select <generated>_1)
+.Any()'
+2017-04-21 17:04:04.012 -04:00 [Debug] TRACKED: False
+(QueryContext queryContext) => IEnumerable<bool> _ToSequence(
+    element: bool GetResult(
+        valueBuffers: IEnumerable<ValueBuffer> _Query(
+            queryContext: queryContext, 
+            shaperCommandContext: SelectExpression: 
+                SELECT CASE
+                    WHEN EXISTS (
+                        SELECT 1
+                        FROM [AspNetUsers] AS [a])
+                    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+                END
+            , 
+            queryIndex: default(System.Nullable`1[System.Int32])
+        )
+    )
+)
+
+2017-04-21 17:04:04.047 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-21 17:04:04.110 -04:00 [Information] Executed DbCommand (54ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AspNetUsers] AS [a])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2017-04-21 17:04:04.121 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-21 17:04:04.125 -04:00 [Debug] Compiling query model: 
+'(from Product <generated>_1 in DbSet<Product>
+select <generated>_1)
+.Any()'
+2017-04-21 17:04:04.125 -04:00 [Debug] Optimized query model: 
+'(from Product <generated>_1 in DbSet<Product>
+select <generated>_1)
+.Any()'
+2017-04-21 17:04:04.129 -04:00 [Debug] TRACKED: False
+(QueryContext queryContext) => IEnumerable<bool> _ToSequence(
+    element: bool GetResult(
+        valueBuffers: IEnumerable<ValueBuffer> _Query(
+            queryContext: queryContext, 
+            shaperCommandContext: SelectExpression: 
+                SELECT CASE
+                    WHEN EXISTS (
+                        SELECT 1
+                        FROM [Products] AS [p])
+                    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+                END
+            , 
+            queryIndex: default(System.Nullable`1[System.Int32])
+        )
+    )
+)
+
+2017-04-21 17:04:04.129 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-21 17:04:04.174 -04:00 [Information] Executed DbCommand (44ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Products] AS [p])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2017-04-21 17:04:04.175 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-21 17:04:04.176 -04:00 [Debug] Compiling query model: 
+'(from Server <generated>_1 in DbSet<Server>
+select <generated>_1)
+.Any()'
+2017-04-21 17:04:04.176 -04:00 [Debug] Optimized query model: 
+'(from Server <generated>_1 in DbSet<Server>
+select <generated>_1)
+.Any()'
+2017-04-21 17:04:04.178 -04:00 [Debug] TRACKED: False
+(QueryContext queryContext) => IEnumerable<bool> _ToSequence(
+    element: bool GetResult(
+        valueBuffers: IEnumerable<ValueBuffer> _Query(
+            queryContext: queryContext, 
+            shaperCommandContext: SelectExpression: 
+                SELECT CASE
+                    WHEN EXISTS (
+                        SELECT 1
+                        FROM [Servers] AS [s])
+                    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+                END
+            , 
+            queryIndex: default(System.Nullable`1[System.Int32])
+        )
+    )
+)
+
+2017-04-21 17:04:04.178 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-21 17:04:04.201 -04:00 [Information] Executed DbCommand (22ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Servers] AS [s])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+2017-04-21 17:04:04.201 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-21 17:04:04.266 -04:00 [Information] User profile is available. Using '"C:\Users\djackson\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2017-04-21 17:04:04.371 -04:00 [Debug] Hosting starting
+2017-04-21 17:04:04.529 -04:00 [Debug] Hosting started
+2017-04-21 17:04:04.655 -04:00 [Debug] Connection id ""0HL48V7OOEQ4K"" started.
+2017-04-21 17:04:04.655 -04:00 [Debug] Connection id ""0HL48V7OOEQ4J"" started.
+2017-04-21 17:04:04.794 -04:00 [Information] Request starting HTTP/1.1 DEBUG http://localhost:12170/  0
+2017-04-21 17:04:04.794 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:12170/  
+2017-04-21 17:04:04.991 -04:00 [Debug] Connection id ""0HL48V7OOEQ4K"" completed keep alive response.
+2017-04-21 17:04:05.009 -04:00 [Information] Request finished in 233.2252ms 200 
+2017-04-21 17:04:05.022 -04:00 [Debug] Reading data from file '"C:\Users\djackson\AppData\Local\ASP.NET\DataProtection-Keys\key-ea34fd48-7318-409d-a55d-2de09c5c2de1.xml"'.
+2017-04-21 17:04:05.031 -04:00 [Debug] Found key {ea34fd48-7318-409d-a55d-2de09c5c2de1}.
+2017-04-21 17:04:05.051 -04:00 [Debug] Considering key {ea34fd48-7318-409d-a55d-2de09c5c2de1} with expiration date 2017-05-29 17:16:36Z as default key.
+2017-04-21 17:04:05.061 -04:00 [Debug] Decrypting secret element using Windows DPAPI.
+2017-04-21 17:04:05.072 -04:00 [Debug] Opening CNG algorithm '"AES"' from provider 'null' with chaining mode CBC.
+2017-04-21 17:04:05.082 -04:00 [Debug] Opening CNG algorithm '"SHA256"' from provider 'null' with HMAC.
+2017-04-21 17:04:05.092 -04:00 [Debug] Using key {ea34fd48-7318-409d-a55d-2de09c5c2de1} as the default key.
+2017-04-21 17:04:05.109 -04:00 [Debug] Using database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-21 17:04:05.109 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-21 17:04:05.109 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-21 17:04:05.109 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-21 17:04:05.138 -04:00 [Information] Executed DbCommand (27ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-21 17:04:05.138 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-21 17:04:05.138 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-21 17:04:05.139 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-21 17:04:05.139 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-21 17:04:05.155 -04:00 [Information] Executed DbCommand (16ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory');
+2017-04-21 17:04:05.172 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-21 17:04:05.172 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-21 17:04:05.205 -04:00 [Information] Executed DbCommand (28ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2017-04-21 17:04:05.206 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-21 17:04:05.289 -04:00 [Debug] Compiling query model: 
+'(from NocUser e in DbSet<NocUser>
+where Property(e, "Id") == __get_Item_0
+select e)
+.FirstOrDefault()'
+2017-04-21 17:04:05.311 -04:00 [Debug] Optimized query model: 
+'(from NocUser e in DbSet<NocUser>
+where Property(e, "Id") == __get_Item_0
+select e)
+.FirstOrDefault()'
+2017-04-21 17:04:05.384 -04:00 [Debug] TRACKED: True
+(QueryContext queryContext) => IAsyncEnumerable<NocUser> _ToSequence(
+    task: Task<NocUser> _FirstOrDefault(
+        source: IAsyncEnumerable<NocUser> _ShapedQuery(
+            queryContext: queryContext, 
+            shaperCommandContext: SelectExpression: 
+                SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[ConcurrencyStamp], [e].[Email], [e].[EmailConfirmed], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UserName]
+                FROM [AspNetUsers] AS [e]
+                WHERE [e].[Id] = @__get_Item_0
+            , 
+            shaper: BufferedEntityShaper<NocUser>
+        )
+        , 
+        cancellationToken: queryContext.CancellationToken
+    )
+)
+
+2017-04-21 17:04:05.399 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-21 17:04:05.520 -04:00 [Information] Executed DbCommand (102ms) [Parameters=[@__get_Item_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[ConcurrencyStamp], [e].[Email], [e].[EmailConfirmed], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UserName]
+FROM [AspNetUsers] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+2017-04-21 17:04:05.578 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-21 17:04:05.664 -04:00 [Debug] Compiling query model: 
+'from IdentityUserRole<string> userRole in DbSet<IdentityUserRole<string>>
+join IdentityRole role in DbSet<IdentityRole>
+on userRole.RoleId equals role.Id
+where bool userRole.UserId.Equals(
+    other: __userId_0
+)
+
+select role.Name'
+2017-04-21 17:04:05.671 -04:00 [Debug] Optimized query model: 
+'from IdentityUserRole<string> userRole in DbSet<IdentityUserRole<string>>
+join IdentityRole role in DbSet<IdentityRole>
+on userRole.RoleId equals role.Id
+where bool userRole.UserId.Equals(
+    other: __userId_0
+)
+
+select role.Name'
+2017-04-21 17:04:05.742 -04:00 [Debug] TRACKED: True
+(QueryContext queryContext) => IAsyncEnumerable<string> _Select(
+    source: IAsyncEnumerable<TransparentIdentifier<ValueBuffer, ValueBuffer>> _ShapedQuery(
+        queryContext: queryContext, 
+        shaperCommandContext: SelectExpression: 
+            SELECT [role].[Name]
+            FROM [AspNetUserRoles] AS [userRole]
+            INNER JOIN [AspNetRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+            WHERE [userRole].[UserId] = @__userId_0
+        , 
+        shaper: CompositeShaper`3
+    )
+    , 
+    selector: (TransparentIdentifier<ValueBuffer, ValueBuffer> t0) => string TryReadValue(
+        valueBuffer: t0.Inner, 
+        index: 0, 
+        property: null
+    )
+)
+
+2017-04-21 17:04:05.747 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-21 17:04:05.799 -04:00 [Information] Executed DbCommand (51ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [role].[Name]
+FROM [AspNetUserRoles] AS [userRole]
+INNER JOIN [AspNetRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0
+2017-04-21 17:04:05.800 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-21 17:04:05.810 -04:00 [Debug] Compiling query model: 
+'from IdentityUserClaim<string> uc in DbSet<IdentityUserClaim<string>>
+where bool uc.UserId.Equals(
+    other: __user_Id_0
+)
+
+select Claim uc.ToClaim()
+'
+2017-04-21 17:04:05.810 -04:00 [Debug] Optimized query model: 
+'from IdentityUserClaim<string> uc in DbSet<IdentityUserClaim<string>>
+where bool uc.UserId.Equals(
+    other: __user_Id_0
+)
+
+select Claim uc.ToClaim()
+'
+2017-04-21 17:04:05.818 -04:00 [Debug] TRACKED: True
+(QueryContext queryContext) => IAsyncEnumerable<Claim> _Select(
+    source: IAsyncEnumerable<IdentityUserClaim<string>> _ShapedQuery(
+        queryContext: queryContext, 
+        shaperCommandContext: SelectExpression: 
+            SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+            FROM [AspNetUserClaims] AS [uc]
+            WHERE [uc].[UserId] = @__user_Id_0
+        , 
+        shaper: UnbufferedEntityShaper<IdentityUserClaim`1>
+    )
+    , 
+    selector: (IdentityUserClaim<string> uc) => Claim uc.ToClaim()
+)
+
+2017-04-21 17:04:05.819 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-21 17:04:05.855 -04:00 [Information] Executed DbCommand (35ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AspNetUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0
+2017-04-21 17:04:05.855 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-21 17:04:05.860 -04:00 [Information] HttpContext.User merged via AutomaticAuthentication from authenticationScheme: "Identity.Application".
+2017-04-21 17:04:05.866 -04:00 [Debug] The request path "/" does not match a supported file type
+2017-04-21 17:04:06.087 -04:00 [Debug] Request successfully matched the route with name '"Default"' and template '"{Controller}/{Action}/{id?}"'.
+2017-04-21 17:04:06.186 -04:00 [Debug] Executing action "NocWebUtilityApp.Controllers.TableDataVMsController.TablesPage1 (NocWebUtilityApp)"
+2017-04-21 17:04:06.274 -04:00 [Information] Executing action method "NocWebUtilityApp.Controllers.TableDataVMsController.TablesPage1 (NocWebUtilityApp)" with arguments (null) - ModelState is Valid
+2017-04-21 17:04:06.285 -04:00 [Debug] Compiling query model: 
+'(from Product primaryServer in DbSet<Product>
+select primaryServer)
+.Include([primaryServer].PrimaryProductServer)
+.Include([primaryServer].SecondaryProductServer)'
+2017-04-21 17:04:06.285 -04:00 [Debug] Optimized query model: 
+'from Product primaryServer in DbSet<Product>
+select primaryServer'
+2017-04-21 17:04:06.294 -04:00 [Debug] Including navigation: 'primaryServer.PrimaryProductServer'
+2017-04-21 17:04:06.312 -04:00 [Debug] Including navigation: 'primaryServer.SecondaryProductServer'
+2017-04-21 17:04:06.323 -04:00 [Debug] TRACKED: True
+(QueryContext queryContext) => IAsyncEnumerable<Product> _Include(
+    queryContext: (RelationalQueryContext) queryContext, 
+    innerResults: IAsyncEnumerable<Product> _Include(
+        queryContext: (RelationalQueryContext) queryContext, 
+        innerResults: IAsyncEnumerable<Product> _ShapedQuery(
+            queryContext: queryContext, 
+            shaperCommandContext: SelectExpression: 
+                SELECT [primaryServer].[Id], [primaryServer].[PrimaryProductServerId], [primaryServer].[ProductGroup], [primaryServer].[ProductName], [primaryServer].[SecondaryProductServerId], [primaryServer].[TableDataVMId], [primaryServer].[TableNumber], [s].[Id], [s].[ServerGroup], [s].[ServerName], [s].[TableDataVMId], [s0].[Id], [s0].[ServerGroup], [s0].[ServerName], [s0].[TableDataVMId]
+                FROM [Products] AS [primaryServer]
+                LEFT JOIN [Servers] AS [s] ON [primaryServer].[PrimaryProductServerId] = [s].[Id]
+                LEFT JOIN [Servers] AS [s0] ON [primaryServer].[SecondaryProductServerId] = [s0].[Id]
+            , 
+            shaper: BufferedEntityShaper<Product>
+        )
+        , 
+        entityAccessor: default(System.Func`2[NocWebUtilityApp.Models.Product,System.Object]), 
+        navigationPath: INavigation[] { Product.SecondaryProductServer, }, 
+        relatedEntitiesLoaderFactories: new Func<QueryContext, IAsyncRelatedEntitiesLoader>[]{ (QueryContext ) => IAsyncRelatedEntitiesLoader _CreateReferenceRelatedEntitiesLoader(
+                valueBufferOffset: 11, 
+                queryIndex: 0, 
+                materializer: (ValueBuffer valueBuffer) => 
+                {
+                    var3 = new Server()
+                    var3.<Id>k__BackingField = int TryReadValue(
+                        valueBuffer: valueBuffer, 
+                        index: 0, 
+                        property: Id
+                    )
+                    var3.<ServerGroup>k__BackingField = string TryReadValue(
+                        valueBuffer: valueBuffer, 
+                        index: 1, 
+                        property: ServerGroup
+                    )
+                    var3.<ServerName>k__BackingField = string TryReadValue(
+                        valueBuffer: valueBuffer, 
+                        index: 2, 
+                        property: ServerName
+                    )
+                    return instance
+                }
+            )
+             }
+        , 
+        querySourceRequiresTracking: True
+    )
+    , 
+    entityAccessor: default(System.Func`2[NocWebUtilityApp.Models.Product,System.Object]), 
+    navigationPath: INavigation[] { Product.PrimaryProductServer, }, 
+    relatedEntitiesLoaderFactories: new Func<QueryContext, IAsyncRelatedEntitiesLoader>[]{ (QueryContext ) => IAsyncRelatedEntitiesLoader _CreateReferenceRelatedEntitiesLoader(
+            valueBufferOffset: 7, 
+            queryIndex: 0, 
+            materializer: (ValueBuffer valueBuffer) => 
+            {
+                var4 = new Server()
+                var4.<Id>k__BackingField = int TryReadValue(
+                    valueBuffer: valueBuffer, 
+                    index: 0, 
+                    property: Id
+                )
+                var4.<ServerGroup>k__BackingField = string TryReadValue(
+                    valueBuffer: valueBuffer, 
+                    index: 1, 
+                    property: ServerGroup
+                )
+                var4.<ServerName>k__BackingField = string TryReadValue(
+                    valueBuffer: valueBuffer, 
+                    index: 2, 
+                    property: ServerName
+                )
+                return instance
+            }
+        )
+         }
+    , 
+    querySourceRequiresTracking: True
+)
+
+2017-04-21 17:04:06.332 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-21 17:04:06.407 -04:00 [Information] Executed DbCommand (74ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [primaryServer].[Id], [primaryServer].[PrimaryProductServerId], [primaryServer].[ProductGroup], [primaryServer].[ProductName], [primaryServer].[SecondaryProductServerId], [primaryServer].[TableDataVMId], [primaryServer].[TableNumber], [s].[Id], [s].[ServerGroup], [s].[ServerName], [s].[TableDataVMId], [s0].[Id], [s0].[ServerGroup], [s0].[ServerName], [s0].[TableDataVMId]
+FROM [Products] AS [primaryServer]
+LEFT JOIN [Servers] AS [s] ON [primaryServer].[PrimaryProductServerId] = [s].[Id]
+LEFT JOIN [Servers] AS [s0] ON [primaryServer].[SecondaryProductServerId] = [s0].[Id]
+2017-04-21 17:04:06.479 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-21 17:04:06.482 -04:00 [Debug] Compiling query model: 
+'from Server <generated>_0 in DbSet<Server>
+select <generated>_0'
+2017-04-21 17:04:06.482 -04:00 [Debug] Optimized query model: 
+'from Server <generated>_0 in DbSet<Server>
+select <generated>_0'
+2017-04-21 17:04:06.485 -04:00 [Debug] TRACKED: True
+(QueryContext queryContext) => IAsyncEnumerable<Server> _ShapedQuery(
+    queryContext: queryContext, 
+    shaperCommandContext: SelectExpression: 
+        SELECT [s].[Id], [s].[ServerGroup], [s].[ServerName], [s].[TableDataVMId]
+        FROM [Servers] AS [s]
+    , 
+    shaper: BufferedEntityShaper<Server>
+)
+
+2017-04-21 17:04:06.486 -04:00 [Debug] Opening connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-21 17:04:06.518 -04:00 [Information] Executed DbCommand (31ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[ServerGroup], [s].[ServerName], [s].[TableDataVMId]
+FROM [Servers] AS [s]
+2017-04-21 17:04:06.519 -04:00 [Debug] Closing connection to database 'PLTablesData' on server '(localdb)\MSSQLLocalDb'.
+2017-04-21 17:04:06.536 -04:00 [Debug] _____________________________Testing LOGS Before minimum level set
+2017-04-21 17:04:06.536 -04:00 [Debug] -----------------------------TESTING LOGS
+2017-04-21 17:04:06.543 -04:00 [Debug] Executed action method "NocWebUtilityApp.Controllers.TableDataVMsController.TablesPage1 (NocWebUtilityApp)", returned result "Microsoft.AspNetCore.Mvc.ViewResult".
+2017-04-21 17:04:06.654 -04:00 [Debug] View lookup cache miss for view '"TablesPage1"' in controller '"TableDataVMs"'.
+2017-04-21 17:04:06.678 -04:00 [Debug] Code generation for the Razor file at '"/Views/TableDataVMs/TablesPage1.cshtml"' started.
+2017-04-21 17:04:07.170 -04:00 [Debug] Code generation for the Razor file at '"/Views/TableDataVMs/TablesPage1.cshtml"' completed in 489.9011ms.
+2017-04-21 17:04:07.257 -04:00 [Debug] Compilation of the generated code for the Razor file at '"/Views/TableDataVMs/TablesPage1.cshtml"' started.
+2017-04-21 17:04:08.802 -04:00 [Debug] Compilation of the generated code for the Razor file at '"/Views/TableDataVMs/TablesPage1.cshtml"' completed in 1545.231ms.
+2017-04-21 17:04:08.807 -04:00 [Debug] Code generation for the Razor file at '"/Views/_ViewStart.cshtml"' started.
+2017-04-21 17:04:08.812 -04:00 [Debug] Code generation for the Razor file at '"/Views/_ViewStart.cshtml"' completed in 4.711ms.
+2017-04-21 17:04:08.813 -04:00 [Debug] Compilation of the generated code for the Razor file at '"/Views/_ViewStart.cshtml"' started.
+2017-04-21 17:04:08.857 -04:00 [Debug] Compilation of the generated code for the Razor file at '"/Views/_ViewStart.cshtml"' completed in 44.5443ms.
+2017-04-21 17:04:08.864 -04:00 [Debug] The view '"TablesPage1"' was found.
+2017-04-21 17:04:08.866 -04:00 [Information] Executing ViewResult, running view at path "/Views/TableDataVMs/TablesPage1.cshtml".
+2017-04-21 17:04:08.980 -04:00 [Debug] Executing view component "NocWebUtilityApp.ViewComponents.ModalWindowViewComponent" with arguments ([]).
+2017-04-21 17:04:08.991 -04:00 [Debug] Executed view component "NocWebUtilityApp.ViewComponents.ModalWindowViewComponent" in 3.1385ms and returned "Microsoft.AspNetCore.Mvc.ViewComponents.ViewViewComponentResult"
+2017-04-21 17:04:08.994 -04:00 [Debug] View lookup cache miss for view '"Components/ModalWindow/Default"' in controller '"TableDataVMs"'.
+2017-04-21 17:04:08.994 -04:00 [Debug] Code generation for the Razor file at '"/Views/Shared/Components/ModalWindow/Default.cshtml"' started.
+2017-04-21 17:04:09.001 -04:00 [Debug] Code generation for the Razor file at '"/Views/Shared/Components/ModalWindow/Default.cshtml"' completed in 6.1628ms.
+2017-04-21 17:04:09.001 -04:00 [Debug] Compilation of the generated code for the Razor file at '"/Views/Shared/Components/ModalWindow/Default.cshtml"' started.
+2017-04-21 17:04:09.063 -04:00 [Debug] Compilation of the generated code for the Razor file at '"/Views/Shared/Components/ModalWindow/Default.cshtml"' completed in 61.7388ms.
+2017-04-21 17:04:09.159 -04:00 [Debug] View lookup cache miss for view '"_Layout"' in controller '"TableDataVMs"'.
+2017-04-21 17:04:09.161 -04:00 [Debug] Code generation for the Razor file at '"/Views/Shared/_Layout.cshtml"' started.
+2017-04-21 17:04:09.191 -04:00 [Debug] Code generation for the Razor file at '"/Views/Shared/_Layout.cshtml"' completed in 29.3914ms.
+2017-04-21 17:04:09.191 -04:00 [Debug] Compilation of the generated code for the Razor file at '"/Views/Shared/_Layout.cshtml"' started.
+2017-04-21 17:04:09.294 -04:00 [Debug] Compilation of the generated code for the Razor file at '"/Views/Shared/_Layout.cshtml"' completed in 103.1474ms.
+2017-04-21 17:04:09.413 -04:00 [Debug] Executing view component "NocWebUtilityApp.Views.ViewComponents.LoginLogoutViewComponent" with arguments ([]).
+2017-04-21 17:04:09.414 -04:00 [Debug] Executed view component "NocWebUtilityApp.Views.ViewComponents.LoginLogoutViewComponent" in 0.2261ms and returned "Microsoft.AspNetCore.Mvc.ViewComponents.ViewViewComponentResult"
+2017-04-21 17:04:09.414 -04:00 [Debug] View lookup cache miss for view '"Components/LoginLogout/Default"' in controller '"TableDataVMs"'.
+2017-04-21 17:04:09.414 -04:00 [Debug] Code generation for the Razor file at '"/Views/Shared/Components/LoginLogout/Default.cshtml"' started.
+2017-04-21 17:04:09.422 -04:00 [Debug] Code generation for the Razor file at '"/Views/Shared/Components/LoginLogout/Default.cshtml"' completed in 7.5475ms.
+2017-04-21 17:04:09.422 -04:00 [Debug] Compilation of the generated code for the Razor file at '"/Views/Shared/Components/LoginLogout/Default.cshtml"' started.
+2017-04-21 17:04:09.464 -04:00 [Debug] Compilation of the generated code for the Razor file at '"/Views/Shared/Components/LoginLogout/Default.cshtml"' completed in 41.2344ms.
+2017-04-21 17:04:09.498 -04:00 [Debug] An antiforgery cookie token was reused.
+2017-04-21 17:04:09.598 -04:00 [Information] Executed action "NocWebUtilityApp.Controllers.TableDataVMsController.TablesPage1 (NocWebUtilityApp)" in 3410.8484ms
+2017-04-21 17:04:09.609 -04:00 [Debug] Connection id ""0HL48V7OOEQ4J"" completed keep alive response.
+2017-04-21 17:04:09.609 -04:00 [Information] Request finished in 4851.0951ms 200 text/html; charset=utf-8
+2017-04-21 17:05:54.648 -04:00 [Debug] Connection id ""0HL48V7OOEQ4K"" received FIN.
+2017-04-21 17:05:54.648 -04:00 [Debug] Connection id ""0HL48V7OOEQ4J"" received FIN.
+2017-04-21 17:05:54.704 -04:00 [Debug] Connection id ""0HL48V7OOEQ4J"" disconnecting.
+2017-04-21 17:05:54.704 -04:00 [Debug] Connection id ""0HL48V7OOEQ4K"" disconnecting.
+2017-04-21 17:05:54.705 -04:00 [Debug] Connection id ""0HL48V7OOEQ4K"" sending FIN.
+2017-04-21 17:05:54.705 -04:00 [Debug] Connection id ""0HL48V7OOEQ4J"" sending FIN.
+2017-04-21 17:05:54.710 -04:00 [Debug] Connection id ""0HL48V7OOEQ4K"" sent FIN with status "0".
+2017-04-21 17:05:54.710 -04:00 [Debug] Connection id ""0HL48V7OOEQ4J"" sent FIN with status "0".
+2017-04-21 17:05:54.712 -04:00 [Debug] Connection id ""0HL48V7OOEQ4K"" stopped.
+2017-04-21 17:05:54.712 -04:00 [Debug] Connection id ""0HL48V7OOEQ4J"" stopped.
