@@ -8,6 +8,6 @@ pipelines:
   default:
     - step:
         script: # Modify the commands below to build your repository.
-          - cd NOC-PL-WebApplication
+          - cd NocWebUtilityApp
           - dotnet restore
           - dotnet build
