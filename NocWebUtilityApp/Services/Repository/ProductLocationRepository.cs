@@ -12,8 +12,7 @@ namespace NocWebUtilityApp.Services {
         public ProductLocationRepository(ProductLocationContext context) {
             _context = context;
         }
-
-        public async Task<ICollection<Product>> GetProducts() {
+        public async Task<IEnumerable<Product>> GetProducts() {
             return await _context.Products
                 .Include(primaryServer => primaryServer.PrimaryProductServer)
                 .Include(secondaryServer => secondaryServer.SecondaryProductServer)
@@ -23,11 +22,15 @@ namespace NocWebUtilityApp.Services {
             return await _context.Products.SingleAsync(product => product.Id == productId);
         }
 
-        public async Task<IEnumerable<Server>> GetServers() {
+        public async Task<ICollection<Server>> GetServers() {
             return await _context.Servers.ToListAsync();
         }
         public async Task<Server> GetServer(int serverId) {
             return await _context.Servers.SingleAsync(server => server.Id == serverId);
+        }
+
+        public async Task SaveChanges() {
+            await _context.SaveChangesAsync();
         }
     }
 }
