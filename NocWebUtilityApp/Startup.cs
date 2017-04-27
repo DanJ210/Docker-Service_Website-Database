@@ -37,7 +37,7 @@ namespace NocWebUtilityApp {
             .MinimumLevel.ControlledBy(levelSwitch)
             .Enrich.FromLogContext()
             .WriteTo.LiterateConsole()
-            .WriteTo.RollingFile("logs\\myapp-{Date}.txt")
+            //.WriteTo.RollingFile("logs\\myapp-{Date}.txt") TURN BACK ON WHEN READY FOR USE
             .CreateLogger();
         }
 
