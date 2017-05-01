@@ -16,6 +16,7 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Serilog.Core;
 using Serilog.Events;
 using NocWebUtilityApp.Services;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace NocWebUtilityApp {
     public class Startup {
@@ -43,6 +44,11 @@ namespace NocWebUtilityApp {
 
         public void ConfigureServices(IServiceCollection services) {
 
+            services.AddSwaggerGen(c => {
+                c.SwaggerDoc("v1", new Info { Title = "My Api", Version = "V1" });
+            });
+            //services.ConfigureSwaggerGen();
+
             var connectionString = Configuration["connectionStrings:nocProductServerDBConnectionString"];
             services.AddDbContext<ProductLocationContext>(options => options.UseSqlServer(connectionString));
 
@@ -57,6 +63,7 @@ namespace NocWebUtilityApp {
             
 
             services.AddMvc();
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -67,7 +74,7 @@ namespace NocWebUtilityApp {
             ProductServerSeedData seeder) {
 
             //loggerFactory.AddConsole();
-
+            //loggerFactory.AddApplicationInsights();
             if (env.IsDevelopment()) {
                 app.UseDeveloperExceptionPage();
                 //loggerFactory.AddDebug(LogLevel.Information)
@@ -91,6 +98,7 @@ namespace NocWebUtilityApp {
                 //    template: "",
                 //    defaults: new { controller = "TableDataVMs", action = "TablesView"}
                 //);
+                
                 config.MapRoute(
                     name: "SaveServerToProduct",
                     template: "SaveSelectedServer",
@@ -113,8 +121,13 @@ namespace NocWebUtilityApp {
                 //    );
             });
 
+            app.UseSwagger();
+            app.UseSwaggerUI(c => {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+            });
+
             // The call to seed data, .Wait() trick to fake async
-           
+
             seeder.EnsureSeedData().Wait();
 
             //app.Run(async (context) => {
