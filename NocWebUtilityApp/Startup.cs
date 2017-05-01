@@ -74,7 +74,7 @@ namespace NocWebUtilityApp {
             ProductServerSeedData seeder) {
 
             //loggerFactory.AddConsole();
-
+            //loggerFactory.AddApplicationInsights();
             if (env.IsDevelopment()) {
                 app.UseDeveloperExceptionPage();
                 //loggerFactory.AddDebug(LogLevel.Information)
