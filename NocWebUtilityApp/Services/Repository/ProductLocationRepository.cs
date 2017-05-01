@@ -19,7 +19,10 @@ namespace NocWebUtilityApp.Services {
                 .ToListAsync();
         }
         public async Task<Product> GetProduct(int productId) {
-            return await _context.Products.SingleAsync(product => product.Id == productId);
+            return await _context.Products
+                .Include(primaryServer => primaryServer.PrimaryProductServer)
+                .Include(secondaryServer => secondaryServer.SecondaryProductServer)
+                .SingleAsync(product => product.Id == productId);
         }
 
         public async Task<ICollection<Server>> GetServers() {
