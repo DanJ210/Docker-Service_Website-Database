@@ -4,13 +4,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace NocWebUtilityApp.ViewComponents
-{
-    public class ModalWindowViewComponent : ViewComponent 
-    {
-    public IViewComponentResult Invoke() 
-    {
-        return View();
+namespace NocWebUtilityApp.ViewComponents {
+    public class ModalWindowViewComponent : ViewComponent {
+        public IViewComponentResult Invoke() {
+            return View();
+        }
     }
-}
 }
