@@ -13,7 +13,7 @@ services:
 
   NocWebUtilityApp:
     container_name: NocWebUtilityApp
-    image: NocWebUtilityApp:latest
+    image: nocwebutilityapp:latest
     build:
       context: .
       dockerfile: Dockerfile
