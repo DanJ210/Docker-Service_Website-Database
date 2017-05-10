@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+  sqlserver:
+      image: microsoft/mssql-server-linux
+      environment:
+        - ACCEPT_EULA=Y
+        - SA_PASSWORD=P@ssw0rd!
+      ports:
+        - 1433:1433
+      networks:
+        - nocwebutilityapp_network
+
+  NocWebUtilityApp:
+    container_name: NocWebUtilityApp
+    image: NocWebUtilityApp:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 80:80
+    networks:
+      - nocwebutilityapp_network
+
+  
+
+networks:
+  nocwebutilityapp_network:
+    driver: bridge
