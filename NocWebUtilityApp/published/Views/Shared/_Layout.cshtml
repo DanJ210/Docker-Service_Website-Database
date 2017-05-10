@@ -1,0 +1,81 @@
+﻿@inject Microsoft.ApplicationInsights.AspNetCore.JavaScriptSnippet JavaScriptSnippet
+@model NocWebUtilityApp.Models.TableDataVM
+@{
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <environment names="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        @*<link href="~/lib/jquery-modal/jquery.modal.css" rel="stylesheet" />*@
+        <link rel="stylesheet" href="~/lib/font-awesome/css/font-awesome.css" /> @*TODO Add staging,production URL below*@
+        <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    </environment>
+    <environment names="Staging,Production">
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute"/>
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+    </environment>
+    @Html.Raw(JavaScriptSnippet.FullScript)
+</head>
+<body>
+    <nav class="navbar navbar-fixed-top">
+            <div class="navbar-header">
+                <!--<a class="navbar-brand">
+                    </a>-->
+                
+                <img class="navbar-brand" src="~/assets/img/onsolve-sm.png" alt="ONSOLVE Logo" />
+                @*<img class="navbar-brand" src="~/assets/img/onsolve-lg.png" />*@
+            </div>
+            <ul id="navbarMenu" class="nav navbar-nav">
+                @*<li><a asp-area="" asp-controller="App" asp-action="Index">News</a></li>*@
+                <li><a asp-area="" asp-controller="TableDataVMs" asp-action="TablesPage1">Tables P1</a></li>
+                <li><a asp-area="" asp-controller="TableDataVMs" asp-action="TablesPage2">Tables P2</a></li>
+            </ul>
+            <div class="nav navbar-right">
+                <div id="loginComponent">
+                    @await Component.InvokeAsync("LoginLogout")
+                </div>
+                
+            </div>
+    </nav>
+    <div>
+        @*<div class="container">
+            <div class="row">
+                <div class="">
+                    
+                    
+                </div>
+            </div>
+        </div>*@
+        @RenderBody()
+    </div>
+    
+    <environment names="Development">
+        <script type="text/javascript" src="~/lib/jquery/dist/jquery.min.js"></script>
+        @*<script src="~/lib/jquery-modal/jquery.modal.min.js"></script>*@
+        <script type="text/javascript" src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="~/lib/angular2/angular.min.js"></script> @*TODO Add angular URL to staging,production below*@
+        @*<script type="text/javascript" src="~/js/site.js"></script>*@
+        <script src="~/js/site.min.js" asp-append-version="true"></script>
+        <script src="~/js/jsmodules/ScrollPositionModule.js" asp-append-version="true"></script>
+    </environment>
+    <environment names="Staging,Production">
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery">
+        </script>
+        <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/bootstrap.min.js"
+                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal">
+        </script>
+        <script src="~/js/site.min.js" asp-append-version="true"></script>
+        <script src="~/js/jsmodules/ScrollPositionModule.min.js" asp-append-version="true"></script>
+    </environment>
+    @RenderSection("scripts", false)
+</body>
+</html>
