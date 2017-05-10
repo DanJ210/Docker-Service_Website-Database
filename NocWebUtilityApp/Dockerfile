@@ -1,4 +1,4 @@
-FROM microsoft/aspnetcore:1.1.1
+FROM microsoft/aspnetcore:1.1.2
 MAINTAINER Daniel Jackson
 LABEL Name=NocWebUtilityApp Version=1.0.0
 ARG source=.
