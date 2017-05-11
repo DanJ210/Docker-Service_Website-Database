@@ -28,6 +28,9 @@ body {
         font-size: larger;
         text-align: center;
     }
+        #loginComponent .btn {
+            background-color: #FFC627;
+        }
 
 /* Login Screen Label */
 #loginLabel {
@@ -41,10 +44,6 @@ body {
 /* Table Cell Colors */
 .productSelected {
     background-color: #40B4E5;
-}
-
-.btn {
-    background-color: #FFC627;
 }
 
 /* Error Page */

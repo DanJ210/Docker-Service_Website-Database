@@ -9,6 +9,8 @@ using NocWebUtilityApp.Models.ViewModels;
 using Microsoft.Extensions.Logging;
 using NocWebUtilityApp.Services;
 
+// Controller for the Login page and its functions.
+
 namespace NocWebUtilityApp.Controllers {
     public class AccountController : Controller {
         private UserManager<NocUser> _userManager;

@@ -12,7 +12,9 @@ using Microsoft.AspNetCore.Authorization;
 using Serilog;
 using Serilog.Core;
 using NocWebUtilityApp.Services;
-// Controller meant for table data display and manipulation
+
+// Controller for the Table pages and table data display and manipulation.
+
 namespace NocWebUtilityApp.Controllers {
     public class TableDataVMsController : Controller {
         private readonly IProductLocationRepository _productLocationRepository;
@@ -99,8 +101,8 @@ namespace NocWebUtilityApp.Controllers {
                 var product = await _productLocationRepository.GetProduct(productId);
                 var server = await _productLocationRepository.GetServer(serverId);
 
-                product.PrimaryProductServer = serverColumn.Contains("primary") ? server : null;
-                product.SecondaryProductServer = serverColumn.Contains("secondary") ? server : null;
+                product.PrimaryProductServer = serverColumn.Contains("primary") ? server : product.SecondaryProductServer = server;
+                //product.SecondaryProductServer = serverColumn.Contains("secondary") ? server ;
                 
                 await _productLocationRepository.SaveChanges();
             }

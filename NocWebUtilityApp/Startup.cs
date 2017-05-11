@@ -38,7 +38,7 @@ namespace NocWebUtilityApp {
             .MinimumLevel.ControlledBy(levelSwitch)
             .Enrich.FromLogContext()
             .WriteTo.LiterateConsole()
-            //.WriteTo.RollingFile("logs\\myapp-{Date}.txt") TURN BACK ON WHEN READY FOR USE
+            .WriteTo.RollingFile("logs\\myapp-{Date}.txt")
             .CreateLogger();
         }
 
@@ -48,7 +48,7 @@ namespace NocWebUtilityApp {
                 c.SwaggerDoc("v1", new Info { Title = "My Api", Version = "V1" });
             });
             //services.ConfigureSwaggerGen();
-
+            //services.AddSingleton(loggingSwitch);
             var connectionString = Configuration["connectionStrings:nocProductServerDBConnectionString"];
             services.AddDbContext<ProductLocationContext>(options => options.UseSqlServer(connectionString));
 
@@ -77,10 +77,12 @@ namespace NocWebUtilityApp {
             //loggerFactory.AddApplicationInsights();
             if (env.IsDevelopment()) {
                 app.UseDeveloperExceptionPage();
-                //loggerFactory.AddDebug(LogLevel.Information)
+                //loggingSwitch.MinimumLevel = LogEventLevel.Debug;
+                //loggerFactory.AddDebug(LogLevel.Information);
                 
             } else {
                 app.UseExceptionHandler("/TableDataVMs/Error");
+                //loggingSwitch.MinimumLevel = LogEventLevel.Error;
                 //loggerFactory.AddDebug(LogLevel.Error);
             }
             loggerFactory.AddSerilog();
