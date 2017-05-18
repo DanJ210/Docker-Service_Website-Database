@@ -101,9 +101,13 @@ namespace NocWebUtilityApp.Controllers {
                 var product = await _productLocationRepository.GetProduct(productId);
                 var server = await _productLocationRepository.GetServer(serverId);
 
-                product.PrimaryProductServer = serverColumn.Contains("primary") ? server : product.SecondaryProductServer = server;
-                //product.SecondaryProductServer = serverColumn.Contains("secondary") ? server ;
-                
+                if (serverColumn.Contains("primary")) {
+                    product.PrimaryProductServer = server;
+                }
+                else {
+                    product.SecondaryProductServer = server;
+                }
+
                 await _productLocationRepository.SaveChanges();
             }
             catch (Exception ex) {
