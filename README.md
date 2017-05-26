@@ -3,7 +3,7 @@
 ### What is this repository for? ###
 
 * This web app was made to replace the product/server locations on the confluence page that the NOC team uses to keep track of which servers host which products. [Confluence Product/Location Page](https://ecndev1.atlassian.net/wiki/display/ECN/Product+Location)
-* Version 1 - Currently live temporarily at [NocUtilityWebApp URL](http://nocwebutilityapp.azurewebsites.net/
+* Version 1 - Currently live temporarily at [NocUtilityWebApp URL](http://nocwebutilityapp.azurewebsites.net/)
 * Versino 2 - In Progress - Dockerized container on VM to replace temporary Azure hosting above.
 
 ** User will need admin username and password to make changes to any table cell. See developer contact below. **
