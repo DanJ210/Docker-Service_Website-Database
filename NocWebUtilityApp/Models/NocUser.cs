@@ -4,7 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace NocWebUtilityApp.Models {
-    public class NocUser : IdentityUser {
-    }
+namespace NocWebUtilityApp.Models
+{
+	public class NocUser : IdentityUser
+	{
+	}
 }

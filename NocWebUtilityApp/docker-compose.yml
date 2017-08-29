@@ -2,27 +2,25 @@ version: '3'
 
 services:
   sqlserver:
-      image: microsoft/mssql-server-linux
-      environment:
-        - ACCEPT_EULA=Y
-        - SA_PASSWORD=P@ssw0rd!
-      ports:
-        - 1433:1433
-      networks:
-        - nocwebutilityapp_network
+    image: microsoft/mssql-server-linux
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=P@ssw0rd!
+    ports:
+      - 1433:1433
+    networks:
+      - nocwebutilityapp_network
 
   NocWebUtilityApp:
     container_name: NocWebUtilityApp
-    image: nocwebutilityapp:latest
+    image: onsolve/nocplwebapp:latest
     build:
       context: .
       dockerfile: Dockerfile
     ports:
-      - 80:80
+      - 8080:80
     networks:
-      - nocwebutilityapp_network
-
-  
+     -  nocwebutilityapp_network
 
 networks:
   nocwebutilityapp_network:

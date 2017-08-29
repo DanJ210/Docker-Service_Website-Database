@@ -18,123 +18,134 @@ using Serilog.Events;
 using NocWebUtilityApp.Services;
 using Swashbuckle.AspNetCore.Swagger;
 
-namespace NocWebUtilityApp {
-    public class Startup {
-        public static IConfigurationRoot Configuration;
-        // This method gets called by the runtime. Use this method to add services to the container.
-        // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
-        public Startup(IHostingEnvironment env) {
-            var levelSwitch = new LoggingLevelSwitch();
-            levelSwitch.MinimumLevel = LogEventLevel.Debug;
+namespace NocWebUtilityApp
+{
+	public class Startup
+	{
+		public static IConfigurationRoot Configuration;
+		// This method gets called by the runtime. Use this method to add services to the container.
+		// For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
+		public Startup(IHostingEnvironment env)
+		{
+			var levelSwitch = new LoggingLevelSwitch();
+			levelSwitch.MinimumLevel = LogEventLevel.Debug;
 
-            var builder = new ConfigurationBuilder()
-                .SetBasePath(env.ContentRootPath)
-                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
-                .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true, reloadOnChange: true);
-                //.AddEnvironmentVariables(); Use production environment variables when deployed
-            Configuration = builder.Build();
+			var builder = new ConfigurationBuilder()
+				.SetBasePath(env.ContentRootPath)
+				.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+				.AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true, reloadOnChange: true);
+			//.AddEnvironmentVariables(); Use production environment variables when deployed
+			Configuration = builder.Build();
 
-            Log.Logger = new LoggerConfiguration()
-            .MinimumLevel.ControlledBy(levelSwitch)
-            .Enrich.FromLogContext()
-            .WriteTo.LiterateConsole()
-            .WriteTo.RollingFile("logs\\myapp-{Date}.txt")
-            .CreateLogger();
-        }
+			Log.Logger = new LoggerConfiguration()
+			.MinimumLevel.ControlledBy(levelSwitch)
+			.Enrich.FromLogContext()
+			.WriteTo.LiterateConsole()
+			.WriteTo.RollingFile("logs\\myapp-{Date}.txt")
+			.CreateLogger();
+		}
 
-        public void ConfigureServices(IServiceCollection services) {
+		public void ConfigureServices(IServiceCollection services)
+		{
 
-            services.AddSwaggerGen(c => {
-                c.SwaggerDoc("v1", new Info { Title = "My Api", Version = "V1" });
-            });
-            //services.ConfigureSwaggerGen();
-            //services.AddSingleton(loggingSwitch);
-            var connectionString = Configuration["connectionStrings:nocProductServerDBConnectionString"];
-            services.AddDbContext<ProductLocationContext>(options => options.UseSqlServer(connectionString));
+			services.AddSwaggerGen(c =>
+			{
+				c.SwaggerDoc("v1", new Info { Title = "My Api", Version = "V1" });
+			});
+			//services.ConfigureSwaggerGen();
+			//services.AddSingleton(loggingSwitch);
+			var connectionString = Configuration["connectionStrings:dockerProductServerDBConnectionString"];
+			services.AddDbContext<ProductLocationContext>(options => options.UseSqlServer(connectionString));
 
-            services.AddIdentity<NocUser, IdentityRole>()
-                .AddEntityFrameworkStores<ProductLocationContext>();
+			services.AddIdentity<NocUser, IdentityRole>()
+				.AddEntityFrameworkStores<ProductLocationContext>();
 
-            services.AddTransient<ProductServerSeedData>();
+			services.AddTransient<ProductServerSeedData>();
 
-            services.AddScoped<IProductLocationRepository, ProductLocationRepository>();
+			services.AddScoped<IProductLocationRepository, ProductLocationRepository>();
 
-            //services.AddLogging(); May not be needed after introducing SeriLog.
-            
+			//services.AddLogging(); May not be needed after introducing SeriLog.
 
-            services.AddMvc();
-            
-        }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app,
-            IHostingEnvironment env,
-            ILoggerFactory loggerFactory,
-            IApplicationLifetime appLifetime,
-            ProductServerSeedData seeder) {
+			services.AddMvc();
 
-            //loggerFactory.AddConsole();
-            //loggerFactory.AddApplicationInsights();
-            if (env.IsDevelopment()) {
-                app.UseDeveloperExceptionPage();
-                //loggingSwitch.MinimumLevel = LogEventLevel.Debug;
-                //loggerFactory.AddDebug(LogLevel.Information);
-                
-            } else {
-                app.UseExceptionHandler("/TableDataVMs/Error");
-                //loggingSwitch.MinimumLevel = LogEventLevel.Error;
-                //loggerFactory.AddDebug(LogLevel.Error);
-            }
-            loggerFactory.AddSerilog();
+		}
 
-            app.UseIdentity();
-            // Ensures that any logs are written to file before app completely stops.
-            appLifetime.ApplicationStopped.Register(Log.CloseAndFlush);
+		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+		public void Configure(IApplicationBuilder app,
+			IHostingEnvironment env,
+			ILoggerFactory loggerFactory,
+			IApplicationLifetime appLifetime,
+			ProductServerSeedData seeder)
+		{
 
-            app.UseStaticFiles();
+			//loggerFactory.AddConsole();
+			//loggerFactory.AddApplicationInsights();
+			if (env.IsDevelopment())
+			{
+				app.UseDeveloperExceptionPage();
+				//loggingSwitch.MinimumLevel = LogEventLevel.Debug;
+				//loggerFactory.AddDebug(LogLevel.Information);
 
-            app.UseMvc(config => {
+			}
+			else
+			{
+				app.UseExceptionHandler("/TableDataVMs/Error");
+				//loggingSwitch.MinimumLevel = LogEventLevel.Error;
+				//loggerFactory.AddDebug(LogLevel.Error);
+			}
+			loggerFactory.AddSerilog();
 
-                //config.MapRoute(
-                //    name: "TableDataVM",
-                //    template: "",
-                //    defaults: new { controller = "TableDataVMs", action = "TablesView"}
-                //);
-                
-                config.MapRoute(
-                    name: "SaveServerToProduct",
-                    template: "SaveSelectedServer",
-                    defaults: new { controller = "TableDataVMs", action = "SaveSelectedServer" }
-                    );
-                config.MapRoute(
-                    name: "Default",
-                    template: "{Controller}/{Action}/{id?}",
-                    defaults: new { controller = "TableDataVMs", action = "TablesPage1" }
-                    );
-                //config.MapRoute(
-                //    name: "Login",
-                //    template: "{Controller}/{Action}",
-                //    defaults: new { controller = "Account", action = "Login" }
-                //    );
-                //config.MapRoute(
-                //    name: "Error",
-                //    template: "TableDataVMs/Error",
-                //    defaults: new { controller = "TableDataVMs", action = "Error" }
-                //    );
-            });
+			app.UseIdentity();
+			// Ensures that any logs are written to file before app completely stops.
+			appLifetime.ApplicationStopped.Register(Log.CloseAndFlush);
 
-            app.UseSwagger();
-            app.UseSwaggerUI(c => {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
-            });
+			app.UseStaticFiles();
 
-            // The call to seed data, .Wait() trick to fake async
+			app.UseMvc(config =>
+			{
 
-            seeder.EnsureSeedData().Wait();
+				//config.MapRoute(
+				//    name: "TableDataVM",
+				//    template: "",
+				//    defaults: new { controller = "TableDataVMs", action = "TablesView"}
+				//);
 
-            //app.Run(async (context) => {
-            //    await context.Response.WriteAsync("Hello World!");
-            //});
-        }
-    }
+				config.MapRoute(
+					name: "SaveServerToProduct",
+					template: "SaveSelectedServer",
+					defaults: new { controller = "TableDataVMs", action = "SaveSelectedServer" }
+					);
+				config.MapRoute(
+					name: "Default",
+					template: "{Controller}/{Action}/{id?}",
+					defaults: new { controller = "TableDataVMs", action = "TablesPage1" }
+					);
+				//config.MapRoute(
+				//    name: "Login",
+				//    template: "{Controller}/{Action}",
+				//    defaults: new { controller = "Account", action = "Login" }
+				//    );
+				//config.MapRoute(
+				//    name: "Error",
+				//    template: "TableDataVMs/Error",
+				//    defaults: new { controller = "TableDataVMs", action = "Error" }
+				//    );
+			});
+
+			app.UseSwagger();
+			app.UseSwaggerUI(c =>
+			{
+				c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+			});
+
+			// The call to seed data, .Wait() trick to fake async
+
+			seeder.EnsureSeedData().Wait();
+
+			//app.Run(async (context) => {
+			//    await context.Response.WriteAsync("Hello World!");
+			//});
+		}
+	}
 }
