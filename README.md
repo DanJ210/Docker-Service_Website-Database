@@ -1,11 +1,12 @@
 # README #
 
-This README would normally document whatever steps are necessary to get your application up and running.
-
 ### What is this repository for? ###
 
 * This web app was made to replace the product/server locations on the confluence page that the NOC team uses to keep track of which servers host which products. [Confluence Product/Location Page](https://ecndev1.atlassian.net/wiki/display/ECN/Product+Location)
-* Version 1
+* Version 1 - Currently live temporarily at [NocUtilityWebApp URL](http://nocwebutilityapp.azurewebsites.net/)
+* Versino 2 - In Progress - Dockerized container on VM to replace temporary Azure hosting above.
+
+** User will need admin username and password to make changes to any table cell. See developer contact below. **
 
 ### How do I get set up? ###
 ## To run Docker version ##
@@ -25,9 +26,8 @@ This README would normally document whatever steps are necessary to get your app
 
 ### Contribution guidelines ###
 
-* Writing tests
-* Code review
-* Other guidelines
+* .NET Core
+* Linux VM Server w/ Docker service support OR Swarm setup for deployment.
 
 ### Who do I talk to? ###
 
