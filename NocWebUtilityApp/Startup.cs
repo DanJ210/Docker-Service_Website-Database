@@ -54,7 +54,7 @@ namespace NocWebUtilityApp
 			});
 			//services.ConfigureSwaggerGen();
 			//services.AddSingleton(loggingSwitch);
-			var connectionString = Configuration["connectionStrings:dockerProductServerDBConnectionString"];
+			var connectionString = Configuration["connectionStrings:dockerVMDBConnectionString"];
 			services.AddDbContext<ProductLocationContext>(options => options.UseSqlServer(connectionString));
 
 			services.AddIdentity<NocUser, IdentityRole>()
