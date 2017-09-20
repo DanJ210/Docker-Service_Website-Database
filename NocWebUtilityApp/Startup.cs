@@ -32,8 +32,8 @@ namespace NocWebUtilityApp
 
 			var builder = new ConfigurationBuilder()
 				.SetBasePath(env.ContentRootPath)
-				.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
-				.AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true, reloadOnChange: true);
+				.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
+				//.AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true, reloadOnChange: true);
 			//.AddEnvironmentVariables(); Use production environment variables when deployed
 			Configuration = builder.Build();
 
@@ -54,7 +54,7 @@ namespace NocWebUtilityApp
 			});
 			//services.ConfigureSwaggerGen();
 			//services.AddSingleton(loggingSwitch);
-			var connectionString = Configuration["connectionStrings:dockerVMLocalDBConnectionString"];
+			var connectionString = Configuration["connectionStrings:dockerLocalDBConnectionString"];
 			services.AddDbContext<ProductLocationContext>(options => options.UseSqlServer(connectionString));
 
 			services.AddIdentity<NocUser, IdentityRole>()
