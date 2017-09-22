@@ -9,10 +9,14 @@
 ** User will need admin username and password to make changes to any table cell. See developer contact below. **
 
 ### How do I get set up? ###
+* View Confluence documentation for detailed walkthrough.
+* https://ecndev1.atlassian.net/wiki/spaces/ECN/pages/146636953/NocWebUtilityApp
+* 
 ## To run Docker version ##
 * Clone Repo.
 * Run `docker-compose up` command to run all services needed, confirm service is up.
 * Navigate to http://localhost:80 to view site.
+
 ## Run Non-Docker Version ##
 * Configured to run via IIS but could also run Kestrel.
 * Will need an active SQL Server DB in one of two ways. Connection string may need adjustments accordingly.
