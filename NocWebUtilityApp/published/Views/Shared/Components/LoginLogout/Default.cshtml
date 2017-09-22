@@ -1,4 +1,13 @@
-﻿@if(User.Identity.IsAuthenticated) {
+﻿@*
+* OnSolve
+* Author: Daniel Jackson
+* NocWebUtility Application
+* Created: 03/22/2017
+* Last Edit: 09/22/2017
+* Description: Login and Logout view component.
+*
+*@
+@if(User.Identity.IsAuthenticated) {
     <span>Hello, @User.Identity.Name</span>
     <form method="post" asp-controller="Account" asp-action="Logout" asp-antiforgery="true">
         <input class="btn btn" type="submit" value="Logout" />

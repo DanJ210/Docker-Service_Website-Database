@@ -1,30 +1,32 @@
 ﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+* OnSolve
+* Author: Daniel Jackson
+* NocWebUtility Application
+* Created: 03/22/2017
+* Last Edit: 09/22/2017
+* Description: View for the modal window component. Invoked when a user clicks a server to change.
+*
 *@
-@{
-}
 <div class="modal fade" id="serverModal" role="dialog">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 id="modalTitle" class="modal-title">Server Select</h4>
-            </div>
-            <div class="modal-body">
-                <ul>
-                    @*<li> Future multi select list drop down.
-                        @Html.ListBox("ProductSelectList",
-                            ViewBag.productList as MultiSelectList, "Select Products")
-                    </li>*@
-                    <li id="modalTd">
-                        @Html.DropDownList("ServerSelectList",
-                            ViewBag.serverList as SelectList, "Select Server",
-                            new { onchange = "$.fn.serverListChangeFunction()" })
-                    </li>
-                </ul>
-            </div>
-            <div class="modal-footer">
-                <button id="cancelButton" class="btn btn-danger" data-dismiss="modal">Cancel</button>
-            </div>
-        </div>
-    </div>
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 id="modalTitle" class="modal-title">Server Select</h4>
+			</div>
+			<div class="modal-body">
+				<ul>
+					@*Pulls from a list of servers set in the ViewBag within the TableDataVM Controller.*@
+					@*Jquery function serverListChangeFunction() located in wwroot/js/serverModal.Controller.js, makes ajax calls to database.*@
+					<li id="modalTd">
+						@Html.DropDownList("ServerSelectList",
+							ViewBag.serverList as SelectList, "Select Server",
+							new { onchange = "$.fn.serverListChangeFunction()" })
+					</li>
+				</ul>
+			</div>
+			<div class="modal-footer">
+				<button id="cancelButton" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+			</div>
+		</div>
+	</div>
 </div>
