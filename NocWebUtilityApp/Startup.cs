@@ -1,11 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿/*
+ * OnSolve
+ * Author: Daniel Jackson
+ * Dialer Front End
+ * Created: 03/22/2017
+ * Last Edit: 09/22/2017
+ * Description: Startup configuration for the web application.
+ * 
+ */
+
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using NocWebUtilityApp.Models;
@@ -22,9 +27,7 @@ namespace NocWebUtilityApp
 {
 	public class Startup
 	{
-		public static IConfigurationRoot Configuration;
-		// This method gets called by the runtime. Use this method to add services to the container.
-		// For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
+		IConfigurationRoot _config;
 		public Startup(IHostingEnvironment env)
 		{
 			var levelSwitch = new LoggingLevelSwitch();
@@ -32,10 +35,10 @@ namespace NocWebUtilityApp
 
 			var builder = new ConfigurationBuilder()
 				.SetBasePath(env.ContentRootPath)
-				.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
-				//.AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true, reloadOnChange: true);
+				.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+				.AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true, reloadOnChange: true);
 			//.AddEnvironmentVariables(); Use production environment variables when deployed
-			Configuration = builder.Build();
+			_config = builder.Build();
 
 			Log.Logger = new LoggerConfiguration()
 			.MinimumLevel.ControlledBy(levelSwitch)
@@ -52,9 +55,8 @@ namespace NocWebUtilityApp
 			{
 				c.SwaggerDoc("v1", new Info { Title = "My Api", Version = "V1" });
 			});
-			//services.ConfigureSwaggerGen();
-			//services.AddSingleton(loggingSwitch);
-			var connectionString = Configuration["connectionStrings:dockerLocalDBConnectionString"];
+
+			var connectionString = _config["connectionStrings:dockerLocalLinuxVMConnectionString"];
 			services.AddDbContext<ProductLocationContext>(options => options.UseSqlServer(connectionString));
 
 			services.AddIdentity<NocUser, IdentityRole>()
@@ -63,9 +65,6 @@ namespace NocWebUtilityApp
 			services.AddTransient<ProductServerSeedData>();
 
 			services.AddScoped<IProductLocationRepository, ProductLocationRepository>();
-
-			//services.AddLogging(); May not be needed after introducing SeriLog.
-
 
 			services.AddMvc();
 
@@ -78,21 +77,14 @@ namespace NocWebUtilityApp
 			IApplicationLifetime appLifetime,
 			ProductServerSeedData seeder)
 		{
-
-			//loggerFactory.AddConsole();
-			//loggerFactory.AddApplicationInsights();
 			if (env.IsDevelopment())
 			{
 				app.UseDeveloperExceptionPage();
-				//loggingSwitch.MinimumLevel = LogEventLevel.Debug;
-				//loggerFactory.AddDebug(LogLevel.Information);
 
 			}
 			else
 			{
 				app.UseExceptionHandler("/TableDataVMs/Error");
-				//loggingSwitch.MinimumLevel = LogEventLevel.Error;
-				//loggerFactory.AddDebug(LogLevel.Error);
 			}
 			loggerFactory.AddSerilog();
 
@@ -104,13 +96,6 @@ namespace NocWebUtilityApp
 
 			app.UseMvc(config =>
 			{
-
-				//config.MapRoute(
-				//    name: "TableDataVM",
-				//    template: "",
-				//    defaults: new { controller = "TableDataVMs", action = "TablesView"}
-				//);
-
 				config.MapRoute(
 					name: "SaveServerToProduct",
 					template: "SaveSelectedServer",
@@ -121,16 +106,6 @@ namespace NocWebUtilityApp
 					template: "{Controller}/{Action}/{id?}",
 					defaults: new { controller = "TableDataVMs", action = "TablesPage1" }
 					);
-				//config.MapRoute(
-				//    name: "Login",
-				//    template: "{Controller}/{Action}",
-				//    defaults: new { controller = "Account", action = "Login" }
-				//    );
-				//config.MapRoute(
-				//    name: "Error",
-				//    template: "TableDataVMs/Error",
-				//    defaults: new { controller = "TableDataVMs", action = "Error" }
-				//    );
 			});
 
 			app.UseSwagger();
@@ -139,13 +114,8 @@ namespace NocWebUtilityApp
 				c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
 			});
 
-			// The call to seed data, .Wait() trick to fake async
-
+			// Seeds database with initial data if database is new.
 			seeder.EnsureSeedData().Wait();
-
-			//app.Run(async (context) => {
-			//    await context.Response.WriteAsync("Hello World!");
-			//});
 		}
 	}
 }

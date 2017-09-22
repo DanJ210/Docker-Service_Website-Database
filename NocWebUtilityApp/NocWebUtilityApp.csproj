@@ -9,6 +9,17 @@
     <RootNamespace>NocWebUtilityApp</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="logs\**" />
+    <Compile Remove="published\**" />
+    <Content Remove="logs\**" />
+    <Content Remove="published\**" />
+    <EmbeddedResource Remove="logs\**" />
+    <EmbeddedResource Remove="published\**" />
+    <None Remove="logs\**" />
+    <None Remove="published\**" />
+  </ItemGroup>
+
   <!--Below was commented out to get bitbucket pipeline builds to work, not sure what affect this will have in the future.-->
   <!--<ItemGroup>
     <Content Include="wwwroot\assets\img\onsolve-lg.png" />

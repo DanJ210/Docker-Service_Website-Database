@@ -1,30 +1,50 @@
-﻿using Microsoft.AspNetCore.Identity;
-using System;
-using System.Collections;
+﻿/*
+ * OnSolve
+ * Author: Daniel Jackson
+ * NocWebUtility Application
+ * Created: 03/22/2017
+ * Last Edit: 09/22/2017
+ * Description: Seeder for database if its new and empty.
+ * 
+ */
+using Microsoft.AspNetCore.Identity;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace NocWebUtilityApp.Models.SeedData
 {
-	/// <summary>
-	/// Only seeds data for the Products and Servers if the data doesn't already exist.
-	/// Meant for initial setup. Section labels below can be removed after future development.
-	/// </summary>
 	public class ProductServerSeedData
 	{
+		/*----------------------------------------------------------------------------------------------------------------------
+		* [fields]
+		-----------------------------------------------------------------------------------------------------------------------*/
 		private ProductLocationContext _context;
 		private UserManager<NocUser> _userManager;
 
+		/*----------------------------------------------------------------------------------------------------------------------
+		* [properties]
+		-----------------------------------------------------------------------------------------------------------------------*/
+
+		/*----------------------------------------------------------------------------------------------------------------------
+		* [constructors]
+		-----------------------------------------------------------------------------------------------------------------------*/
 		public ProductServerSeedData(ProductLocationContext context, UserManager<NocUser> userManager)
 		{
 			_context = context;
 			_userManager = userManager;
 		}
+
+		/*----------------------------------------------------------------------------------------------------------------------
+		* [methods]
+		-----------------------------------------------------------------------------------------------------------------------*/
+
+		/// <summary>
+		/// Creates an admin user in a new database with a default password.
+		/// Also seeds database with needed default values.
+		/// </summary>
 		public async Task EnsureSeedData()
 		{
-
 			if (!_userManager.Users.Any())
 			{
 				var user = new NocUser()

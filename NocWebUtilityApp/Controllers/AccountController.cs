@@ -1,6 +1,13 @@
+/*
+ * OnSolve
+ * Author: Daniel Jackson
+ * NocWebUtility Application
+ * Created: 03/22/2017
+ * Last Edit: 09/22/2017
+ * Description: Account user login and logout.
+ * 
+ */
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Identity;
@@ -9,17 +16,25 @@ using NocWebUtilityApp.Models.ViewModels;
 using Microsoft.Extensions.Logging;
 using NocWebUtilityApp.Services;
 
-// Controller for the Login page and its functions.
-
 namespace NocWebUtilityApp.Controllers
 {
 	public class AccountController : Controller
 	{
+		/*----------------------------------------------------------------------------------------------------------------------
+		* [fields]
+		-----------------------------------------------------------------------------------------------------------------------*/
 		private UserManager<NocUser> _userManager;
 		private SignInManager<NocUser> _signInManager;
 		private ILogger<AccountController> _logger;
 		private IProductLocationRepository _productLocationRepository;
 
+		/*----------------------------------------------------------------------------------------------------------------------
+		* [properties]
+		-----------------------------------------------------------------------------------------------------------------------*/
+
+		/*----------------------------------------------------------------------------------------------------------------------
+		* [constructors]
+		-----------------------------------------------------------------------------------------------------------------------*/
 		public AccountController(IProductLocationRepository productLocationRepository,
 			UserManager<NocUser> userManager,
 			SignInManager<NocUser> signInManager,
@@ -31,6 +46,11 @@ namespace NocWebUtilityApp.Controllers
 			_signInManager = signInManager;
 			_logger = logger;
 		}
+
+		/*----------------------------------------------------------------------------------------------------------------------
+		* [methods]
+		-----------------------------------------------------------------------------------------------------------------------*/
+
 
 		[HttpGet]
 		public IActionResult Login()

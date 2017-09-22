@@ -1,27 +1,38 @@
+/*
+ * OnSolve
+ * Author: Daniel Jackson
+ * NocWebUtility Application
+ * Created: 03/22/2017
+ * Last Edit: 09/22/2017
+ * Description: Controller for both table pages/views.
+ * 
+ */
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
 using NocWebUtilityApp.Models;
-using System.Collections;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Authorization;
-using Serilog;
-using Serilog.Core;
 using NocWebUtilityApp.Services;
-
-// Controller for the Table pages and table data display and manipulation.
 
 namespace NocWebUtilityApp.Controllers
 {
 	public class TableDataVMsController : Controller
 	{
+		/*----------------------------------------------------------------------------------------------------------------------
+		* [fields]
+		-----------------------------------------------------------------------------------------------------------------------*/
 		private readonly IProductLocationRepository _productLocationRepository;
 		private readonly ILogger<TableDataVMsController> _logger;
 
+		/*----------------------------------------------------------------------------------------------------------------------
+		* [properties]
+		-----------------------------------------------------------------------------------------------------------------------*/
+
+		/*----------------------------------------------------------------------------------------------------------------------
+		* [constructors]
+		-----------------------------------------------------------------------------------------------------------------------*/
 		public TableDataVMsController(IProductLocationRepository productLocationRepository,
 			ILogger<TableDataVMsController> logger)
 		{
@@ -29,6 +40,10 @@ namespace NocWebUtilityApp.Controllers
 			_logger = logger;
 			_productLocationRepository = productLocationRepository;
 		}
+
+		/*----------------------------------------------------------------------------------------------------------------------
+		* [methods]
+		-----------------------------------------------------------------------------------------------------------------------*/
 
 		/// <summary>
 		/// Generates a list of products and servers mapped to a VM.
@@ -139,132 +154,5 @@ namespace NocWebUtilityApp.Controllers
 		{
 			return View();
 		}
-
-
-
-
-		// Code below is for reference. No need to review.
-
-
-
-
-
-
-		// GET: TableDataVMs/Details/5
-		//public async Task<IActionResult> Details(int? id)
-		//{
-		//    if (id == null)
-		//    {
-		//        return NotFound();
-		//    }
-
-		//    var tableDataVM = await _context.TableDataVM
-		//        .SingleOrDefaultAsync(m => m.Id == id);
-		//    if (tableDataVM == null)
-		//    {
-		//        return NotFound();
-		//    }
-
-		//    return View(tableDataVM);
-		//}
-
-		// GET: TableDataVMs/Create
-		//public IActionResult Create()
-		//{
-		//    return View();
-		//}
-
-		// POST: TableDataVMs/Create
-		// To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-		// more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-		//[HttpPost]
-		//[ValidateAntiForgeryToken]
-		//public async Task<IActionResult> Create([Bind("Id")] TableDataVM tableDataVM)
-		//{
-		//    if (ModelState.IsValid)
-		//    {
-		//        _context.Add(tableDataVM);
-		//        await _context.SaveChangesAsync();
-		//        return RedirectToAction("Index");
-		//    }
-		//    return View(tableDataVM);
-		//}
-
-		// GET: TableDataVMs/Edit/5
-		//public async Task<IActionResult> Edit(int? id)
-		//{
-		//    if (id == null)
-		//    {
-		//        return NotFound();
-		//    }
-
-		//    var tableDataVM = await _context.TableDataVM.SingleOrDefaultAsync(m => m.Id == id);
-		//    if (tableDataVM == null)
-		//    {
-		//        return NotFound();
-		//    }
-		//    return View(tableDataVM);
-		//}
-
-		// POST: TableDataVMs/Edit/5
-		// To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-		// more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-		//[HttpPost]
-		//[ValidateAntiForgeryToken]
-		//public async Task<IActionResult> Edit(int id, [Bind("Id")] TableDataVM tableDataVM) {
-		//    if (id != tableDataVM.Id) {
-		//        return NotFound();
-		//    }
-
-		//    if (ModelState.IsValid) {
-		//        try {
-		//            _context.Update(tableDataVM);
-		//            await _context.SaveChangesAsync();
-		//        }
-		//        catch (DbUpdateConcurrencyException) {
-		//            if (!TableDataVMExists(tableDataVM.Id)) {
-		//                return NotFound();
-		//            }
-		//            else {
-		//                throw;
-		//            }
-		//        }
-		//        return RedirectToAction("Index");
-		//    }
-		//    return View(tableDataVM);
-		//}
-
-		// GET: TableDataVMs/Delete/5
-		//public async Task<IActionResult> Delete(int? id)
-		//{
-		//    if (id == null)
-		//    {
-		//        return NotFound();
-		//    }
-
-		//    var tableDataVM = await _context.TableDataVM
-		//        .SingleOrDefaultAsync(m => m.Id == id);
-		//    if (tableDataVM == null)
-		//    {
-		//        return NotFound();
-		//    }
-
-		//    return View(tableDataVM);
-		//}
-
-		// POST: TableDataVMs/Delete/5
-		//[HttpPost, ActionName("Delete")]
-		//[ValidateAntiForgeryToken]
-		//public async Task<IActionResult> DeleteConfirmed(int id)
-		//{
-		//    var tableDataVM = await _context.TableDataVM.SingleOrDefaultAsync(m => m.Id == id);
-		//    _context.TableDataVM.Remove(tableDataVM);
-		//    await _context.SaveChangesAsync();
-		//    return RedirectToAction("Index");
-		//}
-
-		//private bool TableDataVMExists(int id) {
-		//    return _context.TableDataVM.Any(e => e.Id == id);
-		//}
 	}
 }
