@@ -20,7 +20,10 @@ services:
     ports:
       - 8080:80
     networks:
-     -  nocwebutilityapp_network
+     - nocwebutilityapp_network
+#    deploy:
+#      mode: replicated
+#      replicas: 3
 
 networks:
   nocwebutilityapp_network:

@@ -26,6 +26,9 @@
 		<link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/css/bootstrap.min.css"
 			  asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
 			  asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+			  asp-fallback-href="~/lib/font-awesome/css/font-awesome.css"
+			  asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
 		<link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
 	</environment>
 	@Html.Raw(JavaScriptSnippet.FullScript)
@@ -35,10 +38,10 @@
 		<div class="navbar-header">
 			<img class="navbar-brand" src="~/assets/img/onsolve-sm.png" alt="ONSOLVE Logo" />
 		</div>
-		<ul id="navbarMenu" class="nav navbar-nav">
+		@*<ul id="navbarMenu" class="nav navbar-nav">
 			<li><a asp-area="" asp-controller="TableDataVMs" asp-action="TablesPage1">Tables P1</a></li>
 			<li><a asp-area="" asp-controller="TableDataVMs" asp-action="TablesPage2">Tables P2</a></li>
-		</ul>
+		</ul>*@
 		<div class="nav navbar-right">
 			<div id="loginComponent">
 				@await Component.InvokeAsync("LoginLogout")

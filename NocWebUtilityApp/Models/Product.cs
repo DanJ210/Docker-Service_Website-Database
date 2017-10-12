@@ -22,6 +22,8 @@ namespace NocWebUtilityApp.Models
 		public int TableNumber { get; set; }
 		public string ProductName { get; set; }
 		public string ProductGroup { get; set; }
+		public string Url { get; set; }
+		public string MachineText { get; set; }
 		public Server PrimaryProductServer { get; set; }
 		public Server SecondaryProductServer { get; set; }
 

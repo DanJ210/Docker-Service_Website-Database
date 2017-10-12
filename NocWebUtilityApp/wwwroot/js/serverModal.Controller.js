@@ -3,7 +3,7 @@
 //* NocWebUtility Application
 //* Created: 03 / 22 / 2017
 //* Last Edit: 09 / 22 / 2017
-//* Description: Logic for the modal window.
+//* Description: Logic for the modal window which changes the servers a user selects via select box.
 
 ; (function ($) {
 	var productId;

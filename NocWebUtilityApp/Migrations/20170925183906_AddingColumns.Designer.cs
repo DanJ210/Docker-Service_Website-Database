@@ -8,9 +8,10 @@ using NocWebUtilityApp.Models;
 namespace NocWebUtilityApp.Migrations
 {
     [DbContext(typeof(ProductLocationContext))]
-    partial class ProductLocationContextModelSnapshot : ModelSnapshot
+    [Migration("20170925183906_AddingColumns")]
+    partial class AddingColumns
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.1.2")

@@ -18,7 +18,7 @@
 
 <div class="container-fluid">
 	<div class="row">
-		<div class="col-md-4">
+		<div class="col-lg-2">
 			<div class="table">
 				<table class="table table-condensed">
 					<thead>
@@ -28,24 +28,23 @@
 						<tr>
 							<th>Product</th>
 							<th>Primary</th>
-							<th>Secondary</th>
 						</tr>
 					</thead>
 					<tbody>
 						@foreach (var item in Model.TableProducts.Where(product => product.TableNumber == 1))
 						{
 							<tr>
-								<td id="@item.Id" class="productSelected">@item.ProductName</td>
+								<td id="@item.Id" class="productSelected success"><a class="machineText" href="@item.MachineText"><i class="fa fa-link"></i></a><a href="@item.Url">@item.ProductName</a></td>
 								<td class="" productId="@item.Id" productName="@item.ProductName" serverColumn="primaryColumn"
 									serverGroup="@(item.PrimaryProductServer != null ? item.PrimaryProductServer.ServerGroup : "Empty")">
 									<i class="fa fa-server"></i>
 									@(item.PrimaryProductServer != null ? item.PrimaryProductServer.ServerName : "Not Set") @*Shown in the cell*@
 								</td>
-								<td class="" productId="@item.Id" productName="@item.ProductName" serverColumn="secondaryColumn"
-									serverGroup="@(item.SecondaryProductServer != null ? item.SecondaryProductServer.ServerGroup : "Empty")">
-									<i class="fa fa-server"></i>
-									@(item.SecondaryProductServer != null ? @item.SecondaryProductServer.ServerName : "Not Set") @*Shown in the cell*@
-								</td>
+								@*<td class="" productId="@item.Id" productName="@item.ProductName" serverColumn="secondaryColumn"
+										serverGroup="@(item.SecondaryProductServer != null ? item.SecondaryProductServer.ServerGroup : "Empty")">
+										<i class="fa fa-server"></i>
+										@(item.SecondaryProductServer != null ? @item.SecondaryProductServer.ServerName : "Not Set") @*Shown in the cell
+									</td>*@
 							</tr>
 						}
 					</tbody>
@@ -53,7 +52,7 @@
 			</div>
 		</div>
 
-		<div class="col-md-4">
+		<div class="col-lg-2">
 			<div class="table">
 				<table class="table table-condensed">
 					<thead>
@@ -63,22 +62,22 @@
 						<tr>
 							<th>Product</th>
 							<th>Primary</th>
-							<th>Secondary</th>
 						</tr>
 					</thead>
 					<tbody>
 						@foreach (var item in Model.TableProducts.Where(product => product.TableNumber == 2))
 						{
 							<tr>
-								<td class="">@item.ProductName</td>
+								<td class="productSelected success"><a class="machineText" href="@item.MachineText"><i class="fa fa-link"></i></a><a href="@item.Url">@item.ProductName</a></td>
 								<td class="" productId="@item.Id" productName="@item.ProductName" serverColumn="primaryColumn"
 									serverGroup="@(item.PrimaryProductServer != null ? item.PrimaryProductServer.ServerGroup : "Empty")">
+									<i class="fa fa-server"></i>
 									@(item.PrimaryProductServer != null ? item.PrimaryProductServer.ServerName : "Not Set") @*Shown in the cell*@
 								</td>
-								<td class="" productId="@item.Id" productName="@item.ProductName" serverColumn="secondaryColumn"
-									serverGroup="@(item.SecondaryProductServer != null ? item.SecondaryProductServer.ServerGroup : "Empty")">
-									@(item.SecondaryProductServer != null ? @item.SecondaryProductServer.ServerName : "Not Set") @*Shown in the cell*@
-								</td>
+								@*<td class="" productId="@item.Id" productName="@item.ProductName" serverColumn="secondaryColumn"
+										serverGroup="@(item.SecondaryProductServer != null ? item.SecondaryProductServer.ServerGroup : "Empty")">
+										@(item.SecondaryProductServer != null ? @item.SecondaryProductServer.ServerName : "Not Set") @*Shown in the cell
+									</td>*@
 							</tr>
 						}
 					</tbody>
@@ -86,7 +85,7 @@
 			</div>
 		</div>
 
-		<div class="col-md-4">
+		<div class="col-lg-2">
 			<div class="table">
 				<table class="table table-condensed">
 					<thead>
@@ -96,21 +95,141 @@
 						<tr>
 							<th>Product</th>
 							<th>Server</th>
-							<th>Status</th>
 						</tr>
 					</thead>
 					<tbody>
 						@foreach (var item in Model.TableProducts.Where(product => product.TableNumber == 3))
 						{
 							<tr>
-								<td class="">@item.ProductName</td>
+								<td class="productSelected success"><a class="machineText" href="@item.MachineText"><i class="fa fa-link"></i></a><a href="@item.Url">@item.ProductName</a></td>
 								<td class="" productId="@item.Id" productName="@item.ProductName" serverColumn="primaryColumn"
 									serverGroup="@(item.PrimaryProductServer != null ? item.PrimaryProductServer.ServerGroup : "Empty")">
+									<i class="fa fa-server"></i>
 									@(item.PrimaryProductServer != null ? item.PrimaryProductServer.ServerName : "Not Set") @*Shown in the cell*@
 								</td>
-								<td class="" productId="@item.Id" productName="@item.ProductName" serverColumn="secondaryColumn"
-									serverGroup="@(item.SecondaryProductServer != null ? item.SecondaryProductServer.ServerGroup : "Empty")">
-									@(item.SecondaryProductServer != null ? @item.SecondaryProductServer.ServerName : "Not Set") @*Shown in the cell*@
+								@*<td class="" productId="@item.Id" productName="@item.ProductName" serverColumn="secondaryColumn"
+										serverGroup="@(item.SecondaryProductServer != null ? item.SecondaryProductServer.ServerGroup : "Empty")">
+										@(item.SecondaryProductServer != null ? @item.SecondaryProductServer.ServerName : "Not Set") @*Shown in the cell
+									</td>*@
+							</tr>
+						}
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<div class="col-lg-2">
+			<div class="table">
+				<table class="table table-condensed">
+					<thead>
+						<tr>
+							<th>SQL Table</th>
+						</tr>
+						<tr>
+							<th>SQL Alias</th>
+							<th>SQL Server</th>
+						</tr>
+					</thead>
+					<tbody>
+						@foreach (var item in Model.TableProducts.Where(product => product.TableNumber == 4))
+						{
+							<tr>
+								<td class="productSelected success"><a class="machineText" href="@item.MachineText"><i class="fa fa-link"></i></a><a href="@item.Url">@item.ProductName</a></td>
+								<td class="" productId="@item.Id" productName="@item.ProductName" serverColumn="primaryColumn">
+									<i class="fa fa-server"></i>
+									@(item.PrimaryProductServer != null ? item.PrimaryProductServer.ServerName : "Not Set")
+								</td>
+							</tr>
+						}
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<div class="col-lg-4">
+			<div class="table">
+				<table class="table table-condensed">
+					<thead>
+						<tr>
+							<th>HORDE</th>
+						</tr>
+						<tr>
+							<th>Horde</th>
+							<th>Active Site</th>
+							<th>Horde Server</th>
+						</tr>
+					</thead>
+					<tbody>
+						@foreach (var item in Model.TableProducts.Where(product => product.TableNumber == 5))
+						{
+							<tr>
+								<td class="success"><a class="machineText" href="@item.MachineText"><i class="fa fa-link"></i></a><a href="@item.Url">@item.ProductName</a></td>
+								<td class="" productId="@item.Id" productName="@item.ProductName" serverColumn="primaryColumn">
+									<i class="fa fa-server"></i>
+									@(item.PrimaryProductServer != null ? item.PrimaryProductServer.ServerName : "Not Set")
+								</td>
+								<td productId="@item.Id" productName="@item.ProductName" serverColumn="secondaryColumn">
+									<i class="fa fa-server"></i>
+									@(item.SecondaryProductServer != null ? @item.SecondaryProductServer.ServerName : "Not Set")
+								</td>
+							</tr>
+						}
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<div class="col-lg-2">
+			<div class="table">
+				<table class="table table-condensed">
+					<thead>
+						<tr>
+							<th>UBER</th>
+						</tr>
+						<tr>
+							<th>Product</th>
+							<th>Uber Server</th>
+						</tr>
+					</thead>
+					<tbody>
+						@foreach (var item in Model.TableProducts.Where(product => product.TableNumber == 6))
+						{
+							<tr>
+								<td class="success"><a class="machineText" href="@item.MachineText"><i class="fa fa-link"></i></a><a href="@item.Url">@item.ProductName</a></td>
+								<td class="" productId="@item.Id" productName="@item.ProductName" serverColumn="primaryColumn">
+									<i class="fa fa-server"></i>
+									@(item.PrimaryProductServer != null ? item.PrimaryProductServer.ServerName : "Not Set")
+								</td>
+							</tr>
+						}
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<div class="col-lg-2">
+			<div class="table">
+				<table class="table table-condensed">
+					<thead>
+						<tr>
+							<th>IPAWS</th>
+						</tr>
+						<tr>
+							<th>Server</th>
+							<th>Active Site</th>
+						</tr>
+					</thead>
+					<tbody>
+						@foreach (var item in Model.TableProducts.Where(product => product.TableNumber == 7))
+						{
+							<tr>
+								<td productId="@item.Id" productName="@item.ProductName" serverColumn="primaryColumn">
+									<i class="fa fa-server"></i>
+									@(item.PrimaryProductServer != null ? item.PrimaryProductServer.ServerName : "Not Set")
+								</td>
+								<td productId="@item.Id" productName="@item.ProductName" serverColumn="secondaryColumn">
+									<i class="fa fa-server"></i>
+									@(item.SecondaryProductServer != null ? @item.SecondaryProductServer.ServerName : "Not Set")
 								</td>
 							</tr>
 						}
@@ -119,6 +238,74 @@
 			</div>
 		</div>
 	</div>
+
+	<div class="col-lg-2">
+		<div class="table">
+			<table class="table table-condensed">
+				<thead>
+					<tr>
+						<th>GIS</th>
+					</tr>
+					<tr>
+						<th>Server/URL</th>
+						<th>Active Site</th>
+					</tr>
+				</thead>
+				<tbody>
+					@foreach (var item in Model.TableProducts.Where(product => product.TableNumber == 8))
+					{
+					<tr>
+						<td productId="@item.Id" productName="@item.ProductName" serverColumn="primaryColumn">
+							<i class="fa fa-server"></i>
+							@(item.PrimaryProductServer != null ? item.PrimaryProductServer.ServerName : "Not Set")
+						</td>
+						<td productId="@item.Id" productName="@item.ProductName" serverColumn="secondaryColumn">
+							<i class="fa fa-server"></i>
+							@(item.SecondaryProductServer != null ? @item.SecondaryProductServer.ServerName : "Not Set")
+						</td>
+					</tr>
+					}
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+	<div class="col-lg-2">
+		<div class="table">
+			<table class="table table-condensed">
+				<thead>
+					<tr>
+						<th>CafeX</th>
+					</tr>
+					<tr>
+						<th>Primary Site</th>
+						<th>Secondary Site</th>
+					</tr>
+				</thead>
+				<tbody>
+					@foreach (var item in Model.TableProducts.Where(product => product.TableNumber == 9))
+					{
+						<tr>
+							<td productId="@item.Id" productName="@item.ProductName" serverColumn="primaryColumn">
+								<i class="fa fa-server"></i>
+								@(item.PrimaryProductServer != null ? item.PrimaryProductServer.ServerName : "Not Set")
+							</td>
+							<td productId="@item.Id" productName="@item.ProductName" serverColumn="secondaryColumn">
+								<i class="fa fa-server"></i>
+								@(item.SecondaryProductServer != null ? @item.SecondaryProductServer.ServerName : "Not Set")
+							</td>
+						</tr>
+					}
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+
+</div>
+
+<div class="row">
+
 </div>
 
 <div>

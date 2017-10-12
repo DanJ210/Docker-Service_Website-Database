@@ -20,7 +20,7 @@
 					<li id="modalTd">
 						@Html.DropDownList("ServerSelectList",
 							ViewBag.serverList as SelectList, "Select Server",
-							new { onchange = "$.fn.serverListChangeFunction()" })
+							new { onChange = "$.fn.serverListChangeFunction()" })
 					</li>
 				</ul>
 			</div>
