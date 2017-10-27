@@ -27,6 +27,7 @@ namespace NocWebUtilityApp
 {
 	public class Startup
 	{
+		//Test
 		IConfigurationRoot _config;
 		public Startup(IHostingEnvironment env)
 		{
